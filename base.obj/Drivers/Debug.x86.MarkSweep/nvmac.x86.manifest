@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application name="nvmac" runtime="Full">
+  <process id="0" main="true" executable="true" version="0.0.0.0" publickey="" strongname="nvmac!0.0.0.0!">
+    <assemblies>
+      <assembly name="nvmac.exe" cache="Drivers/Debug.x86.MarkSweep/nvmac.exe" />
+      <assembly name="Corlib.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Corlib.dll" />
+      <assembly name="Microsoft.SingSharp.Runtime.dll" version="1.0.3555.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Microsoft.SingSharp.Runtime.dll" />
+      <assembly name="Io.Net.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Io.Net.Contracts.dll" />
+      <assembly name="Directory.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Directory.Contracts.dll" />
+      <assembly name="Io.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Io.Contracts.dll" />
+      <assembly name="System.Compiler.Runtime.dll" version="1.0.5031.5" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/System.Compiler.Runtime.dll" />
+      <assembly name="Singularity.V1.App.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Singularity.V1.App.dll" />
+      <assembly name="Drivers.Net.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Drivers.Net.dll" />
+      <assembly name="Corlibsg.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Corlibsg.dll" />
+    </assemblies>
+    <categories>
+      <category id="0" name="driver" class="Microsoft.Singularity.Drivers.Network.nForce4.NvMacResources">
+        <device signature="pci/ven_10de&amp;dev_0037&amp;cc_0200" />
+        <device signature="pci/ven_10de&amp;dev_0056&amp;cc_0200" />
+        <dynamicHardware>
+          <ioMemoryRange id="0" baseAddress="0xfebf9000" rangeLength="0x1000" />
+          <ioPortRange id="1" baseAddress="0xf000" rangeLength="0x8" />
+          <ioIrqRange id="6" baseAddress="11" shared="True" rangeLength="1" />
+        </dynamicHardware>
+        <endpoints>
+          <extension id="0" startStateId="3" contractName="Microsoft.Singularity.Extending.ExtensionContract">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Extending.ExtensionContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Directory.ServiceContract.Exp" />
+              <inherit name="Microsoft.Singularity.Extending.ExtensionContract.Exp" />
+            </exp>
+          </extension>
+          <serviceProvider id="1" startStateId="3" contractName="Microsoft.Singularity.Io.Net.NicDeviceContract">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Directory.ServiceProviderContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Directory.ServiceProviderContract.Exp" />
+            </exp>
+          </serviceProvider>
+        </endpoints>
+      </category>
+    </categories>
+  </process>
+</application>

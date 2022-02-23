@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ipconfig</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Applications.Network.IPConfig">
+      <summary>
+Class for interface configuration related commands.
+</summary>
+    </member>
+  </members>
+</doc>

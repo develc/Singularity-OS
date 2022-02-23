@@ -1,0 +1,24 @@
+warning: Found layout for MetaDataTypeDefinition(Microsoft.Singularity.V1.Services.StackService) in MetaData(C:\Users\cc\source\repos\Singularity-OS\base.obj\Libraries\Debug.x86.MarkSweep\Singularity.V1.App.dll), but no IR type for it
+warning: Expected method body for System.Object.get_vtable
+warning: Expected method body for System.Object.set_vtable
+warning: Expected method body for System.Object.get_VTableFieldAddr
+warning: Expected method body for System.Object.get_muw
+warning: Expected method body for System.Object.set_muw
+warning: Expected method body for System.Object.CompareExchangeMUW
+warning: Class(System.GCs.ProfileObjectsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileObjectsDelegate) has unsupported async invocation
+warning: Class(System.AsyncCallback) has unsupported async invocation
+warning: Class(System.AsyncCallback) has unsupported async invocation
+warning: Class(System.GCs.ProfileRootsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileRootsDelegate) has unsupported async invocation
+warning: Class(System.Threading.ThreadStart) has unsupported async invocation
+warning: Class(System.Threading.ThreadStart) has unsupported async invocation
+warning: Class(System.Threading.Thread.StopServiceNotice) has unsupported async invocation
+warning: Class(System.Threading.Thread.StopServiceNotice) has unsupported async invocation
+warning: Class(System.TryAllManager.VisitMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.VisitMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.GCHookMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.GCHookMethod) has unsupported async invocation
+warning: Type Function({Class(System.Object)}->void)BartokCall not found
+warning: Type Function({Class(System.Object), Class(System.GCs.NonNullReferenceVisitor)}->void)BartokCall not found
+warning: Type Function({Class(System.Object), Class(System.GCs.SegregatedFreeList.ObjectVisitor)}->void)BartokCall not found

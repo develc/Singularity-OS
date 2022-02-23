@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>iso9660</name>
+  </assembly>
+  <members>
+    <member name="T:Iso9660.ByteArray">
+      <summary>
+This class contains a number of static methods for marshalling,
+unmarshalling, and comparing byte arrays.
+</summary>
+    </member>
+    <member name="M:Iso9660.ByteArray.Marshall(System.Byte[],System.Byte[],System.Int32@)">
+      <summary>
+Marshalls a byte array into a buffer starting at a pointer 
+into the buffer, and advances the pointer accordingly.
+</summary>
+      <param name="b">The byte array that is being marshalled.</param>
+      <param name="bytes">The buffer into which the integer is 
+marshalled.
+</param>
+      <param name="offset">The position in the buffer where the Handle 
+starts.After completion, offset is the next position after the 
+Handle.</param>
+    </member>
+    <member name="M:Iso9660.ByteArray.Unmarshall(System.Byte[],System.Int32@)">
+      <summary>
+Given a buffer and a pointer into it, unmarshalls a byte array 
+from the buffer, advancing the pointer by 4 bytes.
+</summary>
+      <param name="bytes">The buffer from which the byte array is 
+unmarshalled.</param>
+      <param name="offset">The position in the buffer where the Handle 
+starts.
+After completion, offset is the next position after the Handle.
+</param>
+      <returns>The byte array that was unmarshalled.</returns>
+    </member>
+    <member name="M:Iso9660.ByteArray.UnmarshallLength(System.Byte[],System.Int32)">
+      <summary>
+Given a buffer and a pointer into it, unmarshalls the length of a 
+byte array  from the buffer, but does not advance the pointer.
+</summary>
+      <param name="bytes">The buffer from which the byte array 
+is unmarshalled.</param>
+      <param name="offset">The position in the buffer where the Handle 
+starts. After completion, offset is the next position after 
+the Handle.</param>
+      <returns>The byte array that was unmarshalled.</returns>
+    </member>
+    <member name="F:Iso9660.ByteArray.Minimum">
+      <summary>
+This constant identifies the minimum byte array, i.e. the byte 
+array that, when compared (via Comparer.Compare) with any other 
+byte array, is smaller.
+</summary>
+    </member>
+    <member name="F:Iso9660.ByteArray.Maximum">
+      <summary>
+This constant identifies the maximum byte array, i.e. the byte 
+array that, when compared (via Comparer.Compare) with any other 
+byte array, is larger.
+</summary>
+    </member>
+    <member name="M:Iso9660.ByteArray.ToString(System.Byte[])">
+      <summary>
+Returns the string representation of a byte array. Returns 
+"null" if the byte array is null, and "Maximum" if the byte
+array is identical to Maximum.
+</summary>
+      <param name="b" />
+      <returns />
+    </member>
+    <member name="M:Iso9660.ByteArray.ToLegibleString(System.Byte[])">
+      <summary>
+for debugging -- return a hex version of the array that can 
+be printed on the console
+</summary>
+      <param name="s" />
+      <returns />
+    </member>
+    <member name="M:Iso9660.ByteArray.StringToByteArray(System.String)">
+      <summary>
+general purpose string-byte array transformation
+</summary>
+      <param name="s" />
+      <returns />
+    </member>
+    <member name="T:Iso9660.Int">
+      <summary>
+This class contains static methods for marshalling and unmarshalling
+32-bit integers.
+</summary>
+    </member>
+    <member name="F:Iso9660.Int.Size">
+      <summary>
+The size (in bytes) of the marshalled representation of an integer.
+</summary>
+    </member>
+    <member name="M:Iso9660.Int.Marshall(System.Int32,System.Byte[],System.Int32@)">
+      <summary>
+Marshalls an integer into a buffer starting at a pointer into the 
+buffer, and advances the pointer accordingly. 
+</summary>
+      <param name="i">The integer that is being marshalled.</param>
+      <param name="bytes">The buffer into which the integer is marshalled.</param>
+      <param name="offset">The position in the buffer where the Handle starts.
+After completion, offset is the next position after the Handle.</param>
+    </member>
+    <member name="M:Iso9660.Int.Unmarshall(System.Byte[],System.Int32@)">
+      <summary>
+Given a buffer and a pointer into it, unmarshalls an integer from the 
+buffer, advancing the pointer by 4 bytes.
+</summary>
+      <param name="bytes">The buffer from which the integer is unmarshalled.</param>
+      <param name="offset">The position in the buffer where the Handle starts.
+After completion, offset is the next position after the Handle.</param>
+      <returns>The integer that was unmarshalled.</returns>
+    </member>
+  </members>
+</doc>

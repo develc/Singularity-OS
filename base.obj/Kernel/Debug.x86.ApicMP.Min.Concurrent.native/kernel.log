@@ -1,0 +1,2102 @@
+fileNames = {C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Security.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Singbench.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Diagnostics.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Singularity.KdFiles.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\System.Compiler.Runtime.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\ApicMP\Hal.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\kernel.exe, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\IoSystem.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Channels.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Stress.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Diagnostics.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Io.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Microsoft.SingSharp.Runtime.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\NetStack.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Drivers.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Directory.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Directory.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\SecurityService.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Io.Net.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\WebApps.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Stress.Contracts.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Loader.dll, C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Security.dll}
+refFileNames = {}
+libDirNames = {}
+outputDirName = .\debug
+       0.064:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Security.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Security.Contracts.pdb Invalid DBI module. (opened=97769312, pad=0)no debug information is read in
+       0.098:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Singbench.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Singbench.Contracts.pdb Invalid DBI module. (opened=92923608, pad=0)no debug information is read in
+       0.114:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Diagnostics.dll'
+       0.118:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Singularity.KdFiles.dll'
+       0.118:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\System.Compiler.Runtime.dll'
+       0.118:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\ApicMP\Hal.dll'
+       0.149:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\kernel.exe'
+       0.300:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\IoSystem.dll'
+       0.300:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Channels.dll'
+       0.300:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Stress.dll'
+       0.300:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Diagnostics.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Diagnostics.Contracts.pdb Invalid DBI module. (opened=104564160, pad=0)no debug information is read in
+       0.317:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Io.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Io.Contracts.pdb Invalid DBI module. (opened=98721536, pad=0)no debug information is read in
+       0.365:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Microsoft.SingSharp.Runtime.dll'
+       0.365:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\NetStack.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\NetStack.Contracts.pdb Invalid DBI module. (opened=102810904, pad=0)no debug information is read in
+       0.396:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Drivers.dll'
+       0.396:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Directory.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Directory.pdb Invalid DBI module. (opened=97692264, pad=0)no debug information is read in
+       0.396:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Directory.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Directory.Contracts.pdb Invalid DBI module. (opened=109511376, pad=0)no debug information is read in
+       0.428:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\SecurityService.dll'
+       0.428:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Io.Net.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Io.Net.Contracts.pdb Invalid DBI module. (opened=92473168, pad=0)no debug information is read in
+       0.444:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\WebApps.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\WebApps.Contracts.pdb Invalid DBI module. (opened=100764512, pad=0)no debug information is read in
+       0.444:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Stress.Contracts.dll'
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Stress.Contracts.pdb Invalid DBI module. (opened=101172864, pad=0)no debug information is read in
+       0.450:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Loader.dll'
+       0.450:  Loading metadata with code from 'C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Security.dll'
+       0.517:  translating from MSIL
+warning:   Ignoring optional modifier Class(Microsoft.Contracts.NonNullType)
+warning: unsealing Microsoft.Singularity.V1.Services.EndpointCore
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Diagnostics.Contracts.ChannelContract.ReadyState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Diagnostics.Contracts.MemoryContract.ReadyState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Diagnostics.Contracts.ProcessContract.ReadyState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.ServiceContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.ServiceProviderContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.NotifyContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.FileContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.DirectoryServiceContract.Ready)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.FileContract.Ready)
+warning: unsealing Microsoft.Singularity.Channels.EndpointCore
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Extending.ExtensionContract.Ready)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.DirectoryServiceContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.ConsoleDeviceContract.Ready)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.ChannelDeliveryContract.ReadyState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Stress.Contracts.StressContract.GcStressState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Stress.Contracts.StressContract.ReadyState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.DiskDeviceContract.Start)
+warning:   Ignoring optional modifier Interface(Microsoft.Singularity.Channels.ESet_2.type parameter.State)
+warning:   Ignoring optional modifier Interface(Microsoft.Singularity.Channels.EMap_3.type parameter.State)
+warning:   Ignoring optional modifier Interface([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.TRef_2.type parameter.State)
+warning:   Ignoring optional modifier Class(NetStack.Contracts.TcpConnectionContract.PreConnected)
+warning:   Ignoring optional modifier Class(NetStack.Contracts.TcpConnectionContract.Start)
+warning:   Ignoring optional modifier Class(NetStack.Contracts.UdpConnectionContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.IoMemFSContract.Ready)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.DirectoryServiceFeederContract.Ready)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.NotifyContract.NotifyAck)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.NotificationManager.NotificationQueueContract.RUNNING)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.NotifyContract.Notify)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Extending.ExtensionContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.ReadyState)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.Net.NicDeviceEventContract.READY)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.WebApps.Contracts.HttpRequestContract.Start)
+warning: Expected method body for System.Object.get_vtable
+warning: Expected method body for System.Object.set_vtable
+warning: Expected method body for System.Object.get_VTableFieldAddr
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp))) in call to Method Microsoft.Singularity.Directory.ServiceContract.Exp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp))), int32}->void)BartokCall from Method Microsoft.Singularity.Directory.ServiceContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)])}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp))) in call to Method Microsoft.Singularity.Directory.ServiceContract.Imp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp))), int32}->void)BartokCall from Method Microsoft.Singularity.Directory.ServiceContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)])}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp))) in call to Method Microsoft.Singularity.Directory.ServiceContract.Exp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp))), int32}->void)BartokCall from Method Microsoft.Singularity.Directory.ServiceContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), int32}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp))) in call to Method Microsoft.Singularity.Directory.ServiceContract.Imp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp))), int32}->void)BartokCall from Method Microsoft.Singularity.Directory.ServiceContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Directory.ServiceContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), int32}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp))) in call to Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp))), int32}->void)BartokCall from Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)])}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp))) in call to Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp))), int32}->void)BartokCall from Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)])}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp))) in call to Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp))), int32}->void)BartokCall from Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), int32}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp))) to TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp))) in call to Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp..ctor: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp))), int32}->void)BartokCall from Method Microsoft.Singularity.Security.SecurityDiagnosticsContract.NewChannel: Function({TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Imp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), TracedPtr(UntracedPtr(Struct(Class(Microsoft.Singularity.Security.SecurityDiagnosticsContract.Exp)))[Class(Microsoft.Singularity.Channels.ExHeap)]), int32}->void)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Channels.EndpointCore))) to TracedPtr(Struct(Class(Microsoft.Singularity.Channels.EndpointCore))) in call to Method Microsoft.Singularity.Channels.EndpointCore.Dispose: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Channels.EndpointCore)))}->bool)BartokCall from Method Microsoft.Singularity.V1.Services.EndpointCore.Dispose: Function({TracedPtr(Struct(Class(Microsoft.Singularity.V1.Services.EndpointCore)))}->bool)BartokCall STATIC
+TYPE ERROR: Introduction of managed pointer type in implicit argument coercion from UntracedPtr(Struct(Class(Microsoft.Singularity.Channels.EndpointCore))) to TracedPtr(Struct(Class(Microsoft.Singularity.Channels.EndpointCore))) in call to Method Microsoft.Singularity.Channels.EndpointCore.Closed: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Channels.EndpointCore)))}->bool)BartokCall from Method Microsoft.Singularity.V1.Services.EndpointCore.Closed: Function({TracedPtr(Struct(Class(Microsoft.Singularity.V1.Services.EndpointCore)))}->bool)BartokCall STATIC
+warning: Expected method body for Microsoft.Singularity.Isal.Isa.DispatchVector
+warning: Expected method body for System.Object.get_muw
+warning: Expected method body for System.Object.set_muw
+warning: Expected method body for System.Object.CompareExchangeMUW
+warning:   Ignoring required modifier Class(Microsoft.Contracts.DelayedAttribute)
+       1.740:  finished translating
+entryPoints = {Microsoft.Singularity.Kernel.Main}
+[parser, AddCountsStaticField, PostParserPhase, GenericInstantiationClosure, InstantiateIr, ScalarConversion, IrTypeChecker, PostInstantiateIrPhase, IrMultiProp, IrMultiProp, SimpleDCE, SimpleDCE, IrTreeShake, WrapEntryPoint, ValueTypeEquals, ToMir-SizeofPrimitive, MarshalPhase, IrScanCallEffects, typeinit, IrStoreCheckElim, MethodDebugPhase, JumpElim, ReverseCopyProp, BBcopyprop, IrStruct, SimpleDCE, IrMultiProp, SimpleDCE, IrConvertOpt, ShortCircuitBBlocks, JumpElim, IrStoreCheckElim, MirTypeChecker, MethodDebugPhase, IrInsertDelegate, ToMir-Constructor, IrFindConcrete, DevirtualizeCall, IrImproveTypes, IrPeepholeNull, SimpleInliner, IrMultiProp, IrLoadStoreOpt, DevirtualizeCall, IrImproveTypes, IrPeepholeNull, typeinit, TypeTestElimPunt, IrConvertOpt, SimpleDCE, ReverseCopyProp, ArrayBoundCheckElimination, ToMir-InterfaceCall, ToMir-SimpleArrayAccess, CloneLoopHeader, JumpElim, IrMultiProp, MethodDebugPhase, CheckInvariants, buildSSA, SSADCE, ArraySimple, SsaNullCheckLocal, LoopHoist, clearSSA, IrInsertStructCopy, IrPeepholeNull, IrLoadStoreOpt, IrInitStaticField, ToMir-Vararg1, vararg-end-pipeline, ToMir-Vararg2, OptRuntimeData, ArrayAddressOpt, IrRefWriteBarrier, ToMir-CheckCast-Sizeof-TypedRef-GetCurrentThread-Allocation-InitCopyBlock-AllocStruct-ArrayTypeTest-NewArray-ConvertConvert, CmpElim, IrArrayBaseLength, SimpleDCE, InitTypeInliner, IrInsertStructCopy, IrTypeChecker, end-IR]
+       1.775:  ir
+       1.818:  AutoPipeline
+       1.827:  finished AutoPipeline
+       1.834:  PostParserPhase
+       1.875:  finished PostParserPhase
+       1.875:  GenericInstantiationClosure
+       1.890:  finished GenericInstantiationClosure
+       1.900:  InstantiateIr
+       2.341:  finished InstantiateIr
+       2.341:  AutoPipeline
+       2.943:  finished AutoPipeline
+       2.943:  IrTreeShake
+       3.153:  IrTreeShake chasing entry point: Method Microsoft.Singularity.Kernel.Main: Function({}->int32)BartokCall STATIC
+       3.168:  IrTreeShake shaking the universe
+       3.197:  finished IrTreeShake
+       3.212:  WrapEntryPoint
+       3.233:  finished WrapEntryPoint
+       3.239:  ValueTypeEquals
+       3.302:  finished ValueTypeEquals
+       3.311:  AutoPipeline
+       3.324:  finished AutoPipeline
+       3.331:  MarshalPhase
+       3.334:  finished MarshalPhase
+       3.334:  IrScanCallEffects
+       3.359:  finished IrScanCallEffects
+       3.359:  typeinit
+Added 696 InitType ops
+       3.451:  finished typeinit
+       3.453:  AutoPipeline
+SsaAlias5 Lubbing Static ([Field freeListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) and Static ([Field saveListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) to Top
+SsaAlias5 Lubbing Vector[_convert1_14649@int32] and Vector[_convert1_14650@int32] to Top
+       4.823:  finished AutoPipeline
+       4.823:  IrInsertDelegate
+warning: Class(Microsoft.Singularity.Eventing.ActiveSourceEntryDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.ActiveSourceEntryDelegate) has unsupported async invocation
+warning: Class(System.TryAllManager.VisitMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.VisitMethod) has unsupported async invocation
+warning: Class(System.AsyncCallback) has unsupported async invocation
+warning: Class(System.AsyncCallback) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Hal.Acpi.AcpiObject.ReservedMethod.AcpiMethodImpl) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Hal.Acpi.AcpiObject.ReservedMethod.AcpiMethodImpl) has unsupported async invocation
+warning: Class(System.Threading.ThreadStart) has unsupported async invocation
+warning: Class(System.Threading.ThreadStart) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Memory.SharedHeap.AllocationVisitor) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Memory.SharedHeap.AllocationVisitor) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Hal.Acpi.Madt.ItemCreateDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Hal.Acpi.Madt.ItemCreateDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.QuerySourceDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.QuerySourceDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileRootsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileRootsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileObjectsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileObjectsDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Hal.Acpi.MethodResultCallback) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Hal.Acpi.MethodResultCallback) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.QueryFieldDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.QueryFieldDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Memory.SharedHeap.AllocationMatches) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Memory.SharedHeap.AllocationMatches) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.QueryEntryDelegate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Eventing.QueryEntryDelegate) has unsupported async invocation
+warning: Class(System.TryAllManager.GCHookMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.GCHookMethod) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Security.AccessControl.AclParser.AcceptMethod) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Security.AccessControl.AclParser.AcceptMethod) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Io.IoDeviceCreate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.Io.IoDeviceCreate) has unsupported async invocation
+warning: Class(Microsoft.Singularity.ProcessStart) has unsupported async invocation
+warning: Class(Microsoft.Singularity.ProcessStart) has unsupported async invocation
+       4.837:  finished IrInsertDelegate
+       4.837:  AutoPipeline
+       4.923:  finished AutoPipeline
+       4.923:  IrFindConcrete
+       5.001:  finished IrFindConcrete
+       5.001:  DevirtualizeCall
+number of virtual calls: 2902
+number of virtual method pointer: 0
+       5.103:  finished DevirtualizeCall
+       5.103:  IrImproveTypes
+number of virtual calls: 857
+number of virtual method pointer: 0
+       5.212:  finished IrImproveTypes
+       5.212:  AutoPipeline
+       5.231:  finished AutoPipeline
+       5.231:  SimpleInliner
+warning: skipping inlining of Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.get_Index: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock)))}->uint32)BartokCall into Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.IsLinked: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock))), uint32}->bool)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.UnderGCControl: Function({int32}->bool)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.HasGCRequest: Function({int32}->bool)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.ClearGCRequest: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.Collect: Function({Class(System.GCs.ConcurrentMSCollector), Class(System.Threading.Thread), int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.Collect: Function({Class(System.GCs.ConcurrentMSCollector), Class(System.Threading.Thread), int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CheckForNeededGCWork: Function({Class(System.GCs.ConcurrentMSCollector), Class(System.Threading.Thread)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.AllocateObjectMemorySlow: Function({Class(System.GCs.ConcurrentMSCollector), uintPtr, uint32, Class(System.Threading.Thread)}->uintPtr)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateString: Function({int32, Class(System.Threading.Thread)}->Class(System.String))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateString: Function({int32}->Class(System.String))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.String.FastAllocateString: Function({int32}->Class(System.String))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.get_Index: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock)))}->uint32)BartokCall into Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.Unlink: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock))), TracedPtr(uint32)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.get_Index: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock)))}->uint32)BartokCall into Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.Unlink: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock))), TracedPtr(uint32)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.get_Index: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock)))}->uint32)BartokCall into Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.Unlink: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock))), TracedPtr(uint32)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.get_Index: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock)))}->uint32)BartokCall into Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.Link: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock))), TracedPtr(uint32)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.get_Index: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock)))}->uint32)BartokCall into Method Microsoft.Singularity.Memory.PhysicalPages.PageBlock.Link: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.PhysicalPages.PageBlock))), TracedPtr(uint32)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateObject: Function({Class(System.VTable), Class(System.Threading.Thread)}->Class(System.Object))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateObject: Function({Class(System.VTable)}->Class(System.Object))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.Array.InternalGetValueHelper: Function({Class(System.Array), UntracedPtr(uint8), int32}->Class(System.Object))BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateVector: Function({Class(System.VTable), int32, Class(System.Threading.Thread)}->Class(System.Array))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateVector: Function({Class(System.VTable), int32}->Class(System.Array))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateArray: Function({Class(System.VTable), int32, int32, Class(System.Threading.Thread)}->Class(System.Array))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateArray: Function({Class(System.VTable), int32, int32}->Class(System.Array))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.Object.MemberwiseClone: Function({Class(System.Object)}->Class(System.Object))BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.Object.MemberwiseClone: Function({Class(System.Object)}->Class(System.Object))BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.Object.MemberwiseClone: Function({Class(System.Object)}->Class(System.Object))BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.InDormantState: Function({int32}->bool)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.NewThreadNotification: Function({int32, bool}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.MakeGCRequest: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.NewThreadNotification: Function({Class(System.GCs.ConcurrentMSCollector), Class(System.Threading.Thread), bool}->void)BartokCall because of pinned vars
+SsaAlias5 Lubbing Static ([Field freeListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) and Static ([Field saveListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) to Top
+warning: skipping inlining of Method Microsoft.Singularity.Memory.HandleTable.HandleEntry.Visit: Function({TracedPtr(Struct(Class(Microsoft.Singularity.Memory.HandleTable.HandleEntry))), Class(System.GCs.DirectReferenceVisitor)}->void)BartokCall into Method Microsoft.Singularity.Memory.HandleTable.VisitSpecialData: Function({Class(Microsoft.Singularity.Memory.HandleTable), Class(System.GCs.DirectReferenceVisitor)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.MakeGCRequests: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.TakeGCControl: Function({int32}->bool)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.ReleaseGCControl: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectorHandshake: Function({Class(System.Threading.Thread)}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectorHandshake: Function({Class(System.Threading.Thread)}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectorHandshake: Function({Class(System.Threading.Thread)}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.InMutatorState: Function({int32}->bool)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.TakeDormantControl: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.ThreadEnd: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.ThreadEnd: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.DeadThreadNotification: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.DeadThreadNotification: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.Threading.Thread.ServiceStopped: Function({Class(System.Threading.Thread)}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.Array.CreateInstance: Function({Class(System.Type), int32}->Class(System.Array))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRendezvous: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRendezvous: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRendezvous: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRelease: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRelease: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRelease: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.BaseCollector.AllThreadRelease: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectionLoop: Function({}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.GetCurrentThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.TakeMutatorControl: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.EnterLoadFunctionStub: Function({}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.LeaveLoadFunctionStub: Function({}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.ThreadStartNotification: Function({Class(System.GCs.ConcurrentMSCollector), int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateObject: Function({Class(System.VTable), uintPtr, uint32, Class(System.Threading.Thread)}->Class(System.Object))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateObjectNoInline: Function({Class(System.VTable)}->Class(System.Object))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GC.AllocateObjectNoInline: Function({Class(System.VTable), Class(System.Threading.Thread)}->Class(System.Object))BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.TakeDormantControlNoGC: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.Transitions.TakeMutatorControlNoGC: Function({int32}->void)BartokCall STATIC because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectStoppable: Function({Class(System.GCs.ConcurrentMSCollector), int32, int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectStoppable: Function({Class(System.GCs.ConcurrentMSCollector), int32, int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectStoppable: Function({Class(System.GCs.ConcurrentMSCollector), int32, int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectStoppable: Function({Class(System.GCs.ConcurrentMSCollector), int32, int32}->void)BartokCall because of pinned vars
+warning: skipping inlining of Method System.GCs.Transitions.GetThreadContext: Function({int32}->UntracedPtr(Struct(Class(Microsoft.Singularity.ThreadContext))))BartokCall STATIC into Method System.GCs.ConcurrentMSCollector.CollectStoppable: Function({Class(System.GCs.ConcurrentMSCollector), int32, int32}->void)BartokCall because of pinned vars
+       6.017:  finished SimpleInliner
+       6.017:  AutoPipeline
+       6.600:  finished AutoPipeline
+       6.600:  IrLoadStoreOpt
+number of virtual calls: 934
+number of virtual method pointer: 0
+       8.933:  finished IrLoadStoreOpt
+       8.933:  DevirtualizeCall
+       8.966:  finished DevirtualizeCall
+       8.966:  IrImproveTypes
+number of virtual calls: 867
+number of virtual method pointer: 0
+       9.060:  finished IrImproveTypes
+       9.076:  AutoPipeline
+       9.092:  finished AutoPipeline
+       9.092:  typeinit
+Removed 1 InitType ops
+       9.155:  finished typeinit
+       9.171:  AutoPipeline
+       9.643:  finished AutoPipeline
+       9.659:  ArrayBoundCheckElimination
+  SsaAlias5 Lubbing Static ([Field freeListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) and Static ([Field saveListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) to Top
+  SsaAlias5 Lubbing Vector[temp_75@uint32] and Vector[temp_60@uint32] to Top
+      10.263:  finished ArrayBoundCheckElimination
+      10.263:  AutoPipeline
+  SsaAlias5 Lubbing Static ([Field freeListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) and Static ([Field saveListTail : Struct(Class(Microsoft.Singularity.Memory.FlatPages.FreeNode))]) to Top
+warning: Cfg does not contain any terminal blocks
+warning: Cfg does not contain any terminal blocks
+  SsaAlias5 Lubbing Vector[temp_75@uint32] and Vector[temp_60@uint32] to Top
+warning: Cfg does not contain any terminal blocks
+      11.993:  finished AutoPipeline
+      11.993:  IrInsertStructCopy
+      12.134:  finished IrInsertStructCopy
+      12.137:  AutoPipeline
+      12.156:  finished AutoPipeline
+      12.161:  IrLoadStoreOpt
+number of virtual calls: 638
+number of virtual method pointer: 0
+      13.693:  finished IrLoadStoreOpt
+      13.693:  IrInitStaticField
+      13.708:  finished IrInitStaticField
+      13.708:  AutoPipeline
+      13.708:  finished AutoPipeline
+      13.708:  AutoPipeline
+      13.724:  finished AutoPipeline
+      13.739:  OptRuntimeData
+      13.755:  finished OptRuntimeData
+      13.755:  ArrayAddressOpt
+      13.787:  finished ArrayAddressOpt
+      13.787:  AutoPipeline
+Object layout: vtable field is already there.
+Object layout: vtable field is already there.
+      14.497:  finished AutoPipeline
+      14.510:  IrInsertStructCopy
+      14.567:  finished IrInsertStructCopy
+      14.567:  AutoPipeline
+      14.677:  finished AutoPipeline
+      14.692:  finished ir
+
+Summary of IrCleanup activity
+-----------------------------
+number of method bodies: 22332
+IrTempRemover:
+    effects merged: 22469
+    temps: 22469(100%)
+    vars removed: 22469(100%)
+BBlocalcopyprop:
+    copies found: 384962
+    substs made: 98734
+struct cleanup:
+    methods skipped: 5357(23%)
+    effects cleaned: 1052
+    effects cleaned (local): 244
+    effects cleaned (object): 321
+    effects cleaned (static): 181
+    effects cleaned (vector): 0
+    effects cleaned (direct): 32
+dce simple:
+    effects removed: 133419
+    vars removed: 133777
+    address constants removed: 103
+    params removed: 0
+multiprop simple:
+    constant substs: 3398
+    copy substs: 27002
+    control folds: 291
+jumpelim:
+    bypasses: 2706
+    inlines: 11490
+convertopts:
+    arithmetic compaction: 19
+    2->1 (conv) compaction: 9279
+    2->1 (cmp) compaction: 7009
+    compare compaction: 29472
+peepholenull:
+    static failures: 48
+    null reads: 79
+    null writes: 108
+    folded as implicit ops: 493
+unmanaged strings converted: 0
+"as" methods found: 0
+"as" method calls replaced: 0
+
+Summary of opt activity
+-----------------------
+simple inliner:
+    method inlines (not transitive): 3023
+    partial initType inlines: 701
+nullcheck:
+    status vars created: 227614
+    methods w/o rets: 1802
+    explicit checks removed: 2865
+    unnecessary checks marked: 12522
+    nonnull params at entry: 3541
+    nonnull returns: 0
+    nonnull params at return: 0
+    undo log operations removed: 0
+    read enlistments removed: 0
+    update enlistments removed: 0
+ssa array simple:
+    induction ABCs: 104
+    static ABCs: 0
+    static ASTs: 297
+    class hierarchy store checks: 440
+array bound elimination:
+    total ABC in program: 220
+    total VBC in program: 2578
+    VBCD completely removed: 1249
+    VBCD upper bound removed: 3
+    ACD completely removed: 218
+    ACD some dimensions removed: 1
+Loop Inv Hoisted: 27
+Variable Rename:
+    number of variables renamed: 0
+ssa deadcode:
+    effects removed: 416
+improve types:
+    parameters set to null: 72
+    parameters set more specific: 159
+    fields set to null: 42
+    fields set more specific: 24
+devirtualized calls:
+    calls devirtualized: 2112
+    method Pointer devirtualized: 0
+write barriers removed:
+     write barriers removed: 4
+Load/Store field opt:
+    load field eliminated: 3022
+    load array element eliminated: 86
+    logging eliminated: 0
+    read enlistments eliminated: 0
+    update enlistments eliminated: 0
+    cse Vector Length: 224
+    cse Array Length: 0
+    cse Array Base: 0
+    cse Unique: 11294
+    cse Replace: 13992
+short circuiting optimization:
+    dead blocks created: 0
+    shortings: 0
+type test optimization:
+    num of InstanceOf: 625
+    num of InstanceOf Removed: 7
+    num of CheckCast: 388
+    num of CheckCast Removed: 74
+array and field initialization:
+    total Array Initialized: 23
+    num of Array Initialized: 23
+    total Static Field: 130
+    num of Static Field Initialized: 130
+runtime opts
+    untraced pointer runtime reps eliminated: 876/883
+    container runtime reps eliminated: 137/1468
+-----------------------------
+outputRootName = C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.native\kernel
+      14.692:  creating data layout
+base+4
+base
+base+4
+base+4
+base+6
+base+8
+base+12
+base+4
+base+6
+base+8
+base+4
+base+6
+base+8
+base+9
+base+10
+base+11
+base+4
+base+12
+base+20
+base+28
+base+36
+base+44
+base+52
+base+60
+base+68
+base+76
+base+84
+base+92
+base+100
+base+4
+base+108
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+4
+base+8
+base+12
+base+16
+base+20
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+36
+base+40
+base+44
+base+48
+base+52
+base+56
+base+60
+base+64
+base+68
+base+72
+base+76
+base+80
+base+84
+base+88
+base+92
+base+96
+base+100
+base+104
+base+108
+base+112
+base+116
+base+120
+base+124
+base+128
+base+132
+base+136
+base+140
+base+144
+base+148
+base+152
+base+156
+base+160
+base+164
+base+168
+base+172
+base+174
+base+176
+base+180
+base+188
+base+196
+base+200
+base+208
+base+216
+base+220
+base+224
+base+232
+base+240
+base+248
+base+256
+base+258
+base+260
+base+264
+base+268
+base+276
+base+284
+base+292
+base+300
+base+308
+base+316
+base+324
+base+328
+base+332
+base+336
+base+340
+base+348
+base+356
+base+360
+base+368
+base+376
+base+380
+base+384
+base+388
+base+392
+base+400
+base+408
+base+412
+base+420
+base+428
+base+432
+base+436
+base+444
+base+464
+base+468
+base+4
+base+8
+base+4
+base+6
+base+8
+base+10
+base+12
+base+16
+base+18
+base+20
+base+24
+base+26
+base+28
+base+32
+base+36
+base+52
+base+68
+base+84
+base+100
+base+116
+base+132
+base+148
+base+164
+base+180
+base+196
+base+212
+base+228
+base+244
+base+260
+base+276
+base+292
+base+308
+base+324
+base+340
+base+356
+base+372
+base+388
+base+404
+base+420
+base+436
+base+452
+base+468
+base+484
+base+500
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+36
+base+40
+base+52
+base+564
+base+568
+base+572
+base+4
+base+580
+base+584
+base+588
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+36
+base+40
+base+4
+base+4
+base+6
+base+8
+base+9
+base+10
+base+11
+base+12
+base+16
+base+4
+base+6
+base+8
+base+9
+base+10
+base+4
+base+6
+base+8
+base+4
+base+6
+base+8
+base+12
+base+14
+base+16
+base+20
+base+22
+base+24
+base+28
+base+30
+base+32
+base+36
+base+40
+base+44
+base+48
+base+52
+base+56
+base+60
+base+64
+base+68
+base+72
+base+76
+base+78
+base+80
+base+82
+base+84
+base+86
+base+88
+base+90
+base+92
+base+94
+base+96
+base+98
+base+100
+base+102
+base+104
+base+106
+base+4
+base+580
+base+4
+base+5
+base+6
+base+7
+base+8
+base+9
+base+10
+base+11
+base+12
+base+13
+base+14
+base+15
+base+16
+base+17
+base+18
+base+19
+base+4
+base+8
+base+4
+base+8
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+36
+base+40
+base+44
+base+48
+base+52
+base+56
+base+60
+base+64
+base+68
+base+72
+base+4
+base+8
+base+12
+base+4
+base+8
+base+12
+base+16
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+4
+base+36
+base+4
+base+8
+base+4
+base+8
+base+4
+base+8
+base+12
+base+20
+base+28
+base+32
+base+36
+base+44
+base+52
+base+60
+base+68
+base+76
+base+84
+base+92
+base+100
+base+108
+base+116
+base+124
+base+132
+base+140
+base+148
+base+4
+base+8
+base+4
+base+8
+base+12
+base+20
+base+4
+base+20
+base+36
+base+52
+base+68
+base+84
+base+100
+base+116
+base+132
+base+148
+base+164
+base+180
+base+196
+base+212
+base+228
+base+244
+base+260
+base+276
+base+292
+base+308
+base+324
+base+340
+base+356
+base+372
+base+388
+base+404
+base+4
+base+6
+base+8
+base+12
+base+20
+base+28
+base+32
+base+36
+base+52
+base+68
+base+84
+base+100
+base+116
+base+132
+base+148
+base+164
+base+180
+base+196
+base+212
+base+228
+base+244
+base+260
+base+276
+base+292
+base+308
+base+324
+base+340
+base+356
+base+372
+base+388
+base+404
+base+420
+base+436
+base+452
+base+468
+base+484
+base+500
+base+4
+base+12
+base+20
+base+28
+base+36
+base+44
+base+52
+base+56
+base+60
+base+62
+base+64
+base+66
+base+68
+base+70
+base+72
+base+76
+base+84
+base+92
+base+100
+base+108
+base+116
+base+124
+base+132
+base+140
+base+148
+base+156
+base+164
+base+172
+base+180
+base+188
+base+196
+base+204
+base+212
+base+220
+base+228
+base+236
+base+244
+base+252
+base+260
+base+772
+base+1188
+base+1196
+base+1204
+base+1212
+base+1220
+base+1228
+base+4
+base+6
+base+8
+base+10
+base+12
+base+4
+base+12
+base+20
+base+24
+base+26
+base+28
+base+44
+base+46
+base+48
+base+50
+base+4
+base+8
+base+12
+base+20
+base+28
+base+4
+base+12
+base+20
+base+28
+base+36
+base+44
+base+52
+base+60
+base+68
+base+76
+base+84
+base+100
+base+116
+base+118
+base+120
+base+124
+base+132
+base+140
+base+148
+base+156
+base+164
+base+172
+base+180
+base+188
+base+196
+base+204
+base+212
+base+4
+base+220
+base+228
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+42
+base+52
+base+62
+base+72
+base+82
+base+92
+base+102
+base+112
+base+4
+base+6
+base+8
+base+10
+base+12
+base+16
+base+18
+base+20
+base+24
+base+26
+base+28
+base+32
+base+36
+base+52
+base+68
+base+84
+base+100
+base+116
+base+132
+base+148
+base+164
+base+180
+base+196
+base+212
+base+228
+base+244
+base+260
+base+276
+base+292
+base+308
+base+324
+base+340
+base+356
+base+372
+base+388
+base+404
+base+420
+base+436
+base+452
+base+468
+base+484
+base+500
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+144
+base+148
+base+152
+base+156
+base+160
+base+164
+base+168
+base+172
+base+176
+base+180
+base+184
+base+188
+base+192
+base+196
+base+200
+base+204
+base+208
+base+4
+base+6
+base+8
+base+4
+base+8
+base+12
+base+14
+base+16
+base+32
+base+34
+base+36
+base+38
+base+40
+base+4
+base+8
+base+12
+base+16
+base+20
+base+4
+base+8
+base+12
+base+16
+base+20
+base+24
+base+28
+base+32
+base+36
+base+40
+base+44
+base+52
+base+60
+base+62
+base+64
+base+68
+base+72
+base+76
+base+80
+base+84
+base+4
+base+720
+base+4
+base+6
+base+8
+base+10
+base+12
+base+14
+base+4
+base+12
+base+16
+base+18
+base+20
+base+22
+base+24
+base+28
+base+30
+base+32
+base+36
+base+40
+base+44
+base+48
+base+28
+base+4
+base+1188
+base+1192
+base+1196
+base+1200
+base+1204
+base+1208
+base+8
+base+12
+base+16
+base+4
+base+16
+base+4
+base+12
+base+20
+base+24
+base+4
+base+596
+base+598
+base+600
+base+604
+base+608
+base+612
+base+616
+base+620
+base+624
+base+628
+base+632
+base+634
+base+635
+base+636
+base+640
+base+644
+base+648
+base+652
+base+654
+base+656
+base+4
+base+8
+base+12
+base+16
+base+4
+base+8
+base+12
+base+16
+base+16
+base+44
+base+8
+base+12
+base+4
+base+8
+base+12
+base+48
+base+124
+base+132
+base+148
+base+820
+base+68
+base+80
+Read-write data size after ChooseRep 301936
+      14.996:  finished creating data layout
+      15.002:  code generation
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakQueryACL@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakQueryACL@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_ProcessUsedCommunicationHeap@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_ProcessUsedCommunicationHeap@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(Microsoft.Singularity.Io.IoConfig), Class(System.String)}->Interface(Microsoft.Singularity.Io.IDevice))BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeleteLink@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeleteLink@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileAttributesRecord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileAttributesRecord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeleteFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeleteFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_HandleTable_HandlePage@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_HandleTable_HandlePage@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakNotifyReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakNotifyReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ChannelDeliveryContract_Ready@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ChannelDeliveryContract_Ready@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_InterruptContext@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_InterruptContext@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetUsedMemory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetUsedMemory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_NackConnect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_NackConnect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeregister@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeregister@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_MemoryModule_HeapDumper_BlockInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_MemoryModule_HeapDumper_BlockInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_SamplingProfiler_ProfilerEvent@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_SamplingProfiler_ProfilerEvent@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakCursorShow@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakCursorShow@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_BumpAllocator@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_BumpAllocator@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakRegisterReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakRegisterReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeleteDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckDeleteDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_UInt128@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_UInt128@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_AutoResetEventHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_AutoResetEventHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_InterruptHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_InterruptHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Hal_RedirectionEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Hal_RedirectionEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetAttributesReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetAttributesReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateFileReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateFileReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetProcessPeakMemory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetProcessPeakMemory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_PageHeaderList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_PageHeaderList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_EFlags@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_EFlags@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateLogWriter@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateLogWriter@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakStoreACLReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakStoreACLReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PT@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PT@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Unaligned128@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Unaligned128@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckWrite@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckWrite@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateLog_Location@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateLog_Location@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakClear@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakClear@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KSpecialRegisters@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KSpecialRegisters@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_HostFileIoRequest@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_HostFileIoRequest@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmContext@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmContext@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Ack@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Ack@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateEnlistmentLog_Location@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateEnlistmentLog_Location@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKdControlSet@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKdControlSet@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_GcStressDone@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_GcStressDone@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64XmmSaveArea@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64XmmSaveArea@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_EndEnumeration@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_EndEnumeration@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_WriteHostFileRequest@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_WriteHostFileRequest@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessGcStats@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessGcStats@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap_FreeNode@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap_FreeNode@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DebugService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DebugService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KProcessorState@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KProcessorState@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetParentID@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetParentID@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorPosition@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorPosition@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Finalizer@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Finalizer@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Notify@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Notify@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_InitializationComplete@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_InitializationComplete@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_Connect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_Connect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_ReadEnlistmentLog_Entry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_ReadEnlistmentLog_Entry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Gdte64@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Gdte64@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_ProcessorContext@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_ProcessorContext@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_MultiUseWord_STMSnapshot@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_MultiUseWord_STMSnapshot@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmRuntimeFunctionException@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmRuntimeFunctionException@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckClearCursorToEndOfLine@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckClearCursorToEndOfLine@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Hal_HalMemory_MemoryAffinity@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Hal_HalMemory_MemoryAffinity@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_AllocationOwnerId@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_AllocationOwnerId@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_MultiUseWord_STMHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_MultiUseWord_STMHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessGcStats@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessGcStats@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_NakShutdown@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_NakShutdown@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmRuntimeFunction@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmRuntimeFunction@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetAttributes@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetAttributes@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeregister@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeregister@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_PutChar@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_PutChar@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_PageHeader@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_PageHeader@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_ProcessService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_ProcessService@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object)}->Class(Microsoft.Singularity.Security.AccessControl.AclToken))BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDE@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDE@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Types_SystemType@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Types_SystemType@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDT@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDT@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_AllocationOwner@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_AllocationOwner@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(Microsoft.Singularity.Eventing.EventDescriptor), Class(Microsoft.Singularity.Eventing.QueryBuffer), TracedPtr(Class(Microsoft.Singularity.Eventing.EnumerationContext))}->bool)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_TempList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_TempList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_Ia64KdControlSet@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_Ia64KdControlSet@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ChannelDeliveryContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ChannelDeliveryContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_EFlagsShift@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_EFlagsShift@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_SharedHeapService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_SharedHeapService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_Ia64KdControlReport@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_Ia64KdControlReport@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckPutCharAt@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckPutCharAt@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_ImportTable_ImportDescriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_ImportTable_ImportDescriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_ChangeNotification@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_ChangeNotification@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateEnlistmentLog_Entry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateEnlistmentLog_Entry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_OverflowFrameDescriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_OverflowFrameDescriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_QualityOfService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_QualityOfService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetLinkValueReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetLinkValueReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_AckConnect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_AckConnect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64Context@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64Context@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalAddress@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalAddress@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetProcessUsedMemory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetProcessUsedMemory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckPutChar@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckPutChar@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Fpcw@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Fpcw@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorFlash@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorFlash@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_CreateHostFileResponse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_CreateHostFileResponse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_GetStatistics@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_GetStatistics@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KProcessorState@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KProcessorState@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_TSS@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_TSS@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Threading_Thread_SchedulerInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Threading_Thread_SchedulerInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_ContainerHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_ContainerHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_Begin@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_Begin@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DeviceService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DeviceService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DiagnosisService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DiagnosisService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Memory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Memory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Context@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Context@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_AckClose@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_AckClose@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_InterruptTable@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_InterruptTable@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Decimal@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Decimal@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_SpillContext@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_SpillContext@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Gdtp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Gdtp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_PlatformService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_PlatformService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateFile@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), UntracedPtr(Struct(Class(Microsoft.Singularity.Memory.SharedHeap.Allocation)))}->bool)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateLink@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateLink@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_Allocation@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_Allocation@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_EnumerationTerminated@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_EnumerationTerminated@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeregisterReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeregisterReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Shutdown@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Shutdown@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ParentID@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ParentID@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Threading_SpinLock@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Threading_SpinLock@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteDirectoryReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteDirectoryReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakBind@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakBind@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Threading_SpinLockBase@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Threading_SpinLockBase@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_RoverType@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_RoverType@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Idte@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Idte@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateLink@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateLink@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_ManualResetEventHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_ManualResetEventHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Pages@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Pages@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_StoreACL@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_StoreACL@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_MmxContext@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_MmxContext@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetLinkValue@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakGetLinkValue@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckRegister@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckRegister@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckCursorHide@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckCursorHide@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_TryAll@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_TryAll@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_ArgList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_ArgList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_DescriptorTable@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_DescriptorTable@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_Ready@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_Ready@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PE@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PE@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_PageManager_UnusedBlockHeader@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_PageManager_UnusedBlockHeader@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_DisplayDimensions@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_DisplayDimensions@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_AckNewChannel@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_AckNewChannel@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_ReadHostFileRequest@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_ReadHostFileRequest@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_PutCharAt@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_PutCharAt@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_VarargList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_VarargList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_VirtualMemoryRange$_struct@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_VirtualMemoryRange$_struct@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKdControlReport@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKdControlReport@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateLink@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateLink@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_GetCursorPosition@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_GetCursorPosition@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKProcessorState@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKProcessorState@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_GetAttributes@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_GetAttributes@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_ExHeapDump@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_ExHeapDump@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_MpBootInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_MpBootInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_AckConnect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_AckConnect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakNotify@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakNotify@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_TypedReference@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_TypedReference@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_TotalUsedCommunicationHeap@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_TotalUsedCommunicationHeap@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_DeliveryHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_DeliveryHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_GetNewDirectoryChannel@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_GetNewDirectoryChannel@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_FlushCaches@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_FlushCaches@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_ReferenceVisitor_ObjectDescriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_ReferenceVisitor_ObjectDescriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_DumpExHeap@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_DumpExHeap@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_WriteBarrierCMS_FakeObjectBytes@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_WriteBarrierCMS_FakeObjectBytes@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckClear@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckClear@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_FlatPages_LastNode@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_FlatPages_LastNode@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckGetLinkValue@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckGetLinkValue@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_WriteHostFileResponse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_WriteHostFileResponse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ChannelDeliveryContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ChannelDeliveryContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckNotify@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckNotify@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Idtp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Idtp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_WaitForData@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_WaitForData@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_FileImage@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_FileImage@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Write@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Write@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckSetCursorPosition@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckSetCursorPosition@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_AlphaKdControlReport@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_AlphaKdControlReport@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CompressedFrameDescriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CompressedFrameDescriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceProviderContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Fpsw@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Fpsw@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_DeleteDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_DeleteDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateAndBindFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateAndBindFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_SharedHeapService_Allocation@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_SharedHeapService_Allocation@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessName@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessName@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Descriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Descriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_MutexHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_MutexHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_AddressSpace@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_AddressSpace@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_EndpointCore@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_EndpointCore@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessTimes@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessTimes@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_ThreadRecord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_ThreadRecord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_StackService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_StackService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_BeginEnumeration@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_BeginEnumeration@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KSpecialRegisters@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KSpecialRegisters@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Clear@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Clear@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateLinkReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateLinkReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Print@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Print@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateLog_Entry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateLog_Entry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_ChannelStats@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_ChannelStats@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalPages_PageBlock@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalPages_PageBlock@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_PageSeparation@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList_PageSeparation@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakStoreACL@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakStoreACL@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_NakNewChannel@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceFeederContract_NakNewChannel@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessIDs@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessIDs@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckCreateFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_FrameDescriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_FrameDescriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_LogEntryUndoAction@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_LogEntryUndoAction@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap_FreeList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap_FreeList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Channels@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Channels@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_CreateHostFileRequest@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_CreateHostFileRequest@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_ReadHostFileResponse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_ReadHostFileResponse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Success@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Success@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessName@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessName@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_HostFileIoResponse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_HostFileIoResponse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetProcessHandlePages@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetProcessHandlePages@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessIDs@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessIDs@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(Microsoft.Singularity.Eventing.FieldDescriptor), Class(System.Object), TracedPtr(Class(Microsoft.Singularity.Eventing.EnumerationContext))}->bool)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_uint128@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_uint128@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_RuntimeFieldHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_RuntimeFieldHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_CloseHostFileRequest@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_KernelDebugger_CloseHostFileRequest@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CalleeSaveLocations@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CalleeSaveLocations@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_AccessControl_Cache_Stats@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_AccessControl_Cache_Stats@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteLink@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteLink@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_AckRead@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_AckRead@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(System.GCs.SegregatedFreeList.ObjectVisitor)}->void)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_EVectors@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_EVectors@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorShow@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorShow@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Bind@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Bind@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(System.GCs.NonNullReferenceVisitor)}->void)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Processes_ProcessHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Processes_ProcessHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Deregister@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Deregister@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KdControlReport@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KdControlReport@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_ReadEnumeration@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_ReadEnumeration@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakQueryACLReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakQueryACLReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_ExportTable_ExportDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_ExportTable_ExportDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Scheduling_ThreadEntryEnum@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Scheduling_ThreadEntryEnum@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Scheduling_ThreadQueueStruct@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Scheduling_ThreadQueueStruct@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_SystemAllocationLogger_MemoryAllocationEvent@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_SystemAllocationLogger_MemoryAllocationEvent@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_AckChangeNotification@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_AckChangeNotification@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_SetCursorPosition@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_SetCursorPosition@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_ClearStatistics@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_ClearStatistics@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Ready@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Ready@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateDirectory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateDirectory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_DirectoryEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_DirectoryEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_GetStatisticsAck@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_GetStatisticsAck@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Bartok_Runtime_PreHeader@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Bartok_Runtime_PreHeader@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_DeleteFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_DeleteFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_ThreadContext@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_ThreadContext@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_NotFound@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_NotFound@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_SmallRegion@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_SharedHeap_SmallRegion@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Security_PrincipalHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Security_PrincipalHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_Resources_PnpBiosInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_Resources_PnpBiosInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Success@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Success@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_DeleteLink@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_DeleteLink@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), uintPtr, uintPtr, uintPtr, uint16, Class(System.String), Class(Microsoft.Singularity.Eventing.EventDescriptor), TracedPtr(Class(Microsoft.Singularity.Eventing.EnumerationContext))}->bool)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_GetLinkValue@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_GetLinkValue@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_PageTableService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_PageTableService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_CpuRecord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_CpuRecord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KdControlReport@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KdControlReport@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NotSupported@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NotSupported@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakBindReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakBindReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_AckWrite@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_AckWrite@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_ProcessorCounter_tmpInterruptCounter@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_ProcessorCounter_tmpInterruptCounter@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CallStack_TransitionRecord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CallStack_TransitionRecord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Stress_StressDirect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Stress_StressDirect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_PciPortHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_PciPortHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Collections_DictionaryEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Collections_DictionaryEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_TimeSpan@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_TimeSpan@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Guid@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Guid@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_ArgIterator@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_ArgIterator@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ExceptionRecord64@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ExceptionRecord64@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_SetCursorSize@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_SetCursorSize@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_ArrayType@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_ArrayType@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckSetCursorSize@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckSetCursorSize@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotifyContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateAndBindFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_CreateAndBindFile@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(Microsoft.Singularity.Io.IoMemory), int32}->Class(System.Object))BartokCall not found
+warning: Type Function({Class(System.Object), UntracedPtr(Struct(Class(Microsoft.Singularity.Memory.SharedHeap.Allocation)))}->void)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_DescriptorTable_Gdt@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_DescriptorTable_Gdt@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Success@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Success@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_ClearCursorToEndOfLine@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_ClearCursorToEndOfLine@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_InvalidPosition@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_InvalidPosition@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Bartok_Runtime_PostHeader@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Bartok_Runtime_PostHeader@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessThreadIDs@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_GetProcessThreadIDs@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_ThreadHeaderQueue@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_ThreadHeaderQueue@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckBind@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckBind@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Ready@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_Ready@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteLinkReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteLinkReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_Principal@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_Principal@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateAndBindFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateAndBindFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_RuntimeTypeHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_RuntimeTypeHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_AckWaitForData@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_AckWaitForData@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_NotificationManager_NotificationQueueContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDPE@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDPE@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_StackHeight@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_StackHeight@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_ThreadHeaderQueue_LocalList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_ThreadHeaderQueue_LocalList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Fp387SaveArea@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Fp387SaveArea@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SDS_Acl@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SDS_Acl@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_Connect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_Connect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakWrite@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakWrite@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessThreadIDs@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessThreadIDs@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CalleeSaveLocations_RegLocation@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CalleeSaveLocations_RegLocation@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_SMAPINFO@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_SMAPINFO@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Collections_Hashtable_bucket@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Collections_Hashtable_bucket@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Disable@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Security_SecurityDiagnosticsContract_Disable@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_FlatPages_FreeNode@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_FlatPages_FreeNode@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_CollectGarbage@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_CollectGarbage@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Microsoft.Singularity.Hal.Acpi.AcpiObject.AcpiObject[]}->Class(Microsoft.Singularity.Hal.Acpi.AcpiObject.AcpiObject))BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckCursorFlash@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckCursorFlash@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_RuntimeSystemType_MD5TypeEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_RuntimeSystemType_MD5TypeEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetMaxMemory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetMaxMemory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_AlphaKdControlSet@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_AlphaKdControlSet@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_AckShutdown@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_AckShutdown@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorHide@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_CursorHide@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_Delegate_NativeDelegateRecord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_Delegate_NativeDelegateRecord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_DeviceContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_DeviceContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateEnlistmentLogWriter@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_UpdateEnlistmentLogWriter@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_SegregatedFreeList@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_Stacks_StackHead@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_Stacks_StackHead@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Success@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Success@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckQueryACL@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckQueryACL@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DeliveryHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_DeliveryHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_MultiUseWord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_MultiUseWord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_ReadEnlistmentLogWriter@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_ReadEnlistmentLogWriter@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_GetChannelStats@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_GetChannelStats@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_InterfaceInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_InterfaceInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_InterruptTable_Dispatcher@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_InterruptTable_Dispatcher@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_AckPrint@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_AckPrint@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86SegmentRegisters@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86SegmentRegisters@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_ThreadHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_ThreadHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KdControlSet@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64KdControlSet@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Xml_XmlNode_XmlAttr@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Xml_XmlNode_XmlAttr@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_MpBootStatus@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_MpBootStatus@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), Class(System.GCs.DirectReferenceVisitor)}->void)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckCursorShow@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_AckCursorShow@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Ready@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_Ready@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceContract_ContractNotSupported@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceContract_ContractNotSupported@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_SchedulerTime@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_SchedulerTime@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteFile@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteFile@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckStoreACL@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckStoreACL@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Monitoring_LogEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Monitoring_LogEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_BlockInfo@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_BlockInfo@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_Imp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_Imp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_SyncHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Threads_SyncHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessTimes@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ProcessContract_ProcessTimes@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_DateTime@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_DateTime@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_STMWord@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_STMWord@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_GetDisplayDimensions@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_GetDisplayDimensions@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_GetChannels@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_ChannelContract_GetChannels@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Close@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Close@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PTE@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PTE@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_EnumerationEntries@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_EnumerationEntries@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64VectorRegisters@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64VectorRegisters@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap_LastNode@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_PhysicalHeap_LastNode@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KdControlSet@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86KdControlSet@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_CR4@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_CR4@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_CR0@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_CR0@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Fp387Register@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86Fp387Register@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_CR3@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_CR3@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_StateStack@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_StateStack@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateDirectoryReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakCreateDirectoryReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakRegister@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakRegister@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_FreeMemoryDistribution_tmpFreeBlockEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Eventing_FreeMemoryDistribution_tmpFreeBlockEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86XmmSaveArea@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X86XmmSaveArea@@SIXPAU1@0@Z
+warning: Type Function({Class(System.Object), uintPtr, int32, Class(Microsoft.Singularity.Eventing.EventDescriptor), Class(Microsoft.Singularity.Eventing.QueryBuffer), TracedPtr(Class(Microsoft.Singularity.Eventing.EnumerationContext))}->bool)BartokCall not found
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_InstructionStream@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_InstructionStream@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Hal_HalMemory_ProcessorAffinity@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Hal_HalMemory_ProcessorAffinity@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteFileReparse@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_NakDeleteFileReparse@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Read@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_FileContract_Read@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckGetAttributes@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_AckGetAttributes@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Extending_ExtensionContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceContract_Exp@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_ServiceContract_Exp@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_Endpoint@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Channels_Endpoint@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_EndpointCore@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_EndpointCore@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_MemoryAccounting_RuntimeTypeAccounting@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_MemoryAccounting_RuntimeTypeAccounting@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_NakConnect@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_IoMemFSContract_NakConnect@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakCursorHide@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakCursorHide@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Gdte@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_Gdte@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_RuntimeArgumentHandle@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_RuntimeArgumentHandle@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Write@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_Write@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CalleeSaveRegisters@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_GCs_CalleeSaveRegisters@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64Descriptor@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_X64Descriptor@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_QueryACL@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_QueryACL@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_SectionHeader@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Loader_SectionHeader@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDPT@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Isal_IX_PDPT@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_EnumerationRecords@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_EnumerationRecords@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_GcStress@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_GcStress@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Ready@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Stress_Contracts_StressContract_Ready@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_MemoryInfoService@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_V1_Services_MemoryInfoService@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_BlocksAndTotal@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_BlocksAndTotal@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKSpecialRegisters@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Kd_ArmKSpecialRegisters@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakCursorFlash@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Io_ConsoleDeviceContract_NakCursorFlash@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Register@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Directory_DirectoryServiceContract_Register@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_HandleTable_HandleEntry@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Memory_HandleTable_HandleEntry@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetFreeMemory@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_Microsoft_Singularity_Diagnostics_Contracts_MemoryContract_GetFreeMemory@@SIXPAU1@0@Z
+multiple defs for ?m_StructCopy@Struct_System_ReadEnlistmentLog_Location@@SIXPAU1@PAU1@@Z
+multiple defs for ?m_StructCopy@Struct_System_ReadEnlistmentLog_Location@@SIXPAU1@0@Z
+      28.072:  finished code generation
+      28.072:  creating exception table
+EHTable saw 98424 blocks.
+       and emitted 8254 entries.
+      28.072:  finished creating exception table
+      28.120:  creating gc tables
+gckey4	Program name	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	>= 19
+	8788	5885	2731	2177	2197	1596	1041	746	585	502	372	261	193	229	169	155	165	109	131	1824
+	17	157	320	401	598	518	442	383	342	307	220	170	131	143	108	94	104	80	73	817
+                Total size of tables: 227676 bytes                  Call site set table size:              119432 bytes
+                  Call site descriptor index table size: 59712 bytes
+                  Activation descriptor table size:      21700 bytes
+                  Full activation descriptor sizes:      26832 bytes
+                  Auxiliary sparse table sizes:          0 bytes
+227676	1843128	119432	59712	21700	26832	64046	29856	3610	1815	0
+gckey2	Program name	total size	code size	call site table	call site descriptor index table	activation descriptor table	full activation descriptor table	call site count	call site set count	compact descriptors	full descriptors	auxiliary sparse tables
+      28.344:  finished gc tables
+multiple defs for ?c_MonitorEMUAllocCount@Struct_System_MultiUseWord@@2HA
+multiple defs for ?c_InflationToCount@Struct_System_MultiUseWord@@2PAUClassVector_int32@@A
+multiple defs for ?c_FullEMUAllocCount@Struct_System_MultiUseWord@@2HA
+multiple defs for ?c_emuGCListAllTail@Struct_System_MultiUseWord@@2IA
+multiple defs for ?c_InflationFromCount@Struct_System_MultiUseWord@@2PAUClassVector_int32@@A
+multiple defs for ?c_emuGCList@Struct_System_MultiUseWord@@2IA
+multiple defs for ?c_ReInflationCount@Struct_System_MultiUseWord@@2HA
+multiple defs for ?c_DeadEMUsCount@Struct_System_MultiUseWord@@2HA
+multiple defs for ?c_AbandonedEMUsCount@Struct_System_MultiUseWord@@2HA
+multiple defs for ?c_emuGCListShadow@Struct_System_MultiUseWord@@2IA
+multiple defs for ?c_emuGCListAll@Struct_System_MultiUseWord@@2IA
+Total number of Symbols 107554
+Relocation Table: 80401
+Relocation Table: 1156
+Relocation Table: 4028
+Relocation Table: 1228
+Relocation Table: 1815
+Relocation Table: 30849
+Relocation Table: 14834
+Relocation Table: 16258
+Total number of Symbols 2
+
+Summary of backend activity
+---------------------------
+conversion to MIR:
+    early convert for instanceOfExact: 548
+    early convert for instanceOfNonNullExact: 0
+    early convert for instanceOfSimple: 28
+    early convert for instanceOfNonNullSimple: 2
+    early convert for instanceOfComplex: 44
+    early convert for instanceOfNonNullComplex: 0
+    early convert for checkCastExact: 230
+    early convert for checkCastNonNullExact: 3
+    early convert for checkCastSimple: 45
+    early convert for checkCastNonNullSimple: 0
+    early convert for checkCastComplex: 4
+    early convert for checkCastNonNullComplex: 0
+    instructions created: 628029
+    write barrier ops: 0
+    write barrier ops avoided: 0
+optimization of MIR:
+    propagated constants into 14272 instructions
+    conditional branch tests improved: 9175
+    jumps to control instructions eliminated: 0
+    conditional branches to jumps eliminated: 8312
+    jumps to following blocks suppressed: 38886
+    redundant test/cmp instructions eliminated: 5131
+    instructions eliminated by 2->1 compaction: 53550
+    instructions eliminated by 3->1 compaction: 1662
+    LEA result propagated into EAs: 16872
+register allocation:
+    functions processed: 10737
+    functions omit FP: 0
+    instructions added by expanding call/return: 184846
+    tmp reg saves avoided: 0/10737 (0%)
+    copy prop: 213458
+    dead instructions eliminated: 169654/812875 (20%)
+    moves avoided: 31597/812875 (3%)
+    redundant spill stores removed: 1
+    spill loads removed by copy prop: 0
+    spill load/stores turned into memory operands: 0
+    regs allocated: 135880
+    regs with preferences: 56474
+    regs preferred successfully: 38705/56474 (68%)
+    regs with available neighbor preferences: 12655/135880 (9%)
+    regs with conflicts between own and neighbor preferences: 693
+    regs where neighbors prefer all available registers: 833
+    largest stack frame: 2928
+Size of read-only data: 350484 bytes
+    GC stack walk table size: 227676
+    GC static data table size: 18924
+    GC instance data table size: 196
+    Exception table size: 99072
+    Jump tables size: 4616
+Size of read-write data: 639523 bytes
+    VTable sizes: 157257
+    String sizes: 314856
+    Statically-allocated arrays 0
+    Static field sizes: 29436
+    System.Type sizes: 107280
+    InterfaceInfo size: 744
+    System.Type[] sizes: 592
+    Constant sizes: 26754
+    Assembly information size: 2604
+    Assembly manifest resource sizes: 0
+Size of code: 1826492 bytes
+Overall size: 2816499 bytes
+---------------------------
+      28.666:  finished compiling
+      28.666:  pre-linking bartok object files
+open file C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.native\kernel_info.obj
+missing symbol ExceptionTableBase
+missing symbol ExceptionTableBound
+missing symbol returnAddressToCallSiteSetNumbers
+missing symbol callSiteSetCount
+missing symbol callSetSiteNumberToIndex
+missing symbol activationDescriptorTable
+missing symbol staticDataPointerBitMap
+missing symbol c_dataSectionBase@Class_System_GCs_StaticData
+missing symbol c_dataSectionEnd@Class_System_GCs_StaticData
+missing symbol c_roDataSectionBase@Class_System_GCs_StaticData
+missing symbol c_roDataSectionEnd@Class_System_GCs_StaticData
+missing symbol C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.native\kernel_CodeBase
+Total number of Symbols 66
+Relocation Table: 2
+Relocation Table: 8
+Relocation Table: 2
+Relocation Table: 4
+Relocation Table: 4
+Relocation Table: 2
+      28.681:  finished pre-linking

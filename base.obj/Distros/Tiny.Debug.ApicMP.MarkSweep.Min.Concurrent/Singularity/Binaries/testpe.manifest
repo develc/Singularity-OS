@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application name="testpe" runtime="Full" processes="1">
+  <process id="0" main="true" executable="true" categories="0" path="testpe.x86" />
+</application>

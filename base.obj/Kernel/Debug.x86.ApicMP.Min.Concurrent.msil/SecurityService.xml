@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>SecurityService</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Security.Principal">
+      <summary>
+A Principal struct is representation of a principal.
+The security service evaluates ACLs and
+    retrieve names associated with principals.  See the
+    security library.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.SecurityDiagnostics">
+      <summary>
+The implementation of the <code>SecurityService</code> state machine.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.SecurityDiagnostics.channel">
+      <summary>
+The exporting endpoint of the security service.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Security.SecurityDiagnostics.Start">
+      <summary>
+Starts the service and registers it in the namespace
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Security.SecurityDiagnostics.StateMachine">
+      <summary>
+State machine for the security namespace
+</summary>
+    </member>
+  </members>
+</doc>

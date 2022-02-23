@@ -1,0 +1,392 @@
+Microsoft (R) Macro Assembler Version 8.00.50727.762	    02/23/22 18:37:45
+UsbFat16_BS.asm						     Page 1 - 1
+
+
+				;; ----------------------------------------------------------------------------
+				;;
+				;;  Copyright (c) Microsoft Corporation.  All rights reserved.
+				;;
+				;; ----------------------------------------------------------------------------
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Concerns
+				;  1 - there is no error checking on the int13 calls
+				;  2 - we assume that the disk is FAT16, and that the parameters in the BPB are correct.
+				;  3 - There is a risk that the LBA->CHS conversion will overflow
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Constants
+
+ = 7C00				BootSecOrigin       EQU     07c00h      ; the BIOS always puts the boot sector here
+ = FFF8				EndOfClusterMarker  EQU     0FFF8h      ; End of cluster is here or higher
+
+				; a little trickery here:  Inside the Boot Sector data structure, there several bytes that we never use.
+				; whether the real file system uses them or not, we don't need them, and we could use the space for locals.
+
+ = OemName			FirstDataSector     EQU     OemName
+ = OemName+2			RootDirSectors      EQU     OemName+2
+ = OemName+4			RootDirStart        EQU     OemName+4
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Directives
+
+				.model tiny
+				.686p
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Begin Code segment
+
+ 0000				_TEXT SEGMENT use16 ; 16-bit code segment
+ 0000				.code
+				ORG     0h                          ; BIOS puts us at 07c0h:0000
+
+ 0000				start:
+
+				    ; standard boot loader procedcure is to jump over the BPB and BS data structures, then nop
+ 0000  EB 3C			    jmp short bootloader
+ 0002  90			    nop
+
+				;;; Example BPB and BS for Singularity, assuming a 64MB disk.  Installers must NEVER copy these 59 bytes - use what the HD has...
+ 0003				BPB:
+ 0003 4953			    OemName         DW      'IS'        ; setting up the first 8 bytes like this lets us address them in other ways
+ 0005  4E 47 55 4C 41 52	                    DB      'NGULAR'
+ 000B 0200			    BytesPerSector  DW      512
+ 000D 04			    SecsPerClust    DB      4
+ 000E 0004			    ReservedSecs    DW      4
+ 0010 02			    NumFats         DB      2
+ 0011 0200			    RootDirEntries  DW      512
+ 0013 0000			    TotalSectors    DW      0
+ 0015 F8			    MediaByte       DB      0F8H
+ 0016 00FA			    NumFatSecs      DW      00fah
+ 0018 003F			    SecPerTrack     DW      03fh
+ 001A 00FF			    NumHeads        DW      00FFh
+ 001C 00000020			    HiddenSecs      DD      020h
+ 0020 0003E7E0			    BigTotalSecs    DD      03e7e0h
+ 0024 00			    BootDrv         DB      00h
+ 0025 00			    BSReserved1     DB      0h
+ 0026 29			    ExtBootSig      DB      29h
+ 0027 00000000			    SerialNum       DD      0
+ 002B 53 49 4E 47 55 4C		    VolumeLabel     DB      'SINGULARITY'
+       41 52 49 54 59
+ 0036 46 41 54 31 36 20		    FatId           DB      'FAT16   '
+       20 20
+
+ 003E				bootloader:
+
+ 003E  EA			    db      0eah                    ; jmp far
+ 003F  0043 R			    dw      OFFSET Step1            ; offset
+ 0041  07C0			    dw      007c0h                  ; segment
+				        
+ 0043				Step1:    ; set CS,DS,SS,ES segments to 07c0h, set stack to 07c0h:0400h
+ 0043  8C C9			    mov     cx, cs
+ 0045  8E D1			    mov     ss, cx
+ 0047  BC 0400			    mov     sp, 0400h
+ 004A  8E C1			    mov     es, cx
+ 004C  8E D9			    mov     ds, cx
+ 004E  8B EC			    mov     bp, sp
+
+ 0050				Step2:    ; Save the boot drive (dl holds it on boot)
+ 0050  88 16 0024 R		    mov     [BootDrv], dl
+ 0054  8A C2			    mov     al, dl
+				    
+ 0056				Step3:    ; Clear the Screen
+ 0056  B8 0002			    mov     ax, 02h
+ 0059  CD 10			    int     010h
+
+ 005B				Step4:    ; Compute the First Data Sector of the FAT
+ 005B  66| 0F B7 06 0011 R	    movzx   eax, [RootDirEntries]
+ 0061  66| C1 E0 05		    shl     eax, 5                  ; (assume no overflow)
+ 0065  66| 0F B7 0E 000B R	    movzx   ecx, [BytesPerSector]
+ 006B  66| 03 C1		    add     eax, ecx
+ 006E  66| 48			    dec     eax
+ 0070  66| F7 F1		    div     ecx                     ; (discard remainder)
+ 0073  A3 0005 R		    mov     [RootDirSectors], ax    ; RootDirSectors = ((RootDirEntries * 32) + (BytesPerSector - 1)) / BytesPerSector
+
+ 0076  66| 0F B6 06 000D R	    movzx   eax, [SecsPerClust]
+ 007C  66| F7 E1		    mul     ecx
+ 007F  66| C1 E8 04		    shr     eax, 4
+ 0083  50			    push    ax                      ; save the cluster size on the stack
+
+ 0084  66| 0F B6 06 0010 R	    movzx   eax, [NumFats]
+ 008A  F7 26 0016 R		    mul     [NumFatSecs]            ; (assume no overflow)
+ 008E  03 06 000E R		    add     ax, [ReservedSecs]
+ 0092  A3 0007 R		    mov     [RootDirStart], ax      ; RootDirStart = ReservedSecs + (NumFats * NumFatSecs)
+
+ 0095  03 06 0005 R		    add     ax, [RootDirSectors]
+ 0099  A3 0003 R		    mov     [FirstDataSector], ax   ; FirstDataSector = RootDirStart + RootDirSectors
+
+
+ 009C				Step5:    ; Search the Root Directory for 'SINGLDR ', find its starting cluster
+
+ 009C  8B 16 0005 R		    mov     dx, [RootDirSectors]    ; set counter for # sectors in root dir
+
+ 00A0  B8 4000			    mov     ax, 4000h
+ 00A3  8E C0			    mov     es, ax                  ; set up ES for a disk transfer
+
+ 00A5  66| 0F B7 06 0007 R	    movzx   eax, [RootDirStart]     ; compute true first sector of root dir
+
+ 00AB				LoadNextSector:
+ 00AB  33 DB			    xor     bx,bx
+ 00AD  E8 00A2			    call    ReadDiskCHS             ; read sector eax to es:bx
+
+ 00B0  8B 1E 000B R		    mov     bx, [BytesPerSector]    ; set a counter for how many directory entries we will check (32 bytes per entry)
+ 00B4  33 FF			    xor     di, di                  ; prep for comparison between [ds:si] (search string) and [es:di] (sector data)
+
+ 00B6				CompareDirEntries:
+ 00B6  BE 01A6 R		    mov     si, OFFSET Stage2File   ; [ds:si] points to the string we are looking for...
+ 00B9  B9 000B			    mov     cx, 11                  ; we are matching an 11-character file name
+ 00BC  F3/ A6			    repe    cmpsb
+ 00BE  74 14			    je      FoundMatch
+ 00C0  03 F9			    add     di, cx
+ 00C2  83 C7 15			    add     di, 21                  ; move to next dir entry, but first make sure we aren't at the last entry!
+ 00C5  83 EB 20			    sub     bx, 32
+ 00C8  75 EC			    jnz     CompareDirEntries;
+
+ 00CA  66| 40			    inc     eax                     ; prep to read next entry
+ 00CC  66| 4A			    dec     edx
+ 00CE  0F 84 00B2		    jz      FileNotFoundError
+ 00D2  EB D7			    jmp     LoadNextSector
+
+ 00D4				FoundMatch:
+				                                    ; es:[di] points to 12th byte of the 32-byte 
+				                                    ; directory entry for the 2nd stage boot loader file
+ 00D4  26: 8B 45 0F		    mov     ax, es:[di+15]          ; read the cluster at offset 26
+
+
+ 00D8				Step6:    ; Load the file whose first cluster is ax to 57c0:0000
+
+ 00D8  B9 57C0			    mov     cx, 057c0h
+ 00DB  8E C1			    mov     es, cx
+
+ 00DD				DoRead:
+ 00DD  E8 0048			    call    ReadCluster
+
+ 00E0  06			    push    es
+ 00E1  B9 4000			    mov     cx, 04000h              ; use different segment to find next cluster
+ 00E4  8E C1			    mov     es, cx
+ 00E6  E8 0022			    call    CalcNextCluster
+
+ 00E9  59			    pop     cx
+ 00EA  03 4E FE			    add     cx, [bp-2]
+ 00ED  8E C1			    mov     es, cx
+
+ 00EF  83 F8 F8			    cmp     ax, EndOfClusterMarker
+ 00F2  72 E9			    jb      DoRead
+
+ 00F4				Step7:    ; Transfer Control to the boot loader file, which we stored at 5000:7c00
+
+ 00F4  66| 0F B6 16 0024 R	    movzx   edx, [BootDrv]
+ 00FA  66| 52			    push    edx                     ; SINGLDR will need to know the boot drive #
+ 00FC  66| 68 00005544		    pushd   05544h                  ; UD boot signature (UsbDisk)
+
+ 0102  9A			    db      09ah                    ; emit a long jump to 5000:7c00
+ 0103  50007C00			    dd      50007c00h
+
+ 0107  B0 2A			    mov     al, "*"
+ 0109  EB 7D			    jmp     PrintError
+				        
+				;;;;;;;;;;;;;;;;;;;;
+				; CalcNextCluster
+				;
+				; Inputs:       ax      = current cluster
+				;               es      = target segment for disk read (es:00)
+				; Operation:    Read the FAT, lookup the value for the cluster in ax, and return it as ax
+
+ 010B				CalcNextCluster PROC NEAR
+ 010B  66| 25 0000FFFF		    and     eax, 0FFFFh             ; clear top half of eax
+ 0111  D1 E0			    shl     ax, 1
+ 0113  33 D2			    xor     dx, dx                  ; clear top half of dividend
+ 0115  F7 36 000B R		    div     [BytesPerSector]
+ 0119  52			    push    dx                      ; save remainder for later - it is the offset
+ 011A  03 06 000E R		    add     ax, [ReservedSecs]      ; eax has the sector to read
+
+				    ; Call ReadDiskCHS to load sector eax at es:bx
+ 011E  33 DB			    xor     bx, bx
+ 0120  E8 002F			    call    ReadDiskCHS
+
+				    ; read cluster# at the offset
+ 0123  5B			    pop     bx                      ; pop the offset
+ 0124  26: 8B 07		    mov     ax, es:[bx]             ; get the value, put it in ax
+ 0127  C3			    ret
+ 0128				CalcNextCluster ENDP
+
+				;;;;;;;;;;;;;;;;;;;;
+				; ReadCluster
+				;
+				; Inputs:       ax      = cluster number to read
+				;               es      = segment into which we will read (at es:0000)
+				; Operation:    Read a cluster from the HD, using ReadDisk as a subroutine
+
+ 0128				ReadCluster PROC NEAR
+ 0128  66| 60			    pushad
+
+				    ; compute the sector that starts the cluster
+ 012A  33 DB			    xor     bx, bx                  ; initially write to es:0000
+ 012C  66| 25 0000FFFF		    and     eax, 0FFFFh             ; clear top half of eax for safety.
+ 0132  66| 83 E8 02		    sub     eax, 2
+ 0136  66| 0F B6 0E 000D R	    movzx   ecx, [SecsPerClust]     ; cx = sectors to load (this always read full clusters)
+ 013C  66| F7 E1		    mul     ecx
+ 013F  03 06 0003 R		    add     ax, [FirstDataSector]   ; eax holds the sector to read
+ 0143				LoadSector:
+ 0143  E8 000C			    call    ReadDiskCHS
+ 0146  03 1E 000B R		    add     bx, [BytesPerSector]
+ 014A  66| 40			    inc     eax
+ 014C  49			    dec     cx
+ 014D  75 F4			    jnz     LoadSector
+
+ 014F  66| 61			    popad
+ 0151  C3			    ret
+ 0152				ReadCluster ENDP
+
+				;;;;;;;;;;;;;;;;;;;;
+				; ReadDiskCHS   read one sector as indicated by eax to es:bx
+				;
+				; Inputs:       eax     = LBA sector to read
+				;               es:bx   = destination address
+				;
+				; Assumptions:  1 - assumes LBA is not beyond CHS representation
+
+ 0152				ReadDiskCHS PROC NEAR
+ 0152  66| 60			    pushad
+
+ 0154  66| 33 D2		    xor     edx, edx                ; edx:eax = absolute sector number
+ 0157  66| 0F B7 0E 0018 R	    movzx   ecx, [SecPerTrack]      ; ecx = sectors per track
+ 015D  66| F7 F1		    div     ecx                     ; eax = track, edx = sector within track (0-62)
+ 0160  FE C2			    inc     dl                      ; dl = sector within track (1-63)
+ 0162  8A CA			    mov     cl, dl                  ; cl = sector within track
+ 0164  66| 8B D0		    mov     edx, eax
+ 0167  66| C1 EA 10		    shr     edx, 16                 ; dx:ax = track
+ 016B  F7 36 001A R		    div     [NumHeads]              ; ax = cylinder (0-1023), dx = head (0-255)
+ 016F  86 D6			    xchg    dl, dh                  ; dh = head
+ 0171  8A 16 0024 R		    mov     dl, [BootDrv]           ; dl = int13 unit #
+ 0175  8A E8			    mov     ch, al                  ; ch = bits 0-7 of cylinder
+ 0177  C0 E4 06			    shl     ah, 6
+ 017A  0A CC			    or      cl, ah                  ; bits 6-7 of cl = bits 8-9 of cylinder
+ 017C  B8 0201			    mov     ax, 201h                ; read 1 sector
+ 017F  CD 13			    int     13h
+
+ 0181  66| 61			    popad
+ 0183  C3			    ret
+ 0184				ReadDiskCHS ENDP
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Error Routines (these are jump points that never return)
+
+ 0184				FileNotFoundError:
+ 0184  B0 46			    mov     al, "F"
+ 0186  EB 00			    jmp     PrintError
+ 0188				PrintError:
+ 0188  BB 0007			    mov     bx, 07h                 ; normal attribute
+ 018B  B4 0E			    mov     ah, 0eh                 ; default print 1 char
+ 018D  B9 0006			    mov     cx, 6
+ 0190  BE 01A0 R		    mov     si, offset ErrorMsg
+ 0193  CD 10			    int     10h
+ 0195				printnext:
+ 0195  AC			    lodsb
+ 0196  0A C0			    or      al, al
+ 0198  74 04			    jz      infloop
+ 019A  CD 10			    int     10h
+ 019C  EB F7			    jmp     printnext
+ 019E				infloop:
+ 019E  EB FE			    jmp     infloop
+
+				;;;;;;;;;;;;;;;;;;;;
+				; String Constants
+
+ 01A0 20 45 72 72 6F 72		    ErrorMsg    DB  " Error"
+ 01A6 53 49 4E 47 4C 44		    Stage2File  DB  "SINGLDR    "   ; spaces are important for FAT file name determination.  Compare all 11 bytes!
+       52 20 20 20 20
+ 01B1  00			    DB 0
+				        
+				;;;;;;;;;;;;;;;;;;;;
+				; Boot Sector Signature
+
+				    ORG     510
+ 01FE  AA55			    DW      0AA55h
+				    
+				end start
+Microsoft (R) Macro Assembler Version 8.00.50727.762	    02/23/22 18:37:45
+UsbFat16_BS.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_TEXT  . . . . . . . . . . . . .	16 Bit	 0200	  Word	  Public  'CODE'	
+_DATA  . . . . . . . . . . . . .	16 Bit	 0000	  Word	  Public  'DATA'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+CalcNextCluster  . . . . . . . .	P Near	 010B	  _TEXT	Length= 001D Public
+ReadCluster  . . . . . . . . . .	P Near	 0128	  _TEXT	Length= 002A Public
+  LoadSector . . . . . . . . . .	L Near	 0143	  _TEXT	
+ReadDiskCHS  . . . . . . . . . .	P Near	 0152	  _TEXT	Length= 0032 Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0001h	 
+@code  . . . . . . . . . . . . .	Text   	 DGROUP
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+BPB  . . . . . . . . . . . . . .	L Near	 0003	  _TEXT	
+BSReserved1  . . . . . . . . . .	Byte	 0025	  _TEXT	
+BigTotalSecs . . . . . . . . . .	DWord	 0020	  _TEXT	
+BootDrv  . . . . . . . . . . . .	Byte	 0024	  _TEXT	
+BootSecOrigin  . . . . . . . . .	Number	 7C00h	 
+BytesPerSector . . . . . . . . .	Word	 000B	  _TEXT	
+CompareDirEntries  . . . . . . .	L Near	 00B6	  _TEXT	
+DoRead . . . . . . . . . . . . .	L Near	 00DD	  _TEXT	
+EndOfClusterMarker . . . . . . .	Number	 FFF8h	 
+ErrorMsg . . . . . . . . . . . .	Byte	 01A0	  _TEXT	
+ExtBootSig . . . . . . . . . . .	Byte	 0026	  _TEXT	
+FatId  . . . . . . . . . . . . .	Byte	 0036	  _TEXT	
+FileNotFoundError  . . . . . . .	L Near	 0184	  _TEXT	
+FirstDataSector  . . . . . . . .	Text   	 OemName
+FoundMatch . . . . . . . . . . .	L Near	 00D4	  _TEXT	
+HiddenSecs . . . . . . . . . . .	DWord	 001C	  _TEXT	
+LoadNextSector . . . . . . . . .	L Near	 00AB	  _TEXT	
+MediaByte  . . . . . . . . . . .	Byte	 0015	  _TEXT	
+NumFatSecs . . . . . . . . . . .	Word	 0016	  _TEXT	
+NumFats  . . . . . . . . . . . .	Byte	 0010	  _TEXT	
+NumHeads . . . . . . . . . . . .	Word	 001A	  _TEXT	
+OemName  . . . . . . . . . . . .	Word	 0003	  _TEXT	
+PrintError . . . . . . . . . . .	L Near	 0188	  _TEXT	
+ReservedSecs . . . . . . . . . .	Word	 000E	  _TEXT	
+RootDirEntries . . . . . . . . .	Word	 0011	  _TEXT	
+RootDirSectors . . . . . . . . .	Text   	 OemName+2
+RootDirStart . . . . . . . . . .	Text   	 OemName+4
+SecPerTrack  . . . . . . . . . .	Word	 0018	  _TEXT	
+SecsPerClust . . . . . . . . . .	Byte	 000D	  _TEXT	
+SerialNum  . . . . . . . . . . .	DWord	 0027	  _TEXT	
+Stage2File . . . . . . . . . . .	Byte	 01A6	  _TEXT	
+Step1  . . . . . . . . . . . . .	L Near	 0043	  _TEXT	
+Step2  . . . . . . . . . . . . .	L Near	 0050	  _TEXT	
+Step3  . . . . . . . . . . . . .	L Near	 0056	  _TEXT	
+Step4  . . . . . . . . . . . . .	L Near	 005B	  _TEXT	
+Step5  . . . . . . . . . . . . .	L Near	 009C	  _TEXT	
+Step6  . . . . . . . . . . . . .	L Near	 00D8	  _TEXT	
+Step7  . . . . . . . . . . . . .	L Near	 00F4	  _TEXT	
+TotalSectors . . . . . . . . . .	Word	 0013	  _TEXT	
+VolumeLabel  . . . . . . . . . .	Byte	 002B	  _TEXT	
+bootloader . . . . . . . . . . .	L Near	 003E	  _TEXT	
+infloop  . . . . . . . . . . . .	L Near	 019E	  _TEXT	
+printnext  . . . . . . . . . . .	L Near	 0195	  _TEXT	
+start  . . . . . . . . . . . . .	L Near	 0000	  _TEXT	
+
+	   0 Warnings
+	   0 Errors

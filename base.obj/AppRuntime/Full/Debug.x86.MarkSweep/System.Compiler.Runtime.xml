@@ -1,0 +1,701 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Compiler.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:System.Compiler.AnonymousAttribute">
+            <summary>
+            Tells a sympathetic compiler that the name of the entity bearing this attribute should be suppressed. When applied to a class or enum,
+            this means that the members of the class or enum should be injected into the same scope as would have contained the class/enum name.
+            When applied to a field or property, it means that the members of structure of the type of the field/property should be visible
+            without qualification by the field/property name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.NullableType">
+            <summary>
+            Used as an optional modifier on type parameter occurrences to override any non-null
+            instantiations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.AssertHelpers.AssertStatement(System.String)">
+            <summary>
+            Is deserialized by Boogie.
+            </summary>
+            <param name="condition">Serialized condition</param>
+        </member>
+        <member name="M:Microsoft.Contracts.AssertHelpers.AssertStatement(System.String,System.String)">
+            <summary>
+            Is deserialized by Boogie.
+            </summary>
+            <param name="condition">Serialized condition</param>
+            <param name="messageForUser">Text to use in error messages</param>
+        </member>
+        <member name="M:Microsoft.Contracts.AssertHelpers.LoopInvariant(System.String)">
+            <summary>
+            Is deserialized by Boogie.
+            </summary>
+            <param name="condition">Serialized condition</param>
+        </member>
+        <member name="M:Microsoft.Contracts.AssertHelpers.LoopInvariant(System.String,System.String)">
+            <summary>
+            Is deserialized by Boogie.
+            </summary>
+            <param name="condition">Serialized condition</param>
+            <param name="messageForUser">Text to use in error messages</param>
+        </member>
+        <member name="M:Microsoft.Contracts.AssertHelpers.AssumeStatement(System.String)">
+            <summary>
+            Is deserialized by Boogie.
+            </summary>
+            <param name="condition">Serialized condition</param>
+        </member>
+        <member name="T:Microsoft.Contracts.UnreachableException">
+            <summary>
+            The Spec# compiler emits "throw new UnreachableException();" statements in places that it knows are unreachable, but that are considered reachable by the CLR verifier.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.InvalidContractException">
+            <summary>
+            Thrown when evaluation of a contract clause throws an exception.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.AttributeWithContext">
+            <summary>
+            We serialize constructs like Requires as custom attributes. But then there
+            is the problem of how to serialize custom attributes that have been put onto
+            such constructs. Since nested attributes are not allowed, we encode them
+            by serializing the nested attributes and then emitting an attribute of type
+            NestedAttributeCount with the number of nested attributes. That way, upon
+            deserialization, as long as the order of the serialized attributes can be
+            depended upon, we can reconstitute the nested attributes.
+            So the Spec# source:
+            "[A][B] requires P"
+            would be serialized as
+            "A(...), B(...), NestedAttributeCount(2), Requires(P,...)".
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.StateIndependentAttribute">
+            
+        </member>
+        <member name="T:Microsoft.Contracts.ContractMarkers">
+            <summary>
+            Used to mark the beginning of contracts so that static verification can recognize them
+            (either to ignore them or to treat them specially)
+            </summary>
+        </member>
+        <member name="T:System.Compiler.UnmanagedStructTemplateParameterAttribute">
+            <summary>
+            This attribute marks a template parameter T as being instantiable only with unmanaged structs
+            thereby allowing types such as T* in the generic code.
+            It needs to be present under Everett and Whidbey, since MSIL 2.0 does not have a way to encode
+            this AFAIK.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.InitGuardSetsDelegate">
+            <summary>
+            Called by a <see cref="T:Microsoft.Contracts.Guard"/> object to initialize its <i>guard sets</i>.
+            </summary>
+            <remarks>
+            This delegate should not call any methods other than
+            <see cref="M:Microsoft.Contracts.Guard.AddRep(Microsoft.Contracts.Guard)"/>,
+            <see cref="M:Microsoft.Contracts.Guard.AddRepObject(System.Object)"/>,
+            <see cref="M:Microsoft.Contracts.Guard.AddImmutableCertificate(Microsoft.Contracts.Guard)"/>,
+            <see cref="M:Microsoft.Contracts.Guard.AddObjectImmutableCertificate(System.Object)"/>,
+            <see cref="M:Microsoft.Contracts.Guard.AddLockProtectedCertificate(Microsoft.Contracts.Guard)"/>, and
+            <see cref="M:Microsoft.Contracts.Guard.AddObjectLockProtectedCertificate(System.Object)"/>.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.CheckInvariantDelegate">
+            <summary>
+            Called by a <see cref="T:Microsoft.Contracts.Guard"/> object to check that its invariant holds, when it ends writing.
+            </summary>
+            <param name="throwException">If true and the invariant does not hold, throws an exception. If false and the invariant does not hold, returns false.</param>
+        </member>
+        <member name="T:Microsoft.Contracts.ThreadConditionDelegate">
+            <summary>
+            Called by the <see cref="M:Microsoft.Contracts.Guard.AcquireForReading(Microsoft.Contracts.ThreadConditionDelegate)"/> and <see cref="M:Microsoft.Contracts.Guard.AcquireForWriting(Microsoft.Contracts.ThreadConditionDelegate)"/> methods
+            to decide whether to return or to wait.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.GuardThreadStart">
+            <summary>
+            Called by the <see cref="T:System.Threading.ThreadStart"/> delegate returned by the
+            <see cref="M:Microsoft.Contracts.Guard.CreateThreadStart(Microsoft.Contracts.GuardThreadStart,Microsoft.Contracts.SharingMode)"/> method.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.FrameGuardGetter">
+            <summary>
+            Delegate that grants access to the frame guards of the objects of a particular type.
+            </summary>
+            <param name="o">Object whose frame guard to return</param>
+            <returns>The frame guard of <paramref name="o"/></returns>
+        </member>
+        <member name="T:Microsoft.Contracts.GuardException">
+            <summary>
+            Thrown by a <see cref="T:Microsoft.Contracts.Guard"/> object whenever a race condition, an ownership violation, or an invariant violation is
+            detected.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.ThreadCapability">
+            <summary>
+            Indicates the capability of a thread with respect to a guard (and the resource it protects).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.ThreadCapability.None">
+            <summary>
+            The thread cannot access the resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.ThreadCapability.Readable">
+            <summary>
+            The thread can read the resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.ThreadCapability.Writable">
+            <summary>
+            The thread can read and write the resource.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.ThreadActivity">
+            <summary>
+            Indicates the activity being performed by a thread on a guard (and the resource it protects).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.ThreadActivity.None">
+            <summary>
+            The thread is not acting on the resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.ThreadActivity.Reading">
+            <summary>
+            The thread is reading the resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.ThreadActivity.Writing">
+            <summary>
+            The thread is writing the resource.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.SharingMode">
+            <summary>
+            Indicates how a thread shares a guard (and the resource it protects).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.SharingMode.Unshared">
+            <summary>
+            The thread does not share the resource.
+            </summary>
+            <remarks>
+            Either the object itself is unshared, or the object is shared but not with the thread.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Contracts.SharingMode.LockProtected">
+            <summary>
+            The thread shares the lock-protected resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.SharingMode.Immutable">
+            <summary>
+            The thread shares the immutable resource.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.Guard">
+            <summary>
+            Helps guard an object or other resource against race conditions, enforce ownership, and enforce invariants.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.Guard.localData">
+            <summary>
+            Thread-local data indicating the sharing mode, the capability and the activity of the current thread with respect
+            to this object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.#ctor(Microsoft.Contracts.InitGuardSetsDelegate,Microsoft.Contracts.CheckInvariantDelegate)">
+            <summary>
+            Creates a new guard object.
+            </summary>
+            <remarks>
+            Initially, the object is unshared;
+            the current thread can write and is writing the guard;
+            and no other thread can access the guard.
+            </remarks>
+            <param name="initGuardSets">A delegate that is called to initialize the guard's <i>guard sets</i>.</param>
+            <param name="checkInvariant">A delegate that is called to check the guard's invariant.</param>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.StartReading">
+            <summary>
+            Starts reading the resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.StartReadingTransitively">
+            <summary>
+            Starts reading the resource; starts reading any transitive owners as necessary.
+            </summary>
+            <returns>The furthest transitive owner that was not yet reading.</returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.EndReading">
+            <summary>
+            Ends reading the resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.EndReadingTransitively">
+            <summary>
+            Ends reading the resource; ends reading any transitive owned resources as necessary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.EndWriting">
+            <summary>
+            Ends writing the resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.StartWritingTransitively">
+            <summary>
+            Starts writing the resource; starts writing any transitive owners as necessary.
+            </summary>
+            <returns>The furthest transitive owner that was not yet writing.</returns>
+            
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.EndWritingTransitively">
+            <summary>
+            Ends writing the resource; ends writing any transitive reps as necessary.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.StartWriting">
+            <summary>
+            Starts writing the resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.Commit(Microsoft.Contracts.Guard)">
+            <summary>
+            Commits the resource.
+            </summary>
+            <param name="owner">The new owner.</param>
+            <returns>A new commitment.</returns>
+            <remarks>
+            A thread that calls this method afterwards no longer has access to the object.
+            Any thread can gain access to the object by calling the <see cref="M:Microsoft.Contracts.Guard.Commitment.Release"/> method on the new commitment.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddRep(Microsoft.Contracts.Guard)">
+            <summary>
+            Adds a resource to this guard's set of <i>reps</i>.
+            </summary>
+            <param name="rep">The resource being added.</param>
+            <remarks>
+            When a guard ends writing, it gains ownership of its reps.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddRepObject(System.Object)">
+            <summary>
+            Adds an object to this guard's set of <i>reps</i>.
+            </summary>
+            <param name="repObject">The object being added.</param>
+            <remarks>
+            If <paramref name="repObject"/> is not a guarded object, the method does nothing.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddRepFrame(System.Object,System.Type)">
+            <summary>
+            Adds a frame to this guard's set of <i>reps</i>.
+            </summary>
+            <remarks>
+            If <paramref name="repObject"/> is not a guarded object, the method does nothing.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.ShareLockProtected">
+            <summary>
+            Turns this unshared resource into a lock-protected resource.
+            </summary>
+            <remarks>
+            When this method returns, only the current thread shares the resource.
+            Share the resource with other threads using
+            the <see cref="M:Microsoft.Contracts.Guard.AddLockProtectedCertificate(Microsoft.Contracts.Guard)"/> method
+            or
+            the <see cref="M:Microsoft.Contracts.Guard.CreateThreadStartForLockProtected(Microsoft.Contracts.GuardThreadStart)"/> method.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.ShareImmutable">
+            <summary>
+            Turns the unshared resource into an immutable resource.
+            </summary>
+            <remarks>
+            When this method returns, only the current thread shares the resource.
+            Share the resource with other threads using
+            the <see cref="M:Microsoft.Contracts.Guard.AddImmutableCertificate(Microsoft.Contracts.Guard)"/> method
+            or the <see cref="M:Microsoft.Contracts.Guard.CreateThreadStartForImmutable(Microsoft.Contracts.GuardThreadStart)"/> method.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AcquireForWriting(Microsoft.Contracts.ThreadConditionDelegate)">
+            <summary>
+            Acquires exclusive access to this resource.
+            </summary>
+            <param name="condition">If not null, indicates when the thread can acquire the resource.</param>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.ReleaseForWriting">
+            <summary>
+            Relinquishes exclusive access to this resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AcquireForReading(Microsoft.Contracts.ThreadConditionDelegate)">
+            <summary>
+            Acquires read access to this resource.
+            </summary>
+            <param name="condition">If not null, indicates when the thread can acquire the resource.</param>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.ReleaseForReading">
+            <summary>
+            Relinquishes read access to this resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddLockProtectedCertificate(Microsoft.Contracts.Guard)">
+            <summary>
+            Adds a resource to this guard's set of <i>lock-protected certificates</i>.
+            </summary>
+            <param name="guard">The resource being added.</param>
+            <remarks>
+            When a thread subsequently starts reading or writing this guard,
+            the resource is shared with the thread.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddImmutableCertificate(Microsoft.Contracts.Guard)">
+            <summary>
+            Adds a resource to this guard's set of <i>immutable certificates</i>.
+            </summary>
+            <param name="guard">The resource being added.</param>
+            <remarks>
+            When a thread subsequently starts reading or writing this guard,
+            the resource is shared with the thread.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddObjectLockProtectedCertificate(System.Object)">
+            <summary>
+            Stores a certificate for a lock-protected object.
+            Does nothing if the object is not guarded.
+            </summary>
+            <param name="sharedObject">The object for which a certificate is stored.</param>
+            <seealso cref="M:Microsoft.Contracts.Guard.AddLockProtectedCertificate(Microsoft.Contracts.Guard)"/>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.AddObjectImmutableCertificate(System.Object)">
+            <summary>
+            Stores a certificate for an immutable object.
+            Does nothing if the object is not guarded.
+            </summary>
+            <param name="sharedObject">The object for which a certificate is stored.</param>
+            <seealso cref="M:Microsoft.Contracts.Guard.AddLockProtectedCertificate(Microsoft.Contracts.Guard)"/>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.CreateThreadStartForImmutable(Microsoft.Contracts.GuardThreadStart)">
+            <summary>
+            Use this method to share the resource with a new thread.
+            </summary>
+            <param name="threadStart">A method to be executed by the new sharing thread.</param>
+            <returns>A delegate that shares the resource with the thread calling it (which is typically a newly started thread)
+            and then calls <paramref name="threadStart"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.CreateThreadStartForLockProtected(Microsoft.Contracts.GuardThreadStart)">
+            <summary>
+            Use this method to share the resource with a new thread.
+            </summary>
+            <param name="threadStart">A method to be executed by the new sharing thread.</param>
+            <returns>A delegate that shares the resource with the thread calling it (which is typically a newly started thread)
+            and then calls <paramref name="threadStart"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.CreateThreadStartForOwn(Microsoft.Contracts.GuardThreadStart)">
+            <summary>
+            Use this method to transfer the resource to a new thread.
+            </summary>
+            <param name="threadStart">A method to be executed by the new standalone thread.</param>
+            <returns>A delegate that transfers the resource to the thread calling it (which is typically a newly started thread)
+            and then calls <paramref name="threadStart"/>.</returns>
+        </member>
+        <member name="F:Microsoft.Contracts.Guard.frameGuardGetters">
+            <summary>
+            Holds the frame guard getter delegates of the guarded classes loaded into the AppDomain.
+            </summary>
+            <remarks>
+            Lock this object to access it.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.GetFrameGuard(System.Object,System.Type)">
+            <summary>
+            Returns the frame guard of object <paramref name="o"/> at type <paramref name="t"/>,
+            or <code>null</code> if <paramref name="t"/> is not a guarded class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.GetObjectGuard(System.Object)">
+            <summary>
+            Returns the guard of object <paramref name="o"/>, or
+            <code>null</code> if <paramref name="o"/> is not guarded.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.IsNew(System.Object)">
+            <summary>
+            In a method's ensures clause, indicates that <paramref name="o"/> was not allocated in the pre-state.
+            Note: this is a temporary measure that will be replaced with a more modular construct in the future.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Guard.NoOp">
+            <summary>
+            Used in the Boogie bytecode translator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Contracts.Guard.CanRead">
+            <summary>
+            Returns true if the current thread can read the resource; otherwise, returns false.
+            </summary>
+            <remarks>
+            Equivalent to <c>Capability != ThreadCapability.None</c>.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Contracts.Guard.CanWrite">
+            <summary>
+            Returns true if the current thread can write the resource; otherwise, returns false.
+            </summary>
+            <remarks>
+            Equivalent to <c>Capability == ThreadCapability.Writable</c>.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Contracts.Guard.IsActive">
+            <summary>
+            Returns true if the current thread is reading or writing the resource; otherwise, returns false.
+            </summary>
+            <remarks>
+            Equivalent to <c>Activity != ThreadActivity.None</c>.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Contracts.Guard.SharingMode">
+            <summary>
+            Returns the current thread's sharing mode for the resource.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Contracts.Guard.Capability">
+            <summary>
+            Returns the current thread's capability with respect to the resource.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Contracts.Guard.Activity">
+            <summary>
+            Returns the current thread's activity with respect to the resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.Guard.Scheduler.queue">
+            <summary>
+            The queue of entries that will be re-evaluated after the next ReleaseForWriting.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.LockProtectedAttribute">
+            <summary>
+            Indicates that the field refers to a lock-protected object.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler to emit a call to the <see cref="M:Microsoft.Contracts.Guard.AddObjectLockProtectedCertificate(System.Object)"/>
+            method in its <see cref="T:Microsoft.Contracts.InitGuardSetsDelegate"/> implementation.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.RequiresLockProtectedAttribute">
+            <summary>
+            Indicates that the method requires that the target is lock-protected.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler's ThreadStart conversion feature
+            to share the lock-protected target object
+            with the newly started thread.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.ImmutableAttribute">
+            <summary>
+            Indicates that the field refers to an immutable object.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler to emit a call to the <see cref="M:Microsoft.Contracts.Guard.AddObjectImmutableCertificate(System.Object)"/>
+            method in its <see cref="T:Microsoft.Contracts.InitGuardSetsDelegate"/> implementation.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.RequiresCanWriteAttribute">
+            <summary>
+            Indicates that the method requires that the target is writeable.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler's ThreadStart conversion feature to transfer the target object
+            to the newly started thread.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.RequiresImmutableAttribute">
+            <summary>
+            Indicates that the method requires that the target is immutable.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler's ThreadStart conversion feature to share the immutable target object
+            with the newly started thread.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.ReaderAttribute">
+            <summary>
+            Indicates that the method reads the target.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler to enclose the method's body in a <c>read (this)</c> statement.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.WriterAttribute">
+            <summary>
+            Indicates that the method writes the target.
+            </summary>
+            <remarks>
+            This attribute causes the Spec# compiler to enclose the method's body in a <c>write (this)</c> statement.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Contracts.OwnedAttribute.Value">
+            <summary>
+            True if the field is owned; false otherwise.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.OwnedAttribute.Peer">
+            <summary>
+            True if the field is a peer field; false otherwise.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.ElementsRepAttribute">
+            <summary>
+            Fields of array-type or subtype of IEnumerable can be marked ElementsRep meaning that the elements of the 
+            array or collection are rep of the array or collection. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.ElementsPeerAttribute">
+            <summary>
+            Fields of array-type or subtype of IEnumerable can be marked ElementsPeer meaning that the elements of the 
+            array or collection are peer of the array or collection. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.ElementAttribute">
+            <summary>
+            Methods of subtypes of IEnumerable can be marked Element meaning that the method returns an 
+            element of the collection. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.ElementCollectionAttribute">
+            <summary>
+            Methods of subtypes of IEnumerable can be marked ElementCollection meaning that the method returns 
+            a set of elements of the collection. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.RecursionTerminationAttribute">
+            <summary>
+            Used to ensure acyclicity of method call chains in specifications of methods.
+            Indicates the maximum number of method calls before the call chain terminates.
+            E.g. zero if method's specification does not contain method calls.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Contracts.CapturedAttribute">
+            <summary>
+            Indicates that a parameter, or the receiver parameter if applied to a method or constructor, starts in an unowned state and may cause the owner to change.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Contracts.DependentAttribute.otherType">
+            <summary>
+            The type that is allowed to have an invariant referring to the field
+            this attribute is attached to.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.Same(System.Object,System.Object)">
+            <summary>
+            As seen by the static program verifier:  returns true iff c and d are owned by the same owner or
+            if they have no owner and belong to the same peer group.
+            Dynamically, this method always returns true.  If you want the negation, you Different.
+            </summary>
+            <param name="c"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.Different(System.Object,System.Object)">
+            <summary>
+            As seen by the static program verifier:  returns false iff c and d are owned by the same owner or
+            if they have no owner and belong to the same peer group.
+            Dynamically, this method always returns true.  If you want the negation, you Same.
+            </summary>
+            <param name="c"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.None(System.Object)">
+            <summary>
+            As seen by the static program verifier:  returns true iff subject has no owner.
+            Dynamically, this method always returns true.
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.Is(System.Object,System.Object,System.Type)">
+            <summary>
+            As seen by the static program verifier:  returns true iff subject is owned by (owner,frame).
+            Dynamically, this method always returns true.
+            </summary>
+            <param name="subject"></param>
+            <param name="owner"></param>
+            <param name="frame"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.New(System.Object)">
+            <summary>
+            As seen by the static program verifier:  returns true iff subject has no owner and is in
+            in peer group represented by itself.  That is, returns true iff the subject's owner is
+            the same as it is in the post-state of a non-capturing constructor.
+            Dynamically, this method always returns true.
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.Assign(System.Object,System.Object,System.Type)">
+            <summary>
+            As seen by the static program verifier:  Requires that subject initially has no owner, and sets the owner of
+            subject and any other objects in its peer group to (owner,frame).
+            That is:
+              requires Owner.None(subject);
+              ensures Owner.Is(subject, owner, frame);
+            Dynamically, this method is a no-op.
+            </summary>
+            <param name="subject"></param>
+            <param name="owner"></param>
+            <param name="frame"></param>
+        </member>
+        <member name="M:Microsoft.Contracts.Owner.AssignSame(System.Object,System.Object)">
+            <summary>
+            As seen by the static program verifier:  Requires that "subject" initially has no owner, and sets the owner of
+            "subject" and any other objects in its peer group to the same owner or peer group as "peer"..
+            That is:
+              requires Owner.None(subject);
+              ensures Owner.Same(subject, peer);
+            Dynamically, this method is a no-op.
+            </summary>
+            <param name="subject"></param>
+            <param name="peer"></param>
+        </member>
+        <member name="T:Microsoft.Contracts.SkipVerificationAttribute">
+            <summary>
+            Instructs downstream tools to assume the correctness of this assembly, type or member without performing any verification.
+             Can use [SkipVerification(false)] to explicitly mark assembly, type or member as one to have verification performed on it.
+             Most specific element found (member, type, then assembly) takes precedence.
+             (That is useful if downstream tools allow a user to decide which polarity is the default, unmarked case.)
+            </summary>
+            <remarks>
+            Apply this attribute to a type to apply to all members of the type, including nested types.
+            Apply this attribute to an assembly to skip verification of all types and members of the assembly.
+             Default is true, so [SkipVerification] is the same as [SkipVerification(true)].
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Contracts.VerifyAttribute">
+            <summary>
+            Instructs downstream tools whether to assume the correctness of this assembly, type or member without performing any verification or not.
+             Can use [Verify(false)] to explicitly mark assembly, type or member as one to *not* have verification performed on it.
+             Most specific element found (member, type, then assembly) takes precedence.
+             (That is useful if downstream tools allow a user to decide which polarity is the default, unmarked case.)
+            </summary>
+            <remarks>
+            Apply this attribute to a type to apply to all members of the type, including nested types.
+            Apply this attribute to an assembly to apply to all types and members of the assembly.
+             Apply this attribute to a property to apply to both the getter and setter.
+            Default is true, so [Verify] is the same as [Verify(true)].
+            </remarks>
+        </member>
+    </members>
+</doc>

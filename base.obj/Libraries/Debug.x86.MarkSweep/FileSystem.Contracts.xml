@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>FileSystem.Contracts</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.FileSystem.FileSystemControllerContract">
+      <summary>
+This contract is exported by services that are filesystem controllers.
+</summary>
+    </member>
+  </members>
+</doc>

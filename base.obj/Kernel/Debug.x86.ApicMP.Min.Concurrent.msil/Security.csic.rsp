@@ -1,0 +1,5 @@
+/r:C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Kernel.ill=kernel
+/r:C:\Users\cc\source\repos\Singularity-OS\base.obj\Kernel\Debug.x86.ApicMP.Min.Concurrent.msil\Loader.ill=Loader
+C:\Users\cc\source\repos\Singularity-OS\base\Interfaces\Security\Security.csi
+C:\Users\cc\source\repos\Singularity-OS\base\Interfaces\Security\Principal.csi
+C:\Users\cc\source\repos\Singularity-OS\base\Interfaces\Security\PrincipalImpl.csi

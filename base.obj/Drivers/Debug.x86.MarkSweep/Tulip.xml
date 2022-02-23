@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Tulip</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.Singularity.Drivers.Network.Tulip.Tulip.MakePerfectFilteringFrame(Drivers.Net.EthernetAddress[]!Microsoft.Contracts.NonNullType)">
+      <summary>
+Constructs a perfect filtering setup frame buffer.
+</summary>
+      <param name="addresses">The addresses to be present
+in the perfect filter up to a maximum of 16.</param>
+    </member>
+    <member name="T:Microsoft.Singularity.Drivers.Network.Tulip.FilteringType">
+      <summary> Filtering types from table 4-8 in 21143ahm.pdf</summary>
+    </member>
+  </members>
+</doc>

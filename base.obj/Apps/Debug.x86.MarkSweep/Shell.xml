@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Shell</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.Singularity.Applications.ShellControl.GetEnumerator">
+      <summary>
+Provides enumeration of non-exited jobs
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.TryParseInt(System.String,System.Int32@)">
+      <summary>
+ Try to parse an integer, return true if successful.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.DoKill(Microsoft.Singularity.Applications.ShellControl!Microsoft.Contracts.NonNullType,System.String[]!Microsoft.Contracts.NonNullType)">
+      <summary>
+ implement the kill command to terminate background processes specified by args
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.RunCommand(Microsoft.Singularity.Applications.ShellControl!Microsoft.Contracts.NonNullType,System.String[],System.Boolean)">
+      <summary>
+ Execute the commandLine.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.RunCommand(Microsoft.Singularity.Applications.ShellControl!Microsoft.Contracts.NonNullType,System.String[],System.Boolean,Microsoft.Singularity.Applications.Shell.SchedulerOptions)">
+      <summary>
+ Execute the commandLine.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.CleanBackgroundProcesses">
+      <summary>
+ Walk through the backgroundProcesses list and remove the ones that are already stopped.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.GetProcessNameFromID(System.Int32)">
+      <summary>
+ Get the process name from the given ID. This can be used to kill processes by name.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.BindToProcessContract">
+      <summary>
+ Use DirectoryService to bind to the ProcessContract.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Shell.WaitForJob(Microsoft.Singularity.Applications.Job!Microsoft.Contracts.NonNullType)">
+      <summary>
+Copy and echo characters from shell stdin to job stdin.
+Wait for either the job to exit gracefully, or for the user
+to press control-c or control-z.
+
+Known limitation: if the child process opens
+its own keyboard channel, the shell may never see the control-c
+message.
+</summary>
+    </member>
+  </members>
+</doc>

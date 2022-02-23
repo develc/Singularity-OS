@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Io.Contracts</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Io.DiskDeviceContract.GetDeviceName">
+      <summary>
+Retrieve the device name.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.DiskDeviceContract.GetStartSector">
+      <summary>
+Retrieve sector offset of first sector on disk or partition.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.DiskDeviceContract.GetSectorCount">
+      <summary>
+Retrieve number of sectors available on drive or partition.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.DiskDeviceContract.GetSystemId">
+      <summary>
+Query for system identifier from partition table for
+partition.  This method is only applicable to partitioned
+drives.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.DiskDeviceContract.Read">
+      <summary>
+Read data from disk.
+<parameter name="sectorId">Relative sector on disk or partition to read data from. </parameter>
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.DiskDeviceContract.Write">
+      <summary>
+Write data to disk.
+<parameter name="sectorId">Relative sector on disk or partition to write data to. </parameter>
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.IoTestContract.Read">
+      <summary>
+Read data from device.
+<parameter name="length">Size of data to read from. </parameter>
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.IoTestContract.Write">
+      <summary>
+Write data to device.
+<parameter name="length">Length of data to write. </parameter>
+</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application name="Shell" runtime="Full" publisher="singularity.microsoft.com" processes="1">
+  <process id="0" main="true" executable="true" version="0.0.0.0" publickey="" strongname="Shell!0.0.0.0!" categories="2" path="Shell.x86">
+    <assemblies>
+      <assembly name="Shell.exe" cache="Apps/Debug.x86.MarkSweep/Shell.exe" />
+      <assembly name="Corlib.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Corlib.dll" />
+      <assembly name="Microsoft.SingSharp.Runtime.dll" version="1.0.3555.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Microsoft.SingSharp.Runtime.dll" />
+      <assembly name="FileSystem.Utils.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/FileSystem.Utils.dll" />
+      <assembly name="Console.App.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Console.App.dll" />
+      <assembly name="Corlibsg.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Corlibsg.dll" />
+      <assembly name="Diagnostics.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Diagnostics.Contracts.dll" />
+      <assembly name="System.Compiler.Runtime.dll" version="1.0.5031.5" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/System.Compiler.Runtime.dll" />
+      <assembly name="System.IO.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/System.IO.dll" />
+      <assembly name="FileSystem.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/FileSystem.Contracts.dll" />
+      <assembly name="Directory.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Directory.Contracts.dll" />
+      <assembly name="Io.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Io.Contracts.dll" />
+      <assembly name="Singularity.Xml.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Singularity.Xml.dll" />
+      <assembly name="Manifest.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Manifest.dll" />
+      <assembly name="DirectoryService.Utils.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/DirectoryService.Utils.dll" />
+      <assembly name="Singularity.V1.App.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Singularity.V1.App.dll" />
+    </assemblies>
+    <categories>
+      <category HelpMessage="Shell" DefaultAction="True" id="0" name="console" class="Microsoft.Singularity.Applications.Parameters">
+        <endpoints length="2">
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringArrayParameters length="1">
+          <StringArrayParameter Name="filename" HelpMessage="the bucket" id="0" />
+        </StringArrayParameters>
+        <StringParameters length="0" />
+        <LongParameters length="0" />
+        <BoolParameters length="0" />
+      </category>
+      <category HelpMessage="Run a single shell command, then exit" Action="single" id="1" name="console" class="Microsoft.Singularity.Applications.SingleParameters">
+        <endpoints length="2">
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters length="1">
+          <StringParameter Name="commandLine" Mandatory="True" Position="0" HelpMessage="Command string to execute" id="0" />
+        </StringParameters>
+        <StringArrayParameters length="0" />
+        <LongParameters length="0" />
+        <BoolParameters length="0" />
+      </category>
+    </categories>
+  </process>
+</application>

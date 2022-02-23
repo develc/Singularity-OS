@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application name="sc" runtime="Full">
+  <process id="0" main="true" executable="true" version="0.0.0.0" publickey="" strongname="sc!0.0.0.0!">
+    <assemblies>
+      <assembly name="sc.exe" cache="Apps/Debug.x86.MarkSweep/sc.exe" />
+      <assembly name="Corlib.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Corlib.dll" />
+      <assembly name="Microsoft.SingSharp.Runtime.dll" version="1.0.3555.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Microsoft.SingSharp.Runtime.dll" />
+      <assembly name="Directory.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Directory.Contracts.dll" />
+      <assembly name="Console.App.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Console.App.dll" />
+      <assembly name="Corlibsg.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/Corlibsg.dll" />
+      <assembly name="DebugUtils.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/DebugUtils.dll" />
+      <assembly name="ServiceManager.Contracts.dll" cache="Libraries/Debug.x86.MarkSweep/ServiceManager.Contracts.dll" />
+      <assembly name="Io.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Io.Contracts.dll" />
+      <assembly name="System.Compiler.Runtime.dll" version="1.0.5031.5" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="AppRuntime/Full/Debug.x86.MarkSweep/System.Compiler.Runtime.dll" />
+      <assembly name="DirectoryService.Utils.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/DirectoryService.Utils.dll" />
+      <assembly name="Singularity.V1.App.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="Libraries/Debug.x86.MarkSweep/Singularity.V1.App.dll" />
+    </assemblies>
+    <categories>
+      <category HelpMessage="Service management client" DefaultAction="True" id="0" name="console" class="Microsoft.Singularity.Applications.ServiceManager.DefaultConfig">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+      </category>
+      <category Action="start" HelpMessage="Start a service" id="1" name="console" class="Microsoft.Singularity.Applications.ServiceManager.StartConfig">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+      </category>
+      <category Action="stop" HelpMessage="Stop a service" id="2" name="console" class="Microsoft.Singularity.Applications.ServiceManager.StopServiceCommand">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+      </category>
+      <category Action="list" HelpMessage="Show a list of services" id="3" name="console" class="Microsoft.Singularity.Applications.ServiceManager.ListConfig">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+      </category>
+      <category Action="show" HelpMessage="Show details about a specific service." id="4" name="console" class="Microsoft.Singularity.Applications.ServiceManager.ShowServiceParameters">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Position="0" Mandatory="True" HelpMessage="The service to examine." id="0" />
+        </StringParameters>
+      </category>
+      <category Action="watch" HelpMessage="Watch the status of a service" id="5" name="console" class="Microsoft.Singularity.Applications.ServiceManager.WatchConfig">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+      </category>
+      <category Action="watchall" HelpMessage="Watch the status of the Service Manager" id="6" name="console" class="Microsoft.Singularity.Applications.ServiceManager.WatchAllConfig">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+      </category>
+      <category Action="create" HelpMessage="Create a new service entry" id="7" name="console" class="Microsoft.Singularity.Applications.ServiceManager.CreateServiceCommand">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+          <StringParameter Name="exe" Mandatory="False" HelpMessage="Executable to use; if omitted, uses service name." id="1" />
+          <StringParameter Name="display" Mandatory="False" HelpMessage="Display name to use; if omitted, uses service name." id="2" />
+        </StringParameters>
+        <BoolParameters>
+          <BoolParameter Name="disabled" Mandatory="False" HelpMessage="Create in a disabled state." id="0" />
+        </BoolParameters>
+      </category>
+      <category Action="delete" HelpMessage="Delete an existing service" id="8" name="console" class="Microsoft.Singularity.Applications.ServiceManager.DeleteServiceCommand">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+      </category>
+      <category Action="enable" HelpMessage="Enable a service" id="9" name="console" class="Microsoft.Singularity.Applications.ServiceManager.EnableServiceCommand">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+      </category>
+      <category Action="disable" HelpMessage="Disable a service" id="10" name="console" class="Microsoft.Singularity.Applications.ServiceManager.DisableServiceCommand">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+      </category>
+      <category Action="kill" HelpMessage="Terminate the process(es) of a service." id="11" name="console" class="Microsoft.Singularity.Applications.ServiceManager.TerminateServiceCommand">
+        <endpoints>
+          <inputPipe id="0" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </inputPipe>
+          <outputPipe id="1" startStateId="4" contractName="Microsoft.Singularity.Io.UnicodePipeContract" Kind="data">
+            <imp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Imp" />
+            </imp>
+            <exp>
+              <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+              <inherit name="Microsoft.Singularity.Io.UnicodePipeContract.Exp" />
+            </exp>
+          </outputPipe>
+        </endpoints>
+        <StringParameters>
+          <StringParameter Name="service" Mandatory="True" Position="0" id="0" />
+        </StringParameters>
+        <LongParameters>
+          <LongParameter Name="pid" Mandatory="False" Position="1" Default="-1" id="0" />
+        </LongParameters>
+      </category>
+    </categories>
+  </process>
+</application>

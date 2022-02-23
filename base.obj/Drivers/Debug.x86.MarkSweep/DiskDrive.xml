@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>DiskDrive</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.Singularity.Drivers.IDE.IdeRequest.BufferAddress">
+      <summary>Note: This is a pointer into a byte array in the ExHeap.</summary>
+    </member>
+  </members>
+</doc>

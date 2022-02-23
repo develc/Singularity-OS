@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Manifest</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.Singularity.Applications.Binder.CreateProcess(Microsoft.Singularity.Directory.DirectoryServiceContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.String[],Microsoft.Singularity.Io.PipeMultiplexer!Microsoft.Contracts.NonNullType)">
+      <summary>
+Wrap up all the details of creating a process in one rountine.
+deals with old and new style processes. Performs manifest parsing
+argument parsing and setting and manages stdin/out
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Binder.CreateProcess(System.String,Microsoft.Singularity.Directory.DirectoryServiceContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.String[],Microsoft.Singularity.Applications.Manifest@,System.String@)">
+      <summary>
+ Create a new process and set parameters using the manifest
+</summary>
+      <return>
+ The process created. If there are errors return null.
+</return>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Binder.TryParseInt(System.String,System.Int32@)">
+      <summary>
+ Try to parse an integer, return true if successful.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Binder.BindServiceUser(System.Process!Microsoft.Contracts.NonNullType,System.Int32,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Xml.XmlNode!Microsoft.Contracts.NonNullType)">
+      <summary>
+Given information in the application manifest attempt to create and bind a channel to
+a service conforming to the contract specified.  This routine parses the manifest
+metadata then makes an ABI call to generate the endpoints, connect them, add the
+imp endpoint to the process StartupEndpoint array at "index", and attempt to bind
+the exp endpoint to a service provider using system policy.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Applications.Manifest">
+      <summary>
+In-memory representation of application manifest
+Objects in manifest are represented as XmlNodes
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Applications.Manifest.pipeContract">
+      <summary>
+We treat the application manifest as a collection of
+key, value pairs.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Manifest.#ctor(System.Byte[])">
+      <summary>
+Create a manifest object from the given xml representation
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Manifest.FindCustomEndpointIndex(System.String!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType)">
+      <summary>
+Finds the index of a custom endpoint in a manifest.  The caller provides the name of the
+application category (such as "console" or "Service"), and the name of the contract of
+the endpoint.
+</summary>
+      <param name="category">The name of a category, such as "Service".  Case is significant.</param>
+      <param name="contractName">The full name of a contract type, as specified in the manifest.
+For example, "Microsoft.Singularity.ServiceManager.ManagedServiceContract".</param>
+      <returns>The index of the endpoint, or -1 if none was found.</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.Manifest.FindCustomEndpointIndex(Microsoft.Singularity.Xml.XmlNode!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType)">
+      <summary>
+Finds the index of a custom endpoint in a manifest.  The caller provides a reference to
+the XmlNode of the category, such as returned from the GetCategoryNodeByName, and the 
+name of the contract of the endpoint.
+</summary>
+      <param name="category">A reference to the XmlNode of a manifest, referring to a 'category' element.</param>
+      <param name="contractName">The full name of a contract type, as specified in the manifest.
+For example, "Microsoft.Singularity.ServiceManager.ManagedServiceContract".</param>
+      <returns>The index of the endpoint, or -1 if none was found.</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.ConsoleApplications.JobControl.GetEnumerator">
+      <summary>
+Provides enumeration of non-exited jobs
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.ConsoleApplications.ConsoleJob.WaitForJob">
+      <summary>
+Copy and echo characters from shell stdin to job stdin.
+Wait for either the job to exit gracefully, or for the user
+to press control-c or control-z.
+
+Known limitation: if the child process opens
+its own keyboard channel, the shell may never see the control-c
+message.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.ShowCommandsSummary(Microsoft.Singularity.Applications.Manifest!Microsoft.Contracts.NonNullType)">
+      <summary>
+This method shows a list of all of the commands (actions) that an
+application provides, as defined in its manifest.  The list simply
+shows the names of each command, and the helptext for each.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.BreakLineAtWords(System.String!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+This method breaks a string into a list of strings, each of which is at most 'maxlength'
+in length, if possible.  The method tries to break the string at whitespace boundaries.
+Note that it is possible for entries returned to be longer than 'maxlength', so don't
+rely on that behavior.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.ShowCommandsSummaryWithArgs(Microsoft.Singularity.Applications.Manifest!Microsoft.Contracts.NonNullType)">
+      <summary>
+This method shows a summary of all of the commands (actions) defined in
+an application manifest.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.GetParameterSyntaxSummary(Microsoft.Singularity.Applications.Manifest!Microsoft.Contracts.NonNullType,System.String)">
+      <summary>
+Builds a 
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.GetAllActions(Microsoft.Singularity.Applications.Manifest!Microsoft.Contracts.NonNullType)">
+      <summary>
+Builds a list of all of the actions (commands) defined in a manifest.
+Note: This CAN return a null entry (an array containing a null entry),
+if the program has a default action, and most do.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.Parse(System.String[]!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Applications.Manifest!Microsoft.Contracts.NonNullType,System.String@,System.String@,Microsoft.Singularity.Applications.ParameterProcessor.Parameter[]@)">
+      <summary>
+ Parse the command line and return the appName, action, and strongly typed parameter values.
+ manifest is used to deduce the strong type information for the parameters.
+</summary>
+      <return>
+ True if a new process should be created. 
+ There are several reasons this function may return false, including:
+     invalid action,
+     -? or -?? for help information only,
+     missing required parameters, 
+     unknown parameter name,
+     incorrect parameter format,
+</return>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.ProcessParameters(System.String[],Microsoft.Singularity.Applications.Manifest,System.Process@,System.String@)">
+      <summary>
+ Parse the command line into stronly typed parameters using the manifest, 
+ validate the parameters, and create the process if all parameters 
+ are in the right format.
+</summary>
+      <return>
+ True if process is created and paramters are parsed, 
+ validated, and set successfully.
+</return>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.SetPosition(Microsoft.Singularity.Applications.ParameterProcessor.Parameter!Microsoft.Contracts.NonNullType)">
+      <summary>
+ Set the position for the parameter. 
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Applications.ParameterProcessor.InitializeParameters(System.String,Microsoft.Singularity.Applications.Manifest!Microsoft.Contracts.NonNullType)">
+      <summary>
+ Use the manifest to initialize the parameters without values. 
+ Later ProcessParameters() will fill in the values from the command line.
+
+ Throws ManifestException upon error.
+</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>sms</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Services.ServiceManager.Service">
+      <summary>
+This class represents the state of a service, as seen by the Service Manager.
+
+Threading: Instances of this class are owned by the main (entry point) thread.
+That is the only thread that creates instances of this class, and reads/writes
+its fields.
+
+There is one important exception to consider: The main thread uses the ServiceStarter
+class to create and start service processes, and when it does so, the main thread
+passes a reference to an instance of Service to ServiceStarter.  ServiceStarter never
+examines the contents of the instance; it passes it back to the main thread.
+This maintains the invariant that only the main thread can read/write fields.
+
+This class encapsulates this information:
+    * the complete configuration of the service, 
+    * current information about the status of the service,
+    * references to all of the processes that have been created for this service,
+    * state fields that control state transitions (starting, stopping, etc.)
+    * state fields relevant to detection of defective service processes and recovery.
+
+This class provides methods for reading/writing some of the state of a Service
+instance, but in general, this class does not contain much of the semantics of the
+Service Manager.  The Service class is not an independent, standalone object; it is
+a data structure owned and manipulated by the ServiceManager class.  The methods
+defined on this class handle making controlled state transitions (such as acquiring
+an endpoint); the methods do *not* make global or broadly-scoped state transitions.
+That is the responsibility of the ServiceManager class.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.Service.LastServiceStatusPublished">
+      <summary>
+This is the last service status that we have published to management clients that are
+watching service status.  When there is any possibility that the status of a service
+has changed, we build a new ServiceStatus object, then compare it to this field.
+If any field has changed, then we notify all service watchers.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.Service.connectQueue">
+      <summary>
+Contains instances of ServiceConnectRequest, representing clients that want
+to connect to a service.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Services.ServiceManager.InternalServiceConfig">
+      <summary>
+This structure is a "local" (in same process) equivalent to the exchangeable ServiceConfig type.
+This is necessary because we can't store rep structures in local types, and because we want to use
+System.String, not char[] in ExHeap for our strings.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.tracePrintLevel">
+      <summary>
+Controls which calls to Dbg() are also sent to DebugStub.WriteLine().
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.rootds">
+      <summary>
+This channel is provided by the kernel (or whatever process created this Service Manager process).
+This endpoint is passed to this process as startup endpoint 0.
+
+Currently, this field is not used.  However, if this process does perform any Directory operations,
+it should use this as its root.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.services_namespace_provider">
+      <summary>
+This channel is provided by the kernel (or whatever process created this Service Manager process).
+This endpoint is a namespace service provider, registered with the Directory service, usually at
+'/service/services'.  However, a creating process may use a different name or path, so the Service Manager
+should never assume that the path is '/service/services'.
+
+This endpoint is passed to this process as startup endpoint 1.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.clients">
+      <summary>
+Contains clients channels who send service control requests to the Service Manager.
+Clients in this set (state) have not selected a specific service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.svclients">
+      <summary>
+Contains clients channels who send service control requests to the Service Manager.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.clients_enumerating">
+      <summary>
+Contains clients that are in the "Enumerate" state; they are enumerating the set of services.
+The IEnumerator reference enumerates Service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.clients_readywatch">
+      <summary>
+The clients whose endpoints in this endpoint map have subscribed to the status of services,
+and the client is the next sender.  The client will send either WaitServiceChange, or
+StopWatchingService.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.dirs">
+      <summary>
+Clients can connect to the Service Manager namespace (/service/services) using DirectoryServiceContract.
+This can be used to enumerate service, and to connect to services.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.dirs_enumerating">
+      <summary>
+Contains directory clients who are enumerating.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.serviceStartWatchers">
+      <summary>
+The set of endpoints that want to be notified when the service starts.
+All of these endpoints (stored in a TRef within ServiceStartWatcher) came from
+clients who issued a StartServiceWait request.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.serviceStopWatchers">
+      <summary>
+The set of endpoints that want to be notified when a specific service stops.
+All of these endpoints (stored in a TRef within ServiceStopWatcher) came from
+clients who issued a StopServiceWait request.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.service_starters">
+      <summary>
+Contains notifier endpoints of services that are being started.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.svcontrols_starting">
+      <summary>
+Contains the control endpoints of services that are starting.  We're waiting for the "Success"
+message from these services before we consider them started.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.svcontrols_stopping">
+      <summary>
+Contains the control endpoints of services that we have sent a "StopService" request to.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.svcontrols_connecting">
+      <summary>
+Contains the control endpoints of services that we have sent a "Connect" request to.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.svevents">
+      <summary>
+Contains the notification channels that are connect to service processes, which are
+in the "Ready" state.  In this state, the service process can send messages to the
+Service Manager.  The Service Manager always responds immediately, so there are no
+other EMaps or ESets for these channels.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.svcontrols_knocking">
+      <summary>
+Contains the control endpoints of services that we have sent a "Knock" message to.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.managerWatchers">
+      <summary>
+Contains instance of ServiceManagerWatcher, representing those management clients that
+have subscribed to the overall status of the Service Manager.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceManager.managerWatchersReady">
+      <summary>
+Contains endpoints of management clients that have subscribed to the overall status of the
+Service Manager, and are ready to wait for the next event, or to end their subscription.
+The next possible messages in this state are WaitNextServiceManagerChange and
+StopWatchingServiceManager.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.Run">
+      <summary>
+Main service loop.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.MarkProcessDefective(Microsoft.Singularity.Services.ServiceManager.ServiceProcess!Microsoft.Contracts.NonNullType)">
+      <summary>
+This method marks a process as "defective", which prevents new clients from being routed
+to the process.  The Service Manager closes all of its endpoints (if possible; some endpoints
+may be in endpoint maps, and so they will not be closed until a message is later received).
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.NotifyServiceManagerWatchers(Microsoft.Singularity.ServiceManager.ServiceManagerEventMask)">
+      <summary>
+This method is called whenever a global Service Manager event has occurred, which includes:
+
+* The status of any service has changed.
+* The configuration of any service has changed.
+* A service has been created.
+* A service has been deleted.
+
+These events are mapped to bits within ServiceManagerEventMask.  All of the "status"
+events map to ServiceManagerEventMask.AnyServiceStatus, and all of the "config" events
+map to ServiceManagerEventMask.AnyServiceConfig.
+
+No attempt is made to notify watchers of the specifics of these events.  Doing so requires
+keeping track of much more state.  If a management client wants to know about details, it
+should query the Service Manager after being notified of a status or config change.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.PushControlMessages(Microsoft.Singularity.Services.ServiceManager.ServiceProcess!Microsoft.Contracts.NonNullType)">
+      <summary>
+For a particular service, this method checks to see if there is any reason to send
+a message to the control channel of a service.  Control messages
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.PushService(Microsoft.Singularity.Services.ServiceManager.Service!Microsoft.Contracts.NonNullType)">
+      <summary>
+This method checks the state of a service, and generally advances that state
+toward its goal state.  It's easier and more reliable to do this in a single
+method, and to run this method when we believe something relevant to this
+service has happened, rather than using a lot of methods that check specific
+aspects of the service (e.g. pushing the connect queue).
+
+This method:
+
+    * Starts a new service process, if necessary.
+    * Dequeues connection requests and forwards them to service processes.
+    * Determines the "next think time", which is the next time that we need
+      to reexamine the state of this service, without receiving a message
+      that drives the state of the service.
+
+This method needs to be efficient, since it is called from many places, and
+is called at the end of many different event handlers.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.PushConnectQueue(Microsoft.Singularity.Services.ServiceManager.Service!Microsoft.Contracts.NonNullType)">
+      <summary>
+This method tries to match up clients who want to connect with the service
+to available service processes.  If necessary, it will schedule the creation
+of a new service process.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.CompareServiceLoads(Microsoft.Singularity.Services.ServiceManager.ServiceProcess!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Services.ServiceManager.ServiceProcess!Microsoft.Contracts.NonNullType)">
+      <summary>
+Compares two services, and selects the one with the best (lightest) load level.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Services.ServiceManager.ServiceManager.CreateInitialServices(System.String[]!Microsoft.Contracts.NonNullType)">
+      <summary>
+Create the inital set of services that are specified in the system manifest.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Services.ServiceManager.DirectoryClientInfo">
+      <summary>
+Instances of this class are used to associate information with instances of
+DirectoryServiceContract.Exp.  The Service Manager allows clients to connect
+to '/service/services' using DirectoryServiceContract.  The Service Manager only
+supports a few requests: service enumeration, and binding to services.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Services.ServiceManager.TraceLevel">
+      <summary>
+Keep these values in sync with the Tracing levels (System.Tracing).
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Services.ServiceManager.ServiceWatcher">
+      <summary>
+References to instances of this class are stored in Service.WatchersList,
+and also as the "data" field of the endpoint map at ServiceManager.clients_readywatch.
+</summary>
+    </member>
+    <member name="P:Microsoft.Singularity.Services.ServiceManager.ServiceWatcher.EndpointCanSend">
+      <summary>
+If true, then Client contains an endpoint that we can send to.
+If false, then Client is either null, or has already been acquired.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceWatcher.MissedChange">
+      <summary>
+If true, then the status of the service changed while 'CanSend' was false.
+So, the next time we send a status change message to the client, we pass
+a flag that says "you missed one or more updates".
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceWatcher.EndpointRef">
+      <summary>
+The client endpoint that has subscribed to the status of the service.
+If EndpointCanSend is true, then this field is non-null and contains
+an endpoint (can be acquired).  If EndpointCanSend is false, then this
+field is either null, or it is in the "acquired" state.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.ServiceProcess.NeedSendStopControl">
+      <summary>
+This variable only has meaning when _state == ServiceProcessState.Stopping
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.EventChannelState.Ready">
+      <summary>
+An event channel exists, and our side of it is parked in Service.eventEndpointRef.
+The GetEventEndpoint method can be used to acquire the endpoint.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.EventChannelState.WaitingEvent">
+      <summary>
+The event channel is created, and is in the ServiceManager.svevents endpoint map.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Services.ServiceManager.EventChannelState.Disconnected">
+      <summary>
+No event channel exists.  Either the service is not running, or the service does not
+support an event channel.
+</summary>
+    </member>
+  </members>
+</doc>

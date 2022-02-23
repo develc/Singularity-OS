@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Corlib.Contracts</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Xml.XmlNode">
+      <summary>
+Summary description for XmlNode.
+</summary>
+    </member>
+  </members>
+</doc>

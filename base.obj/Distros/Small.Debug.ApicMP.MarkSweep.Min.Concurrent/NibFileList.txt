@@ -1,0 +1,12 @@
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\Shell.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\DiskDrive.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\Tulip.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\LegacyKeyboard.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\nvmac.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\NetStack.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\iso9660.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\tty.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\sc.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\sms.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\ipconfig.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\VolMgr.x86.manifest

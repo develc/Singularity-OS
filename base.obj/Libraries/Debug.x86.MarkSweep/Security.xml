@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Security</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Security.AccessMode">
+      <summary>
+Represents an access mode (permission)
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.IAclCoreSupport">
+      <summary>
+Access control implementation core.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.AccessControl.ICacheValue">
+      <summary>
+Implement an cache with maximum size, timeouts, and LRU pruning.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Security.AccessControl.Cache.GetEntry(System.String!Microsoft.Contracts.NonNullType)">
+      <summary>
+Retrieve the corresponding entry
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Security.AccessControl.Cache.AddEntry(System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.AccessControl.ICacheValue!Microsoft.Contracts.NonNullType)">
+      <summary>
+Add or replace the entry in the cache
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Security.AccessControl.Cache.Prune(System.Boolean)">
+      <summary>
+Make room in the cache
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.AccessControl.AclConverter">
+      <summary>
+Converts an Access Control List description to a regular expression.
+Caches group expansions for improved performance.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclConverter.pathfrag">
+      <summary>
+Regular expression matching an path fragment
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclConverter.start">
+      <summary>
+Regular expression matching the beginning of a string
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclConverter.end">
+      <summary>
+Regular expression matching the end of a string
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclConverter.cache">
+      <summary>expression
+The reader of group definitions
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclConverter.ExpnCachePrunePercent">
+      <summary>
+Create new converter,
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Security.AccessControl.AclConverter.DumpStats(System.Text.StringBuilder!Microsoft.Contracts.NonNullType)">
+      <summary>
+Convert the specified ACL to a regular expression
+</summary>
+      <param name="acl">The access control list</param>
+      <returns>An equivalent text regular expression</returns>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.AccessControl.AclToken">
+      <summary>
+Summary description for Token.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclToken.Type">
+      <summary>
+The token type
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclToken.Text">
+      <summary>
+The value of the token
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclToken.Start">
+      <summary>
+Start position in the input stream.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Security.AccessControl.AclToken.End">
+      <summary>
+End position in the input stream.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.AccessControl.AclTokenType">
+      <summary>
+Summary description for TokenType.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.AccessControl.DataReader">
+      <summary>
+Base class for reading bytes from a stream/string.
+</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>System.IO</name>
+  </assembly>
+  <members>
+    <member name="M:System.IO.BinaryReader.System.IDisposable.Dispose">
+      <internalonly />
+    </member>
+    <member name="M:System.IO.BinaryWriter.System.IDisposable.Dispose">
+      <internalonly />
+    </member>
+    <member name="M:System.IO.File.InternalCopy(System.String,System.String,System.Boolean)">
+      <devdoc>
+   Note: This returns the fully qualified name of the destination file.
+</devdoc>
+    </member>
+    <member name="M:System.IO.Stream.System.IDisposable.Dispose">
+      <internalonly />
+    </member>
+    <member name="M:System.IO.TextReader.System.IDisposable.Dispose">
+      <internalonly />
+    </member>
+    <member name="M:System.IO.TextWriter.System.IDisposable.Dispose">
+      <internalonly />
+    </member>
+  </members>
+</doc>

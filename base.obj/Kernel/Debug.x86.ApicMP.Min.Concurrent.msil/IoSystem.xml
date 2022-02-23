@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>IoSystem</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.Singularity.Io.Driver.name">
+      <summary>
+Friendly name used in debugging.
+This comes from the Name property of the System.Type instance.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.pnpSignature">
+      <summary>
+The PNP device ID (hardware, model, class, etc.) that this device driver definition binds to.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.configClass">
+      <summary>
+The PNP config class defined in metadata (class with SignatureAttribute).
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.directoryRoot">
+      <summary>
+root node in directory.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.metadata">
+      <summary>
+The XML metadata for this driver.  -XXX- Which element?
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.factory">
+      <summary>
+Creation delegate for internal (in-kernel) drivers.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.imagePath">
+      <summary>
+The binary / image path for the executable.
+This field is only non-null for process drivers (not in-kernel drivers).
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.instanceCount">
+      <summary>
+The number of instances of this device driver.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Io.Driver.DriversTable">
+      <summary>
+Key: string! PNP device ID
+Value: Driver! driver
+
+List of registered drivers.  A given driver can be in this list more than once,
+if that driver can match more than one device ID.
+</summary>
+    </member>
+  </members>
+</doc>

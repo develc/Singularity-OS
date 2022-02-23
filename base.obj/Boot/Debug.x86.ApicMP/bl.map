@@ -1,0 +1,467 @@
+ bl
+
+ Timestamp is 6216712e (Wed Feb 23 18:38:54 2022)
+
+ Preferred load address is 00040000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000026H .data                   CODE
+ 0001:00000030 00000de2H .rdata                  CODE
+ 0001:00000e14 00000066H .rdata$debug            CODE
+ 0001:00000e80 0000a2adH .text                   CODE
+ 0001:0000c000 0002a542H .bss                    CODE
+ 0001:00036542 00000000H .edata                  CODE
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       ?BlCdTemporaryBlockCount@@3GA 00041000     blcdrom.obj
+ 0001:00000010       ?BlFatTemporaryBlockCount@@3GA 00041010     blfat.obj
+ 0001:00000020       ?BlVideoBuffer@@3PAGA      00041020     blvideo.obj
+ 0001:00000024       ?BlVideoDefaultAttribute@@3GA 00041024     blvideo.obj
+ 0001:0000004c       ??_C@_0BB@JLDALMDP@ACPI?3?5No?5Srat?$DP?$DP?6?$AA@ 0004104c     blacpi.obj
+ 0001:00000060       ??_C@_0BG@FCLKDBKH@ACPI?3?5No?5local?5APIC?$CB?6?$AA@ 00041060     blacpi.obj
+ 0001:00000078       ??_C@_0BA@BODJODDC@ACPI?3?5No?5FADT?$CB?6?$AA@ 00041078     blacpi.obj
+ 0001:00000088       ??_C@_0BA@MDLGPIHP@ACPI?3?5No?5RSDT?$CB?6?$AA@ 00041088     blacpi.obj
+ 0001:00000098       ??_C@_0L@KNFIOBDM@blacpi?4cpp?$AA@ 00041098     blacpi.obj
+ 0001:000000a4       ??_C@_0BA@EMNEGPCI@ACPI?3?5No?5RSDP?$CB?6?$AA@ 000410a4     blacpi.obj
+ 0001:000000b4       ??_C@_0M@CKJPMOGI@blcdrom?4cpp?$AA@ 000410b4     blcdrom.obj
+ 0001:000000c0       ??_C@_0DC@EBKPCJGO@CDROM?3?5I?1O?5Error?3?5DriveID?$DN0x?$CF02x@ 000410c0     blcdrom.obj
+ 0001:000000f4       ??_C@_0BO@OBEOJDCJ@CdGetFileSize?3?5?$FL?$CFs?$FN?5FAILED?52?6?$AA@ 000410f4     blcdrom.obj
+ 0001:00000114       ??_C@_0BO@ODAICNHA@CdGetFileSize?3?5?$FL?$CFs?$FN?5FAILED?51?6?$AA@ 00041114     blcdrom.obj
+ 0001:00000134       ??_C@_0DB@HHGHCLEJ@CDROM?3?5Unable?5to?5find?5Joliet?5vol@ 00041134     blcdrom.obj
+ 0001:00000168       ??_C@_0CA@FBNAKALG@CDROM?3?5Unexpected?5sector?5size?$CB?6?$AA@ 00041168     blcdrom.obj
+ 0001:00000188       ??_C@_0CI@PDLGCFII@CDROM?3?5Unable?5to?5get?5drive?5param@ 00041188     blcdrom.obj
+ 0001:000001b0       ?BlComBasePort@@3QBGB      000411b0     blcom.obj
+ 0001:000001bc       ??_C@_09MIGMGOIK@blcom?4cpp?$AA@ 000411bc     blcom.obj
+ 0001:000001c8       ??_C@_0M@OKIOIALF@blentry?4cpp?$AA@ 000411c8     blentry.obj
+ 0001:000001d4       ??_C@_11LOCGONAA@?$AA?$AA@ 000411d4     blentry.obj
+ 0001:000001d8       ??_C@_0BB@HJLOGHGL@unknown?5source?$CB?6?$AA@ 000411d8     blentry.obj
+ 0001:000001ec       ??_C@_07HCENNHAB@Flash?4?6?$AA@ 000411ec     blentry.obj
+ 0001:000001f4       ??_C@_09JKNBOLCM@network?4?6?$AA@ 000411f4     blentry.obj
+ 0001:00000200       ??_C@_0BJ@OHCMCPKN@FAT32?5on?5drive?50x?$CF02x?4?6?6?$AA@ 00041200     blentry.obj
+ 0001:0000021c       ??_C@_0BJ@NLIFOCJG@FAT16?5on?5drive?50x?$CF02x?4?6?6?$AA@ 0004121c     blentry.obj
+ 0001:00000238       ??_C@_0BG@HNCLEJLF@CD?5in?5drive?50x?$CF02x?4?6?6?$AA@ 00041238     blentry.obj
+ 0001:00000250       ??_C@_0O@PEJMEJNJ@Booting?5from?5?$AA@ 00041250     blentry.obj
+ 0001:00000260       ??_C@_0CK@OAMGPDO@Boot?5Time?3?5?$CF02u?1?$CF02u?1?$CF02u?5?$CF02u?3?$CF@ 00041260     blentry.obj
+ 0001:0000028c       ??_C@_0BH@BBNKHCHK@Looking?5for?5debugger?4?6?$AA@ 0004128c     blentry.obj
+ 0001:000002a4       ??_C@_0CF@IHFGBGKJ@Singularity?5?$CFs?5Boot?5Loader?5?$FL?$CFs?5?$CF@ 000412a4     blentry.obj
+ 0001:000002cc       ??_C@_03NDFEINMN@x86?$AA@  000412cc     blentry.obj
+ 0001:000002d0       ??_C@_0M@JFIONPCF@Feb?523?52022?$AA@ 000412d0     blentry.obj
+ 0001:000002dc       ??_C@_08DJHOGAJP@18?338?352?$AA@ 000412dc     blentry.obj
+ 0001:000002e8       ??_C@_09PEGKEIOA@blfat?4cpp?$AA@ 000412e8     blfat.obj
+ 0001:000002f4       ??_C@_0CA@LMKLIJFF@FAT?3?5Error?5reading?5disk?5image?$CB?6?$AA@ 000412f4     blfat.obj
+ 0001:00000314       ??_C@_0BI@MOIILNGK@FAT?3?5No?5?$CFs?5partitions?$CB?6?$AA@ 00041314     blfat.obj
+ 0001:0000032c       ??_C@_05HNJNFBJJ@FAT32?$AA@ 0004132c     blfat.obj
+ 0001:00000334       ??_C@_05BKHFEAPD@FAT16?$AA@ 00041334     blfat.obj
+ 0001:0000033c       ??_C@_0BI@HGHMGDLA@FAT?3?5No?5MBR?5signature?$CB?6?$AA@ 0004133c     blfat.obj
+ 0001:00000354       ??_C@_0BJ@CLMOHOJH@FAT?3?5Error?5reading?5MBR?$CB?6?$AA@ 00041354     blfat.obj
+ 0001:00000370       ??_C@_0CI@OBAMHFHH@FAT?3?5Unexpected?5bytes?5per?5sector@ 00041370     blfat.obj
+ 0001:00000398       ??_C@_0CD@FBPPOBEA@FAT?3?5Can?8t?5get?5drive?5info?50x?$CF02x@ 00041398     blfat.obj
+ 0001:000003bc       ??_C@_0CA@KKIDKAPN@?9?9?9?5Version?5?$CFx?4?$CFx?5didn?8t?5match?6?$AA@ 000413bc     blflash.obj
+ 0001:000003dc       ??_C@_0BC@KHBDDADI@SingularityFlash?$CB?$AA@ 000413dc     blflash.obj
+ 0001:000003f0       ??_C@_04OPBEDMAI@?$CL?9?$HM?$CK?$AA@ 000413f0     blkd.obj
+ 0001:000003f8       ??_C@_0CM@ILELODI@1394?3?5EnablePhysicalAccess?5IntEv@ 000413f8     blkd1394.obj
+ 0001:00000424       ??_C@_0CM@ODCPEIPD@1394?3?5EnablePhysicalAccess?5HCCon@ 00041424     blkd1394.obj
+ 0001:00000450       ??_C@_0DM@MFBJDALE@LOOP?5?$CFd?5?$FLSendPacket?$DN?$CFp?5?$CF08x?5?$CF08x@ 00041450     blkd1394.obj
+ 0001:0000048c       ??_C@_0BE@JKEJJOAO@BlKd1394SendPacket?6?$AA@ 0004148c     blkd1394.obj
+ 0001:000004a0       ??_C@_1O@ENAGAFIM@?$AA1?$AA3?$AA9?$AA4?$AA?$CB?$AA?6?$AA?$AA@ 000414a0     blkd1394.obj
+ 0001:000004b0       ??_C@_0M@IJFJLPCJ@blkdcom?4cpp?$AA@ 000414b0     blkdcom.obj
+ 0001:000004bc       ??_C@_08JOIABOAI@blmm?4cpp?$AA@ 000414bc     blmm.obj
+ 0001:000004c8       ??_C@_0CA@ENJPJAHG@MM?3?5Physical?5region?5collision?$CB?6?$AA@ 000414c8     blmm.obj
+ 0001:000004e8       ??_C@_0CC@GFMNFNPB@MM?3?5Unable?5to?5allocate?5?$CFx?5bytes?$CB@ 000414e8     blmm.obj
+ 0001:0000050c       ??_C@_0BB@GBGJFAGF@SINGULARITY_SMAP?$AA@ 0004150c     blmm.obj
+ 0001:00000520       ??_C@_0L@HFEHJDPJ@BOOT_STACK?$AA@ 00041520     blmm.obj
+ 0001:0000052c       ??_C@_0M@KGCABPNA@SINGULARITY?$AA@ 0004152c     blmm.obj
+ 0001:00000538       ??_C@_04KKJBFIJG@TASK?$AA@ 00041538     blmm.obj
+ 0001:00000540       ??_C@_07GHPPKNEI@CONTEXT?$AA@ 00041540     blmm.obj
+ 0001:00000548       ??_C@_0N@JIHEIFIK@KERNEL_STACK?$AA@ 00041548     blmm.obj
+ 0001:00000558       ??_C@_08HALIBMIK@LOG_TEXT?$AA@ 00041558     blmm.obj
+ 0001:00000564       ??_C@_0L@NNLIGPNO@LOG_RECORD?$AA@ 00041564     blmm.obj
+ 0001:00000570       ??_C@_0BB@MBLMFHLL@NATIVE_PROCESSOR?$AA@ 00041570     blmm.obj
+ 0001:00000584       ??_C@_0BA@BBGJNAMD@NATIVE_PLATFORM?$AA@ 00041584     blmm.obj
+ 0001:00000594       ??_C@_0N@MOEDNENG@KERNEL_IMAGE?$AA@ 00041594     blmm.obj
+ 0001:000005a4       ??_C@_06NJIFKOLF@DISTRO?$AA@ 000415a4     blmm.obj
+ 0001:000005ac       ??_C@_0O@CKGIKGKG@SMAP_RESERVED?$AA@ 000415ac     blmm.obj
+ 0001:000005bc       ??_C@_0M@CDFHDJDB@BOOT_LOADER?$AA@ 000415bc     blmm.obj
+ 0001:000005c8       ??_C@_04BHKCNABG@BIOS?$AA@ 000415c8     blmm.obj
+ 0001:000005d0       ??_C@_04HEDFJGEJ@FREE?$AA@ 000415d0     blmm.obj
+ 0001:000005d8       ??_C@_01EEMJAFIK@?6?$AA@   000415d8     blmm.obj
+ 0001:000005dc       ??_C@_0BO@NKCHPHGB@MM?3?5?5?5?$CF016I64x?4?4?4?$CF016I64x?5?$CFs?6?$AA@ 000415dc     blmm.obj
+ 0001:000005fc       ??_C@_0BG@CNDFIJED@MM?3?5Physical?5Region?3?6?$AA@ 000415fc     blmm.obj
+ 0001:00000614       ??_C@_09GGGJHACA@blpci?4cpp?$AA@ 00041614     blpci.obj
+ 0001:00000620       ??_C@_0BN@OCAODDMI@pci?3?5PCI?5BIOS?5not?5detected?$CB?6?$AA@ 00041620     blpci.obj
+ 0001:00000640       ??_C@_0N@MNCCIOG@blpecoff?4cpp?$AA@ 00041640     blpecoff.obj
+ 0001:00000650       ??_C@_0BI@DNDJLEKB@PECOFF?3?5Invalid?5image?$CB?6?$AA@ 00041650     blpecoff.obj
+ 0001:00000668       ??_C@_0BN@HECJPAFH@PECOFF?3?5Illegal?5relocation?4?6?$AA@ 00041668     blpecoff.obj
+ 0001:00000688       ??_C@_0BL@IMODACNC@PECOFF?3?5Not?5page?5aligned?4?6?$AA@ 00041688     blpecoff.obj
+ 0001:000006a4       ??_C@_0BG@MHIILMKK@PECOFF?3?5No?5sections?$CB?6?$AA@ 000416a4     blpecoff.obj
+ 0001:000006bc       ??_C@_0BF@ECDALOID@PECOFF?3?5Missing?5PE?$CB?6?$AA@ 000416bc     blpecoff.obj
+ 0001:000006d4       ??_C@_0BF@NCDKKKHJ@PECOFF?3?5Missing?5MZ?$CB?6?$AA@ 000416d4     blpecoff.obj
+ 0001:000006ec       ??_C@_09CDGHECLD@blpnp?4cpp?$AA@ 000416ec     blpnp.obj
+ 0001:000006f8       ??_C@_0DH@ODPGOPBA@PNP?3?5BlPnpGetSystemDeviceNode?5fa@ 000416f8     blpnp.obj
+ 0001:00000730       ??_C@_0L@IABHNPNF@blpool?4cpp?$AA@ 00041730     blpool.obj
+ 0001:0000073c       ??_C@_0CC@ILIHPFFI@PXE?3?5Invalid?5BOOTP_REPLY?5packet?$CB@ 0004173c     blpxe.obj
+ 0001:00000760       ??_C@_0CC@MBIIDCBG@PXE?3?5Get?5DHCP_ACK?5failed?50x?$CF04x?$CB@ 00041760     blpxe.obj
+ 0001:00000784       ??_C@_09HEHCHIGP@blpxe?4cpp?$AA@ 00041784     blpxe.obj
+ 0001:00000790       ??_C@_0CE@DBAHJIHD@PXE?3?5Get?5PXE_REPLY?5failed?3?50x?$CF04@ 00041790     blpxe.obj
+ 0001:000007b4       ??_C@_0BH@OIJGCMHH@PXE?3?5?$CBPXE?5is?5invalid?$CB?6?$AA@ 000417b4     blpxe.obj
+ 0001:000007cc       ??_C@_0BK@BNOBOGEO@PXE?3?5Unable?5to?5find?5PXE?$CB?6?$AA@ 000417cc     blpxe.obj
+ 0001:000007e8       ??_C@_05JDDINMFO@end?4?3?$AA@ 000417e8     blsingularity.obj
+ 0001:000007f0       ??_C@_0CM@LMNFPKBE@?$ANReading?5distro?5files?5?4?4?4?5?$CFu?5?1?5?$CF@ 000417f0     blsingularity.obj
+ 0001:0000081c       ??_C@_0BI@KAGFGJKE@?6BL?3?5Error?5reading?5?$CFs?$CB?6?$AA@ 0004181c     blsingularity.obj
+ 0001:00000834       ??_C@_0BH@LCBGKGKK@DISTRO?3?5?$CFs?5?$FL?$CFu?5bytes?$FN?6?$AA@ 00041834     blsingularity.obj
+ 0001:0000084c       ??_C@_0CP@BKIKLPP@DISTRO?3?5Reading?5distro?5?$CI?$CFu?5files@ 0004184c     blsingularity.obj
+ 0001:0000087c       ??_C@_05COJAONLL@Path?$DN?$AA@ 0004187c     blsingularity.obj
+ 0001:00000884       ??_C@_0CE@EKFFGIL@BL?3?5Error?5parsing?5distro?5INI?5fil@ 00041884     blsingularity.obj
+ 0001:000008a8       ??_C@_05HAHDDALE@Size?$DN?$AA@ 000418a8     blsingularity.obj
+ 0001:000008b0       ??_C@_0BO@DCCFEHEG@BL?3?5Unable?5to?5read?5INI?5file?$CB?6?$AA@ 000418b0     blsingularity.obj
+ 0001:000008d0       ??_C@_0BC@LLHHECHP@blsingularity?4cpp?$AA@ 000418d0     blsingularity.obj
+ 0001:000008e4       ??_C@_0BN@PAFAHLDE@BL?3?5Unable?5to?5get?5INI?5file?$CB?6?$AA@ 000418e4     blsingularity.obj
+ 0001:00000904       ??_C@_0BJ@DGINCILF@singularity?1singboot?4ini?$AA@ 00041904     blsingularity.obj
+ 0001:00000920       ??_C@_0BB@GPAFJBIF@BL?3?5?5?5entry?$DN?5?$CFp?6?$AA@ 00041920     blsingularity.obj
+ 0001:00000934       ??_C@_0BJ@KCGLFDHD@BL?3?5?5kernel?$DN?$FL?$CFp?5?4?4?4?5?$CFp?$FN?6?$AA@ 00041934     blsingularity.obj
+ 0001:00000950       ??_C@_0CD@DEMCBMIL@BL?3?5AP?5returned?5from?5kernel?5call@ 00041950     blsingularity.obj
+ 0001:00000974       ??_C@_0CG@NEIOGAMI@BL?3?5Unrecognized?5kill?5action?50x?$CF@ 00041974     blsingularity.obj
+ 0001:0000099c       ??_C@_0CA@FMEJNHIH@BL?3?5Kernel?5requested?5warmboot?4?6?$AA@ 0004199c     blsingularity.obj
+ 0001:000009bc       ??_C@_0BM@LKIONBKI@BL?3?5Kernel?5requested?5halt?4?6?$AA@ 000419bc     blsingularity.obj
+ 0001:000009d8       ??_C@_0BP@JGHOJCKN@BL?3?5Kernel?5requested?5restart?4?6?$AA@ 000419d8     blsingularity.obj
+ 0001:000009f8       ??_C@_0CA@BLPEJGIE@BL?3?5Kernel?5requested?5shutdown?4?6?$AA@ 000419f8     blsingularity.obj
+ 0001:00000a18       ??_C@_0BL@JBGMGGOL@UNKNOWN?5TYPE?5MEMORY?$DP?$DP?$DP?5?$CFd?6?$AA@ 00041a18     blsingularity.obj
+ 0001:00000a34       ??_C@_0CG@JMHGECHE@Allocated?5kernel?5stack?5at?50x?$CF016@ 00041a34     blsingularity.obj
+ 0001:00000a5c       ??_C@_0CC@JLPBNPHN@Failed?5to?5allocate?5kernel?5stack?4@ 00041a5c     blsingularity.obj
+ 0001:00000a80       ??_C@_0O@CLNMNDLH@Debugger?5OFF?6?$AA@ 00041a80     blsingularity.obj
+ 0001:00000a90       ??_C@_0CB@DIKHLCCP@Got?51394?5debugger?5base?5address?$CB?6@ 00041a90     blsingularity.obj
+ 0001:00000ab4       ??_C@_0BL@MFOMDCLF@SMAP?3?5INT?515?1E820?5failed?$CB?6?$AA@ 00041ab4     blsmap.obj
+ 0001:00000ad0       ??_C@_0L@NPJEFNNA@blsmap?4cpp?$AA@ 00041ad0     blsmap.obj
+ 0001:00000adc       ??_C@_01PAPGNFGE@c?$AA@    00041adc     blstring.obj
+ 0001:00000ae0       ??_C@_01LKDEMHDF@s?$AA@    00041ae0     blstring.obj
+ 0001:00000ae4       ??_C@_01JBBJJEPG@p?$AA@    00041ae4     blstring.obj
+ 0001:00000ae8       ??_C@_04HNPKCLBF@I64x?$AA@ 00041ae8     blstring.obj
+ 0001:00000af0       ??_C@_04MIFEFFFI@I64u?$AA@ 00041af0     blstring.obj
+ 0001:00000af8       ??_C@_04JLINHGEI@I64d?$AA@ 00041af8     blstring.obj
+ 0001:00000b00       ??_C@_01FJMABOPO@x?$AA@    00041b00     blstring.obj
+ 0001:00000b04       ??_C@_01OMGOGALD@u?$AA@    00041b04     blstring.obj
+ 0001:00000b08       ??_C@_01LPLHEDKD@d?$AA@    00041b08     blstring.obj
+ 0001:00000b0c       ??_C@_05HAJCMBLP@?5?$CF02x?$AA@ 00041b0c     bltrap.obj
+ 0001:00000b14       ??_C@_05GOOEJNEL@?5?5?$CFp?3?$AA@ 00041b14     bltrap.obj
+ 0001:00000b1c       ??_C@_0BA@MJDKEIPF@?5?5?$CFp?3?5?$CFp?5?$CFp?5?$CFp?6?$AA@ 00041b1c     bltrap.obj
+ 0001:00000b2c       ??_C@_0BD@PPCAEFDO@?5?5?$CFp?3?5?$CFp?5?$CFp?5?$CFp?5?$CFp?6?$AA@ 00041b2c     bltrap.obj
+ 0001:00000b40       ??_C@_03GPDAHCCA@?5?$CFp?$AA@ 00041b40     bltrap.obj
+ 0001:00000b44       ??_C@_0M@IHNIDGFO@?5?5?$CFp?3?5?$CFp?5?$CFp?$AA@ 00041b44     bltrap.obj
+ 0001:00000b50       ??_C@_07BHLOBMCB@?5?5?$CF8x?3?6?$AA@ 00041b50     bltrap.obj
+ 0001:00000b58       ??_C@_0ED@OFJMDAEI@?5?5?5?5?5Frame?3?5?5?5?5?5next?5?5?5return?5?5?5@ 00041b58     bltrap.obj
+ 0001:00000b9c       ??_C@_0BP@FGJNIPMP@?5?5esp?$DN?$CFp?5ebp?$DN?$CFp?5esi?$DN?$CFp?5edi?$DN?$CFp?6?$AA@ 00041b9c     bltrap.obj
+ 0001:00000bbc       ??_C@_0BP@NGFJDGBA@?5?5eax?$DN?$CFp?5ebx?$DN?$CFp?5ecx?$DN?$CFp?5edx?$DN?$CFp?6?$AA@ 00041bbc     bltrap.obj
+ 0001:00000bdc       ??_C@_0CI@CGBDFPHM@?5?5eip?$DN?$CFp?5efl?$DN?$CFp?5cr2?$DN?$CFp?5cs?$DN?$CF2x?5nu@ 00041bdc     bltrap.obj
+ 0001:00000c04       ??_C@_0CE@DFHPAAJD@?6?$CK?$CK?$CK?5Fatal?5Trap?3?50x?$CF2x?3?$CFp?5?$FLerr?$DN?$CF@ 00041c04     bltrap.obj
+ 0001:00000c28       ??_C@_0L@IIIBICNN@blutil?4cpp?$AA@ 00041c28     blutil.obj
+ 0001:00000c34       ??_C@_0BC@HFDKJDBG@BL?3?5Halt?$CB?5?$CFs?$CI?$CFd?$CJ?6?$AA@ 00041c34     blutil.obj
+ 0001:00000c48       ??_C@_0CA@MFMJIBJG@BL?3?5Assert?5failed?$CB?5?$CFs?$CI?$CFd?$CJ?5?$CI?$CFp?$CJ?6?$AA@ 00041c48     blutil.obj
+ 0001:00000c68       ??_C@_0DA@IAHEEPOL@BL?3?5Attempting?5reset?5with?5keyboa@ 00041c68     blutil.obj
+ 0001:00000c98       ??_C@_0CB@EPLCKFAB@BL?3?5Attempting?5reset?5with?5ACPI?4?6@ 00041c98     blutil.obj
+ 0001:00000cbc       ??_C@_0BJ@CAHBLCHL@APM?3?5Power?9off?5via?5APM?4?6?$AA@ 00041cbc     blutil.obj
+ 0001:00000cd8       ??_C@_0BK@KBFMJDBH@APM?3?5INT15?1530Eh?5failed?$CB?6?$AA@ 00041cd8     blutil.obj
+ 0001:00000cf4       ??_C@_0BK@IGBACJJM@APM?3?5INT15?15301h?5failed?$CB?6?$AA@ 00041cf4     blutil.obj
+ 0001:00000d10       ??_C@_0BF@HKIPIEFE@APM?3?5Not?5available?$CB?6?$AA@ 00041d10     blutil.obj
+ 0001:00000d28       ??_C@_0CN@EAPDPEPL@BL?3?5Attempting?5system?5shutdown?5t@ 00041d28     blutil.obj
+ 0001:00000d58       ??_C@_0CD@CLGCHEI@VESA?3?5Select?51024?5x?5768?5x?516?5?$EA?5?$CF@ 00041d58     blvesa.obj
+ 0001:00000d7c       ??_C@_0CK@DGOLEMIL@?5?5?5?5Couldn?8t?5enable?5Linear?5Frame@ 00041d7c     blvesa.obj
+ 0001:00000da8       ??_C@_0DC@BFIHAFDA@VESA?3?5Mode?5?$CF03x?3?5Attr?$DN?$CF04x?0?5Addr@ 00041da8     blvesa.obj
+ 0001:00000ddc       ??_C@_0BP@KMGIIHJN@VESA?3?5?$CFc?$CFc?$CFc?$CFc?5V?$CFx?5?$CFs?5?$CI?$CFd?5MB?$CJ?6?$AA@ 00041ddc     blvesa.obj
+ 0001:00000dfc       ??_C@_0BG@DMFJCOOA@VESA?3?5No?5VESA?5found?4?6?$AA@ 00041dfc     blvesa.obj
+ 0001:00000e80       ?BlAcpiLocateRsdp@@YIPAU_ACPI_RSDP@@XZ 00041e80 f   blacpi.obj
+ 0001:00000fda       ?BlAcpiLocateRsdt@@YIPAU_ACPI_RSDT@@PAU_ACPI_RSDP@@@Z 00041fda f   blacpi.obj
+ 0001:0000104b       ?BlAcpiLocateMadt@@YIPAU_ACPI_MADT@@PAU_ACPI_RSDT@@@Z 0004204b f   blacpi.obj
+ 0001:000010dd       ?BlAcpiLocateSrat@@YIPAU_ACPI_SRAT@@PAU_ACPI_RSDT@@@Z 000420dd f   blacpi.obj
+ 0001:0000116f       ?BlAcpiDumpSratEntries@@YIXXZ 0004216f f   blacpi.obj
+ 0001:0000124c       ?BlAcpiGetNumberOfProcessors@@YIKXZ 0004224c f   blacpi.obj
+ 0001:000012d0       ?BlAcpiLocateFadt@@YIPAU_ACPI_FADT@@PAU_ACPI_RSDT@@@Z 000422d0 f   blacpi.obj
+ 0001:00001359       ?BlAcpiResetSystem@@YIXXZ  00042359 f   blacpi.obj
+ 0001:000013b8       ?BlAcpiInitialize@@YIXXZ   000423b8 f   blacpi.obj
+ 0001:000014fe       ?BlCdReadLogicalBlock@@YIXKKPAU_ISO9660_LOGICAL_BLOCK@@@Z 000424fe f   blcdrom.obj
+ 0001:000015c6       ?BlCdFindDirectoryRecord@@YIEPBDPAU_ISO9660_DIRECTORY_RECORD@@@Z 000425c6 f   blcdrom.obj
+ 0001:0000187d       ?BlCdGetFileSize@@YIEPBDPAK@Z 0004287d f   blcdrom.obj
+ 0001:000018db       ?BlCdReadFile@@YIEPBDPAXK@Z 000428db f   blcdrom.obj
+ 0001:000019e0       ?BlCdInitialize@@YIXE@Z    000429e0 f   blcdrom.obj
+ 0001:00001ad9       ?BlComInitialize@@YIEEK@Z  00042ad9 f   blcom.obj
+ 0001:00001c4b       ?BlComSendByte@@YIEEE@Z    00042c4b f   blcom.obj
+ 0001:00001cbe       ?BlComDataAvailable@@YIEE@Z 00042cbe f   blcom.obj
+ 0001:00001d13       ?BlComReceiveByte@@YIEE@Z  00042d13 f   blcom.obj
+ 0001:00001d90       __alldiv                   00042d90 f   blcrtasm.obj
+ 0001:00001e3a       __alldvrm                  00042e3a f   blcrtasm.obj
+ 0001:00001f19       __allmul                   00042f19 f   blcrtasm.obj
+ 0001:00001f4d       __allrem                   00042f4d f   blcrtasm.obj
+ 0001:00001fff       __allshl                   00042fff f   blcrtasm.obj
+ 0001:0000201e       __allshr                   0004301e f   blcrtasm.obj
+ 0001:0000203f       __aulldiv                  0004303f f   blcrtasm.obj
+ 0001:000020a7       __aulldvrm                 000430a7 f   blcrtasm.obj
+ 0001:0000213c       __aullrem                  0004313c f   blcrtasm.obj
+ 0001:000021b1       __aullshr                  000431b1 f   blcrtasm.obj
+ 0001:000021d0       ?BlApEntry@@YIXXZ          000431d0 f   blentry.obj
+ 0001:000021e7       ?BlInitialize@@YIXXZ       000431e7 f   blentry.obj
+ 0001:00002338       ?BlGetBeb@@YIPAU_BEB@@XZ   00043338 f i blentry.obj
+ 0001:00002342       ?BlEntry@@YIXXZ            00043342 f   blentry.obj
+ 0001:00002416       ?BlFatHaltInternal@@YIXK@Z 00043416 f   blfat.obj
+ 0001:00002437       ?BlFatReadSector@@YIEKKPAU_FAT_SECTOR@@@Z 00043437 f   blfat.obj
+ 0001:00002543       ?BlFatDirectoryEntryToName@@YIEPAU_FAT_DIRECTORY_ENTRY@@PAU_FAT_NAME@@0@Z 00043543 f   blfat.obj
+ 0001:00002a0f       ?BlFatFindDirectoryTableEntry@@YIPAU_FAT_DIRECTORY_ENTRY@@PAU1@KPBD@Z 00043a0f f   blfat.obj
+ 0001:00002b1b       ?BlFatGetLengthClusterChain@@YIEKPAK@Z 00043b1b f   blfat.obj
+ 0001:00002b88       ?BlFatReadClusterChain@@YIEKKPAX@Z 00043b88 f   blfat.obj
+ 0001:00002cea       ?BlFatFindFileEntry@@YIEPBDPAU_FAT_DIRECTORY_ENTRY@@@Z 00043cea f   blfat.obj
+ 0001:00002edc       ?BlFatGetFileSize@@YIEPBDPAK@Z 00043edc f   blfat.obj
+ 0001:00002f0a       ?BlFatReadFile@@YIEPBDPAXK@Z 00043f0a f   blfat.obj
+ 0001:00002f51       ?BlFat16GetNextCluster@@YIEKPAK@Z 00043f51 f   blfat.obj
+ 0001:00002ff3       ?BlFat16Initialize@@YIXXZ  00043ff3 f   blfat.obj
+ 0001:0000326c       ?BlFat32GetNextCluster@@YIEKPAK@Z 0004426c f   blfat.obj
+ 0001:0000330d       ?BlFat32Initialize@@YIXXZ  0004430d f   blfat.obj
+ 0001:0000355b       ?BlFatInitialize@@YIXEE@Z  0004455b f   blfat.obj
+ 0001:0000375b       ?BlFlashRecordIsValid@@YIPAUFLASH_FILE@@PAU1@@Z 0004475b f   blflash.obj
+ 0001:000037b4       ?BlFlashFindFile@@YIPAUFLASH_FILE@@PBD@Z 000447b4 f   blflash.obj
+ 0001:000037ff       ?BlFlashGetFileSize@@YIEPBDPAK@Z 000447ff f   blflash.obj
+ 0001:0000382f       ?BlFlashReadFile@@YIEPBDPAXK@Z 0004482f f   blflash.obj
+ 0001:0000386d       ?BlFlashInitialize@@YIXPAX0@Z 0004486d f   blflash.obj
+ 0001:00003940       ?BlTrapEnter@@YIXXZ        00044940 f   blidt.obj
+ 0001:00003a71       ?BlTrapSetIdtr@@YIXPAU_IDTR@@@Z 00044a71 f   blidt.obj
+ 0001:00003a80       ?BlRtlReadPort8@@YIEG@Z    00044a80 f   blioport.obj
+ 0001:00003a85       ?BlRtlReadPort32@@YIKG@Z   00044a85 f   blioport.obj
+ 0001:00003a8a       ?BlRtlWritePort8@@YIXGE@Z  00044a8a f   blioport.obj
+ 0001:00003a91       ?BlRtlWritePort32@@YIXGK@Z 00044a91 f   blioport.obj
+ 0001:00003a98       ?BlKdSpin@@YIXXZ           00044a98 f   blkd.obj
+ 0001:00003ac5       ?BlKdComputeChecksum@@YIKPBXK@Z 00044ac5 f   blkd.obj
+ 0001:00003b00       ?BlKdPrintString@@YIEPBD@Z 00044b00 f   blkd.obj
+ 0001:00003b85       ?BlKdPrintf@@YAEPBDZZ      00044b85 f   blkd.obj
+ 0001:00003bc4       ?BlKdInitialize@@YIXXZ     00044bc4 f   blkd.obj
+ 0001:00003bdc       ?BlKd1394StallExecution@@YIKK@Z 00044bdc f   blkd1394.obj
+ 0001:00003c3c       ?BlKd1394ByteSwap@@YIKK@Z  00044c3c f   blkd1394.obj
+ 0001:00003c6f       ?BlKd1394Crc16@@YIKKK@Z    00044c6f f   blkd1394.obj
+ 0001:00003cd7       ?BlKd1394CalculateCrc@@YIGPAKK@Z 00044cd7 f   blkd1394.obj
+ 0001:00003d1c       ?BlKd1394InitHardware@@YIEGPAX@Z 00044d1c f   blkd1394.obj
+ 0001:0000420f       ?BlKd1394EnablePhysicalAccess@@YIXXZ 0004520f f   blkd1394.obj
+ 0001:000042df       ?BlKd1394SendPacket@@YIEGPBXG0G@Z 000452df f   blkd1394.obj
+ 0001:00004513       ?BlKd1394Connect@@YIEXZ    00045513 f   blkd1394.obj
+ 0001:0000457c       ?BlKdComReceiveByte@@YIEPAE@Z 0004557c f   blkdcom.obj
+ 0001:000045d3       ?BlKdComSendData@@YIEPBXK@Z 000455d3 f   blkdcom.obj
+ 0001:00004618       ?BlKdComReceiveData@@YIEPAXK@Z 00045618 f   blkdcom.obj
+ 0001:00004655       ?BlKdComSendControlPacket@@YIEGK@Z 00045655 f   blkdcom.obj
+ 0001:0000469c       ?BlKdComReceivePacket@@YIEXZ 0004569c f   blkdcom.obj
+ 0001:000047a8       ?BlKdComSendPacket@@YIEGPBXG0G@Z 000457a8 f   blkdcom.obj
+ 0001:00004908       ?BlKdComConnect@@YIEXZ     00045908 f   blkdcom.obj
+ 0001:000049b4       ?BlReturnToLegacyMode@@YIXXZ 000459b4 f   bllegacy.obj
+ 0001:00004a1a       ?BlMmCompactPhysicalRegionList@@YIXXZ 00045a1a f   blmm.obj
+ 0001:00004ba2       ?BlMmInsertPhysicalRegion@@YIXPAU_BL_MM_PHYSICAL_REGION@@@Z 00045ba2 f   blmm.obj
+ 0001:00004c10       ?BlMmCreatePhysicalRegion@@YIX_K0K@Z 00045c10 f   blmm.obj
+ 0001:00004e1d       ?BlMmAllocatePhysicalRegion@@YI_KKK@Z 00045e1d f   blmm.obj
+ 0001:0000501e       ?BlMmAllocateSpecificPhysicalRegion@@YIE_K0K@Z 0004601e f   blmm.obj
+ 0001:000052db       ?BlMmFindFreePhysicalRegion@@YIEPA_K0@Z 000462db f   blmm.obj
+ 0001:00005343       ?BlMmGetNextPhysicalRegion@@YIEPAPAXPA_K1PAK@Z 00046343 f   blmm.obj
+ 0001:000053c3       ?BlMmPhysicalRegionTypeString@@YIPADK@Z 000463c3 f   blmm.obj
+ 0001:000054b3       ?BlMmDumpPhysicalRegionList@@YIXXZ 000464b3 f   blmm.obj
+ 0001:00005525       ?BlMmInitializePageTables@@YIXXZ 00046525 f   blmm.obj
+ 0001:000056d6       ?BlMmMapVirtualPage@@YIXPAX0EEE@Z 000466d6 f   blmm.obj
+ 0001:000058ed       ?BlMmMapVirtualRange@@YIXPAX0KEEE@Z 000468ed f   blmm.obj
+ 0001:0000596c       ?BlMmInitializeCodeSegment@@YIXPAU_CODE_SEGMENT@@@Z 0004696c f   blmm.obj
+ 0001:000059fe       ?BlMmInitializeDataSegment@@YIXPAU_DATA_SEGMENT@@KK@Z 000469fe f   blmm.obj
+ 0001:00005bcc       ?BlMmInitializeSystemSegment@@YIXPAU_SYSTEM_SEGMENT@@KKK@Z 00046bcc f   blmm.obj
+ 0001:00005d7a       ?BlMmEnableA20Gate@@YIXXZ  00046d7a f   blmm.obj
+ 0001:00005e00       ?BlMmGetExtendedBiosDataArea@@YIPAXXZ 00046e00 f   blmm.obj
+ 0001:00005e17       ?BlMmInitializeSystem@@YIXXZ 00046e17 f   blmm.obj
+ 0001:0000604b       ?BlMpsLocateFpsInRange@@YIPAU_MPS_FPS@@KK@Z 0004704b f   blmps.obj
+ 0001:000060d6       ?BlMpsLocateFps@@YIPAU_MPS_FPS@@XZ 000470d6 f   blmps.obj
+ 0001:0000613d       ?BlMpsInitialize@@YIXXZ    0004713d f   blmps.obj
+ 0001:0000615b       ?BlPciCheckBios@@YIEPAU_PCI_INSTALLATION_CHECK@@@Z 0004715b f   blpci.obj
+ 0001:00006211       ?BlPciReadConfigurationRegister@@YIKEEEE@Z 00047211 f   blpci.obj
+ 0001:00006305       ?BlPciWriteConfigurationRegister@@YIXEEEEK@Z 00047305 f   blpci.obj
+ 0001:000063f6       ?BlPciReadConfigurationSpace@@YIXEEEEPAXG@Z 000473f6 f   blpci.obj
+ 0001:0000648f       ?BlPciScanDevices@@YIXXZ   0004748f f   blpci.obj
+ 0001:000067b2       ?BlPciInitialize@@YIXXZ    000477b2 f   blpci.obj
+ 0001:000067e7       ?BlPeGetVirtualRange@@YIXPAXPAPAXPAK@Z 000477e7 f   blpecoff.obj
+ 0001:00006927       ?BlPeApplyFixupBlock@@YIXPAU_IMAGE_BASE_RELOCATION@@KK@Z 00047927 f   blpecoff.obj
+ 0001:000069d7       ?BlPeLoadImage@@YIXPAX0PAPAX@Z 000479d7 f   blpecoff.obj
+ 0001:00006bd3       ?BlPnpGetNumberOfSystemDeviceNodes@@YIGPAEPAKG@Z 00047bd3 f   blpnp.obj
+ 0001:00006c74       ?BlPnpGetSystemDeviceNode@@YIGPAEPAU_PNP_SYSTEM_DEVICE_NODE@@KGG@Z 00047c74 f   blpnp.obj
+ 0001:00006d6e       ?BlPnpGetIsaConfiguration@@YIGPAU_PNP_ISA_CONFIGURATION@@G@Z 00047d6e f   blpnp.obj
+ 0001:00006de3       ?BlPnpLocateBios@@YIPAU_PNP_INSTALLATION_CHECK@@XZ 00047de3 f   blpnp.obj
+ 0001:00006e76       ?BlPnpInitialize@@YIXXZ    00047e76 f   blpnp.obj
+ 0001:00006fdf       ?BlPoolInitialize@@YIXXZ   00047fdf f   blpool.obj
+ 0001:00006fee       ?BlPoolVerify@@YIXXZ       00047fee f   blpool.obj
+ 0001:00007253       ?BlPoolGrow@@YIXK@Z        00048253 f   blpool.obj
+ 0001:0000734c       ?BlPoolAllocateBlock@@YIPAXK@Z 0004834c f   blpool.obj
+ 0001:000074cb       ?BlPoolFreeBlock@@YIXPAX@Z 000484cb f   blpool.obj
+ 0001:0000754d       ?BlPxeCallPxeApi@@YIXGPAX@Z 0004854d f   blpxe.obj
+ 0001:000075f2       ?BlPxeGetBootpReply@@YIXXZ 000485f2 f   blpxe.obj
+ 0001:000077df       ?BlPxeGetFileSize@@YIEPBDPAK@Z 000487df f   blpxe.obj
+ 0001:00007876       ?BlPxeReadFile@@YIEPBDPAXK@Z 00048876 f   blpxe.obj
+ 0001:0000796b       ?BlPxeInitialize@@YIXXZ    0004896b f   blpxe.obj
+ 0001:00007b6b       ?BlSingularityLoadDistro@@YIXXZ 00048b6b f   blsingularity.obj
+ 0001:00007f6e       ?BlSingularityLoadKernelImage@@YIXXZ 00048f6e f   blsingularity.obj
+ 0001:0000805a       ?BlSingularityInitializeProcessor@@YIXK@Z 0004905a f   blsingularity.obj
+ 0001:0000818d       ?BlSingularityCallKernel@@YIKK@Z 0004918d f   blsingularity.obj
+ 0001:0000822c       ?BlSingularityEnterKernel@@YIXXZ 0004922c f   blsingularity.obj
+ 0001:00008307       ?BlSingularityExit@@YIXXZ  00049307 f   blsingularity.obj
+ 0001:00008429       ?IsApicPresent@@YIIXZ      00049429 f   blsingularity.obj
+ 0001:00008443       ?GetAPIC_ID@@YIEXZ         00049443 f   blsingularity.obj
+ 0001:0000845f       ?BlSingularityInitialize@@YIXKPAU_FAR_POINTER@@0@Z 0004945f f   blsingularity.obj
+ 0001:00008cc6       ?BlSingularityApEntry@@YIXXZ 00049cc6 f   blsingularity.obj
+ 0001:00008d75       ?BlSmapInitialize@@YIXXZ   00049d75 f   blsmap.obj
+ 0001:00008eb2       ?BlRtlConvertCharacterToUpperCase@@YIDD@Z 00049eb2 f   blstring.obj
+ 0001:00008ed9       ?BlRtlParsePositiveDecimal@@YIEPBDPAK1@Z 00049ed9 f   blstring.obj
+ 0001:00008f71       ?BlRtlParseTypeSpecifier@@YIEPBDPAJPADPAEPAK@Z 00049f71 f   blstring.obj
+ 0001:0000925e       ?BlRtlFormatSignedDecimalLong@@YIEPADKJJPAK@Z 0004a25e f   blstring.obj
+ 0001:000093cb       ?BlRtlFormatUnsignedLong@@YIEPADKKEJKPAK@Z 0004a3cb f   blstring.obj
+ 0001:00009537       ?BlRtlFormatUnsignedLongLong@@YIEPADK_KEJKPAK@Z 0004a537 f   blstring.obj
+ 0001:0000972a       ?BlRtlStringLength@@YIKPBD@Z 0004a72a f   blstring.obj
+ 0001:00009751       ?BlRtlStringLengthW@@YIKPB_W@Z 0004a751 f   blstring.obj
+ 0001:00009779       ?BlRtlFormatStringToken@@YIEPADKPBDJPAK@Z 0004a779 f   blstring.obj
+ 0001:00009857       ?BlRtlFormatChar@@YIEPADKDPAK@Z 0004a857 f   blstring.obj
+ 0001:00009883       ?BlRtlFormatString@@YIEPADKPBD0@Z 0004a883 f   blstring.obj
+ 0001:00009bff       ?BlRtlPrintf@@YAEPBDZZ     0004abff f   blstring.obj
+ 0001:00009c49       ?BlRtlEqualStringN@@YIEPBD0K@Z 0004ac49 f   blstring.obj
+ 0001:00009ca3       ?BlRtlEqualStringI@@YIEPBD0@Z 0004aca3 f   blstring.obj
+ 0001:00009cf2       ?BlRtlFindSubstring@@YIPBDPBD0@Z 0004acf2 f   blstring.obj
+ 0001:00009d3a       ?BlTrapEnable@@YIXXZ       0004ad3a f   bltrap.obj
+ 0001:00009df4       ?BlTrapFatal@@YIXKPAU_BL_TRAP_CONTEXT@@@Z 0004adf4 f   bltrap.obj
+ 0001:0000a07c       ?BlRtlInitializeListHead@@YIXPAU_LIST_ENTRY@@@Z 0004b07c f   blutil.obj
+ 0001:0000a096       ?BlRtlIsListEmpty@@YIEPAU_LIST_ENTRY@@@Z 0004b096 f   blutil.obj
+ 0001:0000a0aa       ?BlRtlRemoveEntryList@@YIEPAU_LIST_ENTRY@@@Z 0004b0aa f   blutil.obj
+ 0001:0000a10a       ?BlRtlRemoveHeadList@@YIPAU_LIST_ENTRY@@PAU1@@Z 0004b10a f   blutil.obj
+ 0001:0000a157       ?BlRtlRemoveTailList@@YIPAU_LIST_ENTRY@@PAU1@@Z 0004b157 f   blutil.obj
+ 0001:0000a1a6       ?BlRtlInsertTailList@@YIXPAU_LIST_ENTRY@@0@Z 0004b1a6 f   blutil.obj
+ 0001:0000a1df       ?BlRtlInsertHeadList@@YIXPAU_LIST_ENTRY@@0@Z 0004b1df f   blutil.obj
+ 0001:0000a217       ?BlRtlConvertLinearPointerToFarPointer@@YIXPAXPAU_FAR_POINTER@@@Z 0004b217 f   blutil.obj
+ 0001:0000a256       ?BlRtlConvertFarPointerToLinearPointer@@YIPAXPAU_FAR_POINTER@@@Z 0004b256 f   blutil.obj
+ 0001:0000a271       ?BlRtlZeroMemory@@YIXPAXK@Z 0004b271 f   blutil.obj
+ 0001:0000a2a5       ?BlRtlCopyMemory@@YIXPAXPBXK@Z 0004b2a5 f   blutil.obj
+ 0001:0000a337       ?BlRtlCompareMemory@@YIEPBX0K@Z 0004b337 f   blutil.obj
+ 0001:0000a37a       ?BlRtlMakeLegacyCall@@YIXXZ 0004b37a f   blutil.obj
+ 0001:0000a389       ?BlRtlCallLegacyInterruptService@@YIXEPAU_BL_LEGACY_CALL_CONTEXT@@0@Z 0004b389 f   blutil.obj
+ 0001:0000a484       ?BlRtlCallLegacyFunction@@YIXGGPAXKPAU_BL_LEGACY_CALL_CONTEXT@@1@Z 0004b484 f   blutil.obj
+ 0001:0000a5d8       ?BlRtlHaltInternal@@YIXPBDK@Z 0004b5d8 f   blutil.obj
+ 0001:0000a5fa       ?BlRtlAssertFailedPtr@@YIXPBDKK@Z 0004b5fa f   blutil.obj
+ 0001:0000a621       ?BlRtlAssertFailed@@YIXPBDK@Z 0004b621 f   blutil.obj
+ 0001:0000a63b       ?BlRtlComputeChecksum8@@YIEPBXK@Z 0004b63b f   blutil.obj
+ 0001:0000a679       ?BlRtlGetDriveParameters@@YIEEPAU_INT13_DRIVE_PARAMETERS@@@Z 0004b679 f   blutil.obj
+ 0001:0000a6f2       ?BlRtlReadDrive@@YIEE_KGPAX@Z 0004b6f2 f   blutil.obj
+ 0001:0000a7cb       ?BlCmosReadRegister@@YIEE@Z 0004b7cb f   blutil.obj
+ 0001:0000a7e9       ?BlCmosWriteRegister@@YIXEE@Z 0004b7e9 f   blutil.obj
+ 0001:0000a80e       ?BlRtlResetSystem@@YIXXZ   0004b80e f   blutil.obj
+ 0001:0000a8da       ?BlRtlShutdownSystem@@YIXXZ 0004b8da f   blutil.obj
+ 0001:0000a9f3       ?BlRtlConvertBcdToBinary8@@YIEE@Z 0004b9f3 f   blutil.obj
+ 0001:0000aa12       ?BlRtlGetCurrentTime@@YIXPAU_BL_TIME@@@Z 0004ba12 f   blutil.obj
+ 0001:0000aaf0       ?BlMmGetCr3@@YIKXZ         0004baf0 f   blutilasm.obj
+ 0001:0000aaf4       ?BlMmSetCr3@@YIXK@Z        0004baf4 f   blutilasm.obj
+ 0001:0000aaf8       ?BlMmGetGdtr@@YIXPAU_GDTR@@@Z 0004baf8 f   blutilasm.obj
+ 0001:0000aafc       ?BlMmSetGdtr@@YIXPAU_GDTR@@@Z 0004bafc f   blutilasm.obj
+ 0001:0000ab00       @BlMmGetFs@0               0004bb00 f   blutilasm.obj
+ 0001:0000ab04       ?BlMmSetFs@@YIXG@Z         0004bb04 f   blutilasm.obj
+ 0001:0000ab08       ?BlMmSwitchStack@@YIXPAX0@Z 0004bb08 f   blutilasm.obj
+ 0001:0000ab0e       ?BlRtlGetEbp@@YIPAXXZ      0004bb0e f   blutilasm.obj
+ 0001:0000ab11       ?BlGetCpuidEax@@YIKK@Z     0004bb11 f   blutilasm.obj
+ 0001:0000ab16       ?BlGetCpuidEbx@@YIKK@Z     0004bb16 f   blutilasm.obj
+ 0001:0000ab1d       ?BlGetCpuidEcx@@YIKK@Z     0004bb1d f   blutilasm.obj
+ 0001:0000ab24       ?BlGetCpuidEdx@@YIKK@Z     0004bb24 f   blutilasm.obj
+ 0001:0000ab2b       ?BlVesaInvoke@@YIKKKKPAX@Z 0004bb2b f   blvesa.obj
+ 0001:0000ab81       ?BlVesaInitialize@@YIEXZ   0004bb81 f   blvesa.obj
+ 0001:0000ae58       ?BlVideoSetCursorPosition@@YIXGG@Z 0004be58 f   blvideo.obj
+ 0001:0000aeb9       ?BlVideoGetCursorPosition@@YIXPAG0@Z 0004beb9 f   blvideo.obj
+ 0001:0000aeec       ?BlVideoWriteCurrentCharacter@@YIXE@Z 0004beec f   blvideo.obj
+ 0001:0000af26       ?BlVideoScrollUpWindow@@YIXE@Z 0004bf26 f   blvideo.obj
+ 0001:0000afda       ?BlVideoPrintCharacter@@YIXE@Z 0004bfda f   blvideo.obj
+ 0001:0000b073       ?BlVideoPrintString@@YIXPBD@Z 0004c073 f   blvideo.obj
+ 0001:0000b0a0       ?BlVideoPrintf@@YAEPBDZZ   0004c0a0 f   blvideo.obj
+ 0001:0000b0df       ?BlVideoInitialize@@YIXXZ  0004c0df f   blvideo.obj
+ 0001:0000c000       ?BlAcpiNumberOfProcessors@@3KA 0004d000     blacpi.obj
+ 0001:0000c004       ?BlAcpiRsdt@@3PAU_ACPI_RSDT@@A 0004d004     blacpi.obj
+ 0001:0000c008       ?BlAcpiSrat@@3PAU_ACPI_SRAT@@A 0004d008     blacpi.obj
+ 0001:0000c00c       ?BlAcpiFadt@@3PAU_ACPI_FADT@@A 0004d00c     blacpi.obj
+ 0001:0000c010       ?BlAcpiMadt@@3PAU_ACPI_MADT@@A 0004d010     blacpi.obj
+ 0001:0000c014       ?BlAcpiRsdpAddress@@3PAXA  0004d014     blacpi.obj
+ 0001:0000c018       ?BlAcpiRsdp@@3PAU_ACPI_RSDP@@A 0004d018     blacpi.obj
+ 0001:0000c020       ?BlCdVolumeDescriptor@@3U_ISO9660_VOLUME_DESCRIPTOR@@A 0004d020     blcdrom.obj
+ 0001:0000c820       ?BlCdDriveId@@3EA          0004d820     blcdrom.obj
+ 0001:0000c824       ?BlCdDriveParameters@@3U_INT13_DRIVE_PARAMETERS@@A 0004d824     blcdrom.obj
+ 0001:0000c840       ?BlCdTemporaryBlock@@3PAU_ISO9660_LOGICAL_BLOCK@@A 0004d840     blcdrom.obj
+ 0001:0001c840       ?BlBootStackBase@@3PAXA    0005d840     blentry.obj
+ 0001:0001c844       ?BlBootStackLimit@@3PAXA   0005d844     blentry.obj
+ 0001:0001c848       ?BlStartTime@@3U_BL_TIME@@A 0005d848     blentry.obj
+ 0001:0001ca00       ?BlFatPartitionStart@@3KA  0005da00     blfat.obj
+ 0001:0001ca04       ?BlFatSectorsPerCluster@@3KA 0005da04     blfat.obj
+ 0001:0001ca08       ?BlFatDriveParameters@@3U_INT13_DRIVE_PARAMETERS@@A 0005da08     blfat.obj
+ 0001:0001ca22       ?BlFatDriveId@@3EA         0005da22     blfat.obj
+ 0001:0001cc00       ?BlFatTemporaryBlock@@3PAU_FAT_SECTOR@@A 0005dc00     blfat.obj
+ 0001:00024c00       ?BlFatDataStart@@3KA       00065c00     blfat.obj
+ 0001:00024c04       ?BlFatNumberOfRootDirectoryEntries@@3KA 00065c04     blfat.obj
+ 0001:00024c08       ?BlFatMbr@@3U_MBR@@A       00065c08     blfat.obj
+ 0001:00024e08       ?BlFatBootSector@@3U_FAT_BOOT_SECTOR@@A 00065e08     blfat.obj
+ 0001:00025008       ?BlFatLinkTerminator@@3KA  00066008     blfat.obj
+ 0001:0002500c       ?BlFatRootDirectory@@3PAU_FAT_DIRECTORY_ENTRY@@A 0006600c     blfat.obj
+ 0001:00025010       ?BlFatPartitionSize@@3KA   00066010     blfat.obj
+ 0001:00025014       ?BlFatBytesPerCluster@@3KA 00066014     blfat.obj
+ 0001:00025018       ?BlFatTableStart@@3KA      00066018     blfat.obj
+ 0001:0002501c       ?BlFatPartitionId@@3KA     0006601c     blfat.obj
+ 0001:00025020       ?BlFatNumberOfDataClusters@@3KA 00066020     blfat.obj
+ 0001:00025024       ?BlFatTotalSectorCount@@3KA 00066024     blfat.obj
+ 0001:00025028       ?BlFatGetNextCluster@@3P6IEKPAK@ZA 00066028     blfat.obj
+ 0001:0002502c       ?BlFatRootStart@@3KA       0006602c     blfat.obj
+ 0001:00025038       ?BlKdNextPacketId@@3KA     00066038     blkd.obj
+ 0001:00025048       ?BlKdComPort@@3EA          00066048     blkdcom.obj
+ 0001:00025050       ?BlKdStaticPacket@@3U<unnamed-tag>@@A 00066050     blkdcom.obj
+ 0001:00027000       ?BlMmExtendedBiosDataArea@@3PAXA 00068000     blmm.obj
+ 0001:00027004       ?BlMmLegacyCr3@@3KA        00068004     blmm.obj
+ 0001:00027008       ?BlMmPhysicalRegionList@@3U_LIST_ENTRY@@A 00068008     blmm.obj
+ 0001:00027010       ?BlMmBootCr3@@3KA          00068010     blmm.obj
+ 0001:00027014       ?BlMmInitialGdtr@@3U_GDTR@@A 00068014     blmm.obj
+ 0001:00028000       ?BlMmPdpTable@@3PAU_BL_MM_PAGE_TABLE@@A 00069000     blmm.obj
+ 0001:00029000       ?BlMmPdTable@@3PAU_BL_MM_PAGE_TABLE@@A 0006a000     blmm.obj
+ 0001:0002d000       ?BlMmPhysicalRegionLookaside@@3U<unnamed-tag>@@A 0006e000     blmm.obj
+ 0001:0002e000       ?BlMmPgTable@@3PAU_BL_MM_PAGE_TABLE@@A 0006f000     blmm.obj
+ 0001:0002f000       ?BlMpsFps@@3PAXA           00070000     blmps.obj
+ 0001:0002f004       ?BlPciOhci1394BaseAddress@@3KA 00070004     blpci.obj
+ 0001:0002f008       ?BlPciInstallationCheck@@3U_PCI_INSTALLATION_CHECK@@A 00070008     blpci.obj
+ 0001:0002f020       ?BlPnpNumberOfNodes@@3EA   00070020     blpnp.obj
+ 0001:0002f021       ?BlPnpHandle@@3EA          00070021     blpnp.obj
+ 0001:0002f024       ?BlPnpNodeSize@@3KA        00070024     blpnp.obj
+ 0001:0002f028       ?BlPnpCallFrame@@3PAGA     00070028     blpnp.obj
+ 0001:0002f048       ?BlPnpBiosInformation@@3PAU_PNP_INSTALLATION_CHECK@@A 00070048     blpnp.obj
+ 0001:0002f04c       ?BlPnpSystemDeviceNodeList@@3PAU_PNP_SYSTEM_DEVICE_NODE@@A 0007004c     blpnp.obj
+ 0001:0002f050       ?BlPnpIsaConfiguration@@3U_PNP_ISA_CONFIGURATION@@A 00070050     blpnp.obj
+ 0001:0002f058       ?BlPnpNodeData@@3PAEA      00070058     blpnp.obj
+ 0001:00030058       ?BlPnpSystemDeviceNodeListSize@@3KA 00071058     blpnp.obj
+ 0001:0003005c       ?BlPoolSegmentList@@3U_LIST_ENTRY@@A 0007105c     blpool.obj
+ 0001:00030068       ?BlPxeBootpReply@@3U_BOOTP_REPLY@@A 00071068     blpxe.obj
+ 0001:00030734       ?BlPxeInstallationCheck@@3PAU_PXE_INSTALLATION_CHECK@@A 00071734     blpxe.obj
+ 0001:00030738       ?BlPxeExtendedInformation@@3PAU_PXE_EXTENDED_INFORMATION@@A 00071738     blpxe.obj
+ 0001:0003073c       ?BlPxeEntry16@@3U_FAR_POINTER@@A 0007173c     blpxe.obj
+ 0001:00030740       ?BlPxeCallFrame@@3PAGA     00071740     blpxe.obj
+ 0001:00030760       ?BlPxeApiPacket@@3U_PXE_API_PACKET@@A 00071760     blpxe.obj
+ 0001:00031000       ?BlSingularityFileImageTable@@3PAUStruct_Microsoft_Singularity_Io_FileImage@@A 00072000     blsingularity.obj
+ 0001:00031004       ?BlCpuArray@@3PAUClass_Microsoft_Singularity_Hal_Cpu@@A 00072004     blsingularity.obj
+ 0001:00031008       ?BlKernelEntryPoint@@3P6IKPAUClass_Microsoft_Singularity_Hal_Platform@@PAUClass_Microsoft_Singularity_Hal_Cpu@@@ZA 00072008     blsingularity.obj
+ 0001:0003100c       ?BlDistro@@3U_BL_DISTRO@@A 0007200c     blsingularity.obj
+ 0001:00031020       ?BlProcessor@@3PAU_BL_PROCESSOR@@A 00072020     blsingularity.obj
+ 0001:00031024       ?BlSingularitySmap@@3PAU_BL_SMAP@@A 00072024     blsingularity.obj
+ 0001:00031028       ?BlKernelFile@@3PAU_BL_DISTRO_FILE@@A 00072028     blsingularity.obj
+ 0001:0003102c       ?BlKernelSize@@3KA         0007202c     blsingularity.obj
+ 0001:00031030       ?BlCommandLine@@3PA_WA     00072030     blsingularity.obj
+ 0001:00031034       ?BlProcessorCount@@3KA     00072034     blsingularity.obj
+ 0001:00031038       ?BlSingularityProcessorToStart@@3KA 00072038     blsingularity.obj
+ 0001:0003103c       ?BlKernelBase@@3PAXA       0007203c     blsingularity.obj
+ 0001:00031040       ?BlSingularityFileImageTableSize@@3KA 00072040     blsingularity.obj
+ 0001:00031044       ?BlPlatform@@3PAUClass_Microsoft_Singularity_Hal_Platform@@A 00072044     blsingularity.obj
+ 0001:00032000       ?BlSingularityOhci1394Buffer@@3PAEA 00073000     blsingularity.obj
+ 0001:00035000       ?BlSystemMemoryMap@@3U_BL_SMAP@@A 00076000     blsmap.obj
+ 0001:00035c08       ?BlIdt@@3PAU_IDTE@@A       00076c08     bltrap.obj
+ 0001:00035d08       ?BlIdtr@@3U_IDTR@@A        00076d08     bltrap.obj
+ 0001:00035d14       ?BlFsGetFileSize@@3P6IEPBDPAK@ZA 00076d14     blutil.obj
+ 0001:00035d18       ?BlInt13AddressPacket@@3U_INT13_DISK_ADDRESS_PACKET@@A 00076d18     blutil.obj
+ 0001:00035d28       ?BlFsReadFile@@3P6IEPBDPAXK@ZA 00076d28     blutil.obj
+ 0001:00035d30       ?BlVesaVideoBuffer@@3KA    00076d30     blvesa.obj
+ 0001:00035d40       ?BlVesaInfo@@3T_BL_VESA_INFO@@A 00076d40     blvesa.obj
+ 0001:00036140       ?BlVesaMode@@3T_BL_VESA_MODE@@A 00077140     blvesa.obj
+ 0001:00036540       ?BlVideoCursorPosition@@3GA 00077540     blvideo.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+

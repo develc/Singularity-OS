@@ -1,0 +1,529 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>NetStackLib</name>
+  </assembly>
+  <members>
+    <member name="M:NetStack.Common.NetPacket.ToUser">
+      <summary>
+should only copy the data from position to count
+</summary>
+    </member>
+    <member name="M:NetStack.Common.NetPacket.Clip(System.Int32)">
+      <summary>
+Clips the remaining bytes (after the current position)
+</summary>
+      <param name="remaining" />
+    </member>
+    <member name="M:NetStack.Common.NetPacket.Clip(System.Int32,System.Int32)">
+      <summary>
+Clips the bytes outside the window
+remaining counts the bytes after the headIndex
+</summary>
+    </member>
+    <member name="T:NetStack.Protocols.Dns.LabelEncoding">
+      <summary>
+Convert between textual and binary DNS names.
+</summary>
+      <remarks>
+<para>
+RFC1035 describes how names should be packed in DNS
+queries and responses.  The method is described as:
+</para>
+<para>
+Domain names in messages are expressed in terms of a
+sequence of labels.  Each label is represented as a one
+octet length field followed by that number of octets.
+Since every domain name ends with the null label of the
+root, a domain name is terminated by a length byte of
+zero.  The high order two bits of every length octet
+must be zero, and the remaining six bits of the length
+field limit the label to 63 octets or less.
+</para>
+</remarks>
+    </member>
+    <member name="M:NetStack.Protocols.Dns.LabelEncoding.GetString(System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32,System.String@)">
+      <summary>
+Convert name from sequence of bytes to string.
+</summary>
+      <returns>
+Returns number of bytes consumed, or 0 if input is invalid.
+</returns>
+    </member>
+    <member name="M:NetStack.Protocols.IPFormat.UpdateChecksum(System.UInt16,System.UInt16,System.UInt16)">
+      <summary>
+Update checksum when a 16-bit value that composed the original
+checksum changes.  Useful for recomputing checksum when
+TTL changes when acting as a router.
+</summary>
+    </member>
+    <member name="M:NetStack.Protocols.UdpFormat.SumHeader(NetStack.Protocols.UdpFormat.UdpHeader)">
+      <summary>
+Compute checksum of UDP header.
+</summary>
+    </member>
+    <member name="M:NetStack.Protocols.UdpFormat.WriteUdpPacket(System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32,NetStack.Protocols.IPFormat.IPHeader!Microsoft.Contracts.NonNullType,NetStack.Protocols.UdpFormat.UdpHeader@,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+Write IP and UDP headers and payload data into a
+byte array.
+</summary>
+      <param name="pkt">Array of bytes representing
+packet to be sent.</param>
+      <param name="offset">Offset of IP Header within
+packet.</param>
+      <param name="ipHeader">IP header to be written
+to packet.</param>
+      <param name="udpHeader">UDP header to be written
+to packet.</param>
+      <param name="payload">Payload of UDP Packet.</param>
+      <param name="payloadOffset">The offset of start
+of the payload data within the payload
+array.</param>
+      <param name="payloadLength">The size of the payload data.</param>
+    </member>
+    <member name="T:NetStack.Runtime.ArpRequestCallback">
+      <summary>
+Callback for Arp Requests.
+
+This delegate is invoked when the ArpModule gets a
+response to a request.
+
+<param name="answer">Ethernet address corresponding to
+requested IP address if a response is received,
+EthernetAddress.Zero if request timed out.</param>
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.ArpModule">
+      <summary>
+This module implements the ARP protocol.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.ArpModule.TimeoutArgument">
+      <summary>
+Class used to hold expiration time of Request timeouts.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.Core.GetAdapterInfoCollection">
+      <summary>
+Get collection of AdapterInfo instances associated
+with adapters.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.DhcpClientState.EnterEvent">
+      <summary>
+State should perform processing as DhcpClient recognizes it
+as the currently active event.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.DhcpClientState.ReceiveEvent(NetStack.Protocols.DhcpFormat!Microsoft.Contracts.NonNullType)">
+      <summary>
+State should process that has arrived.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.DhcpClientState.RenewalTimeoutEvent">
+      <summary>
+Renewal timer expiry event.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.DhcpClientState.RebindTimeoutEvent">
+      <summary>
+Rebind timer expiry event.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.DhcpClientState.StateTimeoutEvent">
+      <summary>
+General purpose timer expiry event.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.DhcpClient">
+      <summary>
+A DhcpClient acts as a DHCP Client on a particular interface.
+
+The implementation is based on RFC2131.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.BasicDnsClient">
+      <summary>
+Dns Client for UDP lookups.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.BasicDnsClient.GetHostByName(System.String,System.Net.IP.IPv4HostEntry@)">
+      <summary>
+Gets the DNS information for the specified DNS host name.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.BasicDnsClient.GetHostByAddress(System.Net.IP.IPv4,System.Net.IP.IPv4HostEntry@)">
+      <summary>
+Gets DNS host information for an IP address.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.BasicDnsClient.Resolve(System.String,System.Net.IP.IPv4HostEntry@)">
+      <summary>
+Resolves a DNS host name or IP address to an IPv4HostEntry instance.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.HostConfiguration.NameServers">
+      <summary>
+Get enumerable interface of IPv4 collection
+containing name servers.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.HostConfiguration.GetCurrentNameServer">
+      <summary>
+Get the current name server.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.HostConfiguration.RotateNameServers">
+      <summary>
+Rotate name servers.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.IPAdapterBindingTable.Flush(NetStack.Common.IAdapter)">
+      <summary>
+Delete all IP address bindings associated with adapter.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.IPAdapterBindingTable.Flush(NetStack.Common.IAdapter,System.Net.IP.IPv4)">
+      <summary>
+Delete specific IP address binding from adapter.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.ProtocolParams">
+      <summary>
+This class encapsulated the modules parameters
+as given in the configuration file.
+The interpretation of each parameter is module specific.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.ProtocolParams.LookupInt32(NetStack.Runtime.ProtocolParams,System.String,System.Int32)">
+      <summary>
+Read a named integer parameter from a <c>ProtocolParams</c>
+instance.
+</summary>
+      <returns>
+        <paramref name="defaultValue" /> if <paramref name="parameters" /> 
+is <c>null</c> or <paramref name="parameterName" /> 
+cannot be found.  Otherwise it
+returns the named parameter as an integer.</returns>
+    </member>
+    <member name="M:NetStack.Runtime.ProtocolParams.LookupUInt32(NetStack.Runtime.ProtocolParams,System.String,System.UInt32)">
+      <summary>
+Read a named unsigned integer parameter from a
+<c>ProtocolParams</c> instance.
+</summary>
+      <returns>
+        <paramref name="defaultValue" /> if <paramref name="parameters" />
+is <c>null</c> or <paramref name="parameterName" /> cannot be found.
+Otherwise it returns the named parameter as an unsigned
+integer.</returns>
+    </member>
+    <member name="M:NetStack.Runtime.ProtocolParams.LookupIPv4(NetStack.Runtime.ProtocolParams,System.String,System.Net.IP.IPv4)">
+      <summary>
+Read a named IPv4 parameter from a <c>ProtocolParams</c>
+instance.
+</summary>
+      <returns>
+        <paramref name="defaultValue" /> if <paramref name="parameters" /> 
+is <c>null</c> or <paramref name="parameterName" /> cannot be found. 
+Otherwise it returns the named parameter as an IPv4 address.</returns>
+    </member>
+    <member name="M:NetStack.Runtime.ProtocolParams.LookupString(NetStack.Runtime.ProtocolParams,System.String,System.String)">
+      <summary>
+Read a named string parameter from a <c>ProtocolParams</c>
+instance.
+</summary>
+      <returns>
+        <paramref name="defaultValue" /> if <paramref name="parameters" /> 
+is <c>null</c> or <paramref name="parameterName" /> cannot be found.
+Otherwise it returns the named parameter as a string.</returns>
+    </member>
+    <member name="M:NetStack.Runtime.ProtocolParams.LookupBoolean(NetStack.Runtime.ProtocolParams,System.String,System.Boolean)">
+      <summary>
+Read a named boolean parameter from a <c>ProtocolParams</c>
+instance.
+</summary>
+      <returns>
+        <paramref name="defaultValue" /> if <paramref name="parameters" />
+is <c>null</c> or <paramref name="parameterName" /> cannot be found.
+Otherwise it returns the named parameter as a boolean.</returns>
+    </member>
+    <member name="T:NetStack.Runtime.RoutingTable">
+      <summary>
+A placeholder implementation of a routing table.
+RoutingTables are great areas for optimization and
+there's a ton of ways to perform fast lookups.  The
+current implementation uses a linear search to find the
+best route and should be replaced if there are going to
+be have more than a handful of routes.
+
+Also note the current implementation allows routes to be
+added without being fully resolvable.  Finding the interface
+for a route may take multiple lookups.
+
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.RoutingTable.Lookup(System.Net.IP.IPv4)">
+      <summary>
+Get route for destination address.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.RoutingTable.Lookup(System.Net.IP.IPv4Network)">
+      <summary>
+Get route for destination network.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.RoutingTable.GetEnumerator">
+      <summary>
+Get Enumerator for <c>RouteEntry</c> instances in Routing table.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.RoutingTable.LookupSpecific(System.Net.IP.IPv4)">
+      <summary>
+Get route for specific destination.
+</summary>
+      <returns>Specific route if it is present,
+<c>null</c> otherwise.  </returns>
+    </member>
+    <member name="M:NetStack.Runtime.RoutingTable.LookupSpecific(System.Net.IP.IPv4Network)">
+      <summary>
+Get route for specific destination network.
+</summary>
+      <returns>Specific route if it is present,
+<c>null</c> otherwise.  </returns>
+    </member>
+    <member name="M:NetStack.Runtime.RoutingTable.DeleteInterfaceRoutes(System.Net.IP.IPv4)">
+      <summary>
+Delete all routes that have specified interface address.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.ReservationCategory">
+      <summary>
+An enumeration describing a Reservation's current state: Under-, Over-,
+and Limit- Utilized.  It's used to control service to the Reservation's
+sessions.
+</summary>
+    </member>
+    <member name="F:NetStack.Runtime.ReservationCategory.OverUtilized">
+      <summary>
+This Reservation's Utilization is more than its "Reservation" level
+and less that its "Maximum" level.
+</summary>
+      <remarks>
+This reservation's sessions are serviced at low priority.
+</remarks>
+    </member>
+    <member name="F:NetStack.Runtime.ReservationCategory.LimitUtilized">
+      <summary>
+This Reservation's Utilization is more than its "Maximum" level.
+</summary>
+      <remarks>
+This reservation's sessions are not serviced.
+</remarks>
+    </member>
+    <member name="F:NetStack.Runtime.ReservationCategory.UnderUtilized">
+      <summary>
+This Reservation's Utilization is less than its "Reservation" level.
+</summary>
+      <remarks>
+This reservation's sessions are serviced at high priority.
+</remarks>
+    </member>
+    <member name="T:NetStack.Runtime.ReservationsByCategory">
+      <summary>
+A collection of Reservations of the same Category (Under/Over/Limit).
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.Reservation">
+      <summary>
+A Network Reservation, containing of a collection of Network Sessions.
+</summary>
+      <remarks>
+In addition to the collection of sessions, a Reservation contains
+housekeeping information: currentUtilization, the time the
+currentUtilization was computed, Reservation category, and the
+utilization limits: Reserved and Maximum.  It also has the time
+(measured form the time the current utilization was computed) that
+it will become elegible to transfer to a more active category -
+assuming it remains idle if in the "OverUtilized" category.
+</remarks>
+    </member>
+    <member name="M:NetStack.Runtime.Session.SetLocalPort(System.UInt16)">
+      <summary>
+This method should only be called by Core.ChangeSessionLocalPort
+which co-ordinates port allocations.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.StaticConfiguration">
+      <summary> A class that Initializes, Starts, and Stops the default
+set of IP modules.
+</summary>
+    </member>
+    <member name="F:NetStack.Runtime.TcpState.TcpStateNames">
+      <summary>
+Names corresponding to Enums, above (reflection missing).
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.TcpSession">
+      <summary>
+The 'TCP' specialization of the Session class.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.TcpSession.TcpTimeoutType">
+      <summary>
+Kinds of Timeout that are used in TCP.
+</summary>
+    </member>
+    <member name="F:NetStack.Runtime.TcpSession.TcpTimeoutTypeNames">
+      <summary>
+Names corresponding to Enums, above (reflection missing).
+</summary>
+    </member>
+    <member name="F:NetStack.Runtime.TcpSession.lockHolder">
+      <summary>Object used to Lock the entire TcpSession.</summary>
+      <remarks>"this" is not used to as it is visible.</remarks>
+    </member>
+    <member name="M:NetStack.Runtime.TcpSession.Accept">
+      <summary>
+Block until a new connection is available,
+accept it, and return a new TcpSession.
+</summary>
+      <remarks>
+The TcpSession (this) must be in the "Listen" state.
+</remarks>
+    </member>
+    <member name="M:NetStack.Runtime.TcpSession.DoneSending">
+      <summary>
+Client informs TcpSession that no more data will be sent.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.EventLogSourceAttribute">
+      <summary>
+A class-only attribute to denote an Event Logging Source.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.EventLogSourceAttribute.#ctor(System.String)">
+      <summary>
+Sole constructor requiring the source Identifier as the only parameter.
+</summary>
+      <params name="id">
+A string identifier for the particular event logging <b>source</b>.
+</params>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogSourceAttribute.Id">
+      <summary>
+A string identifier for the particular event logging <b>source</b>.
+</summary>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogSourceAttribute.FieldRegistationErrorFatal">
+      <summary>
+A Boolean that dictates the handling of a field registration errors.
+If <b>true</b> (the default), any field registration error causes
+the entire registration, and therefore the Create method, to fail.
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.EventLogMethodAttribute">
+      <summary>
+A method-only attribute denoting an Event Logging Method.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.EventLogMethodAttribute.#ctor(System.String)">
+      <summary>
+Sole constructor requiring the method (event type)
+identifier as the only parameter.
+</summary>
+      <params name="id">
+A string identifier for the particular event logging <b>method</b>
+which becomes the identifier for the event type.
+</params>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodAttribute.Id">
+      <summary>
+A string identifier for the particular event logging <b>method</b>
+which becomes the identifier for the event type.
+</summary>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodAttribute.HeapAllowed">
+      <summary>
+If true, the generated code can perform heap allocations.  NOT SURE IF NEEDED.  // TODO
+</summary>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodAttribute.DebugPrint">
+      <summary>
+If true, the generated code will include a test
+for the DebugPrint bit for this event type.
+</summary>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodAttribute.FormatString">
+      <summary>
+A 'String.Format' format control string used when:
+<para>
+1. The event is transferred to the debugger, and
+</para>
+<para>
+2. The event is displayed with the script tool in a mixed stream.
+</para>
+</summary>
+    </member>
+    <member name="T:NetStack.Runtime.EventLogMethodParameterAttribute">
+      <summary>
+A parameter-only attribute describing the treatment
+of a single parameter to an event logging method.
+</summary>
+      <remarks>
+No Id is present as a Property as the parameter's
+name is the natural Id.
+</remarks>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodParameterAttribute.Title">
+      <summary>
+A string used in lieu of the parameter name in columnar reports.
+</summary>
+      <remarks>If not supplied, the parameter name is used.</remarks>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodParameterAttribute.OrdinalInStruct">
+      <summary>
+Specifies the zero-based ordinal of this parameter in the structure
+used to add this event to the event stream.
+</summary>
+      <remarks>
+If not supplied, the parameter order in the method call is used.
+</remarks>
+    </member>
+    <member name="P:NetStack.Runtime.EventLogMethodParameterAttribute.TypeInStruct">
+      <summary>
+Specifies the type of the data element to use in the structure used
+to add this event to the event stream.
+</summary>
+      <remarks>
+If not supplied, the type of the parameter in the method call is used.
+</remarks>
+    </member>
+    <member name="T:NetStack.Runtime.TcpSessionEventsSource">
+      <summary>
+Eventing and Tracing support for the TcpSession class.
+</summary>
+    </member>
+    <member name="M:NetStack.Runtime.TcpSessionEventsSource.Create(System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+      <summary>
+Create and Register a TcpSessionEventsSource.
+</summary>
+      <devdoc>
+This should be a Generic when supported.  Or use more of the base class (Static?)  // BUGBUG AM (later?)
+</devdoc>
+    </member>
+    <member name="M:NetStack.Runtime.TcpSessionEventsSource.#ctor(System.String,Microsoft.Singularity.Eventing.EventingStorage,System.UInt32,System.UInt32)">
+      <summary>Fully parameterized and sole constructor.</summary>
+      <devdoc>BUGBUG AM: parameterization: have base EP that takes storageoptions and size to elim dup code (generated or not)</devdoc>
+    </member>
+    <member name="T:NetStack.Runtime.TcpSessionPool">
+      <summary>
+Static class maintains a pool of Tcp Sessions kept as a FILO (Stack).
+</summary>
+    </member>
+    <member name="M:RJBlack.Timer.TimerWheel.Advance(System.UInt64)">
+      <summary>
+Either advance to time, or return the first event before then
+</summary>
+    </member>
+  </members>
+</doc>

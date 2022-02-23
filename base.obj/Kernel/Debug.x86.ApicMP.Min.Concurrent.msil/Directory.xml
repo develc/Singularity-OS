@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Directory</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.Singularity.Directory.DirectoryService.Initialize(Microsoft.Singularity.Xml.XmlNode!Microsoft.Contracts.NonNullType)">
+      <summary>
+The provider of access control lists for objects
+in this namespace.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.DirNode.RegisterIoMemory(System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Io.IoMemory!Microsoft.Contracts.NonNullType)">
+      <returns>
+Special kernel interface for adding in memory images to the namespace.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.DirNode.Bind(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,System.String@,Microsoft.Singularity.Directory.ServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the service argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.DirNode.Deregister(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.DirectoryServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+The endpoint on success, null, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.DirNode.Enumerate(Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.ErrorCode@)">
+      <returns>
+The a vector of vectors if success, null, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.DirNode.Notify(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.String!Microsoft.Contracts.NonNullType,System.Boolean,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.NotifyContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+true on success, false, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.IoMemoryNode.Bind(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,System.String@,Microsoft.Singularity.Directory.ServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the service argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.IoMemoryNode.Register(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.ServiceProviderContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+null on success, the sp argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.IoMemoryNode.Deregister(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.DirectoryServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+The endpoint on success, null, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.IoMemoryNode.GetAttributes(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.FileAttributesRecord@)">
+      <returns>
+if true returns length and node type, otherwise error
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.IoMemoryNode.Notify(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.String!Microsoft.Contracts.NonNullType,System.Boolean,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.NotifyContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the imp argument if it failed.
+</returns>
+    </member>
+    <member name="F:Microsoft.Singularity.Directory.Node.core">
+      <summary>
+The policy object controlling the access to this node
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Directory.Node.aclRef">
+      <summary>
+ACLs here are not persistent.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.Bind(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,System.String@,Microsoft.Singularity.Directory.ServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the service argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.CreateAndBindFile(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.CreateDirectory(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.CreateFile(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.CreateLink(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.String!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.DeleteDirectory(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.DeleteFile(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.DeleteLink(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.GetLinkValue(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.Deregister(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.DirectoryServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+The endpoint on success, null, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.GetAttributes(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.FileAttributesRecord@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.Notify(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.String!Microsoft.Contracts.NonNullType,System.Boolean,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.NotifyContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the imp argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.QueryACL(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,System.Boolean,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Security.SDS.Acl@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.Register(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.ServiceProviderContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.Node.StoreACL(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Security.SDS.Acl,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+true if  success false if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.Bind(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,System.String@,Microsoft.Singularity.Directory.ServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the service argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.DeleteIfPeerClosed">
+      <returns>
+Inform caller if peer endpoint is closed
+remove endpoint if it is
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.ReplaceProvider(Microsoft.Singularity.Directory.ServiceProviderContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+replace current dead sp with other
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.Register(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.ServiceProviderContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+null on success, the sp argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.Deregister(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.DirectoryServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+The endpoint on success, null, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.GetAttributes(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.FileAttributesRecord@)">
+      <returns>
+if true returns length and node type, otherwise error
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.ProviderNode.Notify(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.String!Microsoft.Contracts.NonNullType,System.Boolean,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.NotifyContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the imp argument if it failed.
+</returns>
+    </member>
+    <member name="T:Microsoft.Singularity.Directory.ResolutionState">
+      <summary>
+This class contains state accumulated during the resolution
+of a namespace path.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Directory.ResolutionState.resolved">
+      <summary>
+what we have resolved so far (modulo the current namespace provider)
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.SymLinkNode.Bind(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,System.String@,Microsoft.Singularity.Directory.ServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+null on success, the service argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.SymLinkNode.Register(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.ServiceProviderContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+null on success, the sp argument if it failed.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.SymLinkNode.Deregister(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,Microsoft.Singularity.Directory.DirectoryServiceContract.Exp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@)">
+      <returns>
+The endpoint on success, null, if it fails.
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.SymLinkNode.GetAttributes(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.FileAttributesRecord@)">
+      <returns>
+if true returns length and node type, otherwise error
+</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Directory.SymLinkNode.Notify(System.Text.StringBuilder!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Security.Principal,System.String!Microsoft.Contracts.NonNullType,System.Boolean,System.Int32,System.Int32@,System.Boolean@,Microsoft.Singularity.Directory.ErrorCode@,System.Boolean@,System.String@,Microsoft.Singularity.Directory.NotifyContract.Imp*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <returns>
+true on success, false, if it fails.
+</returns>
+    </member>
+  </members>
+</doc>

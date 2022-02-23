@@ -1,0 +1,3674 @@
+
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 2.0.50727.42
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+
+
+
+// Metadata version: v1.1.9999
+.assembly extern kernel
+{
+  .publickeytoken = (73 64 40 C9 B4 14 EA 16 )                         // sd@.....
+  .ver 1:0:0:0
+}
+.assembly extern Microsoft.SingSharp.Runtime
+{
+  .ver 1:0:3555:0
+}
+.assembly extern Directory.Contracts
+{
+  .ver 0:0:0:0
+}
+.assembly extern System.Compiler.Runtime
+{
+  .publickeytoken = (73 64 40 C9 B4 14 EA 16 )                         // sd@.....
+  .ver 1:0:5031:5
+}
+.assembly Stress.Contracts
+{
+
+  // --- The following custom attribute is added automatically, do not uncomment -------
+  //  .custom instance void [kernel]System.Diagnostics.DebuggableAttribute::.ctor(bool,
+  //                                                                              bool) = ( 01 00 01 01 00 00 ) 
+
+  .hash algorithm 0x00008004
+  .ver 0:0:0:0
+}
+.module Stress.Contracts.dll
+// MVID: {FD6453E1-CC53-4ED2-9D03-1D91FC1DCDC5}
+.imagebase 0x00400000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00010001    //  ILONLY TRACKDEBUGDATA
+// Image base: 0x027A0000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class public sequential ansi beforefieldinit Microsoft.Singularity.Stress.Contracts.ArgList
+       extends [kernel]System.ValueType
+       implements [kernel]Microsoft.SingSharp.ITracked,
+                  [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IRepStruct
+{
+  .field public char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) arg
+  .field public valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) next
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) arg,
+                               valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) next) cil managed
+  {
+    .param [1]
+    .custom instance void [kernel]Microsoft.SingSharp.ClaimsAttribute::.ctor() = ( 01 00 00 00 ) 
+    .param [2]
+    .custom instance void [kernel]Microsoft.SingSharp.ClaimsAttribute::.ctor() = ( 01 00 00 00 ) 
+    // Code size       15 (0xf)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  ldarg.1
+    IL_0002:  stfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0007:  ldarg.0
+    IL_0008:  ldarg.2
+    IL_0009:  stfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_000e:  ret
+  } // end of method ArgList::.ctor
+
+  .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+  {
+    // Code size       33 (0x21)
+    .maxstack  3
+    .locals init ([0] char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) V_0)
+    IL_0000:  ldarg.0
+    IL_0001:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0006:  stloc.0
+    IL_0007:  ldloc.0
+    IL_0008:  brfalse    IL_0014
+
+    IL_000d:  ldarg.1
+    IL_000e:  ldloc.0
+    IL_000f:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+    IL_0014:  ldarg.1
+    IL_0015:  ldarg.0
+    IL_0016:  ldfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_001b:  call       void Microsoft.Singularity.Stress.Contracts.ArgList::TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+    IL_0020:  ret
+  } // end of method ArgList::TransferContentsOwnership
+
+  .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+  {
+    // Code size       26 (0x1a)
+    .maxstack  8
+    IL_0000:  ldarg.1
+    IL_0001:  brfalse    IL_0019
+
+    IL_0006:  ldarg.1
+    IL_0007:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.ArgList&
+    IL_000c:  ldarg.0
+    IL_000d:  call       instance void Microsoft.Singularity.Stress.Contracts.ArgList::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+    IL_0012:  ldarg.0
+    IL_0013:  ldarg.1
+    IL_0014:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+    IL_0019:  ret
+  } // end of method ArgList::TransferOwnership
+
+  .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+  {
+    // Code size       45 (0x2d)
+    .maxstack  5
+    .locals init ([0] int32 V_0,
+             [1] int32 V_1)
+    IL_0000:  ldarg.1
+    IL_0001:  brfalse    IL_002c
+
+    IL_0006:  ldarg.1
+    IL_0007:  ldlen
+    IL_0008:  stloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  stloc.1
+    IL_000b:  ldloc.1
+    IL_000c:  ldloc.0
+    IL_000d:  bge        IL_0025
+
+    IL_0012:  ldarg.1
+    IL_0013:  ldloc.1
+    IL_0014:  ldelema    Microsoft.Singularity.Stress.Contracts.ArgList
+    IL_0019:  ldarg.0
+    IL_001a:  call       instance void Microsoft.Singularity.Stress.Contracts.ArgList::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+    IL_001f:  ldloc.1
+    IL_0020:  ldc.i4.1
+    IL_0021:  add
+    IL_0022:  stloc.1
+    IL_0023:  br.s       IL_000b
+
+    IL_0025:  ldarg.0
+    IL_0026:  ldarg.1
+    IL_0027:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+    IL_002c:  ret
+  } // end of method ArgList::TransferVectorOwnership
+
+  .method public instance void  MarshallAll(uint8* basep,
+                                            valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from) cil managed
+  {
+    // Code size       10 (0xa)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  ldarg.1
+    IL_0002:  ldarg.2
+    IL_0003:  ldarg.0
+    IL_0004:  call       instance void Microsoft.Singularity.Stress.Contracts.ArgList::MarshallContent(uint8*,
+                                                                                                       valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                       uint8*)
+    IL_0009:  ret
+  } // end of method ArgList::MarshallAll
+
+  .method public static void  MarshallVector(uint8* basep,
+                                             valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                             uint8* parent,
+                                             valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+  {
+    // Code size       46 (0x2e)
+    .maxstack  6
+    .locals init ([0] int32 V_0,
+             [1] int32 V_1)
+    IL_0000:  ldarg.3
+    IL_0001:  brfalse    IL_002d
+
+    IL_0006:  ldarg.3
+    IL_0007:  ldlen
+    IL_0008:  stloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  stloc.1
+    IL_000b:  ldloc.1
+    IL_000c:  ldloc.0
+    IL_000d:  bge        IL_002d
+
+    IL_0012:  ldarg.3
+    IL_0013:  ldloc.1
+    IL_0014:  ldelema    Microsoft.Singularity.Stress.Contracts.ArgList
+    IL_0019:  ldarg.0
+    IL_001a:  ldarg.1
+    IL_001b:  ldarg.3
+    IL_001c:  ldc.i4.0
+    IL_001d:  ldelema    Microsoft.Singularity.Stress.Contracts.ArgList
+    IL_0022:  call       instance void Microsoft.Singularity.Stress.Contracts.ArgList::MarshallContent(uint8*,
+                                                                                                       valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                       uint8*)
+    IL_0027:  ldloc.1
+    IL_0028:  ldc.i4.1
+    IL_0029:  add
+    IL_002a:  stloc.1
+    IL_002b:  br.s       IL_000b
+
+    IL_002d:  ret
+  } // end of method ArgList::MarshallVector
+
+  .method public instance void  MarshallContent(uint8* basep,
+                                                valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                uint8* parent) cil managed
+  {
+    // Code size       162 (0xa2)
+    .maxstack  10
+    .locals init ([0] char& V_0,
+             [1] int32 V_1,
+             [2] int32 V_2,
+             [3] valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3)
+    IL_0000:  ldarg.2
+    IL_0001:  ldarg.1
+    IL_0002:  ldarg.0
+    IL_0003:  ldflda     char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0008:  ldtoken    [kernel]System.Char
+    IL_000d:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+    IL_0012:  ldarg.3
+    IL_0013:  ldarg.0
+    IL_0014:  ldflda     char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0019:  conv.i
+    IL_001a:  ldarg.3
+    IL_001b:  conv.i
+    IL_001c:  sub
+    IL_001d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallPointer(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                             void** modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                             class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                             uint8*,
+                                                                                                                             int32)
+    IL_0022:  ldarg.0
+    IL_0023:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0028:  brfalse    IL_0050
+
+    IL_002d:  ldarg.0
+    IL_002e:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0033:  castclass  char&
+    IL_0038:  stloc.0
+    IL_0039:  ldarg.0
+    IL_003a:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_003f:  ldlen
+    IL_0040:  stloc.1
+    IL_0041:  ldc.i4.0
+    IL_0042:  stloc.2
+    IL_0043:  ldloc.2
+    IL_0044:  ldloc.1
+    IL_0045:  bge        IL_0050
+
+    IL_004a:  ldloc.2
+    IL_004b:  ldc.i4.1
+    IL_004c:  add
+    IL_004d:  stloc.2
+    IL_004e:  br.s       IL_0043
+
+    IL_0050:  ldarg.0
+    IL_0051:  ldfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_0056:  brfalse    IL_00a1
+
+    IL_005b:  ldarg.0
+    IL_005c:  ldfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_0061:  stloc.3
+    IL_0062:  ldarg.2
+    IL_0063:  ldarg.1
+    IL_0064:  ldarg.0
+    IL_0065:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_006a:  ldtoken    valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap)
+    IL_006f:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+    IL_0074:  ldarg.3
+    IL_0075:  ldarg.0
+    IL_0076:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_007b:  conv.i
+    IL_007c:  ldarg.3
+    IL_007d:  conv.i
+    IL_007e:  sub
+    IL_007f:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallPointer(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                             void** modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                             class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                             uint8*,
+                                                                                                                             int32)
+    IL_0084:  ldarg.0
+    IL_0085:  ldfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_008a:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.ArgList&
+    IL_008f:  ldarg.1
+    IL_0090:  ldarg.2
+    IL_0091:  ldarg.0
+    IL_0092:  ldfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_0097:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.ArgList&
+    IL_009c:  call       instance void Microsoft.Singularity.Stress.Contracts.ArgList::MarshallContent(uint8*,
+                                                                                                       valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                       uint8*)
+    IL_00a1:  ret
+  } // end of method ArgList::MarshallContent
+
+  .method public virtual instance void  Dispose() cil managed
+  {
+    // Code size       64 (0x40)
+    .maxstack  4
+    .locals init ([0] char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) V_0,
+             [1] valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_1)
+    IL_0000:  ldarg.0
+    IL_0001:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_0006:  stloc.0
+    IL_0007:  ldloc.0
+    IL_0008:  brfalse    IL_001a
+
+    IL_000d:  ldloc.0
+    IL_000e:  call       void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap::Free(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+    IL_0013:  ldarg.0
+    IL_0014:  ldnull
+    IL_0015:  stfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.ArgList::arg
+    IL_001a:  ldarg.0
+    IL_001b:  ldfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_0020:  stloc.1
+    IL_0021:  ldloc.1
+    IL_0022:  brfalse    IL_003f
+
+    IL_0027:  ldloc.1
+    IL_0028:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.ArgList&
+    IL_002d:  call       instance void Microsoft.Singularity.Stress.Contracts.ArgList::Dispose()
+    IL_0032:  ldloc.1
+    IL_0033:  call       void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap::Free(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+    IL_0038:  ldarg.0
+    IL_0039:  ldnull
+    IL_003a:  stfld      valuetype Microsoft.Singularity.Stress.Contracts.ArgList* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) Microsoft.Singularity.Stress.Contracts.ArgList::next
+    IL_003f:  ret
+  } // end of method ArgList::Dispose
+
+  .method public virtual instance void  Expose() cil managed
+  {
+    // Code size       1 (0x1)
+    .maxstack  8
+    IL_0000:  ret
+  } // end of method ArgList::Expose
+
+  .method public virtual instance void  UnExpose() cil managed
+  {
+    // Code size       1 (0x1)
+    .maxstack  8
+    IL_0000:  ret
+  } // end of method ArgList::UnExpose
+
+  .method public virtual instance void  Acquire() cil managed
+  {
+    // Code size       1 (0x1)
+    .maxstack  8
+    IL_0000:  ret
+  } // end of method ArgList::Acquire
+
+  .method public virtual instance void  Release() cil managed
+  {
+    // Code size       1 (0x1)
+    .maxstack  8
+    IL_0000:  ret
+  } // end of method ArgList::Release
+
+} // end of class Microsoft.Singularity.Stress.Contracts.ArgList
+
+.class public abstract auto ansi beforefieldinit Microsoft.Singularity.Stress.Contracts.StressContract
+       extends [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract
+       implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IChannelContract
+{
+  .class auto ansi sealed nested public Tags
+         extends [kernel]System.Enum
+  {
+    .field public specialname rtspecialname int32 value__
+    .field public static literal specialname int32 Any = int32(0x00000001)
+    .field public static literal specialname int32 $TagBase = int32(0x00000003)
+    .field public static literal specialname int32 $NextTag = int32(0x00000008)
+    .field public static literal specialname int32 Ready = int32(0x00000003)
+    .field public static literal specialname int32 Print = int32(0x00000004)
+    .field public static literal specialname int32 AckPrint = int32(0x00000005)
+    .field public static literal specialname int32 GcStress = int32(0x00000006)
+    .field public static literal specialname int32 GcStressDone = int32(0x00000007)
+  } // end of class Tags
+
+  .class sequential ansi nested public Imp
+         extends [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint
+         implements [kernel]Microsoft.SingSharp.ITracked,
+                    [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IRepStruct
+  {
+    .field family int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) TagPod0
+    .field family valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready ReadyPod0
+    .field family valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print PrintPod0
+    .field family valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone GcStressDonePod0
+    .field family valuetype [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/ContractNotSupported ContractNotSupportedPod0
+    .method privatescope specialname rtspecialname 
+            instance void  '.ctor$PST06000012'(int32 impInitialState) cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::.ctor(int32)
+      IL_0007:  ret
+    } // end of method Imp::.ctor
+
+    .method public instance bool  InState(int32 state) cil managed
+    {
+      .custom instance void [System.Compiler.Runtime]Microsoft.Contracts.PureAttribute::.ctor() = ( 01 00 00 00 ) 
+      // Code size       70 (0x46)
+      .maxstack  4
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack V_2,
+               bool V_3)
+      IL_0000:  ldarg.1
+      IL_0001:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::CanonicalState$PST06000011(int32)
+      IL_0006:  stloc.0
+      IL_0007:  ldarg.0
+      IL_0008:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_000d:  call       instance int32 [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Top()
+      IL_0012:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::CanonicalState$PST06000011(int32)
+      IL_0017:  ldloc.0
+      IL_0018:  ceq
+      IL_001a:  brfalse    IL_0026
+
+      IL_001f:  ldc.i4.1
+      IL_0020:  stloc.1
+      IL_0021:  br         IL_0042
+
+      IL_0026:  ldarg.0
+      IL_0027:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_002c:  ldobj      [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack
+      IL_0031:  stloc.2
+      IL_0032:  ldloca.s   V_2
+      IL_0034:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_0039:  ldloc.0
+      IL_003a:  ceq
+      IL_003c:  stloc.1
+      IL_003d:  br         IL_0042
+
+      IL_0042:  ldloc.1
+      IL_0043:  stloc.3
+      IL_0044:  ldloc.1
+      IL_0045:  ret
+    } // end of method Imp::InState
+
+    .method public instance string  CurrentState() cil managed
+    {
+      // Code size       122 (0x7a)
+      .maxstack  4
+      .locals init (int32 V_0,
+               string V_1,
+               string V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       instance int32 [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Top()
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.6
+      IL_000e:  beq        IL_0034
+
+      IL_0013:  ldloc.0
+      IL_0014:  ldc.i4.5
+      IL_0015:  beq        IL_003f
+
+      IL_001a:  ldloc.0
+      IL_001b:  ldc.i4.4
+      IL_001c:  beq        IL_004a
+
+      IL_0021:  ldloc.0
+      IL_0022:  ldc.i4.3
+      IL_0023:  beq        IL_0055
+
+      IL_0028:  ldloc.0
+      IL_0029:  ldc.i4.2
+      IL_002a:  beq        IL_0060
+
+      IL_002f:  br         IL_006b
+
+      IL_0034:  ldstr      "ReadyState"
+      IL_0039:  stloc.1
+      IL_003a:  br         IL_0076
+
+      IL_003f:  ldstr      "GcStressState"
+      IL_0044:  stloc.1
+      IL_0045:  br         IL_0076
+
+      IL_004a:  ldstr      "GcStressState$0"
+      IL_004f:  stloc.1
+      IL_0050:  br         IL_0076
+
+      IL_0055:  ldstr      "Start"
+      IL_005a:  stloc.1
+      IL_005b:  br         IL_0076
+
+      IL_0060:  ldstr      "DoneState"
+      IL_0065:  stloc.1
+      IL_0066:  br         IL_0076
+
+      IL_006b:  ldstr      "<protocol terminated>"
+      IL_0070:  stloc.1
+      IL_0071:  br         IL_0076
+
+      IL_0076:  ldloc.1
+      IL_0077:  stloc.2
+      IL_0078:  ldloc.1
+      IL_0079:  ret
+    } // end of method Imp::CurrentState
+
+    .method public instance void  RecvReady() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.ReceiveAttribute::.ctor(int32) = ( 01 00 03 00 00 00 00 00 ) 
+      // Code size       195 (0xc3)
+      .maxstack  9
+      .locals init (int32 V_0,
+               bool V_1,
+               int32 V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.3
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_00ac
+
+      IL_0018:  ldc.i4.0
+      IL_0019:  stloc.1
+      IL_001a:  ldarg.0
+      IL_001b:  volatile.
+      IL_001d:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0022:  stloc.2
+      IL_0023:  ldloc.2
+      IL_0024:  brtrue     IL_0039
+
+      IL_0029:  ldarg.0
+      IL_002a:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_002f:  stloc.1
+      IL_0030:  ldarg.0
+      IL_0031:  volatile.
+      IL_0033:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0038:  stloc.2
+      IL_0039:  ldloc.2
+      IL_003a:  ldc.i4.0
+      IL_003b:  ceq
+      IL_003d:  brfalse    IL_005b
+
+      IL_0042:  ldloc.1
+      IL_0043:  brfalse    IL_0053
+
+      IL_0048:  ldstr      "Peer is closed"
+      IL_004d:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0052:  throw
+
+      IL_0053:  ldarg.0
+      IL_0054:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Wait()
+      IL_0059:  br.s       IL_0018
+
+      IL_005b:  ldarg.0
+      IL_005c:  ldc.i4.3
+      IL_005d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::RetrieveHookInternal(int32)
+      IL_0062:  ldloc.2
+      IL_0063:  ldc.i4.3
+      IL_0064:  beq        IL_0086
+
+      IL_0069:  ldstr      "can't recv Ready when next message has tag "
+      IL_006e:  ldarg.0
+      IL_006f:  volatile.
+      IL_0071:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0076:  box        [kernel]System.Int32
+      IL_007b:  call       string [kernel]System.String::Concat(object,
+                                                                object)
+      IL_0080:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0085:  throw
+
+      IL_0086:  ldarg.0
+      IL_0087:  ldc.i4.0
+      IL_0088:  volatile.
+      IL_008a:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_008f:  ldarg.0
+      IL_0090:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready Microsoft.Singularity.Stress.Contracts.StressContract/Imp::ReadyPod0
+      IL_0095:  initobj    Microsoft.Singularity.Stress.Contracts.StressContract/Ready
+      IL_009b:  ldarg.0
+      IL_009c:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_00a1:  ldc.i4.6
+      IL_00a2:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_00a7:  br         IL_00c2
+
+      IL_00ac:  ldstr      "can't recv Ready in state "
+      IL_00b1:  ldarg.0
+      IL_00b2:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Imp::CurrentState()
+      IL_00b7:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_00bc:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_00c1:  throw
+
+      IL_00c2:  ret
+    } // end of method Imp::RecvReady
+
+    .method public instance void  RecvPrint([out] char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector)& s) cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.ReceiveAttribute::.ctor(int32) = ( 01 00 04 00 00 00 00 00 ) 
+      // Code size       208 (0xd0)
+      .maxstack  9
+      .locals init (int32 V_0,
+               bool V_1,
+               int32 V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.5
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_00b9
+
+      IL_0018:  ldc.i4.0
+      IL_0019:  stloc.1
+      IL_001a:  ldarg.0
+      IL_001b:  volatile.
+      IL_001d:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0022:  stloc.2
+      IL_0023:  ldloc.2
+      IL_0024:  brtrue     IL_0039
+
+      IL_0029:  ldarg.0
+      IL_002a:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_002f:  stloc.1
+      IL_0030:  ldarg.0
+      IL_0031:  volatile.
+      IL_0033:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0038:  stloc.2
+      IL_0039:  ldloc.2
+      IL_003a:  ldc.i4.0
+      IL_003b:  ceq
+      IL_003d:  brfalse    IL_005b
+
+      IL_0042:  ldloc.1
+      IL_0043:  brfalse    IL_0053
+
+      IL_0048:  ldstr      "Peer is closed"
+      IL_004d:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0052:  throw
+
+      IL_0053:  ldarg.0
+      IL_0054:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Wait()
+      IL_0059:  br.s       IL_0018
+
+      IL_005b:  ldarg.0
+      IL_005c:  ldc.i4.4
+      IL_005d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::RetrieveHookInternal(int32)
+      IL_0062:  ldloc.2
+      IL_0063:  ldc.i4.4
+      IL_0064:  beq        IL_0086
+
+      IL_0069:  ldstr      "can't recv Print when next message has tag "
+      IL_006e:  ldarg.0
+      IL_006f:  volatile.
+      IL_0071:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0076:  box        [kernel]System.Int32
+      IL_007b:  call       string [kernel]System.String::Concat(object,
+                                                                object)
+      IL_0080:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0085:  throw
+
+      IL_0086:  ldarg.1
+      IL_0087:  ldarg.0
+      IL_0088:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print Microsoft.Singularity.Stress.Contracts.StressContract/Imp::PrintPod0
+      IL_008d:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0092:  stind.i
+      IL_0093:  ldarg.0
+      IL_0094:  ldc.i4.0
+      IL_0095:  volatile.
+      IL_0097:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_009c:  ldarg.0
+      IL_009d:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print Microsoft.Singularity.Stress.Contracts.StressContract/Imp::PrintPod0
+      IL_00a2:  initobj    Microsoft.Singularity.Stress.Contracts.StressContract/Print
+      IL_00a8:  ldarg.0
+      IL_00a9:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_00ae:  ldc.i4.4
+      IL_00af:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_00b4:  br         IL_00cf
+
+      IL_00b9:  ldstr      "can't recv Print in state "
+      IL_00be:  ldarg.0
+      IL_00bf:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Imp::CurrentState()
+      IL_00c4:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_00c9:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_00ce:  throw
+
+      IL_00cf:  ret
+    } // end of method Imp::RecvPrint
+
+    .method public instance void  SendAckPrint() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.SendAttribute::.ctor(int32) = ( 01 00 05 00 00 00 00 00 ) 
+      // Code size       123 (0x7b)
+      .maxstack  10
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_2,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& V_4)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.4
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_0064
+
+      IL_0018:  ldarg.0
+      IL_0019:  ldloca.s   V_1
+      IL_001b:  call       instance valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::GetPeer(bool&)
+      IL_0020:  stloc.2
+      IL_0021:  ldloc.2
+      IL_0022:  stloc.3
+      IL_0023:  ldloc.3
+      IL_0024:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_0029:  stloc.s    V_4
+      IL_002b:  ldloc.1
+      IL_002c:  brtrue     IL_0041
+
+      IL_0031:  ldloc.3
+      IL_0032:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::DeliverAckPrint0$PST06000046()
+      IL_003c:  br         IL_004d
+
+      IL_0041:  ldloc.3
+      IL_0042:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_0047:  ldarg.0
+      IL_0048:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::MarshallDeliverAckPrint0$PST06000047(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_004d:  ldarg.0
+      IL_004e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::NotifyPeer()
+      IL_0053:  ldarg.0
+      IL_0054:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0059:  ldc.i4.5
+      IL_005a:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_005f:  br         IL_007a
+
+      IL_0064:  ldstr      "can't send AckPrint in state "
+      IL_0069:  ldarg.0
+      IL_006a:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Imp::CurrentState()
+      IL_006f:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_0074:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_0079:  throw
+
+      IL_007a:  ret
+    } // end of method Imp::SendAckPrint
+
+    .method public instance void  SendGcStress() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.SendAttribute::.ctor(int32) = ( 01 00 06 00 00 00 00 00 ) 
+      // Code size       123 (0x7b)
+      .maxstack  10
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_2,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& V_4)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.6
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_0064
+
+      IL_0018:  ldarg.0
+      IL_0019:  ldloca.s   V_1
+      IL_001b:  call       instance valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::GetPeer(bool&)
+      IL_0020:  stloc.2
+      IL_0021:  ldloc.2
+      IL_0022:  stloc.3
+      IL_0023:  ldloc.3
+      IL_0024:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_0029:  stloc.s    V_4
+      IL_002b:  ldloc.1
+      IL_002c:  brtrue     IL_0041
+
+      IL_0031:  ldloc.3
+      IL_0032:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::DeliverGcStress0$PST06000048()
+      IL_003c:  br         IL_004d
+
+      IL_0041:  ldloc.3
+      IL_0042:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_0047:  ldarg.0
+      IL_0048:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::MarshallDeliverGcStress0$PST06000049(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_004d:  ldarg.0
+      IL_004e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::NotifyPeer()
+      IL_0053:  ldarg.0
+      IL_0054:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0059:  ldc.i4.5
+      IL_005a:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_005f:  br         IL_007a
+
+      IL_0064:  ldstr      "can't send GcStress in state "
+      IL_0069:  ldarg.0
+      IL_006a:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Imp::CurrentState()
+      IL_006f:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_0074:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_0079:  throw
+
+      IL_007a:  ret
+    } // end of method Imp::SendGcStress
+
+    .method public instance void  RecvGcStressDone() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.ReceiveAttribute::.ctor(int32) = ( 01 00 07 00 00 00 00 00 ) 
+      // Code size       195 (0xc3)
+      .maxstack  9
+      .locals init (int32 V_0,
+               bool V_1,
+               int32 V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.5
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_00ac
+
+      IL_0018:  ldc.i4.0
+      IL_0019:  stloc.1
+      IL_001a:  ldarg.0
+      IL_001b:  volatile.
+      IL_001d:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0022:  stloc.2
+      IL_0023:  ldloc.2
+      IL_0024:  brtrue     IL_0039
+
+      IL_0029:  ldarg.0
+      IL_002a:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_002f:  stloc.1
+      IL_0030:  ldarg.0
+      IL_0031:  volatile.
+      IL_0033:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0038:  stloc.2
+      IL_0039:  ldloc.2
+      IL_003a:  ldc.i4.0
+      IL_003b:  ceq
+      IL_003d:  brfalse    IL_005b
+
+      IL_0042:  ldloc.1
+      IL_0043:  brfalse    IL_0053
+
+      IL_0048:  ldstr      "Peer is closed"
+      IL_004d:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0052:  throw
+
+      IL_0053:  ldarg.0
+      IL_0054:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Wait()
+      IL_0059:  br.s       IL_0018
+
+      IL_005b:  ldarg.0
+      IL_005c:  ldc.i4.7
+      IL_005d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::RetrieveHookInternal(int32)
+      IL_0062:  ldloc.2
+      IL_0063:  ldc.i4.7
+      IL_0064:  beq        IL_0086
+
+      IL_0069:  ldstr      "can't recv GcStressDone when next message has tag "
+      IL_006e:  ldarg.0
+      IL_006f:  volatile.
+      IL_0071:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0076:  box        [kernel]System.Int32
+      IL_007b:  call       string [kernel]System.String::Concat(object,
+                                                                object)
+      IL_0080:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0085:  throw
+
+      IL_0086:  ldarg.0
+      IL_0087:  ldc.i4.0
+      IL_0088:  volatile.
+      IL_008a:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_008f:  ldarg.0
+      IL_0090:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone Microsoft.Singularity.Stress.Contracts.StressContract/Imp::GcStressDonePod0
+      IL_0095:  initobj    Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone
+      IL_009b:  ldarg.0
+      IL_009c:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_00a1:  ldc.i4.6
+      IL_00a2:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_00a7:  br         IL_00c2
+
+      IL_00ac:  ldstr      "can't recv GcStressDone in state "
+      IL_00b1:  ldarg.0
+      IL_00b2:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Imp::CurrentState()
+      IL_00b7:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_00bc:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_00c1:  throw
+
+      IL_00c2:  ret
+    } // end of method Imp::RecvGcStressDone
+
+    .method public instance void  RecvContractNotSupported() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.ReceiveAttribute::.ctor(int32) = ( 01 00 02 00 00 00 00 00 ) 
+      // Code size       195 (0xc3)
+      .maxstack  9
+      .locals init (int32 V_0,
+               bool V_1,
+               int32 V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.3
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_00ac
+
+      IL_0018:  ldc.i4.0
+      IL_0019:  stloc.1
+      IL_001a:  ldarg.0
+      IL_001b:  volatile.
+      IL_001d:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0022:  stloc.2
+      IL_0023:  ldloc.2
+      IL_0024:  brtrue     IL_0039
+
+      IL_0029:  ldarg.0
+      IL_002a:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_002f:  stloc.1
+      IL_0030:  ldarg.0
+      IL_0031:  volatile.
+      IL_0033:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0038:  stloc.2
+      IL_0039:  ldloc.2
+      IL_003a:  ldc.i4.0
+      IL_003b:  ceq
+      IL_003d:  brfalse    IL_005b
+
+      IL_0042:  ldloc.1
+      IL_0043:  brfalse    IL_0053
+
+      IL_0048:  ldstr      "Peer is closed"
+      IL_004d:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0052:  throw
+
+      IL_0053:  ldarg.0
+      IL_0054:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Wait()
+      IL_0059:  br.s       IL_0018
+
+      IL_005b:  ldarg.0
+      IL_005c:  ldc.i4.2
+      IL_005d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::RetrieveHookInternal(int32)
+      IL_0062:  ldloc.2
+      IL_0063:  ldc.i4.2
+      IL_0064:  beq        IL_0086
+
+      IL_0069:  ldstr      "can't recv ContractNotSupported when next message "
+      + "has tag "
+      IL_006e:  ldarg.0
+      IL_006f:  volatile.
+      IL_0071:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0076:  box        [kernel]System.Int32
+      IL_007b:  call       string [kernel]System.String::Concat(object,
+                                                                object)
+      IL_0080:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0085:  throw
+
+      IL_0086:  ldarg.0
+      IL_0087:  ldc.i4.0
+      IL_0088:  volatile.
+      IL_008a:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_008f:  ldarg.0
+      IL_0090:  ldflda     valuetype [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/ContractNotSupported Microsoft.Singularity.Stress.Contracts.StressContract/Imp::ContractNotSupportedPod0
+      IL_0095:  initobj    [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/ContractNotSupported
+      IL_009b:  ldarg.0
+      IL_009c:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_00a1:  ldc.i4.2
+      IL_00a2:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_00a7:  br         IL_00c2
+
+      IL_00ac:  ldstr      "can't recv ContractNotSupported in state "
+      IL_00b1:  ldarg.0
+      IL_00b2:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Imp::CurrentState()
+      IL_00b7:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_00bc:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_00c1:  throw
+
+      IL_00c2:  ret
+    } // end of method Imp::RecvContractNotSupported
+
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0007:  ret
+    } // end of method Imp::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_0019
+
+      IL_0006:  ldarg.1
+      IL_0007:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_000c:  ldarg.0
+      IL_000d:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0012:  ldarg.0
+      IL_0013:  ldarg.1
+      IL_0014:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_0019:  ret
+    } // end of method Imp::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       45 (0x2d)
+      .maxstack  5
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_002c
+
+      IL_0006:  ldarg.1
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0025
+
+      IL_0012:  ldarg.1
+      IL_0013:  ldloc.1
+      IL_0014:  ldelema    Microsoft.Singularity.Stress.Contracts.StressContract/Imp
+      IL_0019:  ldarg.0
+      IL_001a:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_001f:  ldloc.1
+      IL_0020:  ldc.i4.1
+      IL_0021:  add
+      IL_0022:  stloc.1
+      IL_0023:  br.s       IL_000b
+
+      IL_0025:  ldarg.0
+      IL_0026:  ldarg.1
+      IL_0027:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_002c:  ret
+    } // end of method Imp::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from) cil managed
+    {
+      // Code size       18 (0x12)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.2
+      IL_0003:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallAll(uint8*,
+                                                                                                                           valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0008:  ldarg.0
+      IL_0009:  ldarg.1
+      IL_000a:  ldarg.2
+      IL_000b:  ldarg.0
+      IL_000c:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::MarshallContent(uint8*,
+                                                                                                                    valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                    uint8*)
+      IL_0011:  ret
+    } // end of method Imp::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       46 (0x2e)
+      .maxstack  6
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_002d
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_002d
+
+      IL_0012:  ldarg.3
+      IL_0013:  ldloc.1
+      IL_0014:  ldelema    Microsoft.Singularity.Stress.Contracts.StressContract/Imp
+      IL_0019:  ldarg.0
+      IL_001a:  ldarg.1
+      IL_001b:  ldarg.3
+      IL_001c:  ldc.i4.0
+      IL_001d:  ldelema    Microsoft.Singularity.Stress.Contracts.StressContract/Imp
+      IL_0022:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::MarshallContent(uint8*,
+                                                                                                                    valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                    uint8*)
+      IL_0027:  ldloc.1
+      IL_0028:  ldc.i4.1
+      IL_0029:  add
+      IL_002a:  stloc.1
+      IL_002b:  br.s       IL_000b
+
+      IL_002d:  ret
+    } // end of method Imp::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Imp::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Dispose()
+      IL_0006:  ret
+    } // end of method Imp::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Imp::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Imp::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Imp::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Imp::Release
+
+    .method family instance int32  Peek() cil managed
+    {
+      // Code size       342 (0x156)
+      .maxstack  7
+      .locals init (int32 V_0,
+               int32 V_1,
+               bool V_2,
+               int32 V_3,
+               int32 V_4,
+               bool V_5,
+               int32 V_6,
+               bool V_7,
+               int32 V_8,
+               bool V_9,
+               int32 V_10,
+               int32 V_11)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  stloc.1
+      IL_000e:  ldloc.1
+      IL_000f:  ldc.i4.4
+      IL_0010:  beq        IL_002f
+
+      IL_0015:  ldloc.1
+      IL_0016:  ldc.i4.5
+      IL_0017:  beq        IL_006f
+
+      IL_001c:  ldloc.1
+      IL_001d:  ldc.i4.6
+      IL_001e:  beq        IL_00b7
+
+      IL_0023:  ldloc.1
+      IL_0024:  ldc.i4.3
+      IL_0025:  beq        IL_00ff
+
+      IL_002a:  br         IL_0147
+
+      IL_002f:  ldc.i4.0
+      IL_0030:  stloc.2
+      IL_0031:  ldarg.0
+      IL_0032:  volatile.
+      IL_0034:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0039:  stloc.3
+      IL_003a:  ldloc.3
+      IL_003b:  brtrue     IL_0050
+
+      IL_0040:  ldarg.0
+      IL_0041:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_0046:  stloc.2
+      IL_0047:  ldarg.0
+      IL_0048:  volatile.
+      IL_004a:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_004f:  stloc.3
+      IL_0050:  ldloc.3
+      IL_0051:  ldc.i4.0
+      IL_0052:  ceq
+      IL_0054:  brfalse    IL_0067
+
+      IL_0059:  ldloc.2
+      IL_005a:  brfalse    IL_0067
+
+      IL_005f:  ldc.i4.m1
+      IL_0060:  stloc.s    V_4
+      IL_0062:  br         IL_014f
+
+      IL_0067:  ldloc.3
+      IL_0068:  stloc.s    V_4
+      IL_006a:  br         IL_014f
+
+      IL_006f:  ldc.i4.0
+      IL_0070:  stloc.s    V_5
+      IL_0072:  ldarg.0
+      IL_0073:  volatile.
+      IL_0075:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_007a:  stloc.s    V_6
+      IL_007c:  ldloc.s    V_6
+      IL_007e:  brtrue     IL_0095
+
+      IL_0083:  ldarg.0
+      IL_0084:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_0089:  stloc.s    V_5
+      IL_008b:  ldarg.0
+      IL_008c:  volatile.
+      IL_008e:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0093:  stloc.s    V_6
+      IL_0095:  ldloc.s    V_6
+      IL_0097:  ldc.i4.0
+      IL_0098:  ceq
+      IL_009a:  brfalse    IL_00ae
+
+      IL_009f:  ldloc.s    V_5
+      IL_00a1:  brfalse    IL_00ae
+
+      IL_00a6:  ldc.i4.m1
+      IL_00a7:  stloc.s    V_4
+      IL_00a9:  br         IL_014f
+
+      IL_00ae:  ldloc.s    V_6
+      IL_00b0:  stloc.s    V_4
+      IL_00b2:  br         IL_014f
+
+      IL_00b7:  ldc.i4.0
+      IL_00b8:  stloc.s    V_7
+      IL_00ba:  ldarg.0
+      IL_00bb:  volatile.
+      IL_00bd:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_00c2:  stloc.s    V_8
+      IL_00c4:  ldloc.s    V_8
+      IL_00c6:  brtrue     IL_00dd
+
+      IL_00cb:  ldarg.0
+      IL_00cc:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_00d1:  stloc.s    V_7
+      IL_00d3:  ldarg.0
+      IL_00d4:  volatile.
+      IL_00d6:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_00db:  stloc.s    V_8
+      IL_00dd:  ldloc.s    V_8
+      IL_00df:  ldc.i4.0
+      IL_00e0:  ceq
+      IL_00e2:  brfalse    IL_00f6
+
+      IL_00e7:  ldloc.s    V_7
+      IL_00e9:  brfalse    IL_00f6
+
+      IL_00ee:  ldc.i4.m1
+      IL_00ef:  stloc.s    V_4
+      IL_00f1:  br         IL_014f
+
+      IL_00f6:  ldloc.s    V_8
+      IL_00f8:  stloc.s    V_4
+      IL_00fa:  br         IL_014f
+
+      IL_00ff:  ldc.i4.0
+      IL_0100:  stloc.s    V_9
+      IL_0102:  ldarg.0
+      IL_0103:  volatile.
+      IL_0105:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_010a:  stloc.s    V_10
+      IL_010c:  ldloc.s    V_10
+      IL_010e:  brtrue     IL_0125
+
+      IL_0113:  ldarg.0
+      IL_0114:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_0119:  stloc.s    V_9
+      IL_011b:  ldarg.0
+      IL_011c:  volatile.
+      IL_011e:  ldfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0123:  stloc.s    V_10
+      IL_0125:  ldloc.s    V_10
+      IL_0127:  ldc.i4.0
+      IL_0128:  ceq
+      IL_012a:  brfalse    IL_013e
+
+      IL_012f:  ldloc.s    V_9
+      IL_0131:  brfalse    IL_013e
+
+      IL_0136:  ldc.i4.m1
+      IL_0137:  stloc.s    V_4
+      IL_0139:  br         IL_014f
+
+      IL_013e:  ldloc.s    V_10
+      IL_0140:  stloc.s    V_4
+      IL_0142:  br         IL_014f
+
+      IL_0147:  ldc.i4.m1
+      IL_0148:  stloc.s    V_4
+      IL_014a:  br         IL_014f
+
+      IL_014f:  ldloc.s    V_4
+      IL_0151:  stloc.s    V_11
+      IL_0153:  ldloc.s    V_4
+      IL_0155:  ret
+    } // end of method Imp::Peek
+
+    .method public virtual instance bool 
+            HeadMatches(int32 tag,
+                        bool& possible,
+                        object& elemMatch) cil managed
+    {
+      // Code size       102 (0x66)
+      .maxstack  6
+      .locals init ([0] int32 V_0,
+               [1] bool V_1,
+               [2] bool 'SS$Display Return Local')
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_Closed()
+      IL_0006:  brfalse    IL_0016
+
+      IL_000b:  ldstr      "endpoint is closed"
+      IL_0010:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0015:  throw
+
+      IL_0016:  ldarg.0
+      IL_0017:  call       instance int32 Microsoft.Singularity.Stress.Contracts.StressContract/Imp::Peek()
+      IL_001c:  stloc.0
+      IL_001d:  ldloc.0
+      IL_001e:  ldc.i4.0
+      IL_001f:  ceq
+      IL_0021:  brfalse    IL_002d
+
+      IL_0026:  ldc.i4.0
+      IL_0027:  stloc.1
+      IL_0028:  br         IL_0062
+
+      IL_002d:  ldloc.0
+      IL_002e:  ldarg.1
+      IL_002f:  ceq
+      IL_0031:  brfalse    IL_003d
+
+      IL_0036:  ldc.i4.1
+      IL_0037:  stloc.1
+      IL_0038:  br         IL_0062
+
+      IL_003d:  ldc.i4.1
+      IL_003e:  ldarg.1
+      IL_003f:  ceq
+      IL_0041:  brfalse    IL_0054
+
+      IL_0046:  ldloc.0
+      IL_0047:  ldc.i4.0
+      IL_0048:  ble        IL_0054
+
+      IL_004d:  ldc.i4.1
+      IL_004e:  stloc.1
+      IL_004f:  br         IL_0062
+
+      IL_0054:  ldarg.2
+      IL_0055:  ldc.i4.0
+      IL_0056:  stobj      [kernel]System.Boolean
+      IL_005b:  ldc.i4.0
+      IL_005c:  stloc.1
+      IL_005d:  br         IL_0062
+
+      IL_0062:  ldloc.1
+      IL_0063:  stloc.2
+      IL_0064:  ldloc.1
+      IL_0065:  ret
+    } // end of method Imp::HeadMatches
+
+    .method privatescope instance void  DeliverReady0$PST06000028() cil managed
+    {
+      // Code size       17 (0x11)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldc.i4.3
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::DeliverHookInternal(int32)
+      IL_0007:  ldarg.0
+      IL_0008:  ldc.i4.3
+      IL_0009:  volatile.
+      IL_000b:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0010:  ret
+    } // end of method Imp::DeliverReady0
+
+    .method privatescope instance void  MarshallDeliverReady0$PST06000029(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& endpoint) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverReady0$PST06000028()
+      IL_0006:  ldarg.0
+      IL_0007:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready Microsoft.Singularity.Stress.Contracts.StressContract/Imp::ReadyPod0
+      IL_000c:  ldarg.0
+      IL_000d:  ldarg.1
+      IL_000e:  ldarg.0
+      IL_000f:  ldflda     int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0014:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Ready::MarshallAll(uint8*,
+                                                                                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                  int32&)
+      IL_0019:  ret
+    } // end of method Imp::MarshallDeliverReady0
+
+    .method privatescope instance void  DeliverPrint0$PST0600002A(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) s) cil managed
+    {
+      .param [1]
+      .custom instance void [kernel]Microsoft.SingSharp.ClaimsAttribute::.ctor() = ( 01 00 00 00 ) 
+      // Code size       29 (0x1d)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print Microsoft.Singularity.Stress.Contracts.StressContract/Imp::PrintPod0
+      IL_0006:  ldarg.1
+      IL_0007:  stfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_000c:  ldarg.0
+      IL_000d:  ldc.i4.4
+      IL_000e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::DeliverHookInternal(int32)
+      IL_0013:  ldarg.0
+      IL_0014:  ldc.i4.4
+      IL_0015:  volatile.
+      IL_0017:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_001c:  ret
+    } // end of method Imp::DeliverPrint0
+
+    .method privatescope instance void  MarshallDeliverPrint0$PST0600002B(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) s,
+                                                                          valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& endpoint) cil managed
+    {
+      .param [1]
+      .custom instance void [kernel]Microsoft.SingSharp.ClaimsAttribute::.ctor() = ( 01 00 00 00 ) 
+      // Code size       27 (0x1b)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverPrint0$PST0600002A(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector))
+      IL_0007:  ldarg.0
+      IL_0008:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print Microsoft.Singularity.Stress.Contracts.StressContract/Imp::PrintPod0
+      IL_000d:  ldarg.0
+      IL_000e:  ldarg.2
+      IL_000f:  ldarg.0
+      IL_0010:  ldflda     int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0015:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Print::MarshallAll(uint8*,
+                                                                                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                  int32&)
+      IL_001a:  ret
+    } // end of method Imp::MarshallDeliverPrint0
+
+    .method privatescope instance void  DeliverGcStressDone0$PST0600002C() cil managed
+    {
+      // Code size       17 (0x11)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldc.i4.7
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::DeliverHookInternal(int32)
+      IL_0007:  ldarg.0
+      IL_0008:  ldc.i4.7
+      IL_0009:  volatile.
+      IL_000b:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0010:  ret
+    } // end of method Imp::DeliverGcStressDone0
+
+    .method privatescope instance void  MarshallDeliverGcStressDone0$PST0600002D(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& endpoint) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverGcStressDone0$PST0600002C()
+      IL_0006:  ldarg.0
+      IL_0007:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone Microsoft.Singularity.Stress.Contracts.StressContract/Imp::GcStressDonePod0
+      IL_000c:  ldarg.0
+      IL_000d:  ldarg.1
+      IL_000e:  ldarg.0
+      IL_000f:  ldflda     int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0014:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone::MarshallAll(uint8*,
+                                                                                                                         valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                         int32&)
+      IL_0019:  ret
+    } // end of method Imp::MarshallDeliverGcStressDone0
+
+    .method privatescope instance void  DeliverContractNotSupported0$PST0600002E() cil managed
+    {
+      // Code size       17 (0x11)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldc.i4.2
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::DeliverHookInternal(int32)
+      IL_0007:  ldarg.0
+      IL_0008:  ldc.i4.2
+      IL_0009:  volatile.
+      IL_000b:  stfld      int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0010:  ret
+    } // end of method Imp::DeliverContractNotSupported0
+
+    .method privatescope instance void  MarshallDeliverContractNotSupported0$PST0600002F(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& endpoint) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverContractNotSupported0$PST0600002E()
+      IL_0006:  ldarg.0
+      IL_0007:  ldflda     valuetype [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/ContractNotSupported Microsoft.Singularity.Stress.Contracts.StressContract/Imp::ContractNotSupportedPod0
+      IL_000c:  ldarg.0
+      IL_000d:  ldarg.1
+      IL_000e:  ldarg.0
+      IL_000f:  ldflda     int32 modreq([kernel]System.Runtime.CompilerServices.IsVolatile) Microsoft.Singularity.Stress.Contracts.StressContract/Imp::TagPod0
+      IL_0014:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/ContractNotSupported::MarshallAll(uint8*,
+                                                                                                                                                valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                                                int32&)
+      IL_0019:  ret
+    } // end of method Imp::MarshallDeliverContractNotSupported0
+
+  } // end of class Imp
+
+  .class sequential ansi nested public Exp
+         extends [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp
+         implements [kernel]Microsoft.SingSharp.ITracked,
+                    [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IRepStruct
+  {
+    .field family valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint AckPrintPod0
+    .field family valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress GcStressPod0
+    .method famorassem specialname rtspecialname 
+            instance void  .ctor(int32 expInitialState) cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::.ctor(int32)
+      IL_0007:  ret
+    } // end of method Exp::.ctor
+
+    .method public instance bool  InState(int32 state) cil managed
+    {
+      .custom instance void [System.Compiler.Runtime]Microsoft.Contracts.PureAttribute::.ctor() = ( 01 00 00 00 ) 
+      // Code size       70 (0x46)
+      .maxstack  4
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack V_2,
+               bool V_3)
+      IL_0000:  ldarg.1
+      IL_0001:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::CanonicalState$PST06000011(int32)
+      IL_0006:  stloc.0
+      IL_0007:  ldarg.0
+      IL_0008:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_000d:  call       instance int32 [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Top()
+      IL_0012:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::CanonicalState$PST06000011(int32)
+      IL_0017:  ldloc.0
+      IL_0018:  ceq
+      IL_001a:  brfalse    IL_0026
+
+      IL_001f:  ldc.i4.1
+      IL_0020:  stloc.1
+      IL_0021:  br         IL_0042
+
+      IL_0026:  ldarg.0
+      IL_0027:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_002c:  ldobj      [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack
+      IL_0031:  stloc.2
+      IL_0032:  ldloca.s   V_2
+      IL_0034:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_0039:  ldloc.0
+      IL_003a:  ceq
+      IL_003c:  stloc.1
+      IL_003d:  br         IL_0042
+
+      IL_0042:  ldloc.1
+      IL_0043:  stloc.3
+      IL_0044:  ldloc.1
+      IL_0045:  ret
+    } // end of method Exp::InState
+
+    .method public instance string  CurrentState() cil managed
+    {
+      // Code size       122 (0x7a)
+      .maxstack  4
+      .locals init (int32 V_0,
+               string V_1,
+               string V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       instance int32 [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Top()
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.6
+      IL_000e:  beq        IL_0034
+
+      IL_0013:  ldloc.0
+      IL_0014:  ldc.i4.5
+      IL_0015:  beq        IL_003f
+
+      IL_001a:  ldloc.0
+      IL_001b:  ldc.i4.4
+      IL_001c:  beq        IL_004a
+
+      IL_0021:  ldloc.0
+      IL_0022:  ldc.i4.3
+      IL_0023:  beq        IL_0055
+
+      IL_0028:  ldloc.0
+      IL_0029:  ldc.i4.2
+      IL_002a:  beq        IL_0060
+
+      IL_002f:  br         IL_006b
+
+      IL_0034:  ldstr      "ReadyState"
+      IL_0039:  stloc.1
+      IL_003a:  br         IL_0076
+
+      IL_003f:  ldstr      "GcStressState"
+      IL_0044:  stloc.1
+      IL_0045:  br         IL_0076
+
+      IL_004a:  ldstr      "GcStressState$0"
+      IL_004f:  stloc.1
+      IL_0050:  br         IL_0076
+
+      IL_0055:  ldstr      "Start"
+      IL_005a:  stloc.1
+      IL_005b:  br         IL_0076
+
+      IL_0060:  ldstr      "DoneState"
+      IL_0065:  stloc.1
+      IL_0066:  br         IL_0076
+
+      IL_006b:  ldstr      "<protocol terminated>"
+      IL_0070:  stloc.1
+      IL_0071:  br         IL_0076
+
+      IL_0076:  ldloc.1
+      IL_0077:  stloc.2
+      IL_0078:  ldloc.1
+      IL_0079:  ret
+    } // end of method Exp::CurrentState
+
+    .method public instance void  SendReady() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.SendAttribute::.ctor(int32) = ( 01 00 03 00 00 00 00 00 ) 
+      // Code size       123 (0x7b)
+      .maxstack  10
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_2,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& V_4)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.3
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_0064
+
+      IL_0018:  ldarg.0
+      IL_0019:  ldloca.s   V_1
+      IL_001b:  call       instance valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::GetPeer(bool&)
+      IL_0020:  stloc.2
+      IL_0021:  ldloc.2
+      IL_0022:  stloc.3
+      IL_0023:  ldloc.3
+      IL_0024:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0029:  stloc.s    V_4
+      IL_002b:  ldloc.1
+      IL_002c:  brtrue     IL_0041
+
+      IL_0031:  ldloc.3
+      IL_0032:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverReady0$PST06000028()
+      IL_003c:  br         IL_004d
+
+      IL_0041:  ldloc.3
+      IL_0042:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0047:  ldarg.0
+      IL_0048:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::MarshallDeliverReady0$PST06000029(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_004d:  ldarg.0
+      IL_004e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::NotifyPeer()
+      IL_0053:  ldarg.0
+      IL_0054:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0059:  ldc.i4.6
+      IL_005a:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_005f:  br         IL_007a
+
+      IL_0064:  ldstr      "can't send Ready in state "
+      IL_0069:  ldarg.0
+      IL_006a:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Exp::CurrentState()
+      IL_006f:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_0074:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_0079:  throw
+
+      IL_007a:  ret
+    } // end of method Exp::SendReady
+
+    .method public instance void  SendPrint(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) s) cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.SendAttribute::.ctor(int32) = ( 01 00 04 00 00 00 00 00 ) 
+      .param [1]
+      .custom instance void [kernel]Microsoft.SingSharp.ClaimsAttribute::.ctor() = ( 01 00 00 00 ) 
+      // Code size       144 (0x90)
+      .maxstack  11
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_2,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& V_4,
+               char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) V_5)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.5
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_0079
+
+      IL_0018:  ldarg.0
+      IL_0019:  ldloca.s   V_1
+      IL_001b:  call       instance valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::GetPeer(bool&)
+      IL_0020:  stloc.2
+      IL_0021:  ldloc.2
+      IL_0022:  stloc.3
+      IL_0023:  ldloc.3
+      IL_0024:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0029:  stloc.s    V_4
+      IL_002b:  ldloc.1
+      IL_002c:  brtrue     IL_0055
+
+      IL_0031:  ldarg.1
+      IL_0032:  stloc.s    V_5
+      IL_0034:  ldloc.s    V_5
+      IL_0036:  brfalse    IL_0044
+
+      IL_003b:  ldloc.s    V_4
+      IL_003d:  ldloc.s    V_5
+      IL_003f:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_0044:  ldloc.3
+      IL_0045:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_004a:  ldarg.1
+      IL_004b:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverPrint0$PST0600002A(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector))
+      IL_0050:  br         IL_0062
+
+      IL_0055:  ldloc.3
+      IL_0056:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_005b:  ldarg.1
+      IL_005c:  ldarg.0
+      IL_005d:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::MarshallDeliverPrint0$PST0600002B(char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector),
+                                                                                                                                      valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0062:  ldarg.0
+      IL_0063:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::NotifyPeer()
+      IL_0068:  ldarg.0
+      IL_0069:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_006e:  ldc.i4.4
+      IL_006f:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_0074:  br         IL_008f
+
+      IL_0079:  ldstr      "can't send Print in state "
+      IL_007e:  ldarg.0
+      IL_007f:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Exp::CurrentState()
+      IL_0084:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_0089:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_008e:  throw
+
+      IL_008f:  ret
+    } // end of method Exp::SendPrint
+
+    .method public instance void  RecvAckPrint() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.ReceiveAttribute::.ctor(int32) = ( 01 00 05 00 00 00 00 00 ) 
+      // Code size       195 (0xc3)
+      .maxstack  9
+      .locals init (int32 V_0,
+               bool V_1,
+               int32 V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.4
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_00ac
+
+      IL_0018:  ldc.i4.0
+      IL_0019:  stloc.1
+      IL_001a:  ldarg.0
+      IL_001b:  volatile.
+      IL_001d:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0022:  stloc.2
+      IL_0023:  ldloc.2
+      IL_0024:  brtrue     IL_0039
+
+      IL_0029:  ldarg.0
+      IL_002a:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_002f:  stloc.1
+      IL_0030:  ldarg.0
+      IL_0031:  volatile.
+      IL_0033:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0038:  stloc.2
+      IL_0039:  ldloc.2
+      IL_003a:  ldc.i4.0
+      IL_003b:  ceq
+      IL_003d:  brfalse    IL_005b
+
+      IL_0042:  ldloc.1
+      IL_0043:  brfalse    IL_0053
+
+      IL_0048:  ldstr      "Peer is closed"
+      IL_004d:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0052:  throw
+
+      IL_0053:  ldarg.0
+      IL_0054:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Wait()
+      IL_0059:  br.s       IL_0018
+
+      IL_005b:  ldarg.0
+      IL_005c:  ldc.i4.5
+      IL_005d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::RetrieveHookInternal(int32)
+      IL_0062:  ldloc.2
+      IL_0063:  ldc.i4.5
+      IL_0064:  beq        IL_0086
+
+      IL_0069:  ldstr      "can't recv AckPrint when next message has tag "
+      IL_006e:  ldarg.0
+      IL_006f:  volatile.
+      IL_0071:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0076:  box        [kernel]System.Int32
+      IL_007b:  call       string [kernel]System.String::Concat(object,
+                                                                object)
+      IL_0080:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0085:  throw
+
+      IL_0086:  ldarg.0
+      IL_0087:  ldc.i4.0
+      IL_0088:  volatile.
+      IL_008a:  stfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_008f:  ldarg.0
+      IL_0090:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint Microsoft.Singularity.Stress.Contracts.StressContract/Exp::AckPrintPod0
+      IL_0095:  initobj    Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint
+      IL_009b:  ldarg.0
+      IL_009c:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_00a1:  ldc.i4.5
+      IL_00a2:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_00a7:  br         IL_00c2
+
+      IL_00ac:  ldstr      "can't recv AckPrint in state "
+      IL_00b1:  ldarg.0
+      IL_00b2:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Exp::CurrentState()
+      IL_00b7:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_00bc:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_00c1:  throw
+
+      IL_00c2:  ret
+    } // end of method Exp::RecvAckPrint
+
+    .method public instance void  RecvGcStress() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.ReceiveAttribute::.ctor(int32) = ( 01 00 06 00 00 00 00 00 ) 
+      // Code size       195 (0xc3)
+      .maxstack  9
+      .locals init (int32 V_0,
+               bool V_1,
+               int32 V_2)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.6
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_00ac
+
+      IL_0018:  ldc.i4.0
+      IL_0019:  stloc.1
+      IL_001a:  ldarg.0
+      IL_001b:  volatile.
+      IL_001d:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0022:  stloc.2
+      IL_0023:  ldloc.2
+      IL_0024:  brtrue     IL_0039
+
+      IL_0029:  ldarg.0
+      IL_002a:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_002f:  stloc.1
+      IL_0030:  ldarg.0
+      IL_0031:  volatile.
+      IL_0033:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0038:  stloc.2
+      IL_0039:  ldloc.2
+      IL_003a:  ldc.i4.0
+      IL_003b:  ceq
+      IL_003d:  brfalse    IL_005b
+
+      IL_0042:  ldloc.1
+      IL_0043:  brfalse    IL_0053
+
+      IL_0048:  ldstr      "Peer is closed"
+      IL_004d:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0052:  throw
+
+      IL_0053:  ldarg.0
+      IL_0054:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Wait()
+      IL_0059:  br.s       IL_0018
+
+      IL_005b:  ldarg.0
+      IL_005c:  ldc.i4.6
+      IL_005d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::RetrieveHookInternal(int32)
+      IL_0062:  ldloc.2
+      IL_0063:  ldc.i4.6
+      IL_0064:  beq        IL_0086
+
+      IL_0069:  ldstr      "can't recv GcStress when next message has tag "
+      IL_006e:  ldarg.0
+      IL_006f:  volatile.
+      IL_0071:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0076:  box        [kernel]System.Int32
+      IL_007b:  call       string [kernel]System.String::Concat(object,
+                                                                object)
+      IL_0080:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0085:  throw
+
+      IL_0086:  ldarg.0
+      IL_0087:  ldc.i4.0
+      IL_0088:  volatile.
+      IL_008a:  stfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_008f:  ldarg.0
+      IL_0090:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress Microsoft.Singularity.Stress.Contracts.StressContract/Exp::GcStressPod0
+      IL_0095:  initobj    Microsoft.Singularity.Stress.Contracts.StressContract/GcStress
+      IL_009b:  ldarg.0
+      IL_009c:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_00a1:  ldc.i4.5
+      IL_00a2:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_00a7:  br         IL_00c2
+
+      IL_00ac:  ldstr      "can't recv GcStress in state "
+      IL_00b1:  ldarg.0
+      IL_00b2:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Exp::CurrentState()
+      IL_00b7:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_00bc:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_00c1:  throw
+
+      IL_00c2:  ret
+    } // end of method Exp::RecvGcStress
+
+    .method public instance void  SendGcStressDone() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.SendAttribute::.ctor(int32) = ( 01 00 07 00 00 00 00 00 ) 
+      // Code size       123 (0x7b)
+      .maxstack  10
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_2,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& V_4)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.5
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_0064
+
+      IL_0018:  ldarg.0
+      IL_0019:  ldloca.s   V_1
+      IL_001b:  call       instance valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::GetPeer(bool&)
+      IL_0020:  stloc.2
+      IL_0021:  ldloc.2
+      IL_0022:  stloc.3
+      IL_0023:  ldloc.3
+      IL_0024:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0029:  stloc.s    V_4
+      IL_002b:  ldloc.1
+      IL_002c:  brtrue     IL_0041
+
+      IL_0031:  ldloc.3
+      IL_0032:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverGcStressDone0$PST0600002C()
+      IL_003c:  br         IL_004d
+
+      IL_0041:  ldloc.3
+      IL_0042:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0047:  ldarg.0
+      IL_0048:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::MarshallDeliverGcStressDone0$PST0600002D(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_004d:  ldarg.0
+      IL_004e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::NotifyPeer()
+      IL_0053:  ldarg.0
+      IL_0054:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0059:  ldc.i4.6
+      IL_005a:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_005f:  br         IL_007a
+
+      IL_0064:  ldstr      "can't send GcStressDone in state "
+      IL_0069:  ldarg.0
+      IL_006a:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Exp::CurrentState()
+      IL_006f:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_0074:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_0079:  throw
+
+      IL_007a:  ret
+    } // end of method Exp::SendGcStressDone
+
+    .method public instance void  SendContractNotSupported() cil managed
+    {
+      .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.SendAttribute::.ctor(int32) = ( 01 00 02 00 00 00 00 00 ) 
+      // Code size       123 (0x7b)
+      .maxstack  10
+      .locals init (int32 V_0,
+               bool V_1,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_2,
+               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_3,
+               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& V_4)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  ldc.i4.3
+      IL_000e:  beq        IL_0018
+
+      IL_0013:  br         IL_0064
+
+      IL_0018:  ldarg.0
+      IL_0019:  ldloca.s   V_1
+      IL_001b:  call       instance valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::GetPeer(bool&)
+      IL_0020:  stloc.2
+      IL_0021:  ldloc.2
+      IL_0022:  stloc.3
+      IL_0023:  ldloc.3
+      IL_0024:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0029:  stloc.s    V_4
+      IL_002b:  ldloc.1
+      IL_002c:  brtrue     IL_0041
+
+      IL_0031:  ldloc.3
+      IL_0032:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::DeliverContractNotSupported0$PST0600002E()
+      IL_003c:  br         IL_004d
+
+      IL_0041:  ldloc.3
+      IL_0042:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+      IL_0047:  ldarg.0
+      IL_0048:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::MarshallDeliverContractNotSupported0$PST0600002F(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_004d:  ldarg.0
+      IL_004e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::NotifyPeer()
+      IL_0053:  ldarg.0
+      IL_0054:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0059:  ldc.i4.2
+      IL_005a:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+      IL_005f:  br         IL_007a
+
+      IL_0064:  ldstr      "can't send ContractNotSupported in state "
+      IL_0069:  ldarg.0
+      IL_006a:  call       instance string Microsoft.Singularity.Stress.Contracts.StressContract/Exp::CurrentState()
+      IL_006f:  call       string [kernel]System.String::Concat(string,
+                                                                string)
+      IL_0074:  newobj     instance void [kernel]System.ArgumentException::.ctor(string)
+      IL_0079:  throw
+
+      IL_007a:  ret
+    } // end of method Exp::SendContractNotSupported
+
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0007:  ret
+    } // end of method Exp::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_0019
+
+      IL_0006:  ldarg.1
+      IL_0007:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+      IL_000c:  ldarg.0
+      IL_000d:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0012:  ldarg.0
+      IL_0013:  ldarg.1
+      IL_0014:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_0019:  ret
+    } // end of method Exp::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       45 (0x2d)
+      .maxstack  5
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_002c
+
+      IL_0006:  ldarg.1
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0025
+
+      IL_0012:  ldarg.1
+      IL_0013:  ldloc.1
+      IL_0014:  ldelema    Microsoft.Singularity.Stress.Contracts.StressContract/Exp
+      IL_0019:  ldarg.0
+      IL_001a:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_001f:  ldloc.1
+      IL_0020:  ldc.i4.1
+      IL_0021:  add
+      IL_0022:  stloc.1
+      IL_0023:  br.s       IL_000b
+
+      IL_0025:  ldarg.0
+      IL_0026:  ldarg.1
+      IL_0027:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_002c:  ret
+    } // end of method Exp::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from) cil managed
+    {
+      // Code size       18 (0x12)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.2
+      IL_0003:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::MarshallAll(uint8*,
+                                                                                                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&)
+      IL_0008:  ldarg.0
+      IL_0009:  ldarg.1
+      IL_000a:  ldarg.2
+      IL_000b:  ldarg.0
+      IL_000c:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::MarshallContent(uint8*,
+                                                                                                                    valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                    uint8*)
+      IL_0011:  ret
+    } // end of method Exp::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       46 (0x2e)
+      .maxstack  6
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_002d
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_002d
+
+      IL_0012:  ldarg.3
+      IL_0013:  ldloc.1
+      IL_0014:  ldelema    Microsoft.Singularity.Stress.Contracts.StressContract/Exp
+      IL_0019:  ldarg.0
+      IL_001a:  ldarg.1
+      IL_001b:  ldarg.3
+      IL_001c:  ldc.i4.0
+      IL_001d:  ldelema    Microsoft.Singularity.Stress.Contracts.StressContract/Exp
+      IL_0022:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::MarshallContent(uint8*,
+                                                                                                                    valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                    uint8*)
+      IL_0027:  ldloc.1
+      IL_0028:  ldc.i4.1
+      IL_0029:  add
+      IL_002a:  stloc.1
+      IL_002b:  br.s       IL_000b
+
+      IL_002d:  ret
+    } // end of method Exp::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Exp::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::Dispose()
+      IL_0006:  ret
+    } // end of method Exp::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Exp::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Exp::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Exp::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Exp::Release
+
+    .method family instance int32  Peek() cil managed
+    {
+      // Code size       342 (0x156)
+      .maxstack  7
+      .locals init (int32 V_0,
+               int32 V_1,
+               bool V_2,
+               int32 V_3,
+               int32 V_4,
+               bool V_5,
+               int32 V_6,
+               bool V_7,
+               int32 V_8,
+               bool V_9,
+               int32 V_10,
+               int32 V_11)
+      IL_0000:  ldarg.0
+      IL_0001:  ldflda     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::stateStack
+      IL_0006:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+      IL_000b:  stloc.0
+      IL_000c:  ldloc.0
+      IL_000d:  stloc.1
+      IL_000e:  ldloc.1
+      IL_000f:  ldc.i4.4
+      IL_0010:  beq        IL_002f
+
+      IL_0015:  ldloc.1
+      IL_0016:  ldc.i4.5
+      IL_0017:  beq        IL_006f
+
+      IL_001c:  ldloc.1
+      IL_001d:  ldc.i4.6
+      IL_001e:  beq        IL_00b7
+
+      IL_0023:  ldloc.1
+      IL_0024:  ldc.i4.3
+      IL_0025:  beq        IL_00ff
+
+      IL_002a:  br         IL_0147
+
+      IL_002f:  ldc.i4.0
+      IL_0030:  stloc.2
+      IL_0031:  ldarg.0
+      IL_0032:  volatile.
+      IL_0034:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0039:  stloc.3
+      IL_003a:  ldloc.3
+      IL_003b:  brtrue     IL_0050
+
+      IL_0040:  ldarg.0
+      IL_0041:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_0046:  stloc.2
+      IL_0047:  ldarg.0
+      IL_0048:  volatile.
+      IL_004a:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_004f:  stloc.3
+      IL_0050:  ldloc.3
+      IL_0051:  ldc.i4.0
+      IL_0052:  ceq
+      IL_0054:  brfalse    IL_0067
+
+      IL_0059:  ldloc.2
+      IL_005a:  brfalse    IL_0067
+
+      IL_005f:  ldc.i4.m1
+      IL_0060:  stloc.s    V_4
+      IL_0062:  br         IL_014f
+
+      IL_0067:  ldloc.3
+      IL_0068:  stloc.s    V_4
+      IL_006a:  br         IL_014f
+
+      IL_006f:  ldc.i4.0
+      IL_0070:  stloc.s    V_5
+      IL_0072:  ldarg.0
+      IL_0073:  volatile.
+      IL_0075:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_007a:  stloc.s    V_6
+      IL_007c:  ldloc.s    V_6
+      IL_007e:  brtrue     IL_0095
+
+      IL_0083:  ldarg.0
+      IL_0084:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_0089:  stloc.s    V_5
+      IL_008b:  ldarg.0
+      IL_008c:  volatile.
+      IL_008e:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0093:  stloc.s    V_6
+      IL_0095:  ldloc.s    V_6
+      IL_0097:  ldc.i4.0
+      IL_0098:  ceq
+      IL_009a:  brfalse    IL_00ae
+
+      IL_009f:  ldloc.s    V_5
+      IL_00a1:  brfalse    IL_00ae
+
+      IL_00a6:  ldc.i4.m1
+      IL_00a7:  stloc.s    V_4
+      IL_00a9:  br         IL_014f
+
+      IL_00ae:  ldloc.s    V_6
+      IL_00b0:  stloc.s    V_4
+      IL_00b2:  br         IL_014f
+
+      IL_00b7:  ldc.i4.0
+      IL_00b8:  stloc.s    V_7
+      IL_00ba:  ldarg.0
+      IL_00bb:  volatile.
+      IL_00bd:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_00c2:  stloc.s    V_8
+      IL_00c4:  ldloc.s    V_8
+      IL_00c6:  brtrue     IL_00dd
+
+      IL_00cb:  ldarg.0
+      IL_00cc:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_00d1:  stloc.s    V_7
+      IL_00d3:  ldarg.0
+      IL_00d4:  volatile.
+      IL_00d6:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_00db:  stloc.s    V_8
+      IL_00dd:  ldloc.s    V_8
+      IL_00df:  ldc.i4.0
+      IL_00e0:  ceq
+      IL_00e2:  brfalse    IL_00f6
+
+      IL_00e7:  ldloc.s    V_7
+      IL_00e9:  brfalse    IL_00f6
+
+      IL_00ee:  ldc.i4.m1
+      IL_00ef:  stloc.s    V_4
+      IL_00f1:  br         IL_014f
+
+      IL_00f6:  ldloc.s    V_8
+      IL_00f8:  stloc.s    V_4
+      IL_00fa:  br         IL_014f
+
+      IL_00ff:  ldc.i4.0
+      IL_0100:  stloc.s    V_9
+      IL_0102:  ldarg.0
+      IL_0103:  volatile.
+      IL_0105:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_010a:  stloc.s    V_10
+      IL_010c:  ldloc.s    V_10
+      IL_010e:  brtrue     IL_0125
+
+      IL_0113:  ldarg.0
+      IL_0114:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_PeerClosed()
+      IL_0119:  stloc.s    V_9
+      IL_011b:  ldarg.0
+      IL_011c:  volatile.
+      IL_011e:  ldfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0123:  stloc.s    V_10
+      IL_0125:  ldloc.s    V_10
+      IL_0127:  ldc.i4.0
+      IL_0128:  ceq
+      IL_012a:  brfalse    IL_013e
+
+      IL_012f:  ldloc.s    V_9
+      IL_0131:  brfalse    IL_013e
+
+      IL_0136:  ldc.i4.m1
+      IL_0137:  stloc.s    V_4
+      IL_0139:  br         IL_014f
+
+      IL_013e:  ldloc.s    V_10
+      IL_0140:  stloc.s    V_4
+      IL_0142:  br         IL_014f
+
+      IL_0147:  ldc.i4.m1
+      IL_0148:  stloc.s    V_4
+      IL_014a:  br         IL_014f
+
+      IL_014f:  ldloc.s    V_4
+      IL_0151:  stloc.s    V_11
+      IL_0153:  ldloc.s    V_4
+      IL_0155:  ret
+    } // end of method Exp::Peek
+
+    .method public virtual instance bool 
+            HeadMatches(int32 tag,
+                        bool& possible,
+                        object& elemMatch) cil managed
+    {
+      // Code size       102 (0x66)
+      .maxstack  6
+      .locals init ([0] int32 V_0,
+               [1] bool V_1,
+               [2] bool 'SS$Display Return Local')
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance bool [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::get_Closed()
+      IL_0006:  brfalse    IL_0016
+
+      IL_000b:  ldstr      "endpoint is closed"
+      IL_0010:  newobj     instance void [kernel]System.ApplicationException::.ctor(string)
+      IL_0015:  throw
+
+      IL_0016:  ldarg.0
+      IL_0017:  call       instance int32 Microsoft.Singularity.Stress.Contracts.StressContract/Exp::Peek()
+      IL_001c:  stloc.0
+      IL_001d:  ldloc.0
+      IL_001e:  ldc.i4.0
+      IL_001f:  ceq
+      IL_0021:  brfalse    IL_002d
+
+      IL_0026:  ldc.i4.0
+      IL_0027:  stloc.1
+      IL_0028:  br         IL_0062
+
+      IL_002d:  ldloc.0
+      IL_002e:  ldarg.1
+      IL_002f:  ceq
+      IL_0031:  brfalse    IL_003d
+
+      IL_0036:  ldc.i4.1
+      IL_0037:  stloc.1
+      IL_0038:  br         IL_0062
+
+      IL_003d:  ldc.i4.1
+      IL_003e:  ldarg.1
+      IL_003f:  ceq
+      IL_0041:  brfalse    IL_0054
+
+      IL_0046:  ldloc.0
+      IL_0047:  ldc.i4.0
+      IL_0048:  ble        IL_0054
+
+      IL_004d:  ldc.i4.1
+      IL_004e:  stloc.1
+      IL_004f:  br         IL_0062
+
+      IL_0054:  ldarg.2
+      IL_0055:  ldc.i4.0
+      IL_0056:  stobj      [kernel]System.Boolean
+      IL_005b:  ldc.i4.0
+      IL_005c:  stloc.1
+      IL_005d:  br         IL_0062
+
+      IL_0062:  ldloc.1
+      IL_0063:  stloc.2
+      IL_0064:  ldloc.1
+      IL_0065:  ret
+    } // end of method Exp::HeadMatches
+
+    .method privatescope instance void  DeliverAckPrint0$PST06000046() cil managed
+    {
+      // Code size       17 (0x11)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldc.i4.5
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::DeliverHookInternal(int32)
+      IL_0007:  ldarg.0
+      IL_0008:  ldc.i4.5
+      IL_0009:  volatile.
+      IL_000b:  stfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0010:  ret
+    } // end of method Exp::DeliverAckPrint0
+
+    .method privatescope instance void  MarshallDeliverAckPrint0$PST06000047(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& endpoint) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::DeliverAckPrint0$PST06000046()
+      IL_0006:  ldarg.0
+      IL_0007:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint Microsoft.Singularity.Stress.Contracts.StressContract/Exp::AckPrintPod0
+      IL_000c:  ldarg.0
+      IL_000d:  ldarg.1
+      IL_000e:  ldarg.0
+      IL_000f:  ldflda     int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0014:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint::MarshallAll(uint8*,
+                                                                                                                     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                     int32&)
+      IL_0019:  ret
+    } // end of method Exp::MarshallDeliverAckPrint0
+
+    .method privatescope instance void  DeliverGcStress0$PST06000048() cil managed
+    {
+      // Code size       17 (0x11)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  ldc.i4.6
+      IL_0002:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::DeliverHookInternal(int32)
+      IL_0007:  ldarg.0
+      IL_0008:  ldc.i4.6
+      IL_0009:  volatile.
+      IL_000b:  stfld      int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0010:  ret
+    } // end of method Exp::DeliverGcStress0
+
+    .method privatescope instance void  MarshallDeliverGcStress0$PST06000049(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& endpoint) cil managed
+    {
+      // Code size       26 (0x1a)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::DeliverGcStress0$PST06000048()
+      IL_0006:  ldarg.0
+      IL_0007:  ldflda     valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress Microsoft.Singularity.Stress.Contracts.StressContract/Exp::GcStressPod0
+      IL_000c:  ldarg.0
+      IL_000d:  ldarg.1
+      IL_000e:  ldarg.0
+      IL_000f:  ldflda     int32 [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Exp::TagPod0
+      IL_0014:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/GcStress::MarshallAll(uint8*,
+                                                                                                                     valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                     int32&)
+      IL_0019:  ret
+    } // end of method Exp::MarshallDeliverGcStress0
+
+  } // end of class Exp
+
+  .class sequential ansi sealed nested public specialname Ready
+         extends [kernel]System.ValueType
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IMessage
+  {
+    .pack 0
+    .size 1
+    .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute::.ctor(valuetype [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute/Direction) = ( 01 00 01 00 00 00 00 00 ) 
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method Ready::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method Ready::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                              int32& tagLocation) cil managed
+    {
+      // Code size       30 (0x1e)
+      .maxstack  8
+      IL_0000:  ldarg.2
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.0
+      IL_0003:  ldarg.3
+      IL_0004:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/Ready
+      IL_0009:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+      IL_000e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallMessage(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               int32* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+      IL_0013:  ldarg.0
+      IL_0014:  ldarg.1
+      IL_0015:  ldarg.2
+      IL_0016:  ldarg.0
+      IL_0017:  ldarg.3
+      IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Ready::MarshallContent(uint8*,
+                                                                                                                      valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                      uint8*,
+                                                                                                                      int32&)
+      IL_001d:  ret
+    } // end of method Ready::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       25 (0x19)
+      .maxstack  2
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_0018
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0018
+
+      IL_0012:  ldloc.1
+      IL_0013:  ldc.i4.1
+      IL_0014:  add
+      IL_0015:  stloc.1
+      IL_0016:  br.s       IL_000b
+
+      IL_0018:  ret
+    } // end of method Ready::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent,
+                                                  int32& tagLocation) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Ready::Release
+
+  } // end of class Ready
+
+  .class sequential ansi sealed nested public specialname Print
+         extends [kernel]System.ValueType
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IMessage
+  {
+    .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute::.ctor(valuetype [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute/Direction) = ( 01 00 01 00 00 00 00 00 ) 
+    .field public char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) s
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       21 (0x15)
+      .maxstack  3
+      .locals init ([0] char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) V_0)
+      IL_0000:  ldarg.0
+      IL_0001:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0006:  stloc.0
+      IL_0007:  ldloc.0
+      IL_0008:  brfalse    IL_0014
+
+      IL_000d:  ldarg.1
+      IL_000e:  ldloc.0
+      IL_000f:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_0014:  ret
+    } // end of method Print::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method Print::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method Print::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                              int32& tagLocation) cil managed
+    {
+      // Code size       30 (0x1e)
+      .maxstack  8
+      IL_0000:  ldarg.2
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.0
+      IL_0003:  ldarg.3
+      IL_0004:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/Print
+      IL_0009:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+      IL_000e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallMessage(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               int32* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+      IL_0013:  ldarg.0
+      IL_0014:  ldarg.1
+      IL_0015:  ldarg.2
+      IL_0016:  ldarg.0
+      IL_0017:  ldarg.3
+      IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Print::MarshallContent(uint8*,
+                                                                                                                      valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                      uint8*,
+                                                                                                                      int32&)
+      IL_001d:  ret
+    } // end of method Print::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       25 (0x19)
+      .maxstack  2
+      .locals init ([0] int32 V_0,
+               [1] int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_0018
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0018
+
+      IL_0012:  ldloc.1
+      IL_0013:  ldc.i4.1
+      IL_0014:  add
+      IL_0015:  stloc.1
+      IL_0016:  br.s       IL_000b
+
+      IL_0018:  ret
+    } // end of method Print::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent,
+                                                  int32& tagLocation) cil managed
+    {
+      // Code size       81 (0x51)
+      .maxstack  8
+      .locals init ([0] char& V_0,
+               [1] int32 V_1,
+               [2] int32 V_2)
+      IL_0000:  ldarg.2
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.0
+      IL_0003:  ldflda     char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0008:  ldtoken    [kernel]System.Char
+      IL_000d:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+      IL_0012:  ldarg.3
+      IL_0013:  ldarg.0
+      IL_0014:  ldflda     char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0019:  conv.i
+      IL_001a:  ldarg.3
+      IL_001b:  conv.i
+      IL_001c:  sub
+      IL_001d:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallPointer(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               void** modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               uint8*,
+                                                                                                                               int32)
+      IL_0022:  ldarg.0
+      IL_0023:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0028:  brfalse    IL_0050
+
+      IL_002d:  ldarg.0
+      IL_002e:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0033:  castclass  char&
+      IL_0038:  stloc.0
+      IL_0039:  ldarg.0
+      IL_003a:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_003f:  ldlen
+      IL_0040:  stloc.1
+      IL_0041:  ldc.i4.0
+      IL_0042:  stloc.2
+      IL_0043:  ldloc.2
+      IL_0044:  ldloc.1
+      IL_0045:  bge        IL_0050
+
+      IL_004a:  ldloc.2
+      IL_004b:  ldc.i4.1
+      IL_004c:  add
+      IL_004d:  stloc.2
+      IL_004e:  br.s       IL_0043
+
+      IL_0050:  ret
+    } // end of method Print::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       27 (0x1b)
+      .maxstack  2
+      .locals init ([0] char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) V_0)
+      IL_0000:  ldarg.0
+      IL_0001:  ldfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_0006:  stloc.0
+      IL_0007:  ldloc.0
+      IL_0008:  brfalse    IL_001a
+
+      IL_000d:  ldloc.0
+      IL_000e:  call       void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap::Free(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_0013:  ldarg.0
+      IL_0014:  ldnull
+      IL_0015:  stfld      char* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) Microsoft.Singularity.Stress.Contracts.StressContract/Print::s
+      IL_001a:  ret
+    } // end of method Print::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Print::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Print::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Print::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method Print::Release
+
+  } // end of class Print
+
+  .class sequential ansi sealed nested public specialname AckPrint
+         extends [kernel]System.ValueType
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IMessage
+  {
+    .pack 0
+    .size 1
+    .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute::.ctor(valuetype [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute/Direction) = ( 01 00 00 00 00 00 00 00 ) 
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method AckPrint::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method AckPrint::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                              int32& tagLocation) cil managed
+    {
+      // Code size       30 (0x1e)
+      .maxstack  8
+      IL_0000:  ldarg.2
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.0
+      IL_0003:  ldarg.3
+      IL_0004:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint
+      IL_0009:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+      IL_000e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallMessage(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               int32* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+      IL_0013:  ldarg.0
+      IL_0014:  ldarg.1
+      IL_0015:  ldarg.2
+      IL_0016:  ldarg.0
+      IL_0017:  ldarg.3
+      IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint::MarshallContent(uint8*,
+                                                                                                                         valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                         uint8*,
+                                                                                                                         int32&)
+      IL_001d:  ret
+    } // end of method AckPrint::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       25 (0x19)
+      .maxstack  2
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_0018
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0018
+
+      IL_0012:  ldloc.1
+      IL_0013:  ldc.i4.1
+      IL_0014:  add
+      IL_0015:  stloc.1
+      IL_0016:  br.s       IL_000b
+
+      IL_0018:  ret
+    } // end of method AckPrint::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent,
+                                                  int32& tagLocation) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method AckPrint::Release
+
+  } // end of class AckPrint
+
+  .class sequential ansi sealed nested public specialname GcStress
+         extends [kernel]System.ValueType
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IMessage
+  {
+    .pack 0
+    .size 1
+    .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute::.ctor(valuetype [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute/Direction) = ( 01 00 00 00 00 00 00 00 ) 
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method GcStress::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method GcStress::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                              int32& tagLocation) cil managed
+    {
+      // Code size       30 (0x1e)
+      .maxstack  8
+      IL_0000:  ldarg.2
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.0
+      IL_0003:  ldarg.3
+      IL_0004:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/GcStress
+      IL_0009:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+      IL_000e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallMessage(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               int32* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+      IL_0013:  ldarg.0
+      IL_0014:  ldarg.1
+      IL_0015:  ldarg.2
+      IL_0016:  ldarg.0
+      IL_0017:  ldarg.3
+      IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/GcStress::MarshallContent(uint8*,
+                                                                                                                         valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                         uint8*,
+                                                                                                                         int32&)
+      IL_001d:  ret
+    } // end of method GcStress::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       25 (0x19)
+      .maxstack  2
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_0018
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0018
+
+      IL_0012:  ldloc.1
+      IL_0013:  ldc.i4.1
+      IL_0014:  add
+      IL_0015:  stloc.1
+      IL_0016:  br.s       IL_000b
+
+      IL_0018:  ret
+    } // end of method GcStress::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent,
+                                                  int32& tagLocation) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStress::Release
+
+  } // end of class GcStress
+
+  .class sequential ansi sealed nested public specialname GcStressDone
+         extends [kernel]System.ValueType
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IMessage
+  {
+    .pack 0
+    .size 1
+    .custom instance void [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute::.ctor(valuetype [Microsoft.SingSharp.Runtime]Microsoft.SingSharp.MessageAttribute/Direction) = ( 01 00 01 00 00 00 00 00 ) 
+    .method public instance void  TransferContentsOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::TransferContentsOwnership
+
+    .method public static void  TransferOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method GcStressDone::TransferOwnership
+
+    .method public static void  TransferVectorOwnership(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& target,
+                                                        valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) pointer) cil managed
+    {
+      // Code size       14 (0xe)
+      .maxstack  8
+      IL_0000:  ldarg.1
+      IL_0001:  brfalse    IL_000d
+
+      IL_0006:  ldarg.0
+      IL_0007:  ldarg.1
+      IL_0008:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::TransferBlockOwnership(void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap))
+      IL_000d:  ret
+    } // end of method GcStressDone::TransferVectorOwnership
+
+    .method public instance void  MarshallAll(uint8* basep,
+                                              valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                              int32& tagLocation) cil managed
+    {
+      // Code size       30 (0x1e)
+      .maxstack  8
+      IL_0000:  ldarg.2
+      IL_0001:  ldarg.1
+      IL_0002:  ldarg.0
+      IL_0003:  ldarg.3
+      IL_0004:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone
+      IL_0009:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+      IL_000e:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::MarshallMessage(uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               uint8* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               int32* modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                                               class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+      IL_0013:  ldarg.0
+      IL_0014:  ldarg.1
+      IL_0015:  ldarg.2
+      IL_0016:  ldarg.0
+      IL_0017:  ldarg.3
+      IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone::MarshallContent(uint8*,
+                                                                                                                             valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint&,
+                                                                                                                             uint8*,
+                                                                                                                             int32&)
+      IL_001d:  ret
+    } // end of method GcStressDone::MarshallAll
+
+    .method public static void  MarshallVector(uint8* basep,
+                                               valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                               uint8* parent,
+                                               valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([Microsoft.SingSharp.Runtime]Microsoft.SingSharp.CustomVector) 'vector') cil managed
+    {
+      // Code size       25 (0x19)
+      .maxstack  2
+      .locals init (int32 V_0,
+               int32 V_1)
+      IL_0000:  ldarg.3
+      IL_0001:  brfalse    IL_0018
+
+      IL_0006:  ldarg.3
+      IL_0007:  ldlen
+      IL_0008:  stloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  stloc.1
+      IL_000b:  ldloc.1
+      IL_000c:  ldloc.0
+      IL_000d:  bge        IL_0018
+
+      IL_0012:  ldloc.1
+      IL_0013:  ldc.i4.1
+      IL_0014:  add
+      IL_0015:  stloc.1
+      IL_0016:  br.s       IL_000b
+
+      IL_0018:  ret
+    } // end of method GcStressDone::MarshallVector
+
+    .method public instance void  MarshallContent(uint8* basep,
+                                                  valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint& from,
+                                                  uint8* parent,
+                                                  int32& tagLocation) cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::MarshallContent
+
+    .method public virtual instance void 
+            Dispose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::Dispose
+
+    .method public virtual instance void 
+            Expose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::Expose
+
+    .method public virtual instance void 
+            UnExpose() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::UnExpose
+
+    .method public virtual instance void 
+            Acquire() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::Acquire
+
+    .method public virtual instance void 
+            Release() cil managed
+    {
+      // Code size       1 (0x1)
+      .maxstack  8
+      IL_0000:  ret
+    } // end of method GcStressDone::Release
+
+  } // end of class GcStressDone
+
+  .class abstract auto ansi nested public specialname Start
+         extends [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Start
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IProtocolState
+  {
+    .field public static literal int32 Value = int32(0x00000003)
+    .method family abstract virtual instance class Microsoft.Singularity.Stress.Contracts.StressContract/ReadyState 
+            Send(valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Ready msg) cil managed
+    {
+    } // end of method Start::Send
+
+    .method family hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract/Start::.ctor()
+      IL_0006:  ret
+    } // end of method Start::.ctor
+
+  } // end of class Start
+
+  .class abstract auto ansi nested public specialname ReadyState
+         extends [kernel]System.Object
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IProtocolState
+  {
+    .field public static literal int32 Value = int32(0x00000006)
+    .method family abstract virtual instance class Microsoft.Singularity.Stress.Contracts.StressContract/GcStressState 
+            Recv(valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStress msg) cil managed
+    {
+    } // end of method ReadyState::Recv
+
+    .method family hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [kernel]System.Object::.ctor()
+      IL_0006:  ret
+    } // end of method ReadyState::.ctor
+
+  } // end of class ReadyState
+
+  .class abstract auto ansi nested public specialname GcStressState
+         extends [kernel]System.Object
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IProtocolState
+  {
+    .field public static literal int32 Value = int32(0x00000005)
+    .method family abstract virtual instance class Microsoft.Singularity.Stress.Contracts.StressContract/GcStressState$0 
+            Send(valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Print msg) cil managed
+    {
+    } // end of method GcStressState::Send
+
+    .method family abstract virtual instance class Microsoft.Singularity.Stress.Contracts.StressContract/ReadyState 
+            Send(valuetype Microsoft.Singularity.Stress.Contracts.StressContract/GcStressDone msg) cil managed
+    {
+    } // end of method GcStressState::Send
+
+    .method family hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [kernel]System.Object::.ctor()
+      IL_0006:  ret
+    } // end of method GcStressState::.ctor
+
+  } // end of class GcStressState
+
+  .class abstract auto ansi nested public specialname GcStressState$0
+         extends [kernel]System.Object
+         implements [Microsoft.SingSharp.Runtime]System.Compiler.TypeExtensions.IProtocolState
+  {
+    .field public static literal int32 Value = int32(0x00000004)
+    .method family abstract virtual instance class Microsoft.Singularity.Stress.Contracts.StressContract/GcStressState 
+            Recv(valuetype Microsoft.Singularity.Stress.Contracts.StressContract/AckPrint msg) cil managed
+    {
+    } // end of method GcStressState$0::Recv
+
+    .method family hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       7 (0x7)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [kernel]System.Object::.ctor()
+      IL_0006:  ret
+    } // end of method GcStressState$0::.ctor
+
+  } // end of class GcStressState$0
+
+  .field public static literal string ModuleName = "/service/stress"
+  .method public static void  NewChannel([out] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType)& imp,
+                                         [out] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType)& exp) cil managed
+  {
+    // Code size       72 (0x48)
+    .maxstack  7
+    .locals init ([0] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_0,
+             [1] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_1)
+    IL_0000:  ldarg.1
+    IL_0001:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/Exp
+    IL_0006:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+    IL_000b:  call       void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ChannelHeap::Allocate(class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+    IL_0010:  stloc.0
+    IL_0011:  ldloc.0
+    IL_0012:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+    IL_0017:  ldc.i4.3
+    IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::.ctor(int32)
+    IL_001d:  ldloc.0
+    IL_001e:  stind.i
+    IL_001f:  ldarg.0
+    IL_0020:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/Imp
+    IL_0025:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+    IL_002a:  call       void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ChannelHeap::Allocate(class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+    IL_002f:  stloc.1
+    IL_0030:  ldloc.1
+    IL_0031:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+    IL_0036:  ldc.i4.3
+    IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::'.ctor$PST06000012'(int32)
+    IL_003c:  ldloc.1
+    IL_003d:  stind.i
+    IL_003e:  ldarg.1
+    IL_003f:  ldind.i
+    IL_0040:  ldarg.0
+    IL_0041:  ldind.i
+    IL_0042:  call       void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Connect(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                            valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+    IL_0047:  ret
+  } // end of method StressContract::NewChannel
+
+  .method public static void  NewChannel([out] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType)& imp,
+                                         [out] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType)& exp,
+                                         int32 initialState) cil managed
+  {
+    // Code size       72 (0x48)
+    .maxstack  7
+    .locals init ([0] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_0,
+             [1] valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) V_1)
+    IL_0000:  ldarg.1
+    IL_0001:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/Exp
+    IL_0006:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+    IL_000b:  call       void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ChannelHeap::Allocate(class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+    IL_0010:  stloc.0
+    IL_0011:  ldloc.0
+    IL_0012:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Exp&
+    IL_0017:  ldarg.2
+    IL_0018:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Exp::.ctor(int32)
+    IL_001d:  ldloc.0
+    IL_001e:  stind.i
+    IL_001f:  ldarg.0
+    IL_0020:  ldtoken    Microsoft.Singularity.Stress.Contracts.StressContract/Imp
+    IL_0025:  call       class [kernel]System.Type [kernel]System.Type::GetTypeFromHandle(valuetype [kernel]System.RuntimeTypeHandle)
+    IL_002a:  call       void* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType) [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ChannelHeap::Allocate(class [kernel]System.Type modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+    IL_002f:  stloc.1
+    IL_0030:  ldloc.1
+    IL_0031:  castclass  valuetype Microsoft.Singularity.Stress.Contracts.StressContract/Imp&
+    IL_0036:  ldarg.2
+    IL_0037:  call       instance void Microsoft.Singularity.Stress.Contracts.StressContract/Imp::'.ctor$PST06000012'(int32)
+    IL_003c:  ldloc.1
+    IL_003d:  stind.i
+    IL_003e:  ldarg.0
+    IL_003f:  ldind.i
+    IL_0040:  ldarg.1
+    IL_0041:  ldind.i
+    IL_0042:  call       void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint::Connect(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType),
+                                                                                                            valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.Endpoint* modopt([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.ExHeap) modopt([System.Compiler.Runtime]Microsoft.Contracts.NonNullType))
+    IL_0047:  ret
+  } // end of method StressContract::NewChannel
+
+  .method family hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       7 (0x7)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [Directory.Contracts]Microsoft.Singularity.Directory.ServiceContract::.ctor()
+    IL_0006:  ret
+  } // end of method StressContract::.ctor
+
+  .method privatescope static int32  StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack& stateStack) cil managed
+  {
+    // Code size       51 (0x33)
+    .maxstack  6
+    .locals init ([0] int32 V_0,
+             [1] int32 V_1,
+             [2] int32 V_2,
+             [3] int32 'SS$Display Return Local')
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance int32 [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Top()
+    IL_0006:  stloc.0
+    IL_0007:  ldloc.0
+    IL_0008:  stloc.1
+    IL_0009:  ldloc.1
+    IL_000a:  ldc.i4.2
+    IL_000b:  beq        IL_0015
+
+    IL_0010:  br         IL_0028
+
+    IL_0015:  ldarg.0
+    IL_0016:  ldc.i4.1
+    IL_0017:  call       instance void [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack::Set(int32)
+    IL_001c:  ldarg.0
+    IL_001d:  call       int32 Microsoft.Singularity.Stress.Contracts.StressContract::StableState$PST06000010(valuetype [Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.StateStack&)
+    IL_0022:  stloc.2
+    IL_0023:  br         IL_002f
+
+    IL_0028:  ldloc.0
+    IL_0029:  stloc.2
+    IL_002a:  br         IL_002f
+
+    IL_002f:  ldloc.2
+    IL_0030:  stloc.3
+    IL_0031:  ldloc.2
+    IL_0032:  ret
+  } // end of method StressContract::StableState
+
+  .method privatescope static int32  CanonicalState$PST06000011(int32 state) cil managed
+  {
+    // Code size       32 (0x20)
+    .maxstack  2
+    .locals init ([0] int32 V_0,
+             [1] int32 V_1,
+             [2] int32 'SS$Display Return Local')
+    IL_0000:  ldarg.0
+    IL_0001:  stloc.0
+    IL_0002:  ldloc.0
+    IL_0003:  ldc.i4.2
+    IL_0004:  beq        IL_000e
+
+    IL_0009:  br         IL_0015
+
+    IL_000e:  ldc.i4.1
+    IL_000f:  stloc.1
+    IL_0010:  br         IL_001c
+
+    IL_0015:  ldarg.0
+    IL_0016:  stloc.1
+    IL_0017:  br         IL_001c
+
+    IL_001c:  ldloc.1
+    IL_001d:  stloc.2
+    IL_001e:  ldloc.1
+    IL_001f:  ret
+  } // end of method StressContract::CanonicalState
+
+} // end of class Microsoft.Singularity.Stress.Contracts.StressContract
+
+
+// =============================================================
+
+// *********** DISASSEMBLY COMPLETE ***********************

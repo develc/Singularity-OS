@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hal</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Singularity.Hal.ApicTimer.SetDivisor(System.UInt32)">
+             <summary>
+             Set processor clock bus divider.
+             </summary>
+            
+             <param name ="amount">
+             Amount to divide by.  Must be a power of 2 between 1 and 128.
+             </param>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.ApicTimer.GetDivisor">
+            <summary>
+            Get processor clock bus divider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.ApicTimer.SetNextInterrupt(System.TimeSpan)">
+             <summary>
+             Set relative time of next interrupt.
+            
+             <param name="delta">
+             Relative time of next interrupt.
+             The time should be with the range between from <c>SetNextInterruptMinDelta</c> to
+             <c>SetNextInterruptMaxDelta</c></param>.
+             </summary>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.ApicTimer.MaxInterruptInterval">
+            <value>
+            Maximum value accepted by SetNextInterrupt (in units of 100ns).
+            </value>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.ApicTimer.MinInterruptInterval">
+            <value>
+            Minimum value accepted by SetNextInterrupt (in units of 100ns).
+            </value>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.Hpet.PeriodFs">
+            <summary> Period in femptoseconds (10^-15) </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.RTClockApic">
+            <remarks>
+            Class <c>RTClock</c> represents the system
+            Real-Time Clock.  RTC chips in PCs are based on the
+            Motorola MC146818A.  It provides timing resolution
+            of 1 second, but can generate periodic interrupts
+            more frequently.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.RTClockLegacyPC">
+            <remarks>
+            Class <c>RTClock</c> represents the system
+            Real-Time Clock.  RTC chips in PCs are based on the
+            Motorola MC1461818A.  It provides timing resolution of 1
+            second, but can generate periodic interrupts more
+            frequently.  By combining information from
+            <c>Timer8254</c> programmable timer time can be read
+            with a resolution of 0.838 microseconds.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Singularity.Hal.RtcPitState.upTime">
+            <remarks>
+            System up time as measured by the <see>RTClock</see>.  This value
+            is only updated by the RTClock.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Singularity.Hal.RtcPitState.lastKernelTicks">
+            <remarks>
+            Last time returned by GetKernelTicks.  Used to check for time
+            going backwards.  This can occur in PIT value updates in the
+            scaling between PIT timebase and kernel time base.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Timer8254LegacyPC.SetKeepAliveInterrupt">
+            <remarks> Set timer interrupt to start or keep timer running.
+            The user is expected to call SetNextInterrupt regularly during
+            normal operation.  This method is invoked at start-up and if
+            we find the timer interrupt is not programmed during the clock
+            interrupt.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.Timer8254LegacyPC.MaxInterruptInterval">
+            <value>
+            Maximum value accepted by SetNextInterrupt (in units of 100ns).
+            </value>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.Timer8254LegacyPC.MinInterruptInterval">
+            <value>
+            Minimum value accepted by SetNextInterrupt (in units of 100ns).
+            </value>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.IOperationRegionAccessor">
+            <summary>
+            Abstracts away reading of operation regions such as arbitrary
+            memory read/writes, I/O, and PCI configuration space access.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.Acpi.PMTimer.Width">
+            <summary> Get the width of the timer in bits (24 or 32). </summary>
+        </member>
+        <member name="P:Microsoft.Singularity.Hal.Acpi.PMTimer.Value">
+            <summary> Get the current timer value. </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.LookupNode(Microsoft.Singularity.Hal.Acpi.AcpiNamespace.AbsoluteNodePath)">
+            <summary>
+            Look up the node at a given absolute node path.
+            </summary>
+            <returns>The requested node, or null if the node is not found.</returns>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.LookupNode(Microsoft.Singularity.Hal.Acpi.AcpiNamespace.NodePath,Microsoft.Singularity.Hal.Acpi.AcpiNamespace.AbsoluteNodePath)">
+            <summary>
+            Look up the node at a given absolute or relative node path.
+            This may include "single segment name" paths which invoke the
+            search strategy described in section 5.3 of the ACPI spec 3.0b.
+            </summary>
+            <param name="currentPath">Absolute path of the current path
+            relative to which any relative node path will be determined.</param>
+            <returns>The requested node, or null if the node is not found.</returns>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.LookupNodeNoSearch(Microsoft.Singularity.Hal.Acpi.AcpiNamespace.NodePath,Microsoft.Singularity.Hal.Acpi.AcpiNamespace.AbsoluteNodePath)">
+            <summary>
+            A version of LookupNode that does not ever apply the search rules.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.NodePath">
+            <summary>
+            The absolute or relative location of a node in the ACPI namespace.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.AbsoluteNodePath">
+            <summary>
+            A restricted type of NodePath that must be statically absolute.
+            </summary>
+            <remarks>Not every absolute path has this type - some are AbsoluteNodePaths
+            and some are NodePaths. The purpose of this subclass is to statically enforce
+            that absolute paths are always used in certain limited contexts.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.Node">
+            <summary>
+            A node in the ACPI namespace tree.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.Node.#ctor">
+            <summary>
+            Create a root node.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.Node.#ctor(System.String,Microsoft.Singularity.Hal.Acpi.AcpiNamespace.Node)">
+            <summary>
+            Create a child node with a given name and parent node.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiNamespace.Node.AliasTo(Microsoft.Singularity.Hal.Acpi.AcpiNamespace.Node)">
+            <summary>
+            Makes this node refer to the same value as the given node.
+            </summary>
+            <remarks>Aliased names refer to not only the same object but
+            the same object location (cell). Any updates to either node
+            immediately appear in the other.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.AcpiObjectType">
+            <summary>
+            Values returned by ObjectType operator as described in section
+            17.5.86 of the ACPI specification 3.0b.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiObject.AcpiObject.GetTarget">
+            <summary>
+            Get the value referred to by this value, for creating indirection.
+            Returns self for concrete types.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.AcpiObjectCell">
+            <summary>
+            Contains a reference to an AcpiObject - this added level of indirection
+            is necessary to permit AcpiObject objects to be modified through
+            ObjectReference objects.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.UninitializedObject">
+            <summary>
+            An uninitialized ACPI object.
+            </summary>
+            <remarks>From Table 17-6: No assigned type or value. This is the type
+            of all control method LocalX variables and unused ArgX variables at
+            the beginning of method execution, as well as all uninitialized
+            Package elements. Uninitialized objects must be initialized (via
+            Store or CopyObject) before they may be used as source operands in
+            ASL expressions.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Buffer">
+            <summary>
+            An ACPI buffer object representing an array of bytes.
+            </summary>
+            <remarks>From Table 17-6: An array of bytes. Uninitialized elements
+            are zero by default.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.BufferField">
+            <summary>
+            An ACPI buffer field object representing a portion of a buffer.
+            </summary>
+            <remarks>From Table 17-6: Portion of a buffer created using
+            CreateBitField, CreateByteField, CreateWordField, CreateQWordField,
+            CreateField, or returned by the Index operator.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.DdbHandle">
+            <summary>
+            An ACPI DDB handle object referring to a Differentiated Definition Block.
+            </summary>
+            <remarks>From Table 17-6: Definition block handle returned
+            by the Load operator [and passed to the Unload operator].</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.DebugObject">
+            <summary>
+            An ACPI debug object used for formatting and printing debug output.
+            </summary>
+            <remarks>From Table 17-6: Debug output object. Formats an object
+            and prints it to the system debug port. Has no effect if debugging
+            is not active. Section 17.5.23: The debug data object is a virtual
+            data object. Writes to this object provide debugging information.
+            On at least debug versions of the interpreter, any writes into this
+            object are appropriately displayed on the system’s native kernel
+            debugger. All writes to the debug object are otherwise benign. If
+            the system is in use without a kernel debugger, then writes to the
+            debug object are ignored.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Device">
+            <summary>
+            An ACPI device object representing a device or bus.
+            </summary>
+            <remarks>From Table 17-6: Device or bus object</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Event">
+            <summary>
+            An ACPI event synchronization object
+            </summary>
+            <remarks>From Table 17-6: Event synchronization object</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.FieldUnit">
+            <summary>
+            An ACPI field unit object referring to a portion of an address space.
+            </summary>
+            <remarks>From Table 17-6: (within an Operation Region) Portion of an
+            address space, bit-aligned and of one-bit granularity. Created using
+            Field, BankField, or IndexField.</remarks>
+        </member>
+        <member name="M:Microsoft.Singularity.Hal.Acpi.AcpiObject.FieldUnit.Write(Microsoft.Singularity.Hal.Acpi.AcpiObject.AcpiObject)">
+            <summary>
+            This is currently just used by IndexField, will probably become accessible
+            from AML when implementing stores.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.IndexFieldOperationRegionAccessor">
+            <summary>
+            This operation region accessor accesses internal device registers
+            through an index/data pair (typically a pair of I/O ports inside an
+            I/O operation region). It is used by IndexField definitions, which
+            create FieldUnits inside these internal operation regions. The
+            RegionSpace type is ignored.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Integer">
+            <summary>
+            An ACPI integer object
+            </summary>
+            <remarks>From Table 17-6: An n-bit little-endian unsigned integer.
+            In ACPI 1.0 this was at least 32 bits. In ACPI 2.0 and later, this
+            is 64 bits.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.IntegerConstant">
+            <summary>
+            Wrapper class for some static methods referring to ACPI integer
+            constant built-in integer constants.
+            </summary>
+            <remarks>From Table 17-6: Created by the ASL terms "Zero", "One",
+            "Ones", and "Revision". We did not create a subclass for these
+            because ObjectType has no "IntegerConstant" type, only Integer.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Method">
+            <summary>
+            An ACPI method object referring to an invokable method.
+            </summary>
+            <remarks>From Table 17-6: Control Method (Executable AML function)</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.BytecodeMethod">
+            <summary>
+            A method whose body is represented using AML bytecode which can be parsed
+            and interpreted.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.ReservedMethod">
+            <summary>
+            A reserved method implemented directly by the operating system.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Mutex">
+            <summary>
+            An ACPI mutex synchronization object
+            </summary>
+            <remarks>From Table 17-6: Mutex synchronization object</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.NodePathReference">
+            <summary>
+            See AmlLoader.LoadTimeEvaluate(AmlParser.UserTermObj userTermObj)
+            for an explanation of the existence of this object type, which is
+            not defined in the specification.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.ObjectReference">
+            <summary>
+            An ACPI object reference object referring to some other AcpiObject
+            </summary>
+            <remarks>From Table 17-6: Reference to an object created using the
+            RefOf, Index, or CondRefOf operators</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.RegionSpace">
+            <summary>
+            From 17.5.89, describes the built-in region spaces in which an
+            operation region can be created.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.OperationRegion">
+            <summary>
+            An ACPI operation region object, representing a region within an
+            address space.
+            </summary>
+            <remarks>From Table 17-6: Reference to an object created using the
+            RefOf, Index, or CondRefOf operators</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Package">
+            <summary>
+            An ACPI package object, a fixed-length list of other AcpiObject objects
+            </summary>
+            <remarks>From Table 17-6: Collection of ASL objects with a fixed
+            number of elements (up to 255).</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.PowerResource">
+            <summary>
+            An ACPI power resource description object.
+            </summary>
+            <remarks>From Table 17-6: Power Resource description object</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.Processor">
+            <summary>
+            An ACPI processor description object.
+            </summary>
+            <remarks>From Table 17-6: Processor description object. See
+            section 17.5.93.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.String">
+            <summary>
+            An ACPI string object.
+            </summary>
+            <remarks>From Table 17-6: Null-terminated ASCII string.</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AcpiObject.ThermalZone">
+            <summary>
+            An ACPI thermal zone description object.
+            </summary>
+            <remarks>From Table 17-6: Thermal Zone description object</remarks>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.AmlParserNodeVisitor">
+            <summary>
+            This abstract node visitor class (following the GoF Visitor pattern) enables
+            straightforward structural recursion over an AML parse tree, which is useful in
+            the parser and interpreter. Leaf classes are left abstract and must be implemented.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.SmallResourceItemName">
+            <summary>
+            Small item name tag bits as described in table 6-21 of section
+            6.4.2 of the ACPI specification 3.0b.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Hal.Acpi.LargeResourceItemName">
+            <summary>
+            Large item name tag bits as described in table 6-33 of section
+            6.4.2 of the ACPI specification 3.0b.
+            </summary>
+        </member>
+    </members>
+</doc>

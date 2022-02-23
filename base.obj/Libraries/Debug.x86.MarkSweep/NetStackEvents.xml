@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetStackEvents</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Singularity.NetStack.Events.TcpSessionContractEntrypoints">
+            <summary>
+            TCP Contract Entrypoints (use enums, not strings, for density).
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.NetStack.Events.TcpSessionEvents">
+            <summary>
+            Event Definitions for the TcpSession class.
+            </summary>
+        </member>
+    </members>
+</doc>

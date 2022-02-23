@@ -1,0 +1,5 @@
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\VolMgr.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\sms.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\Shell.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Drivers\Debug.x86.MarkSweep\LegacyKeyboard.x86.manifest
+C:\Users\cc\source\repos\Singularity-OS\base.obj\Apps\Debug.x86.MarkSweep\tty.x86.manifest

@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>System.Net.IP</name>
+  </assembly>
+  <members>
+    <member name="T:System.Net.IP.IPv4">
+      <summary>
+IPv4 Address Structure.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.Length">
+      <summary>
+The number of bytes in an IPv4 address.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.BitCount">
+      <summary>
+The number of bits in a IPv4 address.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv4.#ctor(System.UInt32)">
+      <summary>
+Constructor.
+</summary>
+      <param name="hostOrderAddress">A 32-bit value representing an
+IPv4 address in host-order.</param>
+    </member>
+    <member name="M:System.Net.IP.IPv4.#ctor(System.Net.IP.IPv4)">
+      <summary>
+Copy-constructor
+</summary>
+      <param name="IPv4 other">Another IPv4 instance</param>
+    </member>
+    <member name="M:System.Net.IP.IPv4.GetAddressBytes">
+      <summary>
+Provide a copy of the <c>IPv4</c> address as an array of bytes.
+</summary>
+      <returns>Array of bytes, ordered MSB to LSB.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.NetMask(System.Int32)">
+      <summary>
+Create an IPv4 address representing a netmask.
+</summary>
+      <param name="maskLength" />
+      <returns>An IPv4 instance.</returns>
+      <exception cref="ArgumentException">Thrown if maskLength is
+outside of the range [0,32].</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv4.ParseBytes(System.Byte[],System.Int32)">
+      <summary>
+Create an IPv4 address from bytes in an array.  The bytes
+are assumed to be in the order of MSB to LSB.
+</summary>
+      <param name="data">Byte array to read address from.</param>
+      <param name="offset">Offset in bytes of starting point.</param>
+      <exception cref="ArgumentNullException">Thrown if the array
+is null.</exception>
+      <exception cref="ArgumentException">Thrown if there are less
+than 4 bytes from the offset to the end of the array.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv4.ParseBytes(System.Byte[])">
+      <summary>
+Create an IPv4 address from bytes in an array.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if the array
+is null.</exception>
+      <exception cref="ArgumentException">Thrown if there are less
+than 4 bytes in the array.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv4.Parse(System.String)">
+      <summary>
+Converts an IP address string into an IPv4 instance.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if
+<c>ipString</c> is null.</exception>
+      <exception cref="FormatException">Thrown if
+<c>ipString</c> is invalid.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv4.Parse(System.String,System.Net.IP.IPv4@)">
+      <summary>
+Converts an IP address string into an IPv4 instance.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if
+<c>ipString</c> is null.</exception>
+      <returns> <c>true</c> on success, <c>false</c> on failure.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.CopyOut(System.Byte[],System.Int32)">
+      <summary>
+Writes network-order byte representation of IPv4 address
+into buffer at a specified offset.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if <c>buffer</c>
+argument is null. </exception>
+      <exception cref="ArgumentException">Thrown if there is
+insufficient space between <c>outputOffset</c> and the end of
+<c>buffer</c> to write out the IP address.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_LessThan(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+The less-than operator for two IPv4 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 32-bit number representing the <c>lhs</c>
+is less than <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_LessThanOrEqual(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+The less-than-or-equal-to operator for two IPv4 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 32-bit number representing the <c>lhs</c>
+is less than or equal to <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_GreaterThan(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+The greater-than operator for two IPv4 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 32-bit number representing the <c>lhs</c>
+is greater than <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_GreaterThanOrEqual(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+The greater-than-or-equal-to operator for two IPv4 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 32-bit number representing the <c>lhs</c>
+is greater than or equal to <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_Equality(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+Equals operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the addresses represented by <c>lhs</c> and
+<c>rhs</c> are the same.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_Inequality(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+Not-equals operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the addresses represented by <c>lhs</c> and
+<c>rhs</c> are different.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_BitwiseAnd(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+Bit-wise AND operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>An IPv4 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_BitwiseOr(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+Bit-wise OR operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>An IPv4 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_ExclusiveOr(System.Net.IP.IPv4,System.Net.IP.IPv4)">
+      <summary>
+Bit-wise XOR operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>An IPv4 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_OnesComplement(System.Net.IP.IPv4)">
+      <summary>
+Bit-wise NOT operator.
+</summary>
+      <param name="ipv4" />
+      <returns>An IPv4 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_Increment(System.Net.IP.IPv4)">
+      <summary>
+Increment IPv4 address.
+</summary>
+      <param name="ipv4" />
+      <returns>An IPv4 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_Decrement(System.Net.IP.IPv4)">
+      <summary>
+Decrement IPv4 address.
+</summary>
+      <param name="ipv4" />
+      <returns>An IPv4 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_RightShift(System.Net.IP.IPv4,System.Int32)">
+      <summary>
+Right-shift operator.
+</summary>
+      <param name="ipv4">Address to be shifted.</param>
+      <param name="n">Number of bits to shift-by.</param>
+      <returns>An IPv4 address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_LeftShift(System.Net.IP.IPv4,System.Int32)">
+      <summary>
+Left-shift operator.
+</summary>
+      <param name="ipv4">Address to be shifted.</param>
+      <param name="n">Number of bits to shift-by.</param>
+      <returns>An IPv4 address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.GetBit(System.Int32)">
+      <summary>
+Get a single bit from an IPv4 address.
+</summary>
+      <param name="bitIndex">Index of bit (ordered from msb-to-lsb)
+</param>
+      <returns>Returns <c>true</c> if bit is set, false if
+bit is unset or <paramref name="bitIndex" /> is out
+of range.
+</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.GetMaskLength(System.Net.IP.IPv4)">
+      <summary>
+Get the mask length from an IPv4 address representing a netmask.
+</summary>
+      <param name="netmask" />
+    </member>
+    <member name="M:System.Net.IP.IPv4.op_Explicit(System.Net.IP.IPv4)~System.UInt32">
+      <summary>
+Cast <c>IPv4</c> instance into an unsigned integer.
+</summary>
+      <param name="ipv4" />
+      <returns>An unsigned integer.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.Equals(System.Object)">
+      <summary>
+Determines whether two Object instances are equal.
+</summary>
+      <param name="other">Object to be compared to.</param>
+      <returns>True if <c>o</c> is an IPv4 address and numerically
+the same as instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.GetHashCode">
+      <summary>
+Compute numeric hash of IPv4 instance.  Value is
+suitable for use in hashing algorithms and data
+structures like a hash table.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv4.IsLoopback">
+      <summary>
+Indicates whether instance represents a loopback address.
+</summary>
+      <returns>True if instance represents a loopback
+address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.IsMulticast">
+      <summary>
+Indicates whether instance represents a multicast address.
+</summary>
+      <returns>True if instance represents a multicast
+address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv4.ToString">
+      <summary>
+Returns a string representing IPv4 instance.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.Any">
+      <summary>
+IPv4 address representing an unspecified host.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.Zero">
+      <summary>
+IPv4 address with all bits set to zero.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.Loopback">
+      <summary>
+IPv4 loopback address.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.Broadcast">
+      <summary>
+IPv4 broadcast address.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv4.AllOnes">
+      <summary>
+IPv4 address with all bits set to one.
+</summary>
+    </member>
+    <member name="T:System.Net.IP.IPv4Network">
+      <summary>
+IPv4 Network Structure.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv4Network.Parse(System.String)">
+      <summary>
+
+Parse an IPv4 network string representation into an IPv4Network.
+
+<para> The representation should either be <ipAddress /> or
+       <ipAddress />/<masklength />.
+</para>
+
+<para> Example forms of IPv4 Networks are: 10.0.2.0/24,
+       10.0.0.1.
+</para>
+
+</summary>
+      <exception cref="ArgumentNullException" />
+      <exception cref="FormatException">
+Thrown when IP address component of format is invalid or too many
+slashes appear in string argument, or netmask length is not a valid
+integer.
+</exception>
+      <exception cref="ArgumentException">
+Thrown when specified mask length is greater than
+<c>IPv4.BitCount</c>or less than zero.
+</exception>
+      <exception cref="OverflowException">
+Netmask length overflows valid values for integers
+</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv4Network.Parse(System.String,System.Net.IP.IPv4Network@)">
+      <summary>
+Exception-lite IPv4 network address parser.
+</summary>
+      <returns>
+        <c>true</c> on success, <c>false</c> if supplied address
+is not a valid IPv4 string representation.
+</returns>
+      <exception cref="ArgumentNullException" />
+    </member>
+    <member name="T:System.Net.IP.IPv6">
+      <summary>
+IPv6 Address Structure.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv6.Length">
+      <summary>
+The number of bytes in an IPv6 address.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv6.BitCount">
+      <summary>
+The number of bits in an IPv6 address.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+      <summary>
+Constructor.
+</summary>
+      <param name="q0">The most significant 32-bits in
+host order.</param>
+      <param name="q1">The next significant 32-bits in
+host order.</param>
+      <param name="q2">The next significant 32-bits in
+host order.</param>
+      <param name="q3">The least significant 32-bits in
+host order.</param>
+    </member>
+    <member name="M:System.Net.IP.IPv6.GetAddressBytes">
+      <summary>
+Provide a copy of the <c>IPv6</c> address as an array of bytes.
+</summary>
+      <returns>Array of bytes, ordered MSB to LSB.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.NetMask(System.Int32)">
+      <summary>
+Create an IPv6 address representing a netmask.
+</summary>
+      <param name="maskLength" />
+      <returns>An IPv6 instance.</returns>
+      <exception cref="ArgumentException">Thrown if maskLength is
+outside of the range [0,128].</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv6.CreateIPv4OnlyNodeAddress(System.Net.IP.IPv4)">
+      <summary>
+Create an IPv6 address representing an IPv4 node that is only
+IPv4 capable.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.CreateIPv4NodeAddress(System.Net.IP.IPv4)">
+      <summary>
+Create an IPv6 address representing an IPv4 node is IPv4
+and IPv6 capable.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.ParseBytes(System.Byte[],System.Int32)">
+      <summary>
+Create an IPv6 address from bytes in an array.  The bytes
+are assumed to be in the order of MSB to LSB.
+</summary>
+      <param name="data">Byte array to read address from.</param>
+      <param name="offset">Offset in bytes of starting point.</param>
+      <exception cref="ArgumentNullException">Thrown if the array
+is null.</exception>
+      <exception cref="ArgumentException">Thrown if there are less
+than 16 bytes from the offset to the end of the array.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv6.ParseBytes(System.Byte[])">
+      <summary>
+Create an IPv6 address from bytes in an array.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if the array
+is null.</exception>
+      <exception cref="ArgumentException">Thrown if there are less
+than 16 bytes in the array.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv6.Parse(System.String!Microsoft.Contracts.NonNullType,System.Int32,System.Int32,System.Int32,System.UInt16[]!Microsoft.Contracts.NonNullType@)">
+      <summary>
+Converts characters in a range to parts of an IPv6 address.
+<param name="ipString">Input string.</param>
+<param name="start">Start position in <c>ipString</c></param>
+<param name="end">End position in <c>ipString</c></param>
+<param name="maxValues">The maximum number of 16bit address
+  components to accept.</param>
+<param name="values">Array to receive 16bit address components.
+</param>
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.Parse(System.String)">
+      <summary>
+Converts an IP address string into an IPv6 instance.  This string
+must be a pure IPv6 representation -- IPv4 representations are not
+supported.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if
+<c>ipString</c> is null.</exception>
+      <exception cref="FormatException">Thrown if
+<c>ipString</c> is invalid.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv6.Parse(System.String,System.Net.IP.IPv6@)">
+      <summary>
+Converts an IP address string into an IPv6 instance.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if
+<c>ipString</c> is null.</exception>
+      <returns> <c>true</c> on success, <c>false</c> on failure.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.CopyOut(System.Byte[],System.Int32)">
+      <summary>
+Writes network-order byte representation of IPv6 address
+into buffer at a specified offset.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if <c>buffer</c>
+argument is null. </exception>
+      <exception cref="ArgumentException">Thrown if there is
+insufficient space between <c>outputOffset</c> and the end of
+<c>buffer</c> to write out the IP address.</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_LessThan(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+The less-than operator for two IPv6 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 128-bit number representing the <c>lhs</c>
+is less than <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_LessThanOrEqual(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+The less-than-or-equal-to operator for two IPv6 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 128-bit number representing the <c>lhs</c>
+is less than or equal to <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_GreaterThan(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+The greater-than operator for two IPv6 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 128-bit number representing the <c>lhs</c>
+is greater than <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_GreaterThanOrEqual(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+The greater-than-or-equal-to operator for two IPv6 addresses.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the 128-bit number representing the <c>lhs</c>
+is greater than or equal to <c>rhs</c>.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_Equality(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+Equals operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the addresses represented by <c>lhs</c> and
+<c>rhs</c> are the same.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_Inequality(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+Not-equals operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>True if the addresses represented by <c>lhs</c> and
+<c>rhs</c> are different.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_BitwiseAnd(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+Bit-wise AND operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>An IPv6 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_BitwiseOr(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+Bit-wise OR operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>An IPv6 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_ExclusiveOr(System.Net.IP.IPv6,System.Net.IP.IPv6)">
+      <summary>
+Bit-wise XOR operator.
+</summary>
+      <param name="lhs" />
+      <param name="rhs" />
+      <returns>An IPv6 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_OnesComplement(System.Net.IP.IPv6)">
+      <summary>
+Bit-wise NOT operator.
+</summary>
+      <param name="ipv6" />
+      <returns>An IPv6 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_Increment(System.Net.IP.IPv6)">
+      <summary>
+Increment IPv6 address.
+</summary>
+      <param name="ipv6" />
+      <returns>An IPv6 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_Decrement(System.Net.IP.IPv6)">
+      <summary>
+Decrement IPv6 address.
+</summary>
+      <param name="ipv6" />
+      <returns>An IPv6 instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_RightShift(System.Net.IP.IPv6,System.Int32)">
+      <summary>
+Right-shift operator.
+</summary>
+      <param name="addr">Address to be shifted.</param>
+      <param name="n">Number of bits to shift-by.</param>
+      <returns>An IPv6 address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.op_LeftShift(System.Net.IP.IPv6,System.Int32)">
+      <summary>
+Left-shift operator.
+</summary>
+      <param name="addr">Address to be shifted.</param>
+      <param name="n">Number of bits to shift-by.</param>
+      <returns>An IPv6 address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.GetBit(System.Int32)">
+      <summary>
+Get a single bit from an IPv6 address.
+</summary>
+      <param name="bitIndex">Index of bit (ordered from msb-to-lsb)
+</param>
+      <returns>Returns <c>true</c> if bit is set, false if
+bit is unset or <paramref name="bitIndex" /> is out
+of range.
+</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.GetMaskLength(System.Net.IP.IPv6)">
+      <summary>
+Get the mask length from an IPv6 address representing a netmask.
+</summary>
+      <param name="netmask" />
+    </member>
+    <member name="M:System.Net.IP.IPv6.Equals(System.Object)">
+      <summary>
+Determines whether two Object instances are equal.
+</summary>
+      <param name="o">Object to be compared to.</param>
+      <returns>True if <c>o</c> is an IPv6 address and numerically
+the same as instance.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.GetHashCode">
+      <summary>
+Compute numeric hash of IPv6 instance.  Value is
+suitable for use in hashing algorithms and data
+structures like a hash table.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.RepresentsIPv4Address">
+      <summary>
+Determine if IPv6 address represents an IPv4 capable node.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.RepresentsIPv4OnlyAddress">
+      <summary>
+Determine if IPv6 address represents IPv4 only capable node.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.IsLinkLocalAddress">
+      <summary>
+Determine if IPv6 address represents a link-local address.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.IsSiteLocalAddress">
+      <summary>
+Determine if IPv6 address represents a site-local address.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.IsLoopback">
+      <summary>
+Indicates whether instance represents a native IPv6
+loopback address.
+</summary>
+      <returns>True if instance represents a loopback
+address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.IsMulticast">
+      <summary>
+Determine if IPv6 address represents a native IPv6
+multicast address.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6.GetIPv4Address">
+      <summary>
+Extract embedded IPv4 address.
+</summary>
+      <returns>Returns IPv4 address on success and <c>IPv4.Any</c>
+if address does not represent an IPv4 address.</returns>
+    </member>
+    <member name="M:System.Net.IP.IPv6.ToString">
+      <summary>
+Returns a string representing IPv6 instance.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv6.Any">
+      <summary>
+IPv6 address representing unspecified address.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv6.Zero">
+      <summary>
+IPv6 address with all bits set to zero.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv6.Loopback">
+      <summary>
+IPv6 loopback address.
+</summary>
+    </member>
+    <member name="F:System.Net.IP.IPv6.AllOnes">
+      <summary>
+IPv6 address with all bits set to one.
+</summary>
+    </member>
+    <member name="T:System.Net.IP.IPv6Network">
+      <summary>
+IPv6 Network Structure.
+</summary>
+    </member>
+    <member name="M:System.Net.IP.IPv6Network.Parse(System.String)">
+      <summary>
+
+Parse an IPv6 network string representation into an IPv6Network.
+
+<para> The representation should either be <ipAddress /> or
+       <ipAddress />/<masklength />.
+</para>
+
+<para> Example forms of IPv6 Networks are: 10.0.2.0/24,
+       10.0.0.1.
+</para>
+
+</summary>
+      <exception cref="ArgumentNullException" />
+      <exception cref="FormatException">
+Thrown when IP address component of format is invalid or too many
+slashes appear in string argument, or netmask length is not a valid
+integer.
+</exception>
+      <exception cref="ArgumentException">
+Thrown when specified mask length is greater than
+<c>IPv6.BitCount</c> or less than zero.
+</exception>
+      <exception cref="OverflowException">
+Netmask length overflows valid values for integers
+</exception>
+    </member>
+    <member name="M:System.Net.IP.IPv6Network.Parse(System.String,System.Net.IP.IPv6Network@)">
+      <summary>
+Exception-lite IPv6 network address parser.
+</summary>
+      <returns>
+        <c>true</c> on success, <c>false</c> if supplied address
+is not a valid IPv6 string representation.
+</returns>
+      <exception cref="ArgumentNullException" />
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Singularity.Xml</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Singularity.Xml.XmlException">
+            <summary>
+            Summary description for XmlException.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Singularity.Xml.XmlNode">
+            <summary>
+            Summary description for XmlNode.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlNode.WriteTo(Microsoft.Singularity.Xml.XmlWriter)">
+            <devdoc>
+               <para>Saves the current node to the specified XmlWriter.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlNode.WriteContentTo(Microsoft.Singularity.Xml.XmlWriter)">
+            <devdoc>
+               <para>Saves all the children of the node to the specified XmlWriter.</para>
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Singularity.Xml.XmlReader">
+            <summary>
+            This is a simple XML Parser that does no validation.  All it does it parse the syntax of XML
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlReader.ExpandEntityReferences(System.String)">
+            <summary>
+            This method expands XML entity references found in an input string.
+            If an invalid entity reference is encountered, this method will throw
+            XmlException.
+            </summary>
+            <param name="input">The string to search for entity references.</param>
+            <returns>The expanded string.</returns>
+        </member>
+        <member name="T:Microsoft.Singularity.Xml.Formatting">
+            <devdoc>
+               <para>
+                  Specifies formatting options for the XmlWriter stream.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.Formatting.None">
+            <devdoc>
+               <para>
+                  No special formatting is done (this is the default).
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.Formatting.Indented">
+            <devdoc>
+            This option causes child elements to be indented using
+            the Indentation and IndentChar properties.  It only indents Element Content
+            (http://www.w3.org/TR/1998/REC-xml-19980210#sec-element-content)
+            and not Mixed Content (http://www.w3.org/TR/1998/REC-xml-19980210#sec-mixed-content)
+            according to the XML 1.0 definitions of these terms.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Singularity.Xml.WriteState">
+            <devdoc>
+               <para>
+                  Specifies the state of the XmlWriter stream.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.WriteState.Start">
+            <devdoc>
+               <para>
+                  Nothing has been written yet.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.WriteState.Prolog">
+            <devdoc>
+               <para>
+                  Writing the prolog.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.WriteState.Element">
+            <devdoc>
+               <para>
+                  Writing a the start tag for an element.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.WriteState.Attribute">
+            <devdoc>
+               <para>
+                  Writing an attribute value.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.WriteState.Content">
+            <devdoc>
+               <para>
+                  Writing element content.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:Microsoft.Singularity.Xml.WriteState.Closed">
+            <devdoc>
+               <para>
+                  Close has been called.
+               </para>
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Singularity.Xml.XmlWriter">
+            <devdoc>
+               <para>Represents a writer that provides fast non-cached forward-only way of generating XML streams containing XML documents that conform to the W3C Extensible Markup Language (XML) 1.0 specification and the Namespaces in XML specification.</para>
+            <para>This class is <see langword='virtual'/> .</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteStartDocument">
+            <devdoc>
+               <para>Writes out the XML declaration with the version "1.0".</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteStartDocument(System.Boolean)">
+            <devdoc>
+               <para>Writes out the XML declaration with the version "1.0" and the
+                  standalone attribute.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteEndDocument">
+            <devdoc>
+               Closes any open elements or attributes and
+               puts the writer back in the Start state.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteStartElement(System.String,System.String)">
+            <devdoc>
+               <para>Writes out the specified start tag and associates it with the
+                  given namespace.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteStartElement(System.String,System.String,System.String)">
+            <devdoc>
+               <para>Writes out the specified start tag and
+                  associates it with the given namespace and prefix.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteStartElement(System.String)">
+            <devdoc>
+               <para>Writes out a start tag with the specified name.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteStartAttribute(System.String,System.String,System.String)">
+            <devdoc>
+               <para>Writes the start of an attribute.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteEndElement">
+            <devdoc>
+               <para>Closes one element and pops the corresponding namespace scope.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.WriteFullEndElement">
+            <devdoc>
+               <para>Closes one element and pops the
+                  corresponding namespace scope.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.Close">
+            <devdoc>
+               <para>Close this stream and the underlying stream.</para>
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Singularity.Xml.XmlWriter.Flush">
+            <devdoc>
+               <para>Flush whatever is in the buffer to the underlying streams and flush the
+                  underlying stream.</para>
+            </devdoc>
+        </member>
+    </members>
+</doc>

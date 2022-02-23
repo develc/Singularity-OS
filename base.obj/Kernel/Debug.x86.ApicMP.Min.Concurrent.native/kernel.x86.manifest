@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application name="kernel" runtime="Full">
+  <process id="0" main="true" version="0.0.0.0" publickey="" strongname="kernel!0.0.0.0!">
+    <assemblies>
+      <assembly name="Security.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Security.Contracts.dll" />
+      <assembly name="Singbench.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Singbench.Contracts.dll" />
+      <assembly name="Diagnostics.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Diagnostics.dll" />
+      <assembly name="Singularity.KdFiles.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Singularity.KdFiles.dll" />
+      <assembly name="System.Compiler.Runtime.dll" version="1.0.5031.5" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/System.Compiler.Runtime.dll" />
+      <assembly name="Hal.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/ApicMP/Hal.dll" />
+      <assembly name="kernel.exe" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/kernel.exe" />
+      <assembly name="IoSystem.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/IoSystem.dll" />
+      <assembly name="Channels.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Channels.dll" />
+      <assembly name="Stress.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Stress.dll" />
+      <assembly name="Diagnostics.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Diagnostics.Contracts.dll" />
+      <assembly name="Io.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Io.Contracts.dll" />
+      <assembly name="Microsoft.SingSharp.Runtime.dll" version="1.0.3555.0" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Microsoft.SingSharp.Runtime.dll" />
+      <assembly name="NetStack.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/NetStack.Contracts.dll" />
+      <assembly name="Drivers.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Drivers.dll" />
+      <assembly name="Directory.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Directory.dll" />
+      <assembly name="Directory.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Directory.Contracts.dll" />
+      <assembly name="SecurityService.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/SecurityService.dll" />
+      <assembly name="Io.Net.Contracts.dll" version="1.0.0.0" publickey="00240000048000009400000006020000002400005253413100040000010001002b96128273b1f0b289a15381a7a11abf0740a0082151dedf0d8c660d619a9719070876e494445aab22bcb397d7b4ff97ca80ed49b3fc2b87bb767b60cafbf949aa435fcf17deb31901be16493c87dfe61d71f5185f0697a70ab5e0f1e05c7046db0d28c1be6d83da3fac58161c563ca59dc2ef9ce30230d9377aa63dd276cdbf" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Io.Net.Contracts.dll" />
+      <assembly name="WebApps.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/WebApps.Contracts.dll" />
+      <assembly name="Stress.Contracts.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Stress.Contracts.dll" />
+      <assembly name="Loader.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Loader.dll" />
+      <assembly name="Security.dll" cache="C:/Users/cc/source/repos/Singularity-OS/base.obj/Kernel/Debug.x86.ApicMP.Min.Concurrent.msil/Security.dll" />
+    </assemblies>
+    <categories>
+      <category id="0" name="driver" class="Microsoft.Singularity.Hal.HpetResources">
+        <device signature="/pnp/PNP0103" />
+        <dynamicHardware>
+          <ioMemoryRange id="0" baseAddress="0x0" rangeLength="0x400" />
+        </dynamicHardware>
+      </category>
+      <category id="1" name="driver" class="Microsoft.Singularity.Hal.PicStubResources">
+        <device signature="/pnp/PNP0000" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x20" rangeLength="0x2" />
+          <ioPortRange id="1" baseAddress="0xa0" rangeLength="0x2" />
+        </dynamicHardware>
+      </category>
+      <category id="2" name="driver" class="Microsoft.Singularity.Hal.RtcResources">
+        <device signature="/pnp/PNP0B00" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x70" rangeLength="0x2" />
+          <ioIrqRange id="1" baseAddress="8" rangeLength="1" />
+        </dynamicHardware>
+      </category>
+      <category id="3" name="driver" class="Microsoft.Singularity.Hal.Timer8254Resources">
+        <device signature="/pnp/PNP0100" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x40" rangeLength="0x4" />
+          <ioIrqRange id="1" baseAddress="0" rangeLength="1" />
+        </dynamicHardware>
+        <fixedHardware>
+          <ioPortRange baseAddress="0x61" rangeLength="0x1" fixed="true" />
+        </fixedHardware>
+      </category>
+      <category id="4" name="driver" class="Microsoft.Singularity.Hal.HalScreenResources">
+        <fixedHardware>
+          <ioPortRange baseAddress="0x3d4" rangeLength="0x1" shared="True" fixed="true" />
+          <ioPortRange baseAddress="0x3d5" rangeLength="0x1" shared="True" fixed="true" />
+          <ioMemoryRange baseAddress="0xb8000" rangeLength="0x1f40" shared="True" fixed="true" />
+        </fixedHardware>
+      </category>
+      <category id="5" name="driver" class="Microsoft.Singularity.Hal.PicResources">
+        <device signature="/pnp/PNP0000" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x20" rangeLength="0x2" />
+          <ioPortRange id="1" baseAddress="0xa0" rangeLength="0x2" />
+        </dynamicHardware>
+      </category>
+      <category id="6" name="driver" class="Microsoft.Singularity.Hal.RtcResourcesLegacyPC">
+        <device signature="/pnp/PNP0B00" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x70" rangeLength="0x2" />
+          <ioIrqRange id="1" baseAddress="8" rangeLength="1" />
+        </dynamicHardware>
+      </category>
+      <category id="7" name="driver" class="Microsoft.Singularity.Hal.TimerResourcesLegacyPC">
+        <device signature="/pnp/PNP0100" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x40" rangeLength="0x4" />
+          <ioIrqRange id="1" baseAddress="0" rangeLength="1" />
+        </dynamicHardware>
+        <fixedHardware>
+          <ioPortRange baseAddress="0x61" rangeLength="0x1" fixed="true" />
+        </fixedHardware>
+      </category>
+      <category id="8" name="driver" class="Microsoft.Singularity.Drivers.IDE.LegacyIdeBus">
+        <device signature="pci/cc_0101" />
+        <device signature="pci/ven_10de&amp;dev_0053&amp;cc_0101" />
+        <device signature="pci/ven_10de&amp;dev_0035&amp;cc_0101" />
+        <enumerates signature="/ata/controller" />
+        <dynamicHardware>
+          <ioPortRange id="4" baseAddress="0xffa0" rangeLength="0x10" shared="True" />
+        </dynamicHardware>
+        <fixedHardware>
+          <ioIrqRange baseAddress="14" shared="True" fixed="true" rangeLength="1" />
+          <ioIrqRange baseAddress="15" shared="True" fixed="true" rangeLength="1" />
+        </fixedHardware>
+      </category>
+      <category id="9" name="driver" class="Microsoft.Singularity.Drivers.IDE.NvIdeBus">
+        <device signature="pci/ven_10de&amp;dev_0054&amp;cc_0101" />
+        <device signature="pci/ven_10de&amp;dev_0055&amp;cc_0101" />
+        <device signature="pci/ven_10de&amp;dev_0036&amp;cc_0101" />
+        <device signature="pci/ven_10d3&amp;dev_003e&amp;cc_0101" />
+        <enumerates signature="/ata/controller" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x9f0" rangeLength="0x8" shared="True" />
+          <ioPortRange id="1" baseAddress="0xbf0" rangeLength="0x4" shared="True" />
+          <ioPortRange id="2" baseAddress="0x970" rangeLength="0x8" shared="True" />
+          <ioPortRange id="3" baseAddress="0xb70" rangeLength="0x4" shared="True" />
+          <ioPortRange id="4" baseAddress="0xf600" rangeLength="0x10" shared="True" />
+          <ioIrqRange id="6" baseAddress="11" shared="True" rangeLength="1" />
+        </dynamicHardware>
+      </category>
+      <category id="10" name="driver" class="Microsoft.Singularity.Drivers.IDE.TyanIdeBus">
+        <device signature="pci/ven_10de&amp;dev_037f&amp;cc_0101" />
+        <enumerates signature="/ata/controller" />
+        <dynamicHardware>
+          <ioPortRange id="0" baseAddress="0x24d0" rangeLength="0x8" shared="True" />
+          <ioPortRange id="1" baseAddress="0x24c4" rangeLength="0x4" shared="True" />
+          <ioPortRange id="2" baseAddress="0x24c8" rangeLength="0x8" shared="True" />
+          <ioPortRange id="3" baseAddress="0x24c0" rangeLength="0x4" shared="True" />
+          <ioPortRange id="4" baseAddress="0x2490" rangeLength="0x10" shared="True" />
+          <ioIrqRange id="6" baseAddress="7" shared="True" rangeLength="1" />
+        </dynamicHardware>
+      </category>
+      <category id="11" name="driver" class="Microsoft.Singularity.Drivers.NvPciLpcResources">
+        <device signature="pci/ven_10de&amp;dev_0050&amp;cc_0601" />
+        <device signature="pci/ven_10de&amp;dev_0030&amp;cc_0601" />
+        <enumerates signature="/pnp/PNP0103" />
+      </category>
+      <category id="12" name="driver" class="Microsoft.Singularity.Drivers.PciBusResources">
+        <device signature="/pnp/PNP0A03" />
+        <device signature="/pnp/PNP0A08" />
+        <enumerates signature="pci/..." />
+        <fixedHardware>
+          <ioPortRange baseAddress="0xcf8" rangeLength="0x8" shared="True" fixed="true" />
+        </fixedHardware>
+      </category>
+      <category id="13" name="driver" class="Microsoft.Singularity.Drivers.PseudoBusResources">
+        <device signature="/root/pseudobus0" />
+        <enumerates signature="pseudo/..." />
+      </category>
+      <category id="14" name="driver" class="Microsoft.Singularity.Drivers.AcpiBus.MyConfig">
+        <device signature="/root/acpi0" />
+        <enumerates signature="/acpi/..." />
+      </category>
+      <category id="15" name="driver" class="Microsoft.Singularity.Drivers.PnpBios.MyConfig">
+        <device signature="/root/pnp0" />
+        <enumerates signature="/pnp/..." />
+        <dynamicHardware>
+          <ioMemoryRange id="0" baseAddress="0xf3c30000" rangeLength="0x1" AllowWrite="False" />
+          <ioPortRange id="1" baseAddress="0x20b" rangeLength="0x1" AllowWrite="False" />
+        </dynamicHardware>
+        <fixedHardware>
+          <ioPortRange baseAddress="0xa79" rangeLength="0x1" AllowRead="False" fixed="true" />
+          <ioPortRange baseAddress="0x279" rangeLength="0x1" AllowRead="False" fixed="true" />
+        </fixedHardware>
+      </category>
+    </categories>
+  </process>
+</application>

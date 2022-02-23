@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>NetStack</name>
+  </assembly>
+  <members>
+    <member name="T:NetStack.NetStackApplication">
+      <summary>
+The NetStack Application class is a single instance service running
+on a host.  When it runs it attempts to register as /service/netstack;
+success indicates no other instances and it then initializes
+the various NetStack subsystems.
+</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Loader</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.Singularity.Loader.Binder.LoadImage(Microsoft.Singularity.Process,System.String!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Loader.Manifest@)">
+      <summary>
+Loads the image of the corresponding application
+path has to be set to the actual path to the manifest
+(after resolution of symlinks)
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Loader.Manifest">
+      <summary>
+This is a placeholder class for an application's manifest.
+At present the application manifest is represented by a hashtable.
+The hashtable has several important properties:
+ - name: the name of the application
+ - path: path to the application executable
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Loader.Manifest.data">
+      <summary>
+We treat the application manifest as a collection of
+key, value pairs.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Loader.Manifest.#ctor(System.Byte[])">
+      <summary>
+Create a manifest object from the given xml representation
+</summary>
+    </member>
+  </members>
+</doc>

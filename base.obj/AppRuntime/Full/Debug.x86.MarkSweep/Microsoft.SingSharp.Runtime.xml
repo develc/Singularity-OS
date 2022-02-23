@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SingSharp.Runtime</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SingSharp.ContextRestrictionAttribute">
+      <summary>
+Marks methods that check should enforce context restrictions on
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.NoAllocateAttribute">
+      <summary>
+Context restriction that enforces that a method does not perform allocations and does not
+call methods that perform allocations.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.NoBlockingAttribute">
+      <summary>
+Context restriction that enforces that a method does not block and does not call methods that
+might block. It's strictly more restrictive than NoAllocate, since allocation can cause blocking.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.MessageAttribute">
+      <summary>
+Marks a struct as a message.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.PointerFreeAttribute">
+      <summary>
+Marks a rep struct as not containing any pointers.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.ProtocolParallelStateAttribute">
+      <summary>
+Marks the protocolstate as a parallel (All) state
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.ProtocolStartStateAttribute">
+      <summary>
+Marks a the start state of a protocol.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.SendAttribute">
+      <summary>
+Send(tag) annotates a send method on Imp and Exp types, marking that the corresponding message
+is sent on the receiver endpoint
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.ReceiveAttribute">
+      <summary>
+Receive(tag) annotates a receive method on Imp and Exp types, marking that the corresponding message
+is received.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.PreStateAttribute">
+      <summary>
+Annotates an endpoint parameter of a method. Indicates that the endpoint is in the protocol 
+state specified by the given type argument on entry to the method.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.PostStateAttribute">
+      <summary>
+Annotates an endpoint parameter of a method. Indicates that the endpoint is in the protocol 
+state specified by the given type argument on exit of the method.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.BindEndpointAttribute">
+      <summary>
+Annotates a method result or out parameter to indicate that the method transfers ownership of the
+endpoint to the caller. The bind is from the caller's perspective. The callee must view it as
+an unbind.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.UnbindEndpointAttribute">
+      <summary>
+Annotates a method parameter to indicate that the caller transfers ownership of the
+endpoint to the callee. The unbind is from the caller's perspective. The callee must view it as
+a bind.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.SelectReceivePatternAttribute">
+      <summary>
+Marks static fields that hold select receive patterns. The argument
+is the actual int[][] pattern array used in the initializer.
+
+Each case row is a separate attribute.
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IChannelContract">
+      <summary>
+Marks a class as a process contract
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IRepStruct">
+      <summary>
+Marks a struct as a rep struct
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IRepStructParameter">
+      <summary>
+Marks a struct as a rep struct type parameter
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IMessage">
+      <summary>
+Marks a struct as a message struct
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IProtocolState">
+      <summary>
+Marks a protocol state as a protocol state
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.ISignature">
+      <summary>
+Marks a signature class as a signature
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IImportPort">
+      <summary>
+Marks a part class as an import port
+</summary>
+    </member>
+    <member name="T:System.Compiler.TypeExtensions.IExportPort">
+      <summary>
+Marks a part class as an export port
+</summary>
+    </member>
+    <member name="T:System.Compiler.ITemplate">
+      <summary>
+Used to mark Template classes so Bartok can ignore them.
+If the name or namespace changes, we need to update bartok.
+</summary>
+    </member>
+    <member name="T:Microsoft.Contracts.MustOverrideAttribute">
+      <summary>
+Indicates that all derived classes must override this virtual method since the implementation of the method depends on the runtime type of the "this" object
+to be the same as the declaring type of the method.
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.RuntimeLibraryHook">
+      <summary>
+Used as a reference point to the runtime library from code
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.CustomAllocator">
+      <summary>
+This is the Base class for all Custom allocators.
+
+<i>Custom Allocator support</i>
+
+Custom allocators enable Sing# programs to allocate memory explicitly in a variety of
+different heaps.
+
+Pointers to objects in custom allocation regions have types that are tagged by an optional
+type modifier pointing to the Allocator class. E.g., a pointer to a struct S in allocation
+heap controlled by type A is given type
+
+  (S* ) opt A
+
+In the same vein, we can support vectors in these allocation regions by tagging the pointer
+with a vector type A[]
+
+  (S* ) opt A[]      represents a vector of S in allocation region managed by A.
+
+
+The idea is that given a pointer tagged with an allocator, we can perform operations
+specific to that allocator, such as getting the array length, freeing the block, or
+indirect to the data (if the allocator uses that representation).
+
+A pointer without an allocator tag is thus interpreted no differently than the CLR normally
+would treat it, and no special operations can be performed on it, in particular, it cannot
+be freed.
+
+The allocator tagging also enables us to make sure we free the pointer with the right
+allocator and to restrict certain operations to particular heaps, for example message sends
+only accept pointers allocated in the exchange heap.
+
+</summary>
+    </member>
+    <member name="T:Microsoft.SingSharp.CustomVector">
+      <summary>
+This is a marker used in optional modifiers to encode that a pointer to a custom heap is actually a 
+vector and can be indexed. We encode these as T* opt(Allocator) opt(CustomVector)
+
+History:
+  We used to encode these as T* opt(Allocator[]), but the array type in the modifier position throws
+  off IL readers such as ABSIL.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.Endpoint">
+      <summary>
+Provides an adapter class between the runtime provided Endpoint and the compiler generated contract specific
+Imp and Exp endpoints.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.Wait">
+      <summary>
+Wait for a message to arrive on this endpoint.
+</summary>
+    </member>
+    <member name="P:Microsoft.Singularity.Channels.Endpoint.ChannelID">
+      <summary>
+Obtain the channel identifier of this endpoint.
+</summary>
+    </member>
+    <member name="P:Microsoft.Singularity.Channels.Endpoint.OwnerProcessID">
+      <summary>
+Obtain the process identifier of the owner.
+</summary>
+    </member>
+    <member name="P:Microsoft.Singularity.Channels.Endpoint.OwnerPrincipalHandle">
+      <summary>
+Obtain the principal identifier of the owner.
+</summary>
+    </member>
+    <member name="P:Microsoft.Singularity.Channels.Endpoint.PeerProcessID">
+      <summary>
+Obtain the process identifier of the owner of the other endpoint
+</summary>
+    </member>
+    <member name="P:Microsoft.Singularity.Channels.Endpoint.PeerPrincipalHandle">
+      <summary>
+Obtain the principal identifier of the owner of the other endpoint
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.Connect(Microsoft.Singularity.Channels.Endpoint*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType,Microsoft.Singularity.Channels.Endpoint*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <summary>
+Connects up the endpoints and initializes
+the kernel part of the endpoints. The context needs to call the .ctor on the two
+endpoints returned in order to initialize the contract specific structures as well
+as those of the Endpoint struct itself.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.TransferContentsOwnership(Microsoft.Singularity.Channels.Endpoint@)">
+      <summary>
+Transfer any content of this endpoint to target endpoint
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.TransferBlockOwnership(System.Void*!Microsoft.Singularity.Channels.ExHeap)">
+      <summary>
+Transfer actual block of data ownership to this endpoint.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.LinkIntoCollection(Microsoft.Singularity.V1.Threads.AutoResetEventHandle)">
+      <summary>
+Instruct the selectable object to signal events on the given AutoResetEvent
+rather than its normal event in order to aggregate signalling into a set.
+A selectable object need only support being part of a single collection at
+any point in time.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.UnlinkFromCollection(Microsoft.Singularity.V1.Threads.AutoResetEventHandle)">
+      <summary>
+Instruct the selectable object to stop signalling events on the given
+AutoResetEvent.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.Channels.Endpoint.TimeOutIndex">
+      <summary>
+We compute the index of the row that represents timeout case
+See Parser.cs: the label for timeout is -2, unsatisfiable is -1
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.FindRowMatch(System.Int32,Microsoft.Singularity.Channels.ISelectable[]!Microsoft.Contracts.NonNullType,System.Int32[][]!Microsoft.Contracts.NonNullType,System.Boolean[]!Microsoft.Contracts.NonNullType,System.Int32@,System.Int32@,System.Object@)">
+      <summary>
+If hint &lt; 0, scan all patterns for a match. Otherwise, hint specifies which
+endpoint changed. Thus only that column has to be reexamined.
+If we find a row that matches, we return the row index, and true.
+Updates possibleCount and possible array. When possibleCount goes down to
+0, no more matches are possible.
+match is set to -1 when false is returned.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.getContractTag(Microsoft.Singularity.Channels.Endpoint*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <summary>
+Return a uint tag uniquely identifying the contract
+which endpoint "ep" adheres to.
+REVIEW: HACK: this isn't 64-bit clean, nor is the
+tag returned particularly stable (it depends on the
+order in which types and handles are allocated).  Ideally we
+would use the SystemType's MD5 hash, but we can't access
+it here; is this correct?
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.RetrieveHook(Microsoft.Singularity.Channels.Endpoint@,System.UInt32,System.Int32)">
+      <summary>
+Called whenever a message is retrieved from on an endpoint.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.RetrieveHookInternal(System.Int32)">
+      <summary>
+Called whenever a message is retrieved from an endpoint. The "this" parameter
+is the receiving endpoint. In order to get a pointer to the descriptor block
+that includes a pointer to the system type, we use the funky this.Peer-&gt;Peer
+expression.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.DeliverHook(Microsoft.Singularity.Channels.Endpoint@,System.UInt32,System.Int32)">
+      <summary>
+Called whenever a message is actually on an endpoint.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.Endpoint.DeliverHookInternal(System.Int32)">
+      <summary>
+Called whenever a message is delivered on an endpoint. The "this" parameter
+is the receiving endpoint, but the static ReceiveHook is called with the
+sender.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.EMap_3.Node.#ctor(Microsoft.Singularity.Channels.EMap{not found:Microsoft.Singularity.Channels.EMap_3+T,not found:Microsoft.Singularity.Channels.EMap_3+State,not found:Microsoft.Singularity.Channels.EMap_3+Data}!Microsoft.Contracts.NonNullType)">
+      <summary>
+For constructing the dummy head node.            
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.ChannelHeap">
+      <summary>
+Specialized entry point for allocating endpoints rather than other exchangeable objects
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.ExRef_1.Acquire">
+      <summary>
+Will block until the ExRef is free.
+</summary>
+      <returns>Acquired tracked type protected by ExRef</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.ExRef_1.Release(_0*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the ExRef so other
+threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.ExRef_1.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.TContainer_1">
+      <summary>
+TContainer is similar to TRef. It wraps ownership tracked objects (deriving from ITracked) so that
+they can be stored in the GC heap.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TContainer_1.Acquire">
+      <summary>
+Will block until the container is full.
+</summary>
+      <returns>Acquired tracked type protected by TContainer</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TContainer_1.Release(_0!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the container so other threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TContainer_1.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.VContainer_1">
+      <summary>
+VContainer are TContainers for vectors without tracked contents in the shared heap.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.VContainer_1.Acquire">
+      <summary>
+Will block until the container is full.
+</summary>
+      <returns>Acquired tracked type protected by TContainer</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.VContainer_1.Release(_0*!Microsoft.Singularity.Channels.ExHeap!Microsoft.SingSharp.CustomVector!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the container so other threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.VContainer_1.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.TRef_2">
+      <summary>
+In order to capture the state of an endpoint when stored in a TRef, we
+need to attach the state to the type itself, because instance types cannot have attributes.
+
+We use opt modifier types for this.
+
+The syntax is TRef&lt; C.Imp @(State) &gt;
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TRef_2.Acquire">
+      <summary>
+Will block until the TRef is free.
+</summary>
+      <returns>Acquired tracked type protected by TRef</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TRef_2.Release(_0*!Microsoft.Singularity.Channels.ExHeap!_1!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the TRef so other threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TRef_2.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.EMap_3.Node.#ctor(Microsoft.Singularity.Channels.EMap{not found:Microsoft.Singularity.Channels.EMap_3+T,not found:Microsoft.Singularity.Channels.EMap_3+State,not found:Microsoft.Singularity.Channels.EMap_3+Data}!Microsoft.Contracts.NonNullType)">
+      <summary>
+For constructing the dummy head node.            
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.ExRef_1.Acquire">
+      <summary>
+Will block until the ExRef is free.
+</summary>
+      <returns>Acquired tracked type protected by ExRef</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.ExRef_1.Release(_0*!Microsoft.Singularity.Channels.ExHeap!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the ExRef so other
+threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.ExRef_1.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.TContainer_1&lt;Microsoft.Singularity.Channels.TContainer_1+T&gt;">
+      <summary>
+TContainer is similar to TRef. It wraps ownership tracked objects (deriving from ITracked) so that
+they can be stored in the GC heap.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TContainer_1.Acquire">
+      <summary>
+Will block until the container is full.
+</summary>
+      <returns>Acquired tracked type protected by TContainer</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TContainer_1.Release(_0!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the container so other threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TContainer_1.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.VContainer_1&lt;Microsoft.Singularity.Channels.VContainer_1+T&gt;">
+      <summary>
+VContainer are TContainers for vectors without tracked contents in the shared heap.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.VContainer_1.Acquire">
+      <summary>
+Will block until the container is full.
+</summary>
+      <returns>Acquired tracked type protected by TContainer</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.VContainer_1.Release(_0*!Microsoft.Singularity.Channels.ExHeap!Microsoft.SingSharp.CustomVector!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the container so other threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.VContainer_1.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Channels.TRef_2&lt;Microsoft.Singularity.Channels.TRef_2+T,Microsoft.Singularity.Channels.TRef_2+State&gt;">
+      <summary>
+In order to capture the state of an endpoint when stored in a TRef, we
+need to attach the state to the type itself, because instance types cannot have attributes.
+
+We use opt modifier types for this.
+
+The syntax is TRef&lt; C.Imp @(State) &gt;
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TRef_2.Acquire">
+      <summary>
+Will block until the TRef is free.
+</summary>
+      <returns>Acquired tracked type protected by TRef</returns>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TRef_2.Release(_0*!Microsoft.Singularity.Channels.ExHeap!_1!Microsoft.Contracts.NonNullType)">
+      <summary>
+Releases tracked data into the TRef so other threads can access it.
+</summary>
+      <param name="newObj">tracked data to be released</param>
+    </member>
+    <member name="M:Microsoft.Singularity.Channels.TRef_2.Finalize">
+      <summary>
+Finalizer to dispose of any left over contents
+</summary>
+    </member>
+  </members>
+</doc>

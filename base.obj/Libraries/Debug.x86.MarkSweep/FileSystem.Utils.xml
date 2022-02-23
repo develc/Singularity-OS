@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>FileSystem.Utils</name>
+  </assembly>
+  <members>
+    <member name="M:FileSystem.Utils.PathUtils.ToPath(System.String!Microsoft.Contracts.NonNullType)">
+      <remarks> Sanitize path string.  This method removes
+trailing separators and repeat sequences of
+separators.  </remarks>
+    </member>
+  </members>
+</doc>

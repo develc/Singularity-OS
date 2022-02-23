@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<system>
+  <drivers>
+    <driver name="kernel" signature="/pnp/PNP0103" path="" class="Microsoft.Singularity.Hal.HpetResources">
+      <dynamicHardware length="1">
+        <ioMemoryRange id="0" baseAddress="0x0" rangeLength="0x400" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0000" path="" class="Microsoft.Singularity.Hal.PicStubResources">
+      <dynamicHardware length="2">
+        <ioPortRange id="0" baseAddress="0x20" rangeLength="0x2" />
+        <ioPortRange id="1" baseAddress="0xa0" rangeLength="0x2" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0B00" path="" class="Microsoft.Singularity.Hal.RtcResources">
+      <dynamicHardware length="2">
+        <ioPortRange id="0" baseAddress="0x70" rangeLength="0x2" />
+        <ioIrqRange id="1" baseAddress="8" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0100" path="" class="Microsoft.Singularity.Hal.Timer8254Resources">
+      <dynamicHardware length="2">
+        <ioPortRange id="0" baseAddress="0x40" rangeLength="0x4" />
+        <ioIrqRange id="1" baseAddress="0" rangeLength="1" />
+      </dynamicHardware>
+      <fixedHardware length="1">
+        <ioPortRange id="0" baseAddress="0x61" rangeLength="0x1" fixed="true" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="" path="" class="Microsoft.Singularity.Hal.HalScreenResources">
+      <fixedHardware length="3">
+        <ioPortRange id="0" baseAddress="0x3d4" rangeLength="0x1" shared="True" fixed="true" />
+        <ioPortRange id="1" baseAddress="0x3d5" rangeLength="0x1" shared="True" fixed="true" />
+        <ioMemoryRange id="2" baseAddress="0xb8000" rangeLength="0x1f40" shared="True" fixed="true" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0000" path="" class="Microsoft.Singularity.Hal.PicResources">
+      <dynamicHardware length="2">
+        <ioPortRange id="0" baseAddress="0x20" rangeLength="0x2" />
+        <ioPortRange id="1" baseAddress="0xa0" rangeLength="0x2" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0B00" path="" class="Microsoft.Singularity.Hal.RtcResourcesLegacyPC">
+      <dynamicHardware length="2">
+        <ioPortRange id="0" baseAddress="0x70" rangeLength="0x2" />
+        <ioIrqRange id="1" baseAddress="8" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0100" path="" class="Microsoft.Singularity.Hal.TimerResourcesLegacyPC">
+      <dynamicHardware length="2">
+        <ioPortRange id="0" baseAddress="0x40" rangeLength="0x4" />
+        <ioIrqRange id="1" baseAddress="0" rangeLength="1" />
+      </dynamicHardware>
+      <fixedHardware length="1">
+        <ioPortRange id="0" baseAddress="0x61" rangeLength="0x1" fixed="true" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.LegacyIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="5">
+        <ioPortRange id="4" baseAddress="0xffa0" rangeLength="0x10" shared="True" />
+      </dynamicHardware>
+      <fixedHardware length="2">
+        <ioIrqRange id="0" baseAddress="14" shared="True" fixed="true" rangeLength="1" />
+        <ioIrqRange id="1" baseAddress="15" shared="True" fixed="true" rangeLength="1" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0053&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.LegacyIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="5">
+        <ioPortRange id="4" baseAddress="0xffa0" rangeLength="0x10" shared="True" />
+      </dynamicHardware>
+      <fixedHardware length="2">
+        <ioIrqRange id="0" baseAddress="14" shared="True" fixed="true" rangeLength="1" />
+        <ioIrqRange id="1" baseAddress="15" shared="True" fixed="true" rangeLength="1" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0035&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.LegacyIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="5">
+        <ioPortRange id="4" baseAddress="0xffa0" rangeLength="0x10" shared="True" />
+      </dynamicHardware>
+      <fixedHardware length="2">
+        <ioIrqRange id="0" baseAddress="14" shared="True" fixed="true" rangeLength="1" />
+        <ioIrqRange id="1" baseAddress="15" shared="True" fixed="true" rangeLength="1" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0054&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.NvIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="7">
+        <ioPortRange id="0" baseAddress="0x9f0" rangeLength="0x8" shared="True" />
+        <ioPortRange id="1" baseAddress="0xbf0" rangeLength="0x4" shared="True" />
+        <ioPortRange id="2" baseAddress="0x970" rangeLength="0x8" shared="True" />
+        <ioPortRange id="3" baseAddress="0xb70" rangeLength="0x4" shared="True" />
+        <ioPortRange id="4" baseAddress="0xf600" rangeLength="0x10" shared="True" />
+        <ioIrqRange id="6" baseAddress="11" shared="True" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0055&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.NvIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="7">
+        <ioPortRange id="0" baseAddress="0x9f0" rangeLength="0x8" shared="True" />
+        <ioPortRange id="1" baseAddress="0xbf0" rangeLength="0x4" shared="True" />
+        <ioPortRange id="2" baseAddress="0x970" rangeLength="0x8" shared="True" />
+        <ioPortRange id="3" baseAddress="0xb70" rangeLength="0x4" shared="True" />
+        <ioPortRange id="4" baseAddress="0xf600" rangeLength="0x10" shared="True" />
+        <ioIrqRange id="6" baseAddress="11" shared="True" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0036&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.NvIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="7">
+        <ioPortRange id="0" baseAddress="0x9f0" rangeLength="0x8" shared="True" />
+        <ioPortRange id="1" baseAddress="0xbf0" rangeLength="0x4" shared="True" />
+        <ioPortRange id="2" baseAddress="0x970" rangeLength="0x8" shared="True" />
+        <ioPortRange id="3" baseAddress="0xb70" rangeLength="0x4" shared="True" />
+        <ioPortRange id="4" baseAddress="0xf600" rangeLength="0x10" shared="True" />
+        <ioIrqRange id="6" baseAddress="11" shared="True" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10d3&amp;dev_003e&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.NvIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="7">
+        <ioPortRange id="0" baseAddress="0x9f0" rangeLength="0x8" shared="True" />
+        <ioPortRange id="1" baseAddress="0xbf0" rangeLength="0x4" shared="True" />
+        <ioPortRange id="2" baseAddress="0x970" rangeLength="0x8" shared="True" />
+        <ioPortRange id="3" baseAddress="0xb70" rangeLength="0x4" shared="True" />
+        <ioPortRange id="4" baseAddress="0xf600" rangeLength="0x10" shared="True" />
+        <ioIrqRange id="6" baseAddress="11" shared="True" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_037f&amp;cc_0101" path="" class="Microsoft.Singularity.Drivers.IDE.TyanIdeBus">
+      <enumerates signature="/ata/controller" />
+      <dynamicHardware length="7">
+        <ioPortRange id="0" baseAddress="0x24d0" rangeLength="0x8" shared="True" />
+        <ioPortRange id="1" baseAddress="0x24c4" rangeLength="0x4" shared="True" />
+        <ioPortRange id="2" baseAddress="0x24c8" rangeLength="0x8" shared="True" />
+        <ioPortRange id="3" baseAddress="0x24c0" rangeLength="0x4" shared="True" />
+        <ioPortRange id="4" baseAddress="0x2490" rangeLength="0x10" shared="True" />
+        <ioIrqRange id="6" baseAddress="7" shared="True" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0050&amp;cc_0601" path="" class="Microsoft.Singularity.Drivers.NvPciLpcResources">
+      <enumerates signature="/pnp/PNP0103" />
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="pci/ven_10de&amp;dev_0030&amp;cc_0601" path="" class="Microsoft.Singularity.Drivers.NvPciLpcResources">
+      <enumerates signature="/pnp/PNP0103" />
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0A03" path="" class="Microsoft.Singularity.Drivers.PciBusResources">
+      <enumerates signature="pci/..." />
+      <fixedHardware length="1">
+        <ioPortRange id="0" baseAddress="0xcf8" rangeLength="0x8" shared="True" fixed="true" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/pnp/PNP0A08" path="" class="Microsoft.Singularity.Drivers.PciBusResources">
+      <enumerates signature="pci/..." />
+      <fixedHardware length="1">
+        <ioPortRange id="0" baseAddress="0xcf8" rangeLength="0x8" shared="True" fixed="true" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/root/pseudobus0" path="" class="Microsoft.Singularity.Drivers.PseudoBusResources">
+      <enumerates signature="pseudo/..." />
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/root/acpi0" path="" class="Microsoft.Singularity.Drivers.AcpiBus.MyConfig">
+      <enumerates signature="/acpi/..." />
+      <endpoints length="0" />
+      <fixedHardware length="0" />
+      <dynamicHardware length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="kernel" signature="/root/pnp0" path="" class="Microsoft.Singularity.Drivers.PnpBios.MyConfig">
+      <enumerates signature="/pnp/..." />
+      <dynamicHardware length="2">
+        <ioMemoryRange id="0" baseAddress="0xf3c30000" rangeLength="0x1" AllowWrite="False" />
+        <ioPortRange id="1" baseAddress="0x20b" rangeLength="0x1" AllowWrite="False" />
+      </dynamicHardware>
+      <fixedHardware length="2">
+        <ioPortRange id="0" baseAddress="0xa79" rangeLength="0x1" AllowRead="False" fixed="true" />
+        <ioPortRange id="1" baseAddress="0x279" rangeLength="0x1" AllowRead="False" fixed="true" />
+      </fixedHardware>
+      <endpoints length="0" />
+      <configs length="0" />
+    </driver>
+    <driver name="LegacyKeyboard" signature="/pnp/PNP0303" path="LegacyKeyboard.x86" class="Microsoft.Singularity.Drivers.LegacyKeyboard.KeyboardResources">
+      <dynamicHardware length="3">
+        <ioPortRange id="0" baseAddress="0x60" rangeLength="0x1" />
+        <ioPortRange id="1" baseAddress="0x64" rangeLength="0x1" />
+        <ioIrqRange id="2" baseAddress="1" rangeLength="1" />
+      </dynamicHardware>
+      <endpoints length="2">
+        <extension id="0" startStateId="3" contractName="Microsoft.Singularity.Extending.ExtensionContract">
+          <imp>
+            <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+            <inherit name="Microsoft.Singularity.Extending.ExtensionContract.Imp" />
+          </imp>
+          <exp>
+            <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+            <inherit name="Microsoft.Singularity.Directory.ServiceContract.Exp" />
+            <inherit name="Microsoft.Singularity.Extending.ExtensionContract.Exp" />
+          </exp>
+        </extension>
+        <serviceProvider id="1" startStateId="3" contractName="Microsoft.Singularity.Io.KeyboardDeviceContract">
+          <imp>
+            <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+            <inherit name="Microsoft.Singularity.Directory.ServiceProviderContract.Imp" />
+          </imp>
+          <exp>
+            <inherit name="Microsoft.Singularity.Channels.Endpoint" />
+            <inherit name="Microsoft.Singularity.Directory.ServiceProviderContract.Exp" />
+          </exp>
+        </serviceProvider>
+      </endpoints>
+      <fixedHardware length="0" />
+      <configs length="0" />
+    </driver>
+  </drivers>
+  <namingConventions>
+    <name contract="Microsoft.Singularity.Directory.DirectoryServiceContract" nsName="/" />
+    <name contract="Microsoft.Singularity.Io.DiskDeviceContract" nsName="/dev/disk" allowMultiple="True" />
+    <name contract="Microsoft.Singularity.Io.Net.NicDeviceContract" nsName="/dev/nic" allowMultiple="True" />
+    <name contract="Microsoft.Singularity.Io.VolumeManagerContract" nsName="/service/volumes" />
+    <name contract="Microsoft.Singularity.Io.KeyboardDeviceContract" nsName="/dev/keyboard" />
+    <name contract="Microsoft.Singularity.Email.Contracts.AntiVirusContract" nsName="/service/antivirus" />
+    <name contract="Microsoft.Singularity.Email.Contracts.MailStoreContract" nsName="/service/mailstore" />
+    <name contract="Microsoft.Singularity.WepApps.Contracts.WebAppContract" nsName="/service/webapp" />
+    <name contract="HalConsole" nsName="/dev/conout" />
+    <name contract="Microsoft.Singularity.Io.SoundDeviceContract" nsName="/dev/audio" />
+    <name contract="Microsoft.Singularity.Io.VideoDeviceContract" nsName="/dev/video" />
+    <name contract="Microsoft.Singularity.Io.ConsoleDeviceContract" nsName="/dev/video-text" />
+    <name contract="Microsoft.Singularity.Diagnostics.Contracts.ChannelContract" nsName="/status/channels" />
+    <name contract="Microsoft.Singularity.Diagnostics.Contracts.MemoryContract" nsName="/status/memory" />
+    <name contract="Microsoft.Singularity.Diagnostics.Contracts.ProcessContract" nsName="status/process" />
+    <name contract="Microsoft.Singularity.Services.InstallerServiceContract" nsName="/service/installer" />
+    <name contract="Microsoft.Singularity.Hypercall.Contracts.HypercallServiceContract" nsName="/service/hypercall" />
+    <name contract="NetStack.Contracts.IPContract" nsName="/service/ip" />
+    <name contract="NetStack.Contracts.UdpContract" nsName="/service/udp" />
+    <name contract="NetStack.Contracts.TcpContract" nsName="/service/tcp" />
+    <name contract="NetStack.Contracts.DNSContract" nsName="/service/dns" />
+    <name contract="NetStack.Contracts.RoutingContract" nsName="/service/routing" />
+  </namingConventions>
+  <serviceConfig />
+  <processConfig>
+    <policy separateAddressSpace="True" />
+    <processSet name="Orphangroup" kernelDomain="false" set="benchchild" />
+  </processConfig>
+  <initConfig>
+    <groups>
+      <group path="/groups/path" description="!(.!)*" />
+      <group path="/groups/userrole" description="login@!" />
+      <group path="/groups/anyperm" description="@!" />
+      <group path="/groups/app" description="{path}|{userrole}" />
+      <group path="/groups/anyall" description="{app}(+{app})*{anyperm}" />
+    </groups>
+    <authpolicy>
+      <subexpr name="$login" expansion="{$trusted-auth-privilege}" />
+      <subexpr name="$user" expansion="{$trusted-auth-privilege}@!" />
+      <subexpr name="$app" expansion="!|{$user}" />
+      <subexpr name="$any" expansion="{$app}(+!)*" />
+      <subexpr name="$anyuser" expansion="{$user}(+!)*" />
+      <subexpr name="$anyuserall" expansion="{$anyuser}@!" />
+      <subexpr name="$dsregister" expansion="(({$any}+)*{$register-privilege})@register" />
+      <subexpr name="$dsanyr" expansion="{$any}@read" />
+      <subexpr name="$dsanyrw" expansion="{$any}@(read|write|notify)" />
+      <subexpr name="$dsanysetacl" expansion="{$any}@(setacl)" />
+      <subexpr name="$anyall" expansion="{$any}@!" />
+      <subexpr name="$grp5" expansion="(tom|bob|ted|andrew|dan)" />
+      <subexpr name="$grp10" expansion="({$grp5}|{$grp5a})" />
+      <subexpr name="$grp20" expansion="({$grp10}|{$grp10a})" />
+      <subexpr name="$grp5a" expansion="(jeff|john|mike|fred|mort)" />
+      <subexpr name="$grp10a" expansion="(amir|linda|amy|scott|doug|chandu|roy|ulfar|muthu|aydan)" />
+      <authority name="$truncate-history-privilege" acl="singularity.microsoft.com" />
+      <authority name="$trusted-auth-privilege" acl="singularity.microsoft.com" />
+      <authority name="$register-privilege" acl="singularity.microsoft.com" />
+      <authority name="$test-privilege" acl="singularity.microsoft.com" />
+    </authpolicy>
+    <acls>
+      <acl path="/" this="{$dsanyrw}|{$dsregister}" />
+      <acl path="/acltest" this="{$dsanyrw}" inherited="{$dsanyrw}|{$dsanysetacl}" />
+    </acls>
+    <files>
+      <file distroName="/Singularity/Binaries/Kernel.x86" name="kernel.x86" id="0" manifestId="2" />
+      <file distroName="/Singularity/metadata.xml" name="metadata.xml" id="1" />
+      <file distroName="/Singularity/Binaries/Kernel.manifest" name="kernel.manifest" id="2" manifest="true" />
+      <file distroName="/Singularity/Binaries/LegacyKeyboard.x86" name="legacykeyboard.x86" id="3" executable="true" manifestId="4" />
+      <file distroName="/Singularity/Binaries/LegacyKeyboard.x86.manifest" name="legacykeyboard.x86.manifest" id="4" manifest="true" />
+      <file distroName="/Singularity/Binaries/Shell.x86" name="shell.x86" id="5" executable="true" manifestId="6" />
+      <file distroName="/Singularity/Binaries/Shell.x86.manifest" name="shell.x86.manifest" id="6" manifest="true" />
+      <file distroName="/Singularity/Binaries/sms.x86" name="sms.x86" id="7" executable="true" manifestId="8" />
+      <file distroName="/Singularity/Binaries/sms.x86.manifest" name="sms.x86.manifest" id="8" manifest="true" />
+      <file distroName="/Singularity/Binaries/testpe.x86" name="testpe.x86" id="9" executable="true" />
+      <file distroName="/Singularity/Binaries/tty.x86" name="tty.x86" id="10" executable="true" manifestId="11" />
+      <file distroName="/Singularity/Binaries/tty.x86.manifest" name="tty.x86.manifest" id="11" manifest="true" />
+      <file distroName="/Singularity/Binaries/VolMgr.x86" name="volmgr.x86" id="12" executable="true" manifestId="13" />
+      <file distroName="/Singularity/Binaries/VolMgr.x86.manifest" name="volmgr.x86.manifest" id="13" manifest="true" />
+      <file distroName="/Singularity/Files/accounts" name="accounts" id="14" />
+      <file distroName="/Singularity/Files/babysitter.tst" name="babysitter.tst" id="15" />
+      <file distroName="/Singularity/Files/BVT.tst" name="bvt.tst" id="16" />
+      <file distroName="/Singularity/Files/daily.tst" name="daily.tst" id="17" />
+      <file distroName="/Singularity/Files/installer.options" name="installer.options" id="18" />
+      <file distroName="/Singularity/Files/nib.options" name="nib.options" id="19" />
+      <file distroName="/Singularity/Files/README.TXT" name="readme.txt" id="20" />
+      <file distroName="/Singularity/Files/stress.tst" name="stress.tst" id="21" />
+      <file distroName="/Singularity/Files/Threading.tst" name="threading.tst" id="22" />
+      <file distroName="/Singularity/Files/unit.tst" name="unit.tst" id="23" />
+      <file distroName="/Singularity/Scripts/bb.script" name="bb.script" id="24" />
+      <file distroName="/Singularity/Scripts/bench.script" name="bench.script" id="25" />
+      <file distroName="/Singularity/Scripts/bst.script" name="bst.script" id="26" />
+      <file distroName="/Singularity/Scripts/bvt.mandelbrot.script" name="bvt.mandelbrot.script" id="27" />
+      <file distroName="/Singularity/Scripts/bvt.script" name="bvt.script" id="28" />
+      <file distroName="/Singularity/Scripts/evtst.script" name="evtst.script" id="29" />
+      <file distroName="/Singularity/Scripts/fibbench.script" name="fibbench.script" id="30" />
+      <file distroName="/Singularity/Scripts/iobench.script" name="iobench.script" id="31" />
+      <file distroName="/Singularity/Scripts/MapDemo.script" name="mapdemo.script" id="32" />
+      <file distroName="/Singularity/Scripts/netstart.script" name="netstart.script" id="33" />
+      <file distroName="/Singularity/Scripts/ramfat.script" name="ramfat.script" id="34" />
+      <file distroName="/Singularity/Scripts/smtpreset.script" name="smtpreset.script" id="35" />
+      <file distroName="/Singularity/Scripts/smtptest.script" name="smtptest.script" id="36" />
+      <file distroName="/Singularity/Scripts/specweb2.script" name="specweb2.script" id="37" />
+      <file distroName="/Singularity/Scripts/specweb99.script" name="specweb99.script" id="38" />
+      <file distroName="/Singularity/Scripts/specweball.script" name="specweball.script" id="39" />
+      <file distroName="/Singularity/Scripts/startup.script" name="startup.script" id="40" />
+      <file distroName="/Singularity/Scripts/tblast.script" name="tblast.script" id="41" />
+      <file distroName="/Singularity/Scripts/tgulp.script" name="tgulp.script" id="42" />
+      <file distroName="/Singularity/Scripts/webstress.script" name="webstress.script" id="43" />
+      <file distroName="/Singularity/Scripts/xbench.init.script" name="xbench.init.script" id="44" />
+      <file distroName="/Singularity/Scripts/xbench.script" name="xbench.script" id="45" />
+    </files>
+  </initConfig>
+</system>

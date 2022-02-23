@@ -1,0 +1,2663 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Corlib</name>
+    </assembly>
+    <members>
+        <member name="M:System.Object.GcMark(System.UIntPtr)">
+            <summary>
+            Test and set the state of the GC mark bit to be the same
+            as the passed flag. Note that this operation is not
+            synchronized so it is possible for multiple marking threads
+            to 'mark' the same object.
+            </summary>
+        </member>
+        <member name="M:System.Object.GcMark">
+            <summary>
+            Return the current state of the GC mark bit.
+            </summary>
+        </member>
+        <member name="T:System.ObjectDisposedException">
+            <devdoc>
+               <para> The exception that is thrown when accessing an object that was
+                  disposed.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.ObjectDisposedException.#ctor(System.String)">
+            <devdoc>
+            <para>Initializes a new instance of the <see cref="T:System.ObjectDisposedException"/> class.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.ObjectDisposedException.#ctor(System.String,System.String)">
+            <devdoc>
+            <para>Initializes a new instance of the <see cref="T:System.ObjectDisposedException"/> class.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.ObjectDisposedException.Message">
+            <devdoc>
+               <para>Gets the text for the message for this exception.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Array.#ctor">
+            <internalonly/>
+        </member>
+        <member name="P:System.CharEnumerator.System#Collections#IEnumerator#Current">
+            <internalonly/>
+        </member>
+        <member name="P:System.RuntimeType.BaseType">
+            Returns the base class for a class.  If this is an interface or has
+            no base class null is returned.  Object is the only Type that does not 
+            have a base class.  
+        </member>
+        <member name="M:System.RuntimeTypeHash.ComputeHash(System.Byte[],System.Int64@,System.Int64@)">
+            
+              Needs to be replaced with real hash computed over the
+              signature of the type
+            
+        </member>
+        <member name="M:System.String.Join(System.String,System.String[],System.Int32,System.Int32)">
+            
+        </member>
+        <member name="M:System.String.StringCTOR(System.Char[],System.Int32,System.Int32)">
+            
+        </member>
+        <member name="M:System.String.StringCTOR(System.Char[])">
+            
+        </member>
+        <member name="M:System.String.SetChar(System.Int32,System.Char)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.AppendInPlace(System.Char,System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.AppendInPlace(System.Char,System.Int32,System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.AppendInPlace(System.String,System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.AppendInPlace(System.Char[],System.Int32,System.Int32,System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.ReplaceCharInPlace(System.Char,System.Char,System.Int32,System.Int32,System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.GetStringForStringBuilder(System.String,System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.NullTerminate">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.ClearPostNullChar">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.SetLength(System.Int32)">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.System#Collections#IEnumerable#GetEnumerator">
+            <internalonly/>
+        </member>
+        <member name="M:System.String.StringCTOR(System.Char*)">
+             Creates a new string with the characters copied in from <i>ptr</i>. If
+             <i>ptr</i> is null, a string initialized to
+             &quot;&lt;No Object&gt;&quot; (i.e., <code>String.NullString</code>)
+             is created.
+            
+             Issue: This method is only accessible from VC.
+             @issue The verifier needs to recognize that this is not necessarily
+              secure.
+            
+             @param ptr this is a WCHAR *.
+            
+        </member>
+        <member name="M:System.String.InternalLength">
+            This is an EE implemented function so that the JIT can recognise it and
+            treat it specially by eliminating checks on character fetches.
+        </member>
+        <member name="P:System.String.ArrayLength">
+            <internalonly/>
+        </member>
+        <member name="P:System.String.StringState">
+            <summary>
+            Get or set the string state for this string.
+            </summary>
+        </member>
+        <member name="M:System.Threading.WaitHandle.System#IDisposable#Dispose">
+            <internalonly/>
+        </member>
+        <member name="M:System.Threading.AutoResetEvent.Finalize">
+            <summary>
+            Finalizer is responsible for freeing handle that keeps corresponding
+            kernel AutoResetEvent object live.
+            </summary>
+        </member>
+        <member name="M:System.Threading.ManualResetEvent.Finalize">
+            <summary>
+            Finalizer is responsible for freeing handle that keeps corresponding
+            kernel object live.
+            </summary>
+        </member>
+        <member name="T:System.Threading.Monitor">
+             <summary>
+             A monitor is used for synchronization. Only a single thread can
+             hold the monitor at any given time.
+            
+             The monitor maintains two lists of threads: one for threads waiting
+             to enter the monitor, and one for threads waiting for a pulse within
+             the monitor.
+             </summary>
+            <summary>
+            A monitor is used for synchronization. Only a single thread can
+            hold the monitor at any given time.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.#ctor">
+            <summary>
+            Private so that only we can create instances.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Pulse(System.Object)">
+            <summary>
+            Wake up a thread waiting on the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.PulseAll(System.Object)">
+            <summary>
+            Wake up all threads waiting on the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.TryEnter(System.Object)">
+            <summary>
+            Attempt to enter the monitor, returning immediately if it is
+            already held by another thread.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.TryEnter(System.Object,System.TimeSpan)">
+            <summary>
+            Attempt to enter the monitor, returning if it can not be taken
+            within the specified timeout.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Wait(System.Object)">
+            <summary>
+            Wait to be woken up by a holder of the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Wait(System.Object,System.TimeSpan)">
+            <summary>
+            Wait to be woken up by a holder of the monitor. Give up after
+            a specified timeout.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Wait(System.Object,System.TimeSpan,System.Boolean)">
+             <summary>
+             Wait to be woken up by a holder of the monitor. Give up after
+             a specified timeout.
+            
+             Overload exists to match the CLR. Exit Context not supported.
+             </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Enter">
+            <summary>
+            Enter the monitor, blocking until it is held.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Exit">
+            <summary>
+            Exit the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Pulse">
+            <summary>
+            Wake up a single thread waiting on the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.PulseAll">
+            <summary>
+            Wake up all threads waiting on the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.TryEnter">
+            <summary>
+            Try to enter the monitor, returning immediately if it is
+            already held.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.TryEnter(System.SchedulerTime)">
+            <summary>
+            Try to enter the monitor, giving up if it cannot be
+            entered after a timeout.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Wait(System.SchedulerTime)">
+            <summary>
+            Wait within the monitor for a Pulse.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.CreateMonitor(System.Object)">
+            <summary>
+            Ensure that the passed object has a monitor (and associated
+            SyncBlock) allocated.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.FromAddress(System.UIntPtr)">
+             <summary>
+             Internal Type conversion method.
+             Note: we don't use VTable.fromAddress because we
+             cannot do a checked cast from Object to Monitor during GC
+             (because the GC may be using the vtable word)
+             </summary>
+            
+        </member>
+        <member name="M:System.Threading.Monitor.GetMonitorFromObject(System.Object)">
+            <summary>
+            Look up the Monitor for the specified object in the SyncBlock
+            tables. If no Monitor exists for the object then one is created.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Dequeue">
+             <summary>
+             Dequeue a thread from the singly linked list from head to tail,
+             acquiring the ListLock if necessary.
+            
+             If the list is empty then this method returns null.
+             </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Remove(System.Threading.Thread)">
+             <summary>
+             Search the linked list and remove the specified thread if
+             it is linked in.
+            
+             Acquires the ListLock if necessary.
+             </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Enqueue(System.Threading.Thread)">
+             <summary>
+             Append a thread at the tail of a queue. If the queue is
+             currently null this method initializes it.
+            
+             Acquires the ListLock if necessary.
+             </summary>
+        </member>
+        <member name="F:System.Threading.Monitor.depth">
+            <summary>
+            The recursion depth of the current holder of the monitor.
+            </summary>
+        </member>
+        <member name="F:System.Threading.Monitor.mutex">
+            <summary>
+            The mutex that is held by the thread that holds the monitor
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Enter(System.Object)">
+            <summary>
+            Attempt to enter the monitor, blocking until it is held.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Monitor.Exit(System.Object)">
+            <summary>
+            Exit the monitor.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Mutex.Finalize">
+            <summary>
+            Finalizer is responsible for freeing handle that keeps corresponding
+            kernel AutoResetEvent object live.
+            </summary>
+        </member>
+        <member name="T:System.Threading.Thread">
+            
+             <summary>
+                 Class implements thread functionality in Singluarity
+             </summary>
+            
+        </member>
+        <member name="M:System.Threading.Thread.Finalize">
+            <summary>
+            Finalizer is responsible for freeing handle that keeps corresponding
+            kernel object live.
+            </summary>
+        </member>
+        <member name="M:System.Threading.Thread.NotifySpinLockAboutToAcquire(System.Int32)">
+            
+             <summary>
+                 Notify thread that it acquired spinlock of specific rank
+             </summary>
+            
+             <param name="type">Type of spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.Thread.NotifySpinLockReleased(System.Int32)">
+            
+             <summary>
+                 Notify thread that released a spinlock of specific rank
+             </summary>
+            
+             <param name="type">Type of spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.Thread.GetThreadFromThreadId(System.Int32)">
+            
+             <summary>
+                 Given a thread id, return actual thread
+             </summary>
+            
+             <param name="threadId">Thread id</param>
+            
+        </member>
+        <member name="F:System.Threading.Thread.segregatedFreeList">
+            <summary> Thread specific heap allocator </summary>
+        </member>
+        <member name="F:System.Threading.Thread.bumpAllocator">
+            <summary>Thread specific bump allocator </summary>
+        </member>
+        <member name="F:System.Threading.Thread.tryAllManager">
+             <summary>
+                  Bartok specific field: Support for try_all { ... } construct
+            </summary>
+        </member>
+        <member name="T:System.Threading.ThreadState">
+            
+             <summary>
+                Scheduler thread state
+             </summary>
+            
+        </member>
+        <member name="T:System.Threading.ThreadActions">
+            
+             <summary>
+                Scheduler thread's actions
+             </summary>
+            
+        </member>
+        <member name="T:System.Collections.Specialized.ListDictionary">
+            <devdoc>
+             <para>
+               This is a simple implementation of IDictionary using a singly linked list. This
+               will be smaller and faster than a Hashtable if the number of elements is 10 or less.
+               This should not be used if performance is important for large numbers of elements.
+             </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.#ctor">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.#ctor(System.Collections.IComparer)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.Add(System.Object,System.Object)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.Clear">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.Contains(System.Object)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.CopyTo(System.Array,System.Int32)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.GetEnumerator">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.ListDictionary.Remove(System.Object)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.Item(System.Object)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.Count">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.Keys">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.IsReadOnly">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.IsFixedSize">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.IsSynchronized">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.SyncRoot">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.ListDictionary.Values">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="T:System.Collections.Specialized.StringDictionary">
+            <devdoc>
+               <para>Implements a hashtable with the key strongly typed to be
+                  a string rather than an object. </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.#ctor">
+            <devdoc>
+            <para>Initializes a new instance of the System.Windows.Forms.StringDictionary class.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.Add(System.String,System.String)">
+            <devdoc>
+            <para>Adds an entry with the specified key and value into the System.Windows.Forms.StringDictionary.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.Clear">
+            <devdoc>
+            <para>Removes all entries from the System.Windows.Forms.StringDictionary.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.ContainsKey(System.String)">
+            <devdoc>
+               <para>Determines if the string dictionary contains a specific key</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.ContainsValue(System.String)">
+            <devdoc>
+            <para>Determines if the System.Windows.Forms.StringDictionary contains a specific value.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.CopyTo(System.Array,System.Int32)">
+            <devdoc>
+            <para>Copies the string dictionary values to a one-dimensional <see cref="T:System.Array"/> instance at the
+               specified index.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.GetEnumerator">
+            <devdoc>
+               <para>Returns an enumerator that can iterate through the string dictionary.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Collections.Specialized.StringDictionary.Remove(System.String)">
+            <devdoc>
+               <para>Removes the entry with the specified key from the string dictionary.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.StringDictionary.Count">
+            <devdoc>
+            <para>Gets the number of key-and-value pairs in the System.Windows.Forms.StringDictionary.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.StringDictionary.IsSynchronized">
+            <devdoc>
+            <para>Indicates whether access to the System.Windows.Forms.StringDictionary is synchronized (thread-safe). This property is
+               read-only.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.StringDictionary.Item(System.String)">
+            <devdoc>
+               <para>Gets or sets the value associated with the specified key.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.StringDictionary.Keys">
+            <devdoc>
+            <para>Gets a collection of keys in the System.Windows.Forms.StringDictionary.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.StringDictionary.SyncRoot">
+            <devdoc>
+            <para>Gets an object that can be used to synchronize access to the System.Windows.Forms.StringDictionary.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Collections.Specialized.StringDictionary.Values">
+            <devdoc>
+            <para>Gets a collection of values in the System.Windows.Forms.StringDictionary.</para>
+            </devdoc>
+        </member>
+        <member name="T:System.Diagnostics.Debugger">
+            <summary>
+            This class provides some of the methods defined by the CLR's version of
+            the Debugger static class.  This makes writing portable apps easier.
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Regex">
+            <devdoc>
+               <para>
+                  Represents an immutable, compiled regular expression. Also
+                  contains static methods that allow use of regular expressions without instantiating
+                  a Regex explicitly.
+               </para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Regex.pattern">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Regex.roptions">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Regex.caps">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Regex.capnames">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Regex.capslist">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Regex.capsize">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.#ctor(System.String)">
+            <devdoc>
+               <para>
+                  Creates and compiles a regular expression object for the specified regular
+                  expression.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+                  Creates and compiles a regular expression object for the
+                  specified regular expression
+                  with options that modify the pattern.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Finalize">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Escape(System.String)">
+            <devdoc>
+               <para>
+                  Escapes
+                     a minimal set of metacharacters (\, *, +, ?, |, {, [, (, ), ^, $, ., #, and
+                     whitespace) by replacing them with their \ codes. This converts a string so that
+                     it can be used as a constant within a regular expression safely. (Note that the
+                     reason # and whitespace must be escaped is so the string can be used safely
+                     within an expression parsed with x mode. If future Regex features add
+                     additional metacharacters, developers should depend on Escape to escape those
+                     characters as well.)
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Unescape(System.String)">
+            <devdoc>
+               <para>
+                  Unescapes any escaped characters in the input string.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.ToString">
+            <devdoc>
+               <para>
+                  Returns the regular expression pattern passed into the constructor
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.GetGroupNames">
+            <devdoc>
+               Returns
+                  the GroupNameCollection for the regular expression. This collection contains the
+                  set of strings used to name capturing groups in the expression.
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.GetGroupNumbers">
+            <devdoc>
+               returns
+                  the integer group number corresponding to a group name.
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.GroupNameFromNumber(System.Int32)">
+            <devdoc>
+               <para>
+                  Retrieves a group name that corresponds to a group number.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.GroupNumberFromName(System.String)">
+            <devdoc>
+               <para>
+                  Returns a group number that corresponds to a group name.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.String)">
+               <devdoc>
+                  <para>
+                     Searches the input
+                        string for one or more occurrences of the text supplied in the pattern
+                        parameter.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+                  Searches the input string for one or more occurrences of the text
+                     supplied in the pattern parameter with matching options supplied in the options
+                     parameter.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.IsMatch(System.String)">
+            <devdoc>
+               <para>
+                  Searches the input string for one or
+                     more matches using the previous pattern, options, and starting
+                     position.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.Int32)">
+            <devdoc>
+               <para>
+                  Searches the input
+                     string for one or more matches using the previous pattern and options, with
+                     a new starting position.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Match(System.String,System.String)">
+               <devdoc>
+                  <para>
+                     Searches the input string for one or more occurrences of the text
+                        supplied in the pattern parameter.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+                  Searches the input string for one or more occurrences of the text
+                     supplied in the pattern parameter. Matching is modified with an option
+                     string.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Match(System.String)">
+            <devdoc>
+               <para>
+                  Matches a regular expression with a string and returns
+                  the precise result as a RegexMatch object.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32)">
+            <devdoc>
+               Matches a regular expression with a string and returns
+               the precise result as a RegexMatch object.
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32,System.Int32)">
+            <devdoc>
+               <para>
+                  Matches a
+                  regular expression with a string and returns the precise result as a
+                  RegexMatch object.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Matches(System.String,System.String)">
+               <devdoc>
+                  <para>
+                     Returns all the successful matches as if Match were
+                     called iteratively numerous times.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Matches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+                  Returns all the successful matches as if Match were called iteratively
+                  numerous times.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Matches(System.String)">
+            <devdoc>
+               <para>
+                  Returns
+                  all the successful matches as if Match was called iteratively numerous
+                  times.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Matches(System.String,System.Int32)">
+            <devdoc>
+               <para>
+                  Returns
+                  all the successful matches as if Match was called iteratively numerous
+                  times.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.String)">
+            <devdoc>
+               <para>
+                  Replaces
+                     all occurrences of the pattern with the <paramref name="replacement"/> pattern, starting at
+                     the first character in the input string.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+                  Replaces all occurrences of
+                     the <paramref name="pattern "/>with the <paramref name="replacement "/>
+                     pattern, starting at the first character in the input string.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String)">
+            <devdoc>
+               <para>
+                  Replaces all occurrences of
+                     the <paramref name="pattern "/> with the <paramref name="replacement"/> pattern, starting at the
+                     first character in the input string, using the previous patten.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Int32)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the (previously defined) <paramref name="pattern "/>with the
+               <paramref name="replacement"/> pattern, starting at the first character in the input string.
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Int32,System.Int32)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the <paramref name="pattern "/>with the recent
+               <paramref name="replacement"/> pattern, starting at the character position
+               <paramref name="startat."/>
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the <paramref name="pattern "/>with the
+               <paramref name="replacement"/> pattern
+               <paramref name="."/>
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the <paramref name="pattern "/>with the recent
+               <paramref name="replacement"/> pattern, starting at the first character<paramref name="."/>
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.Text.RegularExpressions.MatchEvaluator)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the <paramref name="pattern "/>with the recent
+               <paramref name="replacement"/> pattern, starting at the first character
+               position<paramref name="."/>
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.Text.RegularExpressions.MatchEvaluator,System.Int32)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the <paramref name="pattern "/>with the recent
+               <paramref name="replacement"/> pattern, starting at the first character
+               position<paramref name="."/>
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Replace(System.String,System.Text.RegularExpressions.MatchEvaluator,System.Int32,System.Int32)">
+            <devdoc>
+               <para>
+               Replaces all occurrences of the (previously defined) <paramref name="pattern "/>with
+                  the recent <paramref name="replacement"/> pattern, starting at the character
+               position<paramref name=" startat."/>
+            </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Split(System.String,System.String)">
+               <devdoc>
+                  <para>
+                     Splits the <paramref name="input "/>string at the position defined
+                     by <paramref name="pattern"/>.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Split(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <devdoc>
+               <para>
+                  Splits the <paramref name="input "/>string at the position defined by <paramref name="pattern"/>.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Split(System.String)">
+            <devdoc>
+               <para>
+                  Splits the <paramref name="input "/>string at the position defined by
+                  a previous <paramref name="pattern"/>
+                  .
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Split(System.String,System.Int32)">
+            <devdoc>
+               <para>
+                  Splits the <paramref name="input "/>string at the position defined by a previous
+               <paramref name="pattern"/> .
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.Split(System.String,System.Int32,System.Int32)">
+            <devdoc>
+               <para>
+                  Splits the <paramref name="input "/>string at the position defined by a previous
+               <paramref name="pattern"/> .
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.InitializeReferences">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.UseOptionC">
+            <internalonly/>
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Regex.UseOptionR">
+            <internalonly/>
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Regex.RightToLeft">
+            <devdoc>
+               <para>
+                  Indicates whether the regular expression matches from right to
+                  left.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Regex.Options">
+            <devdoc>
+               <para>
+                  Returns the options passed into the constructor
+               </para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.MatchEvaluator">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Capture">
+            <devdoc>
+               <para> 
+                  Represents the results from a single subexpression capture. The object represents
+                  one substring for a single successful capture.</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Capture.ToString">
+            <devdoc>
+               <para>
+                  Returns 
+                     the substring that was matched.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Capture.Index">
+            <devdoc>
+               <para>Returns the position in the original string where the first character of
+                  captured substring was found.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Capture.Length">
+            <devdoc>
+               <para>
+                  Returns the length of the captured substring.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Capture.Value">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.CaptureCollection">
+            <devdoc>
+               <para>
+                  Represents a sequence of capture substrings. The object is used
+                  to return the set of captures done by a single capturing group.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.CaptureCollection.CopyTo(System.Array,System.Int32)">
+            <devdoc>
+               <para>
+                  Copies all the elements of the collection to the given array
+                  beginning at the given index.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.CaptureCollection.GetEnumerator">
+            <devdoc>
+               <para>
+                  Provides an enumerator in the same order as Item[].
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.CaptureCollection.SyncRoot">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.CaptureCollection.IsSynchronized">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.CaptureCollection.IsReadOnly">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.CaptureCollection.Count">
+            <devdoc>
+               <para>
+                  Returns the number of captures.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.CaptureCollection.Item(System.Int32)">
+            <devdoc>
+               <para>
+                  Provides a means of accessing a specific capture in the collection.
+               </para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.RegexCompilationInfo">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.RegexCompilationInfo.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String,System.Boolean)">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.RegexCompilationInfo.Pattern">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.RegexCompilationInfo.Options">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.RegexCompilationInfo.Name">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.RegexCompilationInfo.Namespace">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.RegexCompilationInfo.IsPublic">
+            <devdoc>
+               <para>
+                  [To be supplied]
+               </para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Group">
+            <devdoc>
+               Group 
+                  represents the results from a single capturing group. A capturing group can
+                  capture zero, one, or more strings in a single match because of quantifiers, so
+                  Group supplies a collection of Capture objects. 
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Group.Synchronized(System.Text.RegularExpressions.Group)">
+            <devdoc>
+               <para>Returns 
+                  a Group object equivalent to the one supplied that is safe to share between
+                  multiple threads.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Group.Success">
+            <devdoc>
+               <para>Indicates whether the match is successful.</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Group.Captures">
+            <devdoc>
+               <para>
+                  Returns a collection of all the captures matched by the capturing
+                  group, in innermost-leftmost-first order (or innermost-rightmost-first order if
+                  compiled with the "r" option). The collection may have zero or more items.
+               </para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.GroupCollection">
+            <devdoc>
+               <para>
+                  Represents a sequence of capture substrings. The object is used
+                  to return the set of captures done by a single capturing group.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.GroupCollection.CopyTo(System.Array,System.Int32)">
+            <devdoc>
+               <para>
+                  Copies all the elements of the collection to the given array
+                  beginning at the given index.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.GroupCollection.GetEnumerator">
+            <devdoc>
+               <para>
+                  Provides an enumerator in the same order as Item[].
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.GroupCollection.SyncRoot">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.GroupCollection.IsSynchronized">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.GroupCollection.IsReadOnly">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.GroupCollection.Count">
+            <devdoc>
+               <para>
+                  Returns the number of groups.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.GroupCollection.Item(System.Int32)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.GroupCollection.Item(System.String)">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.RegexRunner">
+            <internalonly/>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Match">
+            <devdoc>
+               <para>
+                  Represents 
+                     the results from a single regular expression match.
+                  </para>
+               </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Match.NextMatch">
+            <devdoc>
+               <para>Returns a new Match with the results for the next match, starting
+                  at the position at which the last match ended (at the character beyond the last
+                  matched character).</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Match.Result(System.String)">
+            <devdoc>
+               <para>
+                  Returns the expansion of the passed replacement pattern. For
+                  example, if the replacement pattern is ?$1$2?, Result returns the concatenation
+                  of Group(1).ToString() and Group(2).ToString().
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Match.Synchronized(System.Text.RegularExpressions.Match)">
+            <devdoc>
+               <para>
+                  Returns a Match instance equivalent to the one supplied that is safe to share
+                  between multiple threads.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Match.Empty">
+            <devdoc>
+               <para>
+                  Returns an empty Match object.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.Match.Groups">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.MatchCollection">
+            <devdoc>
+               <para>
+                  Represents the set of names appearing as capturing group
+                  names in a regular expression.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.MatchCollection.CopyTo(System.Array,System.Int32)">
+            <devdoc>
+               <para>
+                  Copies all the elements of the collection to the given array
+                  starting at the given index.
+               </para>
+            </devdoc>
+        </member>
+        <member name="M:System.Text.RegularExpressions.MatchCollection.GetEnumerator">
+            <devdoc>
+               <para>
+                  Provides an enumerator in the same order as Item[i].
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.MatchCollection.Count">
+            <devdoc>
+               <para>
+                  Returns the number of captures.
+               </para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.MatchCollection.SyncRoot">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.MatchCollection.IsSynchronized">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.MatchCollection.IsReadOnly">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="P:System.Text.RegularExpressions.MatchCollection.Item(System.Int32)">
+            <devdoc>
+               <para>
+                  Returns the ith Match in the collection.
+               </para>
+            </devdoc>
+        </member>
+        <member name="T:System.Text.RegularExpressions.RegexOptions">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.None">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.IgnoreCase">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.Multiline">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.ExplicitCapture">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.Compiled">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.Singleline">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.RightToLeft">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.ECMAScript">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="F:System.Text.RegularExpressions.RegexOptions.CultureInvariant">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="M:System.Runtime.InteropServices.Marshal.StructSize(System.Type)">
+            
+             Used by the shared heap to allocate structs.
+            
+        </member>
+        <member name="T:Microsoft.SingSharp.ClaimsAttribute">
+             <summary>
+             Can be used on parameters of ITracked type to override the default Borrowed semantics.
+            
+             Means that parameter ownership is not returned by method.
+            
+             If the attribute appears on an instance method, the attribute applies to the receiver parameter.
+             </summary>
+        </member>
+        <member name="T:Microsoft.SingSharp.BorrowedAttribute">
+             <summary>
+             Can be used on return of ITracked type to override the default Owned semantics.
+             
+             Means that the returned value is part of the 'receivers' representation and cannot outlive the receiver.
+            
+             </summary>
+        </member>
+        <member name="T:Microsoft.SingSharp.IBorrowed">
+            <summary>
+            Marker interface for interfaces that custom heap pointers can be boxed to, while
+            preventing the loss of ownership tracking.
+            Upcasts from an interface deriving from IBorrowed are only allowed if target interface
+            also derives from IBorrowed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Channels.ISelectable.HeadMatches(System.Int32,System.Boolean@,System.Object@)">
+             <summary>
+             Tests if the message at the head of the queue matches the given tag. If so,
+             returns true.
+            
+             If no match is possible in the future given the current message, possible must
+             be set to false. 
+             Implementations are disallowed from setting possible to true
+             so that the context can chain them.
+            
+             If the underlying object is an endpoint set, it also returns an object that
+             serves to extract the endpoint having the match from the set later.
+            
+             Again, implementations are disallowed from setting match setMatch to null
+             so that the context can chain the calls.
+            
+             </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Channels.ISelectable.GetWaitHandle">
+            <summary>
+            Allow the context to get a handle to wait on an event for this object
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Channels.ISelectable.ResetWaitSignal">
+            <summary>
+            Reset the associated event to avoid spurious wake-ups. This is called by
+            Select prior to scanning the state of the ISelectable object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SingSharp.ITracked">
+             <summary>
+             ITracked is a marker interface that marks a GC type as linearly tracked.
+             
+             Upcasts of a class C deriving from ITracked are only allowed if 
+             a) the target also derives from ITracked, in which case linear tracking continues, or
+             b) the target is an interface deriving from IBorrowed. In this case, the resulting value
+                is prevented from escaping the static scope it is in. The checker must make sure that the
+                original tracked object isn't used until the borrowed reference dies.
+              By default, any parameter of type ITracked is treated as borrowed, meaning that it must
+              be owned on entry and ownership is returned on exit.
+            
+              By default, any out parameter or return value of type ITracked is interpreted as passing fresh
+              ownership from callee to caller.
+            
+              The only overrides needed are for parameters that claim ownership. The Claims attribute below serves
+              that purpose.
+             </summary>
+        </member>
+        <member name="M:Microsoft.SingSharp.ITracked.Release">
+             <summary>
+             Called when a thread releases a tracked object so it can be acquired by another thread.
+             Gives implementor of tracked type chance to
+             know that current thread no longer owns this tracked resource
+            
+             Normal clients should not call this method.
+             </summary>
+        </member>
+        <member name="M:Microsoft.SingSharp.ITracked.Acquire">
+             <summary>
+             Called when a thread acquired a tracked object not owned by it. Gives implementor of tracked type chance to
+             know that current thread now owns this tracked resource.
+            
+             Note, this method cannot block.
+            
+             Normal clients should not call this method.
+             </summary>
+        </member>
+        <member name="M:Microsoft.SingSharp.ITracked.Dispose">
+            <summary>
+            Called to delete the associated resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SingSharp.ITracked.Expose">
+            <summary>
+            This is a marker method called at the beginning of expose blocks.
+            Expose blocks provide scoped access to the tracked fields of tracked objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SingSharp.ITracked.UnExpose">
+            <summary>
+            This is a marker method called at the end of an expose blocks.
+            Expose blocks provide scoped access to the tracked fields of tracked objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Channels.IEventCollectionElement.LinkIntoCollection(Microsoft.Singularity.V1.Threads.AutoResetEventHandle)">
+            <summary>
+            Instruct the selectable object to signal events on the given AutoResetEvent
+            rather than its normal event in order to aggregate signalling into a set.
+            A selectable object need only support being part of a single collection at
+            any point in time.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Channels.IEventCollectionElement.UnlinkFromCollection(Microsoft.Singularity.V1.Threads.AutoResetEventHandle)">
+            <summary>
+            Instruct the selectable object to stop signalling events on the given
+            AutoResetEvent.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Isal.Isa.GetStackReturnAddresses(System.UIntPtr@,System.UIntPtr@,System.UIntPtr@)">
+            <summary>
+            Provides a mini stack trace starting from the caller of the caller
+            of this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Isal.Isa.GetStackReturnAddresses(System.UIntPtr[])">
+            <summary>
+            Provides the full stack trace starting from the caller of the caller
+            of this method.
+            </summary>
+            <returns>Return address values in stack array from top to bottom</returns>
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PE">
+            
+             <remarks> PAE Paging Constants. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PTE">
+            
+             <remarks> IX PAE Page table entry. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PT">
+            
+             <remarks> IX PAE Page table. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PDE">
+            
+             <remarks> IX PAE Page directory entry. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PDE_2MB">
+            
+             <remarks> IX PAE 2MB Page directory entry </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PDT">
+            
+             <remarks> IX PAE Page directory table. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PDPE">
+            
+             <remarks> IX PAE Page directory pointer entry. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Isal.IX.PDPT">
+            
+             <remarks> IX PAE Page directory pointer table. </remarks>
+            
+        </member>
+        <member name="T:Microsoft.Singularity.Io.IoConfig">
+            <summary>
+            Instances of this class represent a set of I/O resources that have been assigned
+            to a specific device driver instance.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.Io.IoConfig.Ids">
+            <summary>
+            Contains the list of device IDs for this device.  These IDs are created (assigned)
+            by the bus driver that enumerated this device.  The bus driver may assign any
+            number of IDs.  The first ID should always be the Singularity-compatible ID,
+            which uses a path-like syntax, e.g. /pnp/PNP0303 for devices enumerated by the
+            PNP BIOS / ISAPNP bus device, or /pci/02/00/8086/... for devices enumerated by
+            the PCI bus enumerator.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Io.IoConfig.ToPrint">
+            <summary>
+            Builds a description of this IoConfig instance.
+            </summary>
+            <returns>The description text.</returns>
+        </member>
+        <member name="M:Microsoft.Singularity.Io.IoConfig.ToPrint(System.Text.StringBuilder)">
+            <summary>
+            Builds a description of this IoConfig instance.
+            </summary>
+            <param name="text">The text buffer in which to write the description.</param>
+        </member>
+        <member name="M:Microsoft.Singularity.Io.IoConfig.Print">
+            <summary>
+            Prints a description of this I/O configuration to the debug port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Singularity.Io.IoConfig.Id">
+            <summary>
+            This property exists for compatibility with drivers that assume a single device ID.
+            It returns the first device ID in the list.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.Io.PciConfig.GetIds">
+             <summary>
+             <para>
+             Builds the list of device IDs for this PCI device.  We generate the same
+             strings that Windows uses for its hardware IDs and compatible IDs.
+             The order is significant; the PNP manager will search the device IDs,
+             one by one, for a device driver that matches.  The list is ordered from
+             most specific to least specific.
+             </para>
+            
+             <para>
+             WDM "hardware IDs":
+                  PCI\VEN_xxxy&amp;DEV_yyyy&amp;SUBSYS_zzzzzzzz&amp;REV_rr
+                  PCI\VEN_xxxy&amp;DEV_yyyy&amp;SUBSYS_zzzzzzzz
+                  PCI\VEN_xxxy&amp;DEV_yyyy&amp;CC_ccssii
+                  PCI\VEN_xxxy&amp;DEV_yyyy&amp;CC_ccss
+                  PCI\VEN_xxxy
+             </para>
+            
+             <para>
+             WDM "compatible IDs":
+                  PCI\VEN_xxxy&amp;DEV_yyyy&amp;REV_rr
+                  PCI\VEN_xxxy&amp;DEV_yyyy
+                  PCI\VEN_xxxx&amp;CC_ccssii
+                  PCI\VEN_xxxx&amp;CC_ccss
+                  PCI\CC_ccssii
+                  PCI\CC_ccss
+             </para>
+             </summary>
+             <returns>
+             An array containing the device IDs.  The list is ordered from most specific
+             to least specific.
+             </returns>
+        </member>
+        <member name="T:Microsoft.Singularity.Configuration.StringParameterAttribute">
+            
+             Parameter Attributes
+            
+        </member>
+        <member name="M:Microsoft.Singularity.AppRuntime.TopLevelException(System.Exception)">
+            <summary>
+            This method runs when the "main" thread terminates by throwing an exception.
+            It is a separate method, rather than simply code within the AppStart method,
+            in order to make life easier during debugging.
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Microsoft.Singularity.AppRuntime.InitializeConsole">
+            <summary>
+            This stub method is provided for so that System.Console.dll can override it for those
+            apps that want a console.  This is necessary, in order to initialize and shutdown the
+            console at the right time.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.AppRuntime.FinalizeConsole">
+            <summary>
+            This stub method is provided for so that System.Console.dll can override it for those
+            apps that want a console.  This is necessary, in order to initialize and shutdown the
+            console at the right time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Singularity.AppRuntime.AppName">
+            <summary>
+            Returns the name of the application, as determined by the first parameter
+            passed in the argv block.  This property is only present on DEBUG builds 
+            (Debug and Prototype).  It is provided for DebugStub.WriteLine, to provide 
+            useful debugging spew.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.DebugStub.AddLineHeader(System.Char*,System.Int32@,System.Int32)">
+            <summary>
+            This method adds prefix to each line sent to the debugger, containing the app name,
+            process id, thread id, and thread name.  The thread name can be changed by setting
+            the DebugName property of a thread.
+            </summary>
+        </member>
+        <member name="T:System.GCs.SegregatedFreeList">
+             <summary>
+             This class supports Allocate/Free operations using memory obtained
+             from the PageManager.
+            
+             Objects that are small enough that multiple instances of them can fit
+             on a page are allocated from pages of identically sized memory cells.
+            
+             Large objects are allocated on separate pages.
+            
+             This class is designed to be thread safe on both allocation and free
+             operations. At this stage it is required that RecycleGlobalPages is
+             called periodically to reconsider previously full pages for inclusion
+             in allocation lists.
+            
+             The free operation is currently more expensive than required due to
+             space accounting.
+            
+             This class also keeps up to date memory accounting information. Note
+             that modifications to this data is not synchronized so it is possible
+             that the counts drift from actual figures over time.
+             </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.INIT_PAGE">
+            <summary>
+            Pages that are the process of being initialized, either as
+            a page of small chunks or for a large object.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.SMALL_OBJ_PAGE">
+            <summary>
+            PageType for pages containing small objects.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.LARGE_OBJ_START">
+            <summary>
+            For any large object, the first page is marked
+            LARGE_OBJ_START, and subsequent pages marked
+            LARGE_OBJ_TAIL.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.LOG_PAGE_SIZE">
+            <summary>
+            BUGBUG: Duplicated constant.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.GetSizeClass(System.UIntPtr)">
+             <summary>
+             Returns the size class index for an object of the specified size.
+            
+             BUGBUG: We hope that from an inlined allocation site this is
+             resolved as a constant. That is why this was changed to remove
+             indirection through an index lookup table.
+             </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.GetCellSize(System.UInt32)">
+            <summary>
+            Returns the cell size for a given size class.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.SmallBytes">
+            <summary>
+            A count of the bytes allocated for small objects.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.SmallFreedBytes">
+            <summary>
+            A count of the bytes for objects the process of being freed.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.SmallFreedPages">
+            <summary>
+            A count of the small pages in the process of being freed.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.LargeFreedPages">
+            <summary>
+            A count of the large pages in the process of being freed.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.LargePages">
+            <summary>
+            The number of pages reserved for large objects.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.SmallPages">
+            <summary>
+            The number of pages reserved for small objects.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.nullPartialFreePageVisitor">
+            <summary>
+            A partial free page visitor that does nothing.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AddSmallBytes(System.UIntPtr)">
+            <summary>
+            Increment the counter of the number of small bytes allocated.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AddLargePages(System.UIntPtr)">
+            <summary>
+            Increment the counter of the number of large bytes allocated.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.SubSmallBytes(System.UIntPtr)">
+            <summary>
+            Decrement the counter of the number of small bytes allocated.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.SubLargePages(System.UIntPtr)">
+            <summary>
+            Decrement the counter of the number of large pages allocated.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AddSmallPage(System.GCs.SegregatedFreeList.PageHeader*)">
+            <summary>
+            Increment the counter of the number of small pages allocated.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.SubSmallPage(System.GCs.SegregatedFreeList.PageHeader*)">
+            <summary>
+            Decrement the counter of the number of small pages allocated.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.CommitFreedData">
+            <summary>
+            Subtract and zero the freed data counts.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.NewThreadNotification(System.Threading.Thread,System.Boolean)">
+            <summary>
+            When notified of the creation of a new thread we initialize the
+            alloc heap in that thread.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.DeadThreadNotification(System.Threading.Thread)">
+            <summary>
+            A thread has finished, so we release any local pages.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AllocateLarge(System.UInt32,System.UIntPtr,System.Threading.Thread)">
+            <summary>
+            Allocate a large object. Large objects don't share pages with
+            any other objects. Get memory for the object directly from the
+            PageManager.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.Free(System.Object)">
+            <summary>
+            Free the specified object. For large objects the page becomes
+            immediately available. For small objects it may require a call
+            to RecycleGlobalPages.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.FreeSmall(System.UIntPtr,System.UInt32)">
+            <summary>
+            Free a small object.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.FreeLarge(System.Object)">
+            <summary>
+            Free a large object.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.IsGcPtr(System.UIntPtr)">
+            <summary>
+            Determines whether a given address could be an interior pointer
+            into an object.  If the function returns true, FindObjectAddr
+            must be able to find the object containing the given address if
+            such an object exists.  If the given address is outside the
+            memory area for any object, it is possible for the function to
+            return true, in which case FindObjectAddr is expected to
+            be able to find a nearby object.
+            Note: this method assumes that a pointer to the tail of one
+            object and the head of another is really a pointer to the tail
+            of the former.  In order to use method for pointers into the
+            PreHeader, add PreHeader.Size to the argument.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.Find(System.UIntPtr)">
+            <summary>
+            Given a possibly interior pointer to an object, return the
+            real address of the object.  Note that this assumes that
+            a pointer to the tail of one object and the head of another
+            is really a pointer to the tail of the former.  In order
+            to use this for identifying pointers to PreHeader fields,
+            add PreHeader.Size to the argument.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.FindSmall(System.UIntPtr)">
+            <summary>
+            Find a small object (after determining it is on a small page)
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.FindSmallCell(System.UIntPtr)">
+            <summary>
+            Find the cell for a given object address
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.FindLarge(System.UIntPtr)">
+            <summary>
+            Find a large object (after determining it is on a large page)
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.VisitAllObjects(System.GCs.SegregatedFreeList.ObjectVisitor)">
+            <summary>
+            Visit each object in the heap across all pages.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.VisitObjects(System.UIntPtr,System.UIntPtr,System.GCs.SegregatedFreeList.ObjectVisitor)">
+             <summary>
+             Visit each object in the heap across a range of pages.
+            
+             This can be run concurrent to allocations, but not frees.
+             </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.VisitSmallObjects(System.UIntPtr,System.GCs.SegregatedFreeList.ObjectVisitor)">
+            <summary>
+            Visit small objects in a single page.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.VisitLargeObject(System.UIntPtr,System.GCs.SegregatedFreeList.ObjectVisitor)">
+            <summary>
+            Visit a large object on the specified page.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.globalFreePages">
+            <summary>
+            This is the the free list of pages to allocate from.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.globalPages">
+            <summary>
+            This is the list of pages released by threads. These pages must
+            be periodically processes to release them back for allocation if
+            necessary.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.Initialize">
+            <summary>
+            Initialize the alloc heap by setting up the heads for all the
+            linked lists.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.RecycleGlobalPages">
+            <summary>
+            Take all global pages that have had elements freed and put them in
+            the allocation queues.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AtomicAdd(System.Int32@,System.Int32)">
+            <summary>
+            Atomically add a value to a field.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AtomicPush(System.UIntPtr@,System.GCs.SegregatedFreeList.PageHeader*)">
+            <summary>
+            Atomically push a value onto a linked list.  The linked list
+            may be concurrently added to, but may not be concurrently
+            removed from.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AtomicPop(System.UIntPtr@)">
+            <summary>
+            Atomically remove a value from the linked list. Returns null
+            if the list is empty.  The list may be concurrently removed
+            from by means of AtomicPop and concurrently added to by means
+            of AtomicPushDecrementList.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AtomicPopChain(System.UIntPtr@)">
+            <summary>
+            Steal an entire list.  Atomic PopChain can be done concurrently
+            with any other atomic operation.  The removal of an entire chain
+            does not by itself invite the ABA problem of lock-free algorithms.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AtomicPushIncrementList(System.UIntPtr@,System.GCs.SegregatedFreeList.PageHeaderList)">
+            <summary>
+            Push a whole chain onto a list.
+            The list may be concurrently added to by means to AtomicPush.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AtomicPushDecrementList(System.UIntPtr@,System.GCs.SegregatedFreeList.PageHeaderList)">
+            <summary>
+            Push a whole chain onto a list.
+            The list may be concurrently removed from by AtomicPop.
+            The removal is done along with removal of the first element of
+            the list, and the removed node is returned.  The removal of
+            the first element of the list ensures the absence of an ABA
+            problem.  AtomicPop and AtomicPushDecrementList are both
+            tolerant of the particular kind of ABA change that could occur
+            without removal of the first element of the list, but the
+            defensive mechanism is used anyway to ensure that potential
+            future problems are avoided.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.freeList">
+            <summary>
+            This is a thread's local free list for each size class.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.localPages">
+            <summary>
+            This is a thread's local set of pages for each size class.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.largeOffset">
+            <summary>
+            Used to attempt to spread large objects across pages to avoid
+            higher cache conflicts on low page addresses.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AllocateSmall(System.UInt32,System.Threading.Thread)">
+            <summary>
+            Allocate an object of a specified size class from the
+            thread's local block.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.AllocateSmallSlow(System.UInt32,System.Threading.Thread)">
+            <summary>
+            Get a new thread-local page and allocate from it.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.ReleaseLocalPage(System.UInt32)">
+            <summary>
+            Release a local allocation page into the pool of consumed pages.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.GetLocalPage(System.UInt32,System.Threading.Thread)">
+            <summary>
+            Either reuse an existing page or acquire a completely new page
+            to allocate from.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.NewLocalPage(System.UInt32,System.Threading.Thread)">
+            <summary>
+            Create a new page to allocate from.
+            </summary>
+        </member>
+        <member name="P:System.GCs.SegregatedFreeList.BLOCK_SIZE">
+            <summary>
+            The size of each block (which contains a single object size)
+            </summary>
+        </member>
+        <member name="P:System.GCs.SegregatedFreeList.LARGE_OBJECT_THRESHOLD">
+            <summary>
+            The threshold where objects become large objects.
+            </summary>
+        </member>
+        <member name="P:System.GCs.SegregatedFreeList.SIZE_CLASSES">
+            <summary>
+            The largest possible size class.
+            </summary>
+        </member>
+        <member name="P:System.GCs.SegregatedFreeList.LargeBytes">
+            <summary>
+            A count of the bytes allocated for large objects.
+            </summary>
+        </member>
+        <member name="P:System.GCs.SegregatedFreeList.TotalBytes">
+            <summary>
+            This is the total size of data (including object headers)
+            </summary>
+        </member>
+        <member name="P:System.GCs.SegregatedFreeList.ReservedBytes">
+            <summary>
+            The number of pages managed by the alloc heap, including space
+            occupied by empty cells.
+            </summary>
+        </member>
+        <member name="M:System.GCs.SegregatedFreeList.PageHeaderList.Append(System.GCs.SegregatedFreeList.PageHeader*)">
+            <summary>
+            Add a page onto a local linked list (possibly the first page)
+            </summary>
+        </member>
+        <member name="T:System.GCs.SegregatedFreeList.PageHeader">
+             <summary>
+             This struct represents the header data stored in each
+             small object page.
+            
+             BUGBUG: Not space efficient.
+             </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.PageHeader.nextPage">
+            <summary>
+            The next page in the linked list.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.PageHeader.freeList">
+            <summary>
+            The head of the free list for this page. This is not
+            used when a page is assigned to a thread.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.PageHeader.cellSize">
+            <summary>
+            The cell size for objects in this page.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.PageHeader.userValue">
+            <summary>
+            User value.
+            </summary>
+        </member>
+        <member name="F:System.GCs.SegregatedFreeList.PageHeader.freeCount">
+            <summary>
+            The number of cells that have been freed. This is used
+            for accounting purposes.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.OverrideCctorAttribute">
+            <summary>
+            This attribute must be placed on override types that override the class
+            constructor.  It is a compile-time error if the attribute is missing
+            during an override.  It is also a compile-time error if it exists and
+            either the original or the override type does not have a class
+            constructor.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.OverrideExtendsAttribute">
+            <summary>
+            This attribute must be placed on override types that mean to override the
+            base class.  If a base class is overridden, then either this attribute or
+            IgnoreOverrideExtendsAttribute must be present.  It is also a compile-time
+            error if this attribute exists and the override base class is the same as
+            the original base class.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IgnoreOverrideExtendsAttribute">
+            <summary>
+            This attribute must be placed on override types that override the base
+            class in the override assembly but do not mean to override the base class
+            in the actual type.  If a base class is overridden, then either this
+            attribute or OverrideExtendsAttribute must be present.  It is also a
+            compile-time error if this attribute exists and the override base class is
+            the same as the original base class.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.DeleteCctorAttribute">
+            <summary>
+            This attribute is placed on override types to delete the built-in class
+            constructor.  Using this is better than overriding with an empty method.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.DeleteAttribute">
+            <summary>
+            This attribute is placed on methods in override assemblies to delete the
+            original method.  This shouldn't be used for optimization.  For example,
+            this was introduced to temporarily remove a complex interface
+            implementation that could not be handled by MethodHierarchy.
+            </summary>
+        </member>
+        <member name="T:System.Threading.SpinLockBase">
+            
+             <summary>
+                 Spinlock Base - actual implementation of spinlock mechanism
+             </summary>
+            
+        </member>
+        <member name="F:System.Threading.SpinLockBase.MaxSpinLimit">
+            <summary> A timer for short back off in ms </summary>
+        </member>
+        <member name="F:System.Threading.SpinLockBase.ShortBackOffLimit">
+            <summary> A counter for short back off in ms </summary>
+        </member>
+        <member name="F:System.Threading.SpinLockBase.LongBackOffLimit">
+            <summary> A counter for short back off in ms </summary>
+        </member>
+        <member name="F:System.Threading.SpinLockBase.ShortBackOff">
+            <summary> A timer for short back off in ms </summary>
+        </member>
+        <member name="F:System.Threading.SpinLockBase.LongBackOff">
+            <summary> A timer for long back off in ms </summary>
+        </member>
+        <member name="M:System.Threading.SpinLockBase.#ctor(System.Int32)">
+            
+             <summary>
+                 Construct a SpinLockBase and initialize its type
+             </summary>
+            
+             <param name="type">Type of the spin lock. See KernelSpinLock.cs for details</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.AssertHeldBy(System.Int32)">
+            
+             <summary>
+                Assert if the specified thread actual owner of the spinlock
+             </summary>
+            
+             <param name="ownerId">Owner Id that request is using to get spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.IsHeld">
+            
+             <summary>
+                 Internal method to find out if spinlock is held by any thread
+             </summary>
+             <returns> true if the spin lock is acquired. </returns>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.IsHeldBy(System.Int32)">
+            
+             <summary>
+                 Method to find out if spinlock is held by specific thread
+             </summary>
+             <returns> true if the spin lock is acquired by specific thread. </returns>
+            
+             <param name="ownerId">Owner Id that request is using to check for spinlock ownership</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.TryAcquire(System.Int32)">
+            
+             <summary>
+                 Try to acquire the spin lock. Always return immediately.
+             </summary>
+             <returns> true if the spin lock is acquired. </returns>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.Acquire(System.Int32)">
+            
+             <summary>
+                Acquire a lock
+             </summary>
+            
+             <param name="ownerId">Owner Id that request is using to acquire spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.Release(System.Int32)">
+            
+             <summary>
+                Release a lock
+             </summary>
+            
+             <param name="ownerId">Spinlock owner</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLockBase.SpinToAcquire(System.Int32)">
+            
+             <summary>
+                Spin until we can actually acquire spinlock
+             </summary>
+            
+             <param name="ownerId">Owner Id that request is using to acquire spinlock</param>
+            
+        </member>
+        <member name="F:System.Threading.SpinLockBase.ownerId">
+            <summary> Thread owner </summary>
+        </member>
+        <member name="F:System.Threading.SpinLockBase.type">
+            <summary>Type of a spinlock</summary>
+        </member>
+        <member name="P:System.Threading.SpinLockBase.Type">
+            
+             <summary>
+                 Type of a spinlock
+            </summary>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.Acquire">
+            
+             <summary>
+                 Acquire spinlock
+             </summary>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.Acquire(System.Int32)">
+            
+             <summary>
+                 Acquire spinlock
+             </summary>
+            
+             <param name="threadId">Thread's Id acquiring spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.Acquire(System.Threading.Thread)">
+            
+             <summary>
+                 Acquire spinlock
+             </summary>
+            
+             <param name="thread">Thread acquiring spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.Release">
+            
+             <summary>
+                 Release spinlock
+             </summary>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.Release(System.Int32)">
+            
+             <summary>
+                 Release spinlock
+             </summary>
+            
+             <param name="threadId">Thread's Id releasing spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.Release(System.Threading.Thread)">
+            
+             <summary>
+                 Release spinlock
+             </summary>
+            
+             <param name="thread">Thread releasing spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.TryAcquire">
+            
+             <summary>
+                 Try to acquire the spin lock. Always return immediately. 
+             </summary>
+            
+             <returns> true if the spin lock is acquired. </returns>
+        </member>
+        <member name="M:System.Threading.SpinLock.TryAcquire(System.Threading.Thread)">
+            
+             <summary>
+                 Try to acquire the spin lock. Always return immediately. 
+             </summary>
+            
+             <returns> true if the spin lock is acquired. </returns>
+            
+             <param name="thread">Thread acquiring spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.IsHeldBy(System.Threading.Thread)">
+             
+             <summary>
+                 Method to find out if spinlock is held by specified thread
+             </summary>
+             <returns> true if the spin lock is acquired. </returns>
+            
+             <param name="thread">Thread to verify possible spinlock's ownership</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.IsHeldBy(System.Int32)">
+             
+             <summary>
+                 Method to find out if spinlock is held by specified thread
+             </summary>
+             <returns> true if the spin lock is acquired. </returns>
+            
+             <param name="threadId">Thread's Id to verify possible spinlock's ownership</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.AssertHeldBy(System.Threading.Thread)">
+             
+             <summary>
+                 Assert thatf spinlock is held by specified thread
+             </summary>
+            
+             <param name="thread">Thread to verify possible spinlock's ownership</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.AssertHeldBy(System.Int32)">
+             
+             <summary>
+                 Assert thatf spinlock is held by specified thread
+             </summary>
+            
+             <param name="threadId">Thread's Id to verify possible spinlock's ownership</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.TryAcquireInternal(System.Threading.Thread,System.Int32)">
+             
+             <summary>
+                 Try to acquire the spin lock. Always return immediately. 
+             </summary>
+             <returns> true if the spin lock is acquired. </returns>
+            
+             <param name="thread">Thread acquiring spinlock</param>
+             <param name="threadId">Thread's Id acquiring spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.AcquireInternal(System.Threading.Thread,System.Int32)">
+             
+             <summary>
+                 Acquire the spin lock. 
+             </summary>
+            
+             <param name="thread">Thread acquiring spinlock</param>
+             <param name="threadId">Thread's Id acquiring spinlock</param>
+            
+        </member>
+        <member name="M:System.Threading.SpinLock.ReleaseInternal(System.Threading.Thread,System.Int32)">
+             
+             <summary>
+                 Release the spin lock. 
+             </summary>
+            
+             <param name="thread">Thread releasing spinlock</param>
+             <param name="threadId">Thread's Id releasing spinlock</param>
+            
+        </member>
+        <member name="F:System.Threading.SpinLock.baseLock">
+            <summary> Actual mechanism implementing spinlock</summary>
+        </member>
+        <member name="T:System.Threading.PreemptionLock">
+            
+        </member>
+        <member name="T:System.Finalizer">
+             <summary>
+             Finalizers are allocated for allocated objects that are finalizable.
+            
+             BUGBUG: During a garbage collection it should be possible to coalesce
+             several FinalizerTable entries into a single entry. In order to
+             facilitate this all indexes are currently allocated with reference to
+             the first table. It should also be possible to compact the tables.
+             </summary>
+        </member>
+        <member name="M:System.Finalizer.RegisterCandidate(System.Object)">
+            <summary>
+            Allocate a Finalizer entry for this object.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.SuppressCandidate(System.Object)">
+            <summary>
+            Loop through the candidate structure and zero a reference to
+            this object.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.Shutdown">
+            <summary>
+            Moves all candidates to the run queue.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.WaitForPending">
+            <summary>
+            Wait until the finalization queue has been emptied.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.CompactTables">
+            <summary>
+            BUGBUG: TODO
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.StartFinalizerThread">
+            <summary>
+            Start the finalization thread.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.ThreadLoop">
+            <summary>
+            The thread loops doing this work forever.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.PrepareCollectFinalizers">
+            <summary>
+            This method must be called to prepare the Finalizer data
+            structures for a collection.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.ReleaseCollectFinalizers">
+            <summary>
+            Finish up after a collection.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.VisitBootstrapData(System.GCs.DirectReferenceVisitor)">
+            <summary>
+            Ensure that any references from the Bootstrap space into the
+            managed heap are traced during a collection avoiding dangling
+            pointers.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.VisitAllRunFinalizer(System.GCs.DirectReferenceVisitor,System.Boolean,System.Boolean)">
+            <summary>
+            This method visits all the objects in the RunFinalizer structures.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.ResurrectCandidates(System.GCs.DirectReferenceVisitor,System.GCs.DirectReferenceVisitor,System.Boolean)">
+            <summary>
+            Find all candidates that have become unreachable.
+            </summary>
+        </member>
+        <member name="M:System.Finalizer.GetObjectFromRun">
+            <summary>
+            Find and remove an object from the to be run list.  Remembers where
+            the last object was found as a starting point for finding the next
+            object.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.finalizerThread">
+            <summary>
+            The thread that runs finalizers.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.madeRunnable">
+            <summary>
+            Did the current collection make any finalizers runnable?
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.running">
+            <summary>
+            Is the finalization thread running?
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.CandidateTable">
+            <summary>
+            The table of Finalization Candidates.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.CandidateTableShadow">
+            <summary>
+            A shadow of the candidates table (hidden from GC).
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.RunFinalizerTable">
+            <summary>
+            The table of objects to have finalizers run Candidates.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.WorkExistsForFinalizerThread">
+            <summary>
+            Controls sleeping on the finalizer thread.  The GC signals the
+            finalizer thread when there is work to do.  The finalizer thread
+            sleeps when there is no work remaining.  The use of an event prevents
+            the GC from being blocked.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.WaitForPendingShouldReturn">
+            <summary>
+            Controls sleeping in calls to WaitForPendingFinalizers.  The
+            finalizer thread signals when work is complete.  The GC resets the
+            signal when there is more work.  The use of an event should prevent
+            deadlocks.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.RunFinalizerTableShadow">
+            <summary>
+            A shadow of the run finalizer table (hidden from GC).
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.lastCandidateIndex">
+            <summary>
+            This is one more than the highest index in use.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.freeCandidateLink">
+            <summary>
+            This is a link into the free list of entries in the CandidateTable.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.spinLock">
+            <summary>
+            SpinLock to serialize modifications to the CandidateTable.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.LastTableRun">
+            <summary>
+            This is the index of the table from which the last finalizer was run.
+            Used as an optimization in finding the next finalizer to run.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.LastEntryRun">
+            <summary>
+            This is the index of the finalizer (in LastTableRun) that was last
+            run.  Used as an optimization in finding the next finalizer to run.
+            </summary>
+        </member>
+        <member name="F:System.Finalizer.WaitingToRun">
+            <summary>
+            The number of finalizers waiting to run
+            </summary>
+        </member>
+        <member name="T:System.StackHeight">
+             <summary>
+             Abstraction for information about the stack height.  This is currently
+             only used by the logging undo code for determining if a pointer write
+             occurred in stack space allocated after the tryall section began.
+            
+             StackHeight does not record information about the call stack.
+            
+             The current implementation is hardwired to a stack model where the stack
+             is a single contiguous piece of memory that grows by putting smaller
+             values into the stack pointer.
+             </summary>
+        </member>
+        <member name="M:System.StackHeight.#ctor(System.UIntPtr)">
+            <summary>
+            Interpret the pointer as a stack pointer to determine the stack
+            height.
+            </summary>
+            <param name="stackPointer">Pointer into the stack.</param>
+            <returns>The stack height of the location pointed to by the
+            argument.</returns>
+        </member>
+        <member name="M:System.StackHeight.op_Explicit(System.UIntPtr)~System.StackHeight">
+            <summary>
+            Interpret the pointer as a stack pointer to determine the stack
+            height.
+            </summary>
+            <param name="stackPointer">Pointer into the stack.</param>
+            <returns>The stack height of the location pointed to by the
+            argument.</returns>
+        </member>
+        <member name="M:System.StackHeight.GetStackHeight">
+            <summary>
+            Get the current stack height.
+            </summary>
+            <returns>The current stack height.</returns>
+        </member>
+        <member name="M:System.StackHeight.Deeper(System.StackHeight,System.StackHeight)">
+            <summary>
+            Check if the first stack height represents a deeper location on the
+            stack.
+            </summary>
+            <param name="first">The first stack height to compare.</param>
+            <param name="second">The second stack height to compare.</param>
+            <returns>True iff the first height is deeper in the stack than the
+            second height.</returns>
+        </member>
+        <member name="F:System.StackHeight.stackPointer">
+            <summary>
+            The value of the stack pointer when the stack height was taken.
+            </summary>
+        </member>
+        <member name="T:System.WeakReference">
+            <summary>
+            This class implements weak references.
+            
+            When a new weak references is allocated it is atomically linked 
+            onto a singly linked list of weak references.
+            
+            During a garbage collection this chain is traversed and references 
+            are updated or cleared.
+            
+            There are two modes of processing weak references.
+            
+                1. Ignoring 'Long' References that track resurrection and
+                   only updating references that should be cleared when the
+                   object is finalized.
+                2. Updating all reference types.
+               
+            In any collection at least the second method must be called to 
+            ensure no dangling pointers are created.
+            
+            BUGBUG: At the moment it is possible to have a weak reference that
+            is unlinked from the chain and then resurrected as reachable from 
+            a finalizable object!
+            </summary>
+        </member>
+        <member name="F:System.WeakReference.headRef">
+            <summary>
+            The dummy head reference to simplify traversal logic.
+            </summary>
+        </member>
+        <member name="F:System.WeakReference.objPtr">
+            <summary>
+            The weak reference to the object
+            </summary>
+        </member>
+        <member name="F:System.WeakReference.nextRef">
+            <summary>
+            The next reference on the chain.
+            </summary>
+        </member>
+        <member name="F:System.WeakReference.trackResurrection">
+            <summary>
+            Does this reference stay alive during finalization of the target?
+            </summary>
+        </member>
+        <member name="M:System.WeakReference.#ctor(System.Object)">
+            <summary>
+            Construct a 'Short' weak reference.
+            </summary>
+        </member>
+        <member name="M:System.WeakReference.#ctor(System.Object,System.Boolean)">
+            <summary>
+            Construct a weak reference and link it onto the chain, 
+            specifying if it is to track an object through finalization.
+            </summary>
+        </member>
+        <member name="M:System.WeakReference.Process(System.GCs.DirectReferenceVisitor,System.Boolean,System.Boolean)">
+            <summary>
+            This method performs the processing of weak references for GC.
+            
+            It essentially walks a list unlinking weak reference objects 
+            that are not live and updating references as necessary.
+            </summary>
+        </member>
+        <member name="M:System.WeakReference.#cctor">
+            <summary>
+            Class constructor, set up dummy head.
+            </summary>
+        </member>
+        <member name="P:System.WeakReference.IsAlive">
+            <summary>
+            Is the object alive?
+            </summary>
+        </member>
+        <member name="P:System.WeakReference.Target">
+            <summary>
+            Get or set target of the object. Null if the object has been
+            collected.
+            </summary>
+        </member>
+        <member name="P:System.WeakReference.TrackResurrection">
+            <summary>
+            Should this reference track objects through finalization?
+            </summary>
+        </member>
+        <member name="T:System.GCs.GCEvent">
+            <summary>
+            Enumeration of Event Types.
+            </summary>
+        </member>
+        <member name="T:System.GCs.CollectorStatistics">
+            <summary>
+            Manages statistics from the collector. Intended for communication
+            with the scheduler.
+            </summary>
+        </member>
+        <member name="F:System.GCs.CollectorStatistics.CounterFrequency">
+            <summary>
+            The number of counter values per microsecond.
+            </summary>
+        </member>
+        <member name="F:System.GCs.CollectorStatistics.StartCount">
+            <summary>
+            The counter value at the initialization of statistics.
+            </summary>
+        </member>
+        <member name="M:System.GCs.CollectorStatistics.Initialize">
+            <summary>
+            Initialize the statistics information
+            </summary>
+        </member>
+        <member name="M:System.GCs.CollectorStatistics.Summary">
+            <summary>
+            Print out a summary
+            </summary>
+        </member>
+        <member name="M:System.GCs.CollectorStatistics.Event(System.GCs.GCEvent)">
+            <summary>
+            A GC event.
+            </summary>
+        </member>
+        <member name="M:System.GCs.CollectorStatistics.Event(System.GCs.GCEvent,System.Int64)">
+            <summary>
+            A GC event.
+            </summary>
+        </member>
+        <member name="P:System.GCs.CollectorStatistics.PerformanceCounter">
+            <summary>
+            The current value of the counter.
+            </summary>
+        </member>
+        <member name="T:System.GCs.StopTheWorldPhase">
+            <summary>
+            Identifies the current collection phase
+            </summary>
+        </member>
+        <member name="F:System.GCs.StopTheWorldGCData.CurrentPhase">
+            <summary>
+            The current state of the collector.
+            </summary>
+        </member>
+    </members>
+</doc>

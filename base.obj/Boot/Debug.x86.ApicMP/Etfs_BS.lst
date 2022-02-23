@@ -1,0 +1,402 @@
+Microsoft (R) Macro Assembler Version 8.00.50727.762	    02/23/22 18:37:45
+Etfs_BS.asm						     Page 1 - 1
+
+
+				;;
+				;;  Copyright (c) Microsoft Corporation.  All rights reserved.
+				;;
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Concerns
+				;  1 - there is no error checking on the int13 calls
+				;  2 - we assume that the block size is 2048 bytes
+				;  3 - this cannot handle large root directories (>64KB)
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Constants
+
+ = 7C00				BootSecOrigin       EQU     07c00h      ; the BIOS puts the boot sector at 07c0h:0000 == 0000:7c00h
+ =-000C				StackOffset         EQU     -12         ; we will put the stack a small bit below it (we hardly use the stack, so it is safe...)
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Macros
+
+				JMPF16 MACRO SEG:REQ,OFF:REQ
+				        db      0eah
+				        dw      OFF
+				        dw      SEG
+				ENDM        
+
+				        
+				;;;;;;;;;;;;;;;;;;;;
+				; Directives
+
+				.model tiny
+				.686p
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Begin Code segment
+
+ 0000				_TEXT SEGMENT use16 ; 16-bit code segment
+ 0000				.code
+				ORG     0h                          ; ETFS puts us at 07c0h:0000
+
+ 0000				start:
+				    JMPF16  07c0h,OFFSET Step1
+ 0000  EA		     1	        db      0eah
+ 0001  0005 R		     1	        dw      OFFSET Step1
+ 0003  07C0		     1	        dw      07c0h
+				        
+ 0005				Step1:    ; set stack and data segments
+ 0005  8C C9			    mov     cx, cs
+ 0007  8E D1			    mov     ss, cx
+ 0009  BC 7BF4			    mov     sp, BootSecOrigin + StackOffset
+ 000C  8E C1			    mov     es, cx
+ 000E  8E D9			    mov     ds, cx
+ 0010  8B EC			    mov     bp, sp
+
+ 0012				Step2:    ; Save the boot drive (dl holds it on boot)
+ 0012  88 16 01B6 R		    mov     [CDDrive], dl
+
+ 0016				Step3:    ; Clear the Screen
+ 0016  B8 0002			    mov     ax, 02h
+ 0019  CD 10			    int     010h
+
+				        ;; Configure GS to point to the text-mode video console.
+ 001B  B8 B800			    mov     ax, 0b800h
+ 001E  8E E8			    mov     gs, ax
+
+				        ;; Write 'A' to position 0.
+ 0020  B8 4F41			    mov     ax, 04f41h
+ 0023  65: A3 0000		    mov     gs:[0], ax
+				       
+				        ;; Write 'B' to position 1.
+ 0027  B8 4F42			    mov     ax, 04f42h
+ 002A  65: A3 0002		    mov     gs:[2], ax
+				       
+ 002E				Step4:    ; Load the PVD to get the Logical Block Size
+ 002E  66| B8 00000010		    mov     eax, 10h                ; the PVD is in the 16th block
+ 0034  BB 2000			    mov     bx, 2000h
+ 0037  8E C3			    mov     es, bx                  ; transfer address = 2000:0000
+ 0039  B9 0001			    mov     cx, 1
+ 003C  E8 0121			    call    ReadDisk
+ 003F  26: A1 0080		    mov     ax, es:128              ; block size is at offset 128
+ 0043  A3 01B7 R		    mov     [BlockSize], ax
+
+				        ;; Write 'C' to position 2.
+ 0046  B8 4F43			    mov     ax, 04f43h
+ 0049  65: A3 0004		    mov     gs:[4], ax
+				       
+ 004D				Step5:    ; Find the Joliet SVD, and then find the Root Directory Information
+ 004D  66| B8 00000010		    mov     eax, 10h                ; start with the PVD, even though it will fail
+ 0053				GetNextVD:
+ 0053  66| 50			    push    eax
+ 0055  B9 0001			    mov     cx, 1
+ 0058  E8 0105			    call    ReadDisk
+ 005B  BE 01C3 R		    mov     si, OFFSET SVDesc       ; [ds:si] points to the desired first 6 bytes of this VD
+ 005E  33 FF			    xor     di, di                  ; [es:di] points to the start of what we just read
+ 0060  B9 0006			    mov     cx, 6
+ 0063  F3/ A6			    repe    cmpsb
+ 0065  74 10			    je      FoundSVD
+ 0067  26: A0 0000		    mov     al, es:0000h
+ 006B  3C FF			    cmp     al, 0FFh                ; is this the last Volume Descriptor?
+ 006D  0F 84 010C		    je      SVDError
+ 0071  66| 58			    pop     eax
+ 0073  66| 40			    inc     eax
+ 0075  EB DC			    jmp     GetNextVD               ; try another VD
+
+ 0077				FoundSVD:                           ; need to make sure this is a Joliet SVD - we need 025h, 02Fh, 045h in [88,89,90]
+ 0077  BE 01C9 R		    mov     si, OFFSET JolietSig    ; [ds:si] points to the Joliet Signature
+ 007A  BF 0058			    mov     di, 88                  ; [es:di] points to the escape sequence field of the current SVD
+ 007D  B9 0003			    mov     cx, 3
+ 0080  F3/ A6			    repe    cmpsb
+ 0082  74 06			    je      FoundJoliet
+ 0084  66| 58			    pop     eax
+ 0086  66| 40			    inc     eax
+ 0088  EB C9			    jmp     GetNextVD
+
+ 008A				FoundJoliet:
+				        ;; Write 'D' to position 3.
+ 008A  B8 4F44			    mov     ax, 04f44h
+ 008D  65: A3 0006		    mov     gs:[6], ax
+				       
+ 0091  66| 26: A1 009E		    mov     eax, es:158             ; now get the rootstart and rootsize fields
+ 0096  66| A3 01AE R		    mov     [RootStart], eax
+ 009A  66| 26: A1 00A6		    mov     eax, es:166
+ 009F  66| A3 01B2 R		    mov     [RootSize], eax
+
+ 00A3				Step6:    ; Load the Root Directory (SVD), and search it for SINGLDR
+ 00A3  66| 0F B7 1E 01B7 R	    movzx   ebx, [BlockSize]
+ 00A9  66| F7 F3		    div     ebx                     ; eax has # blocks in root directory.  Round up if necessary:
+ 00AC  66| 83 FA 00		    cmp     edx, 0
+ 00B0  74 04			    je      ReadyToLoad
+ 00B2  66| 83 C0 01		    add     eax, 1
+ 00B6				ReadyToLoad:                        ; we're going to assume that the root directory will not be bigger than 64K
+ 00B6  66| 8B C8		    mov     ecx, eax
+ 00B9  66| A1 01AE R		    mov     eax, [RootStart]
+ 00BD  E8 00A0			    call    ReadDisk
+
+ 00C0  66| 33 DB		    xor     ebx, ebx                ; bx will hold the start of the current entry
+ 00C3				CheckEntry:
+ 00C3  8B FB			    mov     di, bx
+ 00C5  83 C7 19			    add     di, 25                  ; let's check the file flags - should be 00
+ 00C8  26: 8A 05		    mov     al, es:[di]
+ 00CB  3C 00			    cmp     al, 0
+ 00CD  75 11			    jne     PrepNextEntry
+				                                    ; file flags are good.  now check the file identifier:
+ 00CF  BE 01CC R		    mov     si, OFFSET Stage2FileSize
+ 00D2  33 C9			    xor     cx, cx
+ 00D4  8A 0C			    mov     cl, ds:[si]             ; first byte is file name length
+ 00D6  83 C1 02			    add     cx, 2                   ; add two because we check the length byte of the directory entry and the padding byte, too
+ 00D9  83 C7 07			    add     di, 7                   ; now es:di points to the file length/name field, and ds:si has our desired content
+ 00DC  F3/ A6			    repe    cmpsb
+ 00DE  74 19			    je      FoundEntry
+
+ 00E0				PrepNextEntry:
+ 00E0  33 C9			    xor     cx, cx                  ; increment bx by adding the byte value in es:[bx]
+ 00E2  26: 8A 0F		    mov     cl, es:[bx]             ; if es:[bx]==0 and ebx!= [RootSize], then we are in a padding zone
+ 00E5  83 F9 00			    cmp     cx, 0                   ; designed to prevent a directory entry from spilling over a block.
+ 00E8  75 03			    jne     LoadNext                ; Should this be the case, we will increment bx until es:[bx] is not null
+ 00EA  43			    inc     bx
+ 00EB  EB F3			    jmp     PrepNextEntry
+
+ 00ED				LoadNext:
+ 00ED  03 D9			    add     bx, cx
+ 00EF  66| 3B 1E 01B2 R		    cmp     ebx, [RootSize]
+ 00F4  7C CD			    jl      CheckEntry
+ 00F6  E9 008C			    jmp     FileNotFoundError
+
+ 00F9				FoundEntry:
+				        ;; Write 'E' to position 5.
+ 00F9  B8 4F45			    mov     ax, 04f45h
+ 00FC  65: A3 0008		    mov     gs:[8], ax
+				       
+ 0100  66| 26: 8B 47 02		    mov     eax, es:[bx+2]
+ 0105  66| A3 01B9 R		    mov     [FileStart], eax
+ 0109  66| 26: 8B 47 0A		    mov     eax, es:[bx+10]
+ 010E  66| A3 01BD R		    mov     [FileSize], eax
+				    
+ 0112				Step7:    ; Load the file to 57c0:0000
+ 0112  B9 57C0			    mov     cx, 057c0h
+ 0115  8E C1			    mov     es, cx
+ 0117  66| 0F B7 1E 01B7 R	    movzx   ebx, [BlockSize]
+ 011D  66| F7 F3		    div     ebx                     ; eax has # blocks in root directory
+ 0120  66| 83 FA 00		    cmp     edx, 0                  ; on carry, there will be one more block
+ 0124  74 04			    je      ReadyToLoadFile
+ 0126  66| 83 C0 01		    add     eax, 1
+
+ 012A				ReadyToLoadFile:
+ 012A  66| 8B C8		    mov     ecx, eax
+ 012D  66| A1 01B9 R		    mov     eax, [FileStart]
+ 0131  E8 002C			    call    ReadDisk
+
+				        ;; Write 'F' to position 6.
+ 0134  B8 4F46			    mov     ax, 04f46h
+ 0137  65: A3 000A		    mov     gs:[10], ax
+				        
+ 013B				Step8:    ; Now we need to set up the stack for SINGLDR and do a jump
+ 013B  33 C9			    xor     cx, cx                  ; Always point the stack to 0000:7c00h - 12
+ 013D  8E D1			    mov     ss, cx
+ 013F  BC 7BF4			    mov     sp, BootSecOrigin + StackOffset
+
+ 0142  66| 0F B6 16 01B6 R	    movzx   edx, [CDDrive]
+ 0148  66| 52			    push    edx                     ; SINGLDR will need to know the boot drive #
+ 014A  66| 68 00004344		    pushd   04344h                  ; CD boot signature
+ 0150  68 01AC R		    pushw   offset infloop          ; return address = "infloop", which is the infinite loop
+ 0153  0E			    push    cs
+				    
+				        ;; Write 'G' to position 7.
+ 0154  B8 4F47			    mov     ax, 04f47h
+ 0157  65: A3 000C		    mov     gs:[12], ax
+				        
+ 015B  EA			    db      0EAh                    ; emit a long jump to 5000:7c00
+ 015C  50007C00			    dd      50007c00h
+
+				;;;;;;;;;;;;;;;;;;;;
+				; ReadDisk
+				;
+				; Inputs:       eax     = Block Number
+				;               cx      = number of blocks to read (warning: cx > 32 will cause overflow)
+				;               es      = destination segment
+				; Assumptions:  1 - assumes request will not cause overflow of es:00 (limit on # sectors)
+				;               2 - assumes int13 extensions available
+
+ 0160				ReadDisk PROC NEAR
+ 0160  66| 60			    pushad
+ 0162  8A 16 01B6 R		    mov     dl, [CDDrive]           ; set the drive
+				                
+ 0166  66| 6A 00		    pushd   00
+ 0169  66| 50			    push    eax                     ; push 64-bit block number (top half always null)
+
+ 016B  06			    push    es
+ 016C  6A 00			    pushw   00h                     ; push transfer address
+
+ 016E  51			    push    cx                      ; # sectors
+ 016F  6A 10			    pushw   0010h                   ; this request packet is 16 bytes
+ 0171  B4 42			    mov     ah,42h                  ; extended read
+ 0173  8B F4			    mov     si,sp                   ; ds:si = address of params
+ 0175  CD 13			    int     13h                     ; perform the read
+
+ 0177  83 C4 10			    add     sp, 10h                 ; clean the stack and return
+ 017A  66| 61			    popad
+ 017C  C3			    ret
+ 017D				ReadDisk ENDP
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Error Routines (these are jump points that never return)
+
+ 017D				SVDError:
+ 017D  BE 01DC R		    mov     si, offset SvdFailMsg      
+ 0180  E8 000A			    call    PrintString
+ 0183				@@: 
+ 0183  EB FE			    jmp @b
+				        
+ 0185				FileNotFoundError:
+ 0185  BE 01E9 R		    mov     si, offset FileNotFoundMsg
+ 0188  E8 0002			    call    PrintString
+ 018B				@@: 
+ 018B  EB FE			    jmp @b
+				        
+ 018D				PrintString:
+ 018D				psnext:
+ 018D  AC			    lodsb
+ 018E  0A C0			    or  al, al
+ 0190  74 19			    jz  done
+
+				;;; Write directly to memory.
+ 0192  B4 47			    mov     ah, 047h
+ 0194  8B 1E 01C1 R		    mov     bx, [Cursor]
+ 0198  65: 89 07		    mov     gs:[bx], ax
+ 019B  83 C3 02			    add     bx, 2
+ 019E  89 1E 01C1 R		    mov     [Cursor], bx
+				        
+ 01A2  BB 0007			    mov     bx, 07h                 ; normal attribute
+ 01A5  B4 0E			    mov     ah, 0eh                 ; default print 1 char
+ 01A7  CD 10			    int 10h
+ 01A9  EB E2			    jmp psnext
+ 01AB				done:
+ 01AB  C3			    ret        
+
+ 01AC				infloop:
+ 01AC  EB FE			    jmp     infloop
+				        
+				;;;;;;;;;;;;;;;;;;;;
+				; Global Vars
+
+ 01AE 00000000			    RootStart       DD  0
+ 01B2 00000000			    RootSize        DD  0
+ 01B6 00			    CDDrive         DB  0
+ 01B7 0000			    BlockSize       DW  0
+ 01B9 00000000			    FileStart       DD  0
+ 01BD 00000000			    FileSize        DD  0
+ 01C1 0280			    Cursor          DW  640
+				    
+				;;;;;;;;;;;;;;;;;;;;
+				; String Constants
+
+ 01C3 02 43 44 30 30 31		    SVDesc          DB  02h, "CD001"
+ 01C9 25 2F 45			    JolietSig       DB  25h, 2fh, 45h                               ; this is the value of the escape sequence for a Joliet CD 
+				                                                                    ;   we'll use it as the signature...
+ 01CC 0E			    Stage2FileSize  DB  OFFSET Stage2FilePad - OFFSET Stage2File
+ 01CD 00 53 00 69 00 6E		    Stage2File      DB  0,"S",0,"i",0,"n",0,"g",0,"l",0,"d",0,"r"   ; in unicode, this is how our filename will appear
+       00 67 00 6C 00 64
+       00 72
+ 01DB 00			    Stage2FilePad   DB  0
+ 01DC 0A 0D 53 56 44 20		    SvdFailMsg      DB  10,13,"SVD Failed",0
+       46 61 69 6C 65 64
+       00
+ 01E9 0A 0D 46 69 6C 65		    FileNotFoundMsg DB  10,13,"File not found",0  
+       20 6E 6F 74 20 66
+       6F 75 6E 64 00
+
+				;;;;;;;;;;;;;;;;;;;;
+				; Boot Sector Signature
+				    ORG     510
+ 01FE  AA55			    DW      0AA55h
+
+				end start
+Microsoft (R) Macro Assembler Version 8.00.50727.762	    02/23/22 18:37:45
+Etfs_BS.asm						     Symbols 2 - 1
+
+
+
+
+Macros:
+
+                N a m e                 Type
+
+JMPF16 . . . . . . . . . . . . .	Proc
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_TEXT  . . . . . . . . . . . . .	16 Bit	 0200	  Word	  Public  'CODE'	
+_DATA  . . . . . . . . . . . . .	16 Bit	 0000	  Word	  Public  'DATA'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ReadDisk . . . . . . . . . . . .	P Near	 0160	  _TEXT	Length= 001D Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0001h	 
+@code  . . . . . . . . . . . . .	Text   	 DGROUP
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+BlockSize  . . . . . . . . . . .	Word	 01B7	  _TEXT	
+BootSecOrigin  . . . . . . . . .	Number	 7C00h	 
+CDDrive  . . . . . . . . . . . .	Byte	 01B6	  _TEXT	
+CheckEntry . . . . . . . . . . .	L Near	 00C3	  _TEXT	
+Cursor . . . . . . . . . . . . .	Word	 01C1	  _TEXT	
+FileNotFoundError  . . . . . . .	L Near	 0185	  _TEXT	
+FileNotFoundMsg  . . . . . . . .	Byte	 01E9	  _TEXT	
+FileSize . . . . . . . . . . . .	DWord	 01BD	  _TEXT	
+FileStart  . . . . . . . . . . .	DWord	 01B9	  _TEXT	
+FoundEntry . . . . . . . . . . .	L Near	 00F9	  _TEXT	
+FoundJoliet  . . . . . . . . . .	L Near	 008A	  _TEXT	
+FoundSVD . . . . . . . . . . . .	L Near	 0077	  _TEXT	
+GetNextVD  . . . . . . . . . . .	L Near	 0053	  _TEXT	
+JolietSig  . . . . . . . . . . .	Byte	 01C9	  _TEXT	
+LoadNext . . . . . . . . . . . .	L Near	 00ED	  _TEXT	
+PrepNextEntry  . . . . . . . . .	L Near	 00E0	  _TEXT	
+PrintString  . . . . . . . . . .	L Near	 018D	  _TEXT	
+ReadyToLoadFile  . . . . . . . .	L Near	 012A	  _TEXT	
+ReadyToLoad  . . . . . . . . . .	L Near	 00B6	  _TEXT	
+RootSize . . . . . . . . . . . .	DWord	 01B2	  _TEXT	
+RootStart  . . . . . . . . . . .	DWord	 01AE	  _TEXT	
+SVDError . . . . . . . . . . . .	L Near	 017D	  _TEXT	
+SVDesc . . . . . . . . . . . . .	Byte	 01C3	  _TEXT	
+StackOffset  . . . . . . . . . .	Number	 -000Ch	  
+Stage2FilePad  . . . . . . . . .	Byte	 01DB	  _TEXT	
+Stage2FileSize . . . . . . . . .	Byte	 01CC	  _TEXT	
+Stage2File . . . . . . . . . . .	Byte	 01CD	  _TEXT	
+Step1  . . . . . . . . . . . . .	L Near	 0005	  _TEXT	
+Step2  . . . . . . . . . . . . .	L Near	 0012	  _TEXT	
+Step3  . . . . . . . . . . . . .	L Near	 0016	  _TEXT	
+Step4  . . . . . . . . . . . . .	L Near	 002E	  _TEXT	
+Step5  . . . . . . . . . . . . .	L Near	 004D	  _TEXT	
+Step6  . . . . . . . . . . . . .	L Near	 00A3	  _TEXT	
+Step7  . . . . . . . . . . . . .	L Near	 0112	  _TEXT	
+Step8  . . . . . . . . . . . . .	L Near	 013B	  _TEXT	
+SvdFailMsg . . . . . . . . . . .	Byte	 01DC	  _TEXT	
+done . . . . . . . . . . . . . .	L Near	 01AB	  _TEXT	
+infloop  . . . . . . . . . . . .	L Near	 01AC	  _TEXT	
+psnext . . . . . . . . . . . . .	L Near	 018D	  _TEXT	
+start  . . . . . . . . . . . . .	L Near	 0000	  _TEXT	
+
+	   0 Warnings
+	   0 Errors

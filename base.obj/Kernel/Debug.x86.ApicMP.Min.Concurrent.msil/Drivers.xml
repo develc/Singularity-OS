@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Drivers</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Drivers.PseudoBus">
+      <summary>
+Bus for pseudo-devices.  A pseudo-device is typically a
+layer in I/O stack that may or may not be associated
+with one or more physical devices.
+</summary>
+    </member>
+  </members>
+</doc>

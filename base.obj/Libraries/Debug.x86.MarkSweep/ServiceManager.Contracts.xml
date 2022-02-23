@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ServiceManager.Contracts</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.ServiceManager.ServiceActivationMode">
+      <summary>
+This enumeration defines the activation mode for services, which controls when
+the Service Manager starts services.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceActivationMode.AlwaysActive">
+      <summary>
+In this mode, the Service Manager will always attempt to keep the service running.
+The StartService and StopService control messages cannot be used to control these
+services.  The only way to stop a service that uses this activation mode is to
+disable the service (set IsAdministrativelyDisabled to true), or to delete the service.
+If a service process terminates unexpectedly, the Service Manager may attempt to restart
+the service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceActivationMode.Manual">
+      <summary>
+In this mode, management clients control the state of the service.  When the service
+is created, the Service Manager leaves the service in the Stopped state.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceActivationMode.Demand">
+      <summary>
+In this mode, the Service Manager will start the service, if necessary, when clients
+attempt to connect to the service.  When the service is created, the Service Manager
+will not attempt to start the service.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.ServiceManager.ServiceConfig">
+      <summary>
+This structure describes all of the configuration parameters of a service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.ServiceName">
+      <summary>
+Specifies the name of the service.  This field is arbitrary; the Service Manager does not
+impose any interpretation on the service name.  It only serves to distinguish services.
+The field is case-sensitive.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.DisplayName">
+      <summary>
+Specifies the name to display to the user for this service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.ExecutableName">
+      <summary>
+Specifies the name of the executable (a manifest name).
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.ActivationMode">
+      <summary>
+Controls when the Service Manager starts the service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.IsAdministrativelyDisabled">
+      <summary>
+If this field is set to true, then this service has been administratively disabled.
+This allows administrators to disable a service, without affecting any other aspect
+of its configuration.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.MinProcesses">
+      <summary>
+Specifies the minimum number of processes that the Service Manager should create for this
+service.  If this field is 0, then the Service Manager will not create any processes for
+the service, until the Service Manager receives a Connect request.  Later, when demand
+for the service decreases, the Service Manager may stop the process (or processes) that
+it created.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.MaxProcesses">
+      <summary>
+Specifies the maximum number of processes that the Service Manager should create for
+this service.  If this field is 1, then the service is a singleton.  If this field is
+UnlimitedProcesses (-1), then the Service Manager will not limit the number of processes.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.MaxClientsPerProcess">
+      <summary>
+Specifies the maximum number of clients that each service process should handle.  If this
+field is 1, then there is a 1:1 relationship between service processes and clients.
+If this field is UnlimitedClientsPerProcess, then the Service Manager will not create more
+than one service process (per service).
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceConfig.MaxProcessAgeInSeconds">
+      <summary>
+The maximum age, in seconds, of each service process.  The Service Manager records the
+time when it created each service process.  When a process reaches the age specified by
+this field, the Service Manager will no longer route requests to that process.  Instead,
+it will route requests to an existing process (whose age limit has not yet been reached),
+or will create a new process, if needed.
+
+If this field is set to UnlimitedProcessAge, then the Service Manager will not perform
+service process aging.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessState.Running">
+      <summary>
+In this state, the service process is ready for use; the Service Manager
+will route client connection requests to the process.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessState.Stopping">
+      <summary>
+In this state, the Service Manager is stopping the service process.
+There may be important substates to consider, but this is the overall
+state of the service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessState.Defective">
+      <summary>
+In this state, the Service Manager considers this process to be defective.
+The Service Manager has (or will) close all channels to this process, and
+will not route any new client connections to the service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessState.Starting">
+      <summary>
+In this state, the Service Manager has created a new service process,
+and is waiting for the process to indicate that it has finished starting.
+The process must either indicate that it has finished starting by sending
+a StartSucceeded message, indicate that it failed to start by sending a
+StartFailed message.  If the service process does not send either of these
+messages within a reasonable period of time, then the Service Manager will
+mark the process as Defective.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.ServiceManager.ServiceStatus">
+      <summary>
+This structure describes the operational status of a service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceStatus.TotalActiveClients">
+      <summary>
+The total number of clients that are connect to the service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceStatus.TotalActiveProcesses">
+      <summary>
+The total number of processes that the Service Manager has created for this service.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessStatus.TotalConnects">
+      <summary>
+The total number of client connections that have ever been routed to this
+service process.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessStatus.TimeCreated">
+      <summary>
+The system time (actually, scheduler time) when the process was created.
+</summary>
+    </member>
+    <member name="F:Microsoft.Singularity.ServiceManager.ServiceProcessStatus.ActiveClientCount">
+      <summary>
+The number of clients that the Service Manager believes are being
+serviced by this process.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.ServiceManager.ServiceEventContract">
+      <summary>
+The Service Manager and service processes communicate using this contract.
+Service Manager holds the import side, the service the export side.
+The service sends notification events to the SM.
+</summary>
+    </member>
+  </members>
+</doc>

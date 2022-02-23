@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Drivers.Net</name>
+  </assembly>
+  <members>
+    <member name="T:Drivers.Net.EthernetAddress">
+      <summary>
+Structure representing an Ethernet address.
+</summary>
+    </member>
+    <member name="F:Drivers.Net.EthernetAddress.Length">
+      <summary>
+Length of an Ethernet address in bytes.
+</summary>
+    </member>
+    <member name="F:Drivers.Net.EthernetAddress.Broadcast">
+      <summary>
+Ethernet broadcast address.
+</summary>
+    </member>
+    <member name="F:Drivers.Net.EthernetAddress.Zero">
+      <summary>
+The all-zeros address.
+</summary>
+    </member>
+    <member name="F:Drivers.Net.EthernetAddress.Bridge">
+      <summary>
+Bridge Group Address.
+ Reserved by IEEE 802.1D, Table 7-9, 1998 Edition:
+...-00 is the Bridge Group Address, used for Spanning Tree Protocol
+</summary>
+    </member>
+    <member name="F:Drivers.Net.EthernetAddress.PAUSE">
+      <summary>
+Full Duplex PAUSE operation address.
+</summary>
+    </member>
+    <member name="M:Drivers.Net.EthernetAddress.#ctor(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+      <summary>
+Constructor.
+</summary>
+      <param name="pa0">Most significant byte</param>
+      <param name="pa1">Second most significant byte</param>
+      <param name="pa2" />
+      <param name="pa3" />
+      <param name="pa4" />
+      <param name="pa5">Least significant byte</param>
+    </member>
+    <member name="M:Drivers.Net.EthernetAddress.Parse(System.String,Drivers.Net.EthernetAddress@)">
+      <summary>
+Converts an string into an EthernetAddress instance.
+</summary>
+      <exception cref="ArgumentNullException">Thrown if
+<c>macString</c> is null.</exception>
+      <returns> <c>true</c> on success, <c>false</c> on failure.</returns>
+    </member>
+    <member name="T:Drivers.Net.NetworkBitConverter">
+      <summary>
+Converts host ordered integer base types to network
+ordered array of bytes, and vice-versa.
+</summary>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.ToInt16(System.Byte[],System.Int32)">
+      <returns>
+Returns a host-order 16-bit signed integer converted from
+two bytes in a byte array.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.ToUInt16(System.Byte[],System.Int32)">
+      <returns>
+Returns a host-order 16-bit unsigned integer converted from
+two bytes in a byte array.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.ToInt32(System.Byte[],System.Int32)">
+      <returns>
+Returns a host-order 32-bit signed integer converted from
+two bytes in a byte array.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.ToUInt32(System.Byte[],System.Int32)">
+      <returns>
+Returns a host-order 32-bit unsigned integer converted from
+two bytes in a byte array.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.ToInt64(System.Byte[],System.Int32)">
+      <returns>
+Returns a host-order 64-bit signed integer converted from
+two bytes in a byte array.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.ToUInt64(System.Byte[],System.Int32)">
+      <returns>
+Returns a host-order 64-bit unsigned integer converted from
+two bytes in a byte array.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.GetBytes(System.Int16)">
+      <returns>
+Returns network ordered bytes representing 16-bit signed integer.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.GetBytes(System.UInt16)">
+      <returns>
+Returns network ordered bytes representing 16-bit unsigned integer.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.GetBytes(System.Int32)">
+      <returns>
+Returns network ordered bytes representing 32-bit signed integer.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.GetBytes(System.UInt32)">
+      <returns>
+Returns network ordered bytes representing 32-bit unsigned integer.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.GetBytes(System.Int64)">
+      <returns>
+Returns network ordered bytes representing 64-bit signed integer.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.GetBytes(System.UInt64)">
+      <returns>
+Returns network ordered bytes representing 64-bit unsigned integer.
+</returns>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.PutBytes(System.Int16,System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+Convert a host-ordered 16-bit signed integer into network order
+and place result in a byte array.
+<param name="value"> Value to be placed into byte array.</param>
+<param name="dstBuffer"> Byte array to receive value.</param>
+<param name="dstOffset"> Offset in buffer to place value.
+</param>
+</summary>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.PutBytes(System.UInt16,System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+Convert a host-ordered 16-bit unsigned integer into network order
+and place result in a byte array.
+<param name="value"> Value to be placed into byte array.</param>
+<param name="dstBuffer"> Byte array to receive value.</param>
+<param name="dstOffset"> Offset in buffer to place value.
+</param>
+</summary>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.PutBytes(System.Int32,System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+Convert a host-ordered 32-bit signed integer into network order
+and place result in a byte array.
+<param name="value"> Value to be placed into byte array.</param>
+<param name="dstBuffer"> Byte array to receive value.</param>
+<param name="dstOffset"> Offset in buffer to place value.
+</param>
+</summary>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.PutBytes(System.UInt32,System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+Convert a host-ordered 32-bit unsigned integer into network order
+and place result in a byte array.
+<param name="value"> Value to be placed into byte array.</param>
+<param name="dstBuffer"> Byte array to receive value.</param>
+<param name="dstOffset"> Offset in buffer to place value.
+</param>
+</summary>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.PutBytes(System.Int64,System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+Convert a host-ordered 64-bit signed integer into network order
+and place result in a byte array.
+<param name="value"> Value to be placed into byte array.</param>
+<param name="dstBuffer"> Byte array to receive value.</param>
+<param name="dstOffset"> Offset in buffer to place value.
+</param>
+</summary>
+    </member>
+    <member name="M:Drivers.Net.NetworkBitConverter.PutBytes(System.UInt64,System.Byte[]!Microsoft.Contracts.NonNullType,System.Int32)">
+      <summary>
+Convert a host-ordered 64-bit unsigned integer into network order
+and place result in a byte array.
+<param name="value"> Value to be placed into byte array.</param>
+<param name="dstBuffer"> Byte array to receive value.</param>
+<param name="dstOffset"> Offset in buffer to place value.
+</param>
+</summary>
+    </member>
+  </members>
+</doc>

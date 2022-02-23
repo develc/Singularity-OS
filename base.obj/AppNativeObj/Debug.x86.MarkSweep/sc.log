@@ -1,0 +1,97 @@
+# Name = [sc]
+# obj  = [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc.obj]
+# info = [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc_info.obj]
+# super= [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc_superObj.obj]
+# mpdb = [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeImage\Debug.x86.MarkSweep\sc.x86.pdb]
+# mname= [sc.x86]
+# mpath= [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeImage\Debug.x86.MarkSweep\sc.x86]
+# map  = [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc.map]
+# log  = [C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc.log]
+# target = 01/01/0001 00:00:00
+# newest = 23/02/2022 18:42:02
+# bartok = C:\Users\cc\source\repos\Singularity-OS\base\Build\x86_x86\BARTOK\DEBUG\CLR\bartok.exe
+# Bartok Options:
+#    /Singularity
+#    /Verbosity:silence
+#    /GCInlineArrayAllocations=false
+#    /GCInlineFixedAllocations=false
+#    /GCIntrinsicFixedAllocations=false
+#    /GCInlineWriteBarrier=false
+#    
+#    /StackOverflowChecks=true
+#    /OmitFramePointer=false
+#    /SymbolicDebug=true
+#    /OptimizeLocals=false
+#    /DebugInline=true
+#    /UnnameTracedPtrs=true
+#    /Warnings=true
+#    /WholeProgram=true
+#    /MarkSweepGC
+#    /minopt
+#    /IrSimpleInliner=false
+#    /IrPeepholeNull=false
+#    /CoalesceExceptionThrow=false
+#    /out:C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc.obj
+#    /outdir:C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep
+# Assemblies:
+#    sc.exe
+#    Corlib.dll
+#    Microsoft.SingSharp.Runtime.dll
+#    Directory.Contracts.dll
+#    Console.App.dll
+#    Corlibsg.dll
+#    DebugUtils.dll
+#    ServiceManager.Contracts.dll
+#    Io.Contracts.dll
+#    System.Compiler.Runtime.dll
+#    DirectoryService.Utils.dll
+#    Singularity.V1.App.dll
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Libraries\Debug.x86.MarkSweep\Directory.Contracts.pdb Invalid DBI module. (opened=104333504, pad=0)no debug information is read in
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\AppRuntime\Full\Debug.x86.MarkSweep\Corlibsg.pdb Invalid DBI module. (opened=110481936, pad=0)no debug information is read in
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Libraries\Debug.x86.MarkSweep\ServiceManager.Contracts.pdb Invalid DBI module. (opened=98836992, pad=0)no debug information is read in
+warning: I/O failure while reading pdbinfo C:\Users\cc\source\repos\Singularity-OS\base.obj\Libraries\Debug.x86.MarkSweep\Io.Contracts.pdb Invalid DBI module. (opened=98008592, pad=0)no debug information is read in
+warning: unsealing Microsoft.Singularity.V1.Services.EndpointCore
+warning:   Ignoring optional modifier Class(Microsoft.Contracts.NonNullType)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.UnicodePipeContract.READY)
+warning:   Ignoring optional modifier Interface(Microsoft.Singularity.Channels.ESet_2.type parameter.State)
+warning:   Ignoring optional modifier Interface(Microsoft.Singularity.Channels.EMap_3.type parameter.State)
+warning:   Ignoring optional modifier Interface([Microsoft.SingSharp.Runtime]Microsoft.Singularity.Channels.TRef_2.type parameter.State)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.ServiceContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.NotifyContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.ServiceProviderContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.FileContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.DirectoryServiceContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Directory.DirectoryServiceContract.Ready)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Extending.ExtensionContract.Start)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.UnicodePipeContract.EXPMOVABLE)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.PipeMultiplexControl.START)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.UnicodePipeContract.ACK)
+warning:   Ignoring optional modifier Class(Microsoft.Singularity.Io.DiskDeviceContract.Start)
+warning: Expected method body for System.Object.get_vtable
+warning: Expected method body for System.Object.set_vtable
+warning: Expected method body for System.Object.get_VTableFieldAddr
+warning: Expected method body for System.Object.get_muw
+warning: Expected method body for System.Object.set_muw
+warning: Expected method body for System.Object.CompareExchangeMUW
+warning: Class(System.Threading.ThreadStart) has unsupported async invocation
+warning: Class(System.Threading.ThreadStart) has unsupported async invocation
+warning: Class(System.GCs.ProfileRootsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileRootsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileObjectsDelegate) has unsupported async invocation
+warning: Class(System.GCs.ProfileObjectsDelegate) has unsupported async invocation
+warning: Class(System.Threading.Thread.StopServiceNotice) has unsupported async invocation
+warning: Class(System.Threading.Thread.StopServiceNotice) has unsupported async invocation
+warning: Class(System.AsyncCallback) has unsupported async invocation
+warning: Class(System.AsyncCallback) has unsupported async invocation
+warning: Class(System.TryAllManager.VisitMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.VisitMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.GCHookMethod) has unsupported async invocation
+warning: Class(System.TryAllManager.GCHookMethod) has unsupported async invocation
+warning: Type Function({Class(System.Object)}->void)BartokCall not found
+warning: Type Function({Class(System.Object), Class(System.GCs.DirectReferenceVisitor)}->void)BartokCall not found
+warning: Type Function({Class(System.Object), Interface(System.IAsyncResult)}->void)BartokCall not found
+warning: Type Function({Class(System.Object), Class(System.GCs.SegregatedFreeList.ObjectVisitor)}->void)BartokCall not found
+warning: Type Function({Class(System.Object), Class(System.GCs.NonNullReferenceVisitor)}->void)BartokCall not found
+# peak memory: paged=0KB, virtual=0KB, working=0KB
+#C:\Users\cc\source\repos\Singularity-OS\base\Build\x86_x86\link.exe  /nologo /debug /debugtype:cv /incremental:no /opt:ref /release /nod /subsystem:native /fixed:no /base:0x2000000 /entry:RuntimeEntryPoint /machine:x86 /out:C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeImage\Debug.x86.MarkSweep\sc.x86 /pdb:C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeImage\Debug.x86.MarkSweep\sc.x86.pdb /map:C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc.map C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc.obj C:\Users\cc\source\repos\Singularity-OS\base.obj\AppNativeObj\Debug.x86.MarkSweep\sc_superObj.obj C:\Users\cc\source\repos\Singularity-OS\base.obj\nib.libcache\Debug.x86.MarkSweep\native.Full.lib C:\Users\cc\source\repos\Singularity-OS\base.obj\nib.libcache\Debug.x86.MarkSweep\singularity.V1.Full.lib
+# 20.5751078 seconds elapsed.

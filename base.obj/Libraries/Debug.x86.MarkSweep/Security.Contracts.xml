@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Security.Contracts</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Singularity.Security.SecurityDiagnosticsContract.Ready">
+      <summary>
+Tell the client the channel is ready.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.SecurityDiagnosticsContract.GetStatistics">
+      <summary>
+Get a principal name from a principal
+</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Corlibsg</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.Singularity.Io.PipeLookAhead.ReadChar">
+      <summary>
+blocks until a character is available
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Io.PipeMultiplexer">
+      <summary>
+Allows creating and managing a multiplexer that forwards data from several pipes
+to a single output pipe.
+</summary>
+    </member>
+    <member name="M:Microsoft.Singularity.Io.PipeMultiplexer.FreshClient">
+      <summary>
+Adds a fresh input pipe to the multiplexer and returns the client end.
+</summary>
+    </member>
+    <member name="M:System.Process.BindToService(Microsoft.Singularity.V1.Types.SystemType,Microsoft.Singularity.V1.Types.SystemType,System.String!Microsoft.Contracts.NonNullType,System.Int32,System.Int32)">
+      <summary>
+Given 2 system types generate and initialize the two endpoints of
+a channel. The imp side will be set in the processes startup endpoint array
+at position "index". The exp side will be bound to a service based on global policy
+</summary>
+    </member>
+    <member name="M:System.Process.Finalize">
+      <summary>
+Finalizer is responsible for freeing handle that keeps corresponding
+kernel AutoResetEvent object live.
+</summary>
+    </member>
+    <member name="T:Microsoft.Singularity.Security.Principal">
+      <summary>
+A Principal struct is a representation of a principal.
+There are methods here to retrieve the Principal of a process
+and to resolve the principal name of a Principal.
+See the security library for methods to evaluate whether
+Principals satisfy ACLs.
+</summary>
+    </member>
+  </members>
+</doc>

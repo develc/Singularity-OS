@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Singularity.V1.App</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Singularity.V1.Processes.ProcessHandle.BindToService(Microsoft.Singularity.V1.Processes.ProcessHandle,Microsoft.Singularity.V1.Types.SystemType,Microsoft.Singularity.V1.Types.SystemType,System.Char*,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Given 2 system types generate and initialize the two endpoints of
+            a channel. The imp side will be set in the processes startup endpoint array
+            at position "index". The exp side will be bound to a service based on global policy
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.deliveryHandle">
+            <summary>
+            Handle to the actual message delivery mechanism
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.collectionEvent">
+            <summary>
+            Event handle in case this endpoint is part of a collection
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.cachedMessageEvent">
+            <summary>
+            Event on which sends are signaled to this endpoint.
+            The handle is owned by the kernel, since the endpoint can move.
+            The kernel deallocates the handle when the channel is deallocated.
+            NOTE: stays valid until the entire channel gets collected.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.cachedClosed">
+            <summary>
+            Closed flag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.cachedOwnerProcessId">
+            <summary>
+            Contains the process id of the process currently owning this end of the
+            channel.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.cachedChannelId">
+            <summary>
+            Contains the channelId (positive on the EXP endpoint, negative on the imp endpoint)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.cachedMarshall">
+            <summary>
+            Whether to marshall or not
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.cachedPeer">
+            <summary>
+            Points to the peer endpoint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Services.EndpointCore.peerStateValid">
+            <summary>
+            If true then the peer state can be queried directly from cachedPeer
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Allocate(System.UInt32,Microsoft.Singularity.V1.Types.SystemType)">
+            <summary>
+            Used to allocate a channel endpoint. The size must be correctly computed by
+            the trusted caller (currently trusted code NewChannel)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Dispose(Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Closes this end of the channel and frees associated resources, EXCEPT the block
+            of memory for this endpoint. It must be released by the caller. Sing# does this
+            for the programmer.
+            Returns true for success, false for failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Free(Microsoft.Singularity.V1.Services.SharedHeapService.Allocation*)">
+            <summary>
+            Deallocates this end of the channel. If other end is also
+            deallocated, the entire channel is deallocated.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Connect(Microsoft.Singularity.V1.Services.SharedHeapService.Allocation*,Microsoft.Singularity.V1.Services.SharedHeapService.Allocation*)">
+            <summary>
+            Performs the initialization of the core part of each endpoint and cross links
+            them to form a channel.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Closed(Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Indicates if this endpoint is closed
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Close(Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Set this end to closed
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.GetPeer(Microsoft.Singularity.V1.Services.EndpointCore@,System.Boolean@)">
+            <summary>
+            The endpoint to which this endpoint is connected. (non ABI call version)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.GetPeerABI(Microsoft.Singularity.V1.Services.EndpointCore@,System.Boolean@)">
+            <summary>
+            The endpoint to which this endpoint is connected. (ABI version if cached peer is
+            not valid)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.GetWaitHandle(Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            The event to wait for messages on this endpoint. Used by Select.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.NotifyPeer(Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Notify the owner of this endpoint that a message is ready.
+            Notifies the set owner if this endpoint is part of a set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.Wait(Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Wait for a message to arrive on this endpoint.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.TransferBlockOwnership(Microsoft.Singularity.V1.Services.SharedHeapService.Allocation*,Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Transfer the given Allocation block to the target endpoint
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.TransferContentOwnership(Microsoft.Singularity.V1.Services.EndpointCore@,Microsoft.Singularity.V1.Services.EndpointCore@)">
+            <summary>
+            Transfer any contents that needs to be adjusted from the transferee to the target
+            endpoint.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.LinkIntoCollection(Microsoft.Singularity.V1.Services.EndpointCore@,Microsoft.Singularity.V1.Threads.AutoResetEventHandle)">
+            <summary>
+            Instruct the selectable object to signal events on the given AutoResetEvent
+            rather than its normal event in order to aggregate signalling into a set.
+            A selectable object need only support being part of a single collection at
+            any point in time.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.UnlinkFromCollection(Microsoft.Singularity.V1.Services.EndpointCore@,Microsoft.Singularity.V1.Threads.AutoResetEventHandle)">
+            <summary>
+            Instruct the selectable object to stop signalling events on the given
+            AutoResetEvent.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.EndpointCore.MarshallMessage(Microsoft.Singularity.V1.Services.EndpointCore@,System.Byte*,System.Byte*,System.Int32*,System.Int32)">
+             <summary>
+             Called when sending a message across domains. Instructs the kernel
+             to prepare an update record to push into the peer when the peer
+             is running.
+            
+             This call starts a sequence of MarshallPointer calls that will
+             end with a call to NotifyPeer.
+             </summary>
+        </member>
+        <member name="M:Microsoft.Singularity.V1.Services.SharedHeapService.Free(Microsoft.Singularity.V1.Services.SharedHeapService.Allocation*)">
+            <returns>true if last reference was freed</returns>
+        </member>
+        <member name="F:Microsoft.Singularity.V1.Types.SystemType.id">
+            A handle to a RuntimeSystemType
+        </member>
+    </members>
+</doc>
